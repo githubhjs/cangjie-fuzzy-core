@@ -39,3 +39,8 @@ Adjacent-key typo tolerance for Cangjie input (Rime): contract, neighbour maps, 
 ## 授權
 
 MIT（見 `LICENSE`）。本倉庫只含程式與設定，不含第三方資料。
+
+## 預設值與可調整的旋鈕 / Defaults and configurable knobs
+
+範圍、每碼容錯、每句容錯三個旋鈕的預設值與研究依據見 [DEFAULTS.md](DEFAULTS.md)（模擬結果：`results/range_study.md`）。跨平台無介面引擎測試：`tests/headless/cj_headless.py`（Linux、macOS、Windows 同一份）。
+The three tolerance knobs, their defaults and the evidence behind them: [DEFAULTS.md](DEFAULTS.md). Cross-platform headless engine test: `tests/headless/cj_headless.py`.

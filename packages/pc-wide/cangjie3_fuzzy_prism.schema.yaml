@@ -1,0 +1,281 @@
+# Rime schema
+# encoding: utf-8
+#
+# 倉頡三代 整句輸入 (MS 新倉頡 / Windows XP 新倉頡 style sentence auto-correction)
+# Same engine behaviour as cangjie5_fluency (v1); only the code table differs.
+# The table cangjie3.base.dict.yaml is generated at install time from PIME mscj3.cin
+# (tools/cin2rime.py or install.ps1 -Cangjie3) and is NOT part of this repository.
+#
+# Ideas taken from eight04's `quick5_fluency` (rime/rime-quick issue #2):
+#   fluency_editor, no abc_segmentor, recognizer `abc` pattern,
+#   single-letter codes forced to end with a space, space handled by punctuator.
+# Differences: full Cangjie 3 codes only (no 速成 derive), standalone file
+# (no __include of quick5.schema.yaml).
+
+schema:
+  schema_id: cangjie3_fuzzy_prism
+  name: 倉頡三代容錯（內部：容錯索引，請勿選用）
+  version: "0.1"
+  author:
+    - 朱邦復先生 (倉頡)
+    - 佛振 (rime-cangjie / rime-quick)
+    - eight04 (quick5_fluency prototype)
+  description: |
+    全碼倉頡三代（微軟新倉頡相容），詞句連打（整句輸入），語言模型：八股文 (librime-octagram)
+    3rd generation Cangjie; table from PIME mscj3.cin, downloaded at install time
+  dependencies:
+    - luna_quanpin
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+    abbrev: [ 中, Ａ ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    states: [ 漢字, 汉字 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - fluency_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    # abc_segmentor intentionally NOT used: the recognizer pattern `abc`
+    # below tags the whole preedit as one segment so it can be re-segmented
+    # as a sentence.
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    - reverse_lookup_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " ;'"
+  algebra:
+    # A single-letter code must be followed by a space (otherwise "a" is
+    # ambiguous with the first letter of every longer code).
+    - 'fuzz/^([a-z]{0})[qswz]([a-z]{1,})$/${1}A${2}/'
+    - 'fuzz/^([a-z]{0})[ghnv]([a-z]{1,})$/${1}B${2}/'
+    - 'fuzz/^([a-z]{0})[dfvx]([a-z]{1,})$/${1}C${2}/'
+    - 'fuzz/^([a-z]{0})[cefrswx]([a-z]{1,})$/${1}D${2}/'
+    - 'fuzz/^([a-z]{0})[dfrsw]([a-z]{1,})$/${1}E${2}/'
+    - 'fuzz/^([a-z]{0})[cdegrtv]([a-z]{1,})$/${1}F${2}/'
+    - 'fuzz/^([a-z]{0})[bfhrtvy]([a-z]{1,})$/${1}G${2}/'
+    - 'fuzz/^([a-z]{0})[bgjntuy]([a-z]{1,})$/${1}H${2}/'
+    - 'fuzz/^([a-z]{0})[jklou]([a-z]{1,})$/${1}I${2}/'
+    - 'fuzz/^([a-z]{0})[hikmnuy]([a-z]{1,})$/${1}J${2}/'
+    - 'fuzz/^([a-z]{0})[ijlmou]([a-z]{1,})$/${1}K${2}/'
+    - 'fuzz/^([a-z]{0})[ikop]([a-z]{1,})$/${1}L${2}/'
+    - 'fuzz/^([a-z]{0})[jkn]([a-z]{1,})$/${1}M${2}/'
+    - 'fuzz/^([a-z]{0})[bhjm]([a-z]{1,})$/${1}N${2}/'
+    - 'fuzz/^([a-z]{0})[iklp]([a-z]{1,})$/${1}O${2}/'
+    - 'fuzz/^([a-z]{0})[lo]([a-z]{1,})$/${1}P${2}/'
+    - 'fuzz/^([a-z]{0})[asw]([a-z]{1,})$/${1}Q${2}/'
+    - 'fuzz/^([a-z]{0})[defgt]([a-z]{1,})$/${1}R${2}/'
+    - 'fuzz/^([a-z]{0})[adeqwxz]([a-z]{1,})$/${1}S${2}/'
+    - 'fuzz/^([a-z]{0})[fghry]([a-z]{1,})$/${1}T${2}/'
+    - 'fuzz/^([a-z]{0})[hijky]([a-z]{1,})$/${1}U${2}/'
+    - 'fuzz/^([a-z]{0})[bcfg]([a-z]{1,})$/${1}V${2}/'
+    - 'fuzz/^([a-z]{0})[adeqs]([a-z]{1,})$/${1}W${2}/'
+    - 'fuzz/^([a-z]{0})[cdsz]([a-z]{1,})$/${1}X${2}/'
+    - 'fuzz/^([a-z]{0})[ghjtu]([a-z]{1,})$/${1}Y${2}/'
+    - 'fuzz/^([a-z]{0})[asx]([a-z]{1,})$/${1}Z${2}/'
+    - 'fuzz/^([a-z]{1})[qswz]([a-z]{0,})$/${1}A${2}/'
+    - 'fuzz/^([a-z]{1})[ghnv]([a-z]{0,})$/${1}B${2}/'
+    - 'fuzz/^([a-z]{1})[dfvx]([a-z]{0,})$/${1}C${2}/'
+    - 'fuzz/^([a-z]{1})[cefrswx]([a-z]{0,})$/${1}D${2}/'
+    - 'fuzz/^([a-z]{1})[dfrsw]([a-z]{0,})$/${1}E${2}/'
+    - 'fuzz/^([a-z]{1})[cdegrtv]([a-z]{0,})$/${1}F${2}/'
+    - 'fuzz/^([a-z]{1})[bfhrtvy]([a-z]{0,})$/${1}G${2}/'
+    - 'fuzz/^([a-z]{1})[bgjntuy]([a-z]{0,})$/${1}H${2}/'
+    - 'fuzz/^([a-z]{1})[jklou]([a-z]{0,})$/${1}I${2}/'
+    - 'fuzz/^([a-z]{1})[hikmnuy]([a-z]{0,})$/${1}J${2}/'
+    - 'fuzz/^([a-z]{1})[ijlmou]([a-z]{0,})$/${1}K${2}/'
+    - 'fuzz/^([a-z]{1})[ikop]([a-z]{0,})$/${1}L${2}/'
+    - 'fuzz/^([a-z]{1})[jkn]([a-z]{0,})$/${1}M${2}/'
+    - 'fuzz/^([a-z]{1})[bhjm]([a-z]{0,})$/${1}N${2}/'
+    - 'fuzz/^([a-z]{1})[iklp]([a-z]{0,})$/${1}O${2}/'
+    - 'fuzz/^([a-z]{1})[lo]([a-z]{0,})$/${1}P${2}/'
+    - 'fuzz/^([a-z]{1})[asw]([a-z]{0,})$/${1}Q${2}/'
+    - 'fuzz/^([a-z]{1})[defgt]([a-z]{0,})$/${1}R${2}/'
+    - 'fuzz/^([a-z]{1})[adeqwxz]([a-z]{0,})$/${1}S${2}/'
+    - 'fuzz/^([a-z]{1})[fghry]([a-z]{0,})$/${1}T${2}/'
+    - 'fuzz/^([a-z]{1})[hijky]([a-z]{0,})$/${1}U${2}/'
+    - 'fuzz/^([a-z]{1})[bcfg]([a-z]{0,})$/${1}V${2}/'
+    - 'fuzz/^([a-z]{1})[adeqs]([a-z]{0,})$/${1}W${2}/'
+    - 'fuzz/^([a-z]{1})[cdsz]([a-z]{0,})$/${1}X${2}/'
+    - 'fuzz/^([a-z]{1})[ghjtu]([a-z]{0,})$/${1}Y${2}/'
+    - 'fuzz/^([a-z]{1})[asx]([a-z]{0,})$/${1}Z${2}/'
+    - 'fuzz/^([a-z]{2})[qswz]([a-z]{0,})$/${1}A${2}/'
+    - 'fuzz/^([a-z]{2})[ghnv]([a-z]{0,})$/${1}B${2}/'
+    - 'fuzz/^([a-z]{2})[dfvx]([a-z]{0,})$/${1}C${2}/'
+    - 'fuzz/^([a-z]{2})[cefrswx]([a-z]{0,})$/${1}D${2}/'
+    - 'fuzz/^([a-z]{2})[dfrsw]([a-z]{0,})$/${1}E${2}/'
+    - 'fuzz/^([a-z]{2})[cdegrtv]([a-z]{0,})$/${1}F${2}/'
+    - 'fuzz/^([a-z]{2})[bfhrtvy]([a-z]{0,})$/${1}G${2}/'
+    - 'fuzz/^([a-z]{2})[bgjntuy]([a-z]{0,})$/${1}H${2}/'
+    - 'fuzz/^([a-z]{2})[jklou]([a-z]{0,})$/${1}I${2}/'
+    - 'fuzz/^([a-z]{2})[hikmnuy]([a-z]{0,})$/${1}J${2}/'
+    - 'fuzz/^([a-z]{2})[ijlmou]([a-z]{0,})$/${1}K${2}/'
+    - 'fuzz/^([a-z]{2})[ikop]([a-z]{0,})$/${1}L${2}/'
+    - 'fuzz/^([a-z]{2})[jkn]([a-z]{0,})$/${1}M${2}/'
+    - 'fuzz/^([a-z]{2})[bhjm]([a-z]{0,})$/${1}N${2}/'
+    - 'fuzz/^([a-z]{2})[iklp]([a-z]{0,})$/${1}O${2}/'
+    - 'fuzz/^([a-z]{2})[lo]([a-z]{0,})$/${1}P${2}/'
+    - 'fuzz/^([a-z]{2})[asw]([a-z]{0,})$/${1}Q${2}/'
+    - 'fuzz/^([a-z]{2})[defgt]([a-z]{0,})$/${1}R${2}/'
+    - 'fuzz/^([a-z]{2})[adeqwxz]([a-z]{0,})$/${1}S${2}/'
+    - 'fuzz/^([a-z]{2})[fghry]([a-z]{0,})$/${1}T${2}/'
+    - 'fuzz/^([a-z]{2})[hijky]([a-z]{0,})$/${1}U${2}/'
+    - 'fuzz/^([a-z]{2})[bcfg]([a-z]{0,})$/${1}V${2}/'
+    - 'fuzz/^([a-z]{2})[adeqs]([a-z]{0,})$/${1}W${2}/'
+    - 'fuzz/^([a-z]{2})[cdsz]([a-z]{0,})$/${1}X${2}/'
+    - 'fuzz/^([a-z]{2})[ghjtu]([a-z]{0,})$/${1}Y${2}/'
+    - 'fuzz/^([a-z]{2})[asx]([a-z]{0,})$/${1}Z${2}/'
+    - 'fuzz/^([a-z]{3})[qswz]([a-z]{0,})$/${1}A${2}/'
+    - 'fuzz/^([a-z]{3})[ghnv]([a-z]{0,})$/${1}B${2}/'
+    - 'fuzz/^([a-z]{3})[dfvx]([a-z]{0,})$/${1}C${2}/'
+    - 'fuzz/^([a-z]{3})[cefrswx]([a-z]{0,})$/${1}D${2}/'
+    - 'fuzz/^([a-z]{3})[dfrsw]([a-z]{0,})$/${1}E${2}/'
+    - 'fuzz/^([a-z]{3})[cdegrtv]([a-z]{0,})$/${1}F${2}/'
+    - 'fuzz/^([a-z]{3})[bfhrtvy]([a-z]{0,})$/${1}G${2}/'
+    - 'fuzz/^([a-z]{3})[bgjntuy]([a-z]{0,})$/${1}H${2}/'
+    - 'fuzz/^([a-z]{3})[jklou]([a-z]{0,})$/${1}I${2}/'
+    - 'fuzz/^([a-z]{3})[hikmnuy]([a-z]{0,})$/${1}J${2}/'
+    - 'fuzz/^([a-z]{3})[ijlmou]([a-z]{0,})$/${1}K${2}/'
+    - 'fuzz/^([a-z]{3})[ikop]([a-z]{0,})$/${1}L${2}/'
+    - 'fuzz/^([a-z]{3})[jkn]([a-z]{0,})$/${1}M${2}/'
+    - 'fuzz/^([a-z]{3})[bhjm]([a-z]{0,})$/${1}N${2}/'
+    - 'fuzz/^([a-z]{3})[iklp]([a-z]{0,})$/${1}O${2}/'
+    - 'fuzz/^([a-z]{3})[lo]([a-z]{0,})$/${1}P${2}/'
+    - 'fuzz/^([a-z]{3})[asw]([a-z]{0,})$/${1}Q${2}/'
+    - 'fuzz/^([a-z]{3})[defgt]([a-z]{0,})$/${1}R${2}/'
+    - 'fuzz/^([a-z]{3})[adeqwxz]([a-z]{0,})$/${1}S${2}/'
+    - 'fuzz/^([a-z]{3})[fghry]([a-z]{0,})$/${1}T${2}/'
+    - 'fuzz/^([a-z]{3})[hijky]([a-z]{0,})$/${1}U${2}/'
+    - 'fuzz/^([a-z]{3})[bcfg]([a-z]{0,})$/${1}V${2}/'
+    - 'fuzz/^([a-z]{3})[adeqs]([a-z]{0,})$/${1}W${2}/'
+    - 'fuzz/^([a-z]{3})[cdsz]([a-z]{0,})$/${1}X${2}/'
+    - 'fuzz/^([a-z]{3})[ghjtu]([a-z]{0,})$/${1}Y${2}/'
+    - 'fuzz/^([a-z]{3})[asx]([a-z]{0,})$/${1}Z${2}/'
+    - 'fuzz/^([a-z]{4})[qswz]([a-z]{0,})$/${1}A${2}/'
+    - 'fuzz/^([a-z]{4})[ghnv]([a-z]{0,})$/${1}B${2}/'
+    - 'fuzz/^([a-z]{4})[dfvx]([a-z]{0,})$/${1}C${2}/'
+    - 'fuzz/^([a-z]{4})[cefrswx]([a-z]{0,})$/${1}D${2}/'
+    - 'fuzz/^([a-z]{4})[dfrsw]([a-z]{0,})$/${1}E${2}/'
+    - 'fuzz/^([a-z]{4})[cdegrtv]([a-z]{0,})$/${1}F${2}/'
+    - 'fuzz/^([a-z]{4})[bfhrtvy]([a-z]{0,})$/${1}G${2}/'
+    - 'fuzz/^([a-z]{4})[bgjntuy]([a-z]{0,})$/${1}H${2}/'
+    - 'fuzz/^([a-z]{4})[jklou]([a-z]{0,})$/${1}I${2}/'
+    - 'fuzz/^([a-z]{4})[hikmnuy]([a-z]{0,})$/${1}J${2}/'
+    - 'fuzz/^([a-z]{4})[ijlmou]([a-z]{0,})$/${1}K${2}/'
+    - 'fuzz/^([a-z]{4})[ikop]([a-z]{0,})$/${1}L${2}/'
+    - 'fuzz/^([a-z]{4})[jkn]([a-z]{0,})$/${1}M${2}/'
+    - 'fuzz/^([a-z]{4})[bhjm]([a-z]{0,})$/${1}N${2}/'
+    - 'fuzz/^([a-z]{4})[iklp]([a-z]{0,})$/${1}O${2}/'
+    - 'fuzz/^([a-z]{4})[lo]([a-z]{0,})$/${1}P${2}/'
+    - 'fuzz/^([a-z]{4})[asw]([a-z]{0,})$/${1}Q${2}/'
+    - 'fuzz/^([a-z]{4})[defgt]([a-z]{0,})$/${1}R${2}/'
+    - 'fuzz/^([a-z]{4})[adeqwxz]([a-z]{0,})$/${1}S${2}/'
+    - 'fuzz/^([a-z]{4})[fghry]([a-z]{0,})$/${1}T${2}/'
+    - 'fuzz/^([a-z]{4})[hijky]([a-z]{0,})$/${1}U${2}/'
+    - 'fuzz/^([a-z]{4})[bcfg]([a-z]{0,})$/${1}V${2}/'
+    - 'fuzz/^([a-z]{4})[adeqs]([a-z]{0,})$/${1}W${2}/'
+    - 'fuzz/^([a-z]{4})[cdsz]([a-z]{0,})$/${1}X${2}/'
+    - 'fuzz/^([a-z]{4})[ghjtu]([a-z]{0,})$/${1}Y${2}/'
+    - 'fuzz/^([a-z]{4})[asx]([a-z]{0,})$/${1}Z${2}/'
+    - 'xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|abcdefghijklmnopqrstuvwxyz|'
+    - 'xform/^(\w)$/$1 /'
+
+translator:
+  dictionary: cangjie3_fluency
+  prism: cangjie3_fuzzy_prism
+  # same values as grammar.yaml:/hant, repeated here so the model is still
+  # used if grammar.yaml is missing (the `grammar:/hant?` patch below is
+  # optional and silently skipped when the file is absent)
+  contextual_suggestions: true
+  max_homophones: 7
+  max_homographs: 7
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz;'|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符··|"
+  comment_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz~|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符～|"
+  disable_user_dict_for_patterns:
+    - "^z.*$"
+    - "^yyy.*$"
+
+reverse_lookup:
+  dictionary: luna_pinyin
+  prism: luna_quanpin
+  prefix: "`"
+  suffix: "'"
+  tips: 〔拼音〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+  comment_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
+
+grammar:
+  # needs librime-octagram + zh-hant-t-essay-bgw.gram in the user/shared dir
+  language: zh-hant-t-essay-bgw
+
+simplifier:
+  tips: all
+
+punctuator:
+  # Treat space as a symbol: it commits the preedit, then types a space.
+  use_space: true
+  import_preset: default
+  half_shape:
+    ' ': { commit: ' ' }
+
+key_binder:
+  # Like default.yaml's key_binder but WITHOUT paging_with_comma_period and
+  # paging_with_minus_equal: with them "." "-" "=" page the candidate menu
+  # instead of typing 。 - = in the middle of a sentence. Page_Up/Page_Down
+  # and the arrow keys still page.
+  bindings:
+    __patch:
+      - key_bindings:/emacs_editing
+      - key_bindings:/numbered_mode_switch
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*'?$"
+    # letters, optionally separated by single spaces, optional trailing space
+    abc: "^[a-z]+( [a-z]+)* ?$"
+
+ascii_composer:
+  good_old_caps_lock: true
+  switch_key:
+    Shift_L: commit_text
+    Shift_R: commit_code
+    Control_L: noop
+    Control_R: noop
+    Caps_Lock: noop
+    Eisu_toggle: clear
+
+__patch:
+  # language model (librime-octagram + zh-hant-t-essay-bgw.gram)
+  - grammar:/hant?
+  # user overrides: cangjie3_fluency.custom.yaml
+  - cangjie3_fluency.custom:/patch?

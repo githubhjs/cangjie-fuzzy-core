@@ -53,7 +53,9 @@ def load_rime_dict(path):
 
 
 class Matcher:
-    def __init__(self, entries, layout, theta=1.3, budget=1, min_len=2):
+    def __init__(self, entries, layout, theta=1.3, budget=1, min_len=2, config=None):
+        if config is not None:  # a FuzzyConfig overrides the individual numbers
+            theta, budget, min_len = config.theta, config.per_code, config.min_code_len
         self.root = Trie.build(entries)
         self.layout, self.theta, self.budget, self.min_len = layout, theta, budget, min_len
         self._nb = {}

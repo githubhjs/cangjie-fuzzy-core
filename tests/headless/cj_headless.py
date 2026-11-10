@@ -81,6 +81,10 @@ CASES = [
     ("fuzzy", "{g}_fuzzy", "yhmbc", "same_top", "{g}_fluency"),
 ]
 
+# 顏 is yhmbc; c has v (1.0, all ranges) and d/f (1.12, not narrow); y->j is 1.6 away (wide only)
+RANGE_CASES = [("yhmbd", {"narrow": False, "normal": True, "wide": True}),
+               ("jhmbc", {"narrow": False, "normal": False, "wide": True})]
+
 
 def main():
     ap = argparse.ArgumentParser()
@@ -93,6 +97,7 @@ def main():
     ap.add_argument("--gens", default="3", help="generations to test, e.g. 3 or 3,5")
     ap.add_argument("--require", default="", help="comma separated schema ids that must be installed (else SKIP is a failure)")
     ap.add_argument("--json", default="")
+    ap.add_argument("--range", choices=["narrow", "normal", "wide"], default="normal", help="which fuzzy range profile is installed")
     ap.add_argument("--no-deploy", action="store_true")
     a = ap.parse_args()
 
@@ -170,10 +175,11 @@ def main():
     results, fails, skips = [], 0, 0
     for g in [x.strip() for x in a.gens.split(",") if x.strip()]:
         gname = "cangjie" + g
-        for suite, schema_t, keys, kind, val in CASES:
+        cases = CASES + [("fuzzy", "{g}_fuzzy", k, "has" if e[a.range] else "lacks", "顏") for k, e in RANGE_CASES]
+        for suite, schema_t, keys, kind, val in cases:
             if a.suite != "all" and suite != a.suite:
                 continue
-            if g == "5" and keys in ("yhmbc", "yhmbv", "yhnbc", "yhnbv", "yhmbp", "mwyl"):
+            if g == "5" and keys in ("yhmbc", "yhmbv", "yhnbc", "yhnbv", "yhmbp", "mwyl", "yhmbd", "jhmbc"):
                 continue  # the 5th-generation code of 顏 is not asserted here
             schema = schema_t.format(g=gname)
             r = {"schema": schema, "keys": keys, "kind": kind, "expect": val.format(g=gname)}
