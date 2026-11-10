@@ -2,7 +2,8 @@ param(
   [Parameter(Mandatory = $true)][string]$Zip,        # full release zip already copied to this machine
   [string]$Range = 'normal',                          # narrow | normal | wide
   [string]$InstallArgs = '',                          # extra installer arguments, e.g. "-FuzzyDefault"
-  [string]$Gens = '3,5'
+  [string]$Gens = '3,5',
+  [string]$FirstSchema = ''                           # the schema that must be first in schema_list
 )
 # Installs the release bundle into a throwaway Rime folder with Windows PowerShell 5.1 and runs the headless engine test
 # with Weasel's own rime.dll. Needs Weasel (C:\Program Files\Rime\weasel-*) and Python 3 on the machine.
@@ -23,5 +24,7 @@ $w = (Get-ChildItem 'C:\Program Files\Rime' -Directory -Filter 'weasel-*' | Sort
 $py = (Get-Command python -ErrorAction SilentlyContinue).Source
 if (-not $py) { $py = 'C:\Python313\python.exe' }
 $here = Split-Path -Parent $MyInvocation.MyCommand.Path
-& $py (Join-Path $here 'cj_headless.py') --lib "$w\rime.dll" --user "$base\rime" --shared "$w\data" --gens $Gens --range $Range --require cangjie3_fluency,cangjie3_fuzzy
+$fs = @()
+if ($FirstSchema) { $fs = @('--first-schema', $FirstSchema) }
+& $py (Join-Path $here 'cj_headless.py') --lib "$w\rime.dll" --user "$base\rime" --shared "$w\data" --gens $Gens --range $Range --require cangjie3_fluency,cangjie3_fuzzy @fs
 exit $LASTEXITCODE

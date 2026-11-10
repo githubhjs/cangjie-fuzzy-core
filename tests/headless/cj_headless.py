@@ -97,6 +97,7 @@ def main():
     ap.add_argument("--gens", default="3", help="generations to test, e.g. 3 or 3,5")
     ap.add_argument("--require", default="", help="comma separated schema ids that must be installed (else SKIP is a failure)")
     ap.add_argument("--json", default="")
+    ap.add_argument("--first-schema", default="", help="the first schema id of schema_list in default.custom.yaml must be this (the default schema)")
     ap.add_argument("--range", choices=["narrow", "normal", "wide"], default="normal", help="which fuzzy range profile is installed")
     ap.add_argument("--no-deploy", action="store_true")
     a = ap.parse_args()
@@ -209,6 +210,17 @@ def main():
             fails += not ok
             results.append(r)
 
+    if a.first_schema:
+        first = None
+        dc = os.path.join(a.user, "default.custom.yaml")
+        if os.path.exists(dc):
+            import re
+            m = re.search(r"schema:\s*'?\"?([A-Za-z0-9_]+)", open(dc, encoding="utf-8").read())
+            first = m.group(1) if m else None
+        ok = first == a.first_schema
+        results.append({"schema": "(default)", "keys": "-", "kind": "first-in-list", "expect": a.first_schema, "top": first,
+                        "status": "PASS" if ok else "FAIL"})
+        fails += not ok
     for r in results:
         extra = r.get("note") or ("top=%s first5=%s" % (r.get("top"), "".join(r.get("first5", []))))
         print("%-4s %-18s %-8s %-9s expect=%s  %s" % (r["status"], r["schema"], r["keys"], r["kind"], r["expect"], extra))

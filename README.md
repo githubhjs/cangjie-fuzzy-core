@@ -44,3 +44,17 @@ MIT（見 `LICENSE`）。本倉庫只含程式與設定，不含第三方資料�
 
 範圍、每碼容錯、每句容錯三個旋鈕的預設值與研究依據見 [DEFAULTS.md](DEFAULTS.md)（模擬結果：`results/range_study.md`）。跨平台無介面引擎測試：`tests/headless/cj_headless.py`（Linux、macOS、Windows 同一份）。
 The three tolerance knobs, their defaults and the evidence behind them: [DEFAULTS.md](DEFAULTS.md). Cross-platform headless engine test: `tests/headless/cj_headless.py`.
+
+## 各平台安裝（容錯為預設方案）/ Install per platform (typo-tolerant is the default schema)
+
+每個平台是獨立倉庫，內含完整的 cj*fluency，有一行安裝指令與 release 離線包 / Each platform is its own repository containing the full cj*fluency, with a one-line install and an offline release bundle:
+
+| 平台 / Platform | 倉庫 / Repository | 一行安裝 / One-liner |
+|---|---|---|
+| Windows 11 (Weasel) | [cangjie-fuzzy-windows](https://github.com/githubhjs/cangjie-fuzzy-windows) | `irm https://raw.githubusercontent.com/githubhjs/cangjie-fuzzy-windows/main/install.ps1 \| iex` |
+| macOS (Squirrel) | [cangjie-fuzzy-macos](https://github.com/githubhjs/cangjie-fuzzy-macos) | `curl -fsSL https://raw.githubusercontent.com/githubhjs/cangjie-fuzzy-macos/main/install.sh \| bash` |
+| Linux (ibus-rime, fcitx5-rime) | [cangjie-fuzzy-linux](https://github.com/githubhjs/cangjie-fuzzy-linux) | `curl -fsSL https://raw.githubusercontent.com/githubhjs/cangjie-fuzzy-linux/main/install.sh \| bash` |
+| Android | 私有、之後收費 / private, to be sold | （建置與測試進行中 / build and tests in progress） |
+
+預設方案是普通倉頡的版本：[cangjie-fluency](https://github.com/githubhjs/cangjie-fluency)（Windows）、[-macos](https://github.com/githubhjs/cangjie-fluency-macos)、[-linux](https://github.com/githubhjs/cangjie-fluency-linux)，容錯方案隨附但排第二。
+The versions whose default is plain Cangjie are cangjie-fluency (Windows), -macos and -linux; the typo-tolerant schema is included there too, listed second.
