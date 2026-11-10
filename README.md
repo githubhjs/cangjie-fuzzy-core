@@ -6,6 +6,7 @@ Adjacent-key typo tolerance for Cangjie input (Rime): contract, neighbour maps, 
 打碼時只錯**一個鍵、而且錯成鄰近的鍵**，仍然出正確的字：`yhmbc` 是「顏」，打成 `yhmbv`（c 與 v 相鄰）也要能出「顏」；兩個位置都錯（`yhnbv`）或錯成非鄰鍵（`yhmbp`）則不出。
 
 - 規格與已驗證的結果：[SPEC.md](SPEC.md)
+- **核心：** `core/layout.py`（用鍵位幾何動態判斷鄰鍵：PC 是 QWERTY 實體鍵盤，Android 是螢幕鍵盤實際繪出的按鍵矩形，誤差值 θ 可設）與 `core/matcher.py`（動態比對器，每次查詢 8 微秒）；測試：`python3 tests/test_layout_matcher.py -v`
 - 這是核心與驗收標準；各平台的安裝包另外做。目前可以用的是 `packages/pc/`（Rime 方案；在 Linux 的 Rime 引擎驗證過，還沒有在小狼毫、鼠鬚管的圖形介面實際打字驗證）。
 
 ## 使用（PC 實體鍵盤，Rime：小狼毫 / 鼠鬚管 / ibus-rime / fcitx5-rime）
