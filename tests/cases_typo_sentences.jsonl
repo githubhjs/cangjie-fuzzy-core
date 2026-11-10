@@ -1,0 +1,364 @@
+{"id": "E0", "keys": "dhedhkb", "truth": "板橋"}
+{"id": "T0-0", "keys": "dhedukb", "contains": "板橋", "typo_at": [1, 1]}
+{"id": "T0-1", "keys": "dhedhlb", "contains": "板橋", "typo_at": [1, 2]}
+{"id": "T0-2", "keys": "dhsdhkb", "contains": "板橋", "typo_at": [0, 2]}
+{"id": "E1", "keys": "hqioygklgdhedhkb", "truth": "我住在板橋"}
+{"id": "T1-0", "keys": "hqiougklgdhedhkb", "contains": "我住在板橋", "typo_at": [1, 1]}
+{"id": "T1-1", "keys": "hqioygklgdhedjkb", "contains": "我住在板橋", "typo_at": [4, 1]}
+{"id": "T1-2", "keys": "hqioygklgdhedhkv", "contains": "我住在板橋", "typo_at": [4, 3]}
+{"id": "E2", "keys": "dhepruysokklgyadym", "truth": "皮包放在桌上"}
+{"id": "T2-0", "keys": "dhepruysokklgyadhm", "contains": "皮包放在桌上", "typo_at": [5, 0]}
+{"id": "T2-1", "keys": "dhepruysokklgyarym", "contains": "皮包放在桌上", "typo_at": [4, 2]}
+{"id": "T2-2", "keys": "dhepruysokklghadym", "contains": "皮包放在桌上", "typo_at": [4, 0]}
+{"id": "E3", "keys": "l oj", "truth": "中午"}
+{"id": "T3-0", "keys": "o oj", "contains": "中午", "typo_at": [0, 0]}
+{"id": "T3-1", "keys": "l ij", "contains": "中午", "typo_at": [1, 0]}
+{"id": "T3-2", "keys": "p oj", "contains": "中午", "typo_at": [0, 0]}
+{"id": "E4", "keys": "hqioanabmkl ojgidhedhkbronoihe", "truth": "我們明天中午去板橋吃飯"}
+{"id": "T4-0", "keys": "hqioanabmjl ojgidhedhkbronoihe", "contains": "我們明天中午去板橋吃飯", "typo_at": [3, 1]}
+{"id": "T4-1", "keys": "hqipanabmkl ojgidhedhkbronoihe", "contains": "我們明天中午去板橋吃飯", "typo_at": [1, 0]}
+{"id": "T4-2", "keys": "hqioanabmkl ojvidhedhkbronoihe", "contains": "我們明天中午去板橋吃飯", "typo_at": [6, 0]}
+{"id": "E5", "keys": "suvfmvm", "truth": "已經"}
+{"id": "T5-0", "keys": "auvfmvm", "contains": "已經", "typo_at": [0, 0]}
+{"id": "T5-1", "keys": "suvfjvm", "contains": "已經", "typo_at": [1, 2]}
+{"id": "T5-2", "keys": "sjvfmvm", "contains": "已經", "typo_at": [0, 1]}
+{"id": "E6", "keys": "opdsuvfmvmokrythuyymrohqjllnpqmbhapijbmcdbunn", "truth": "他已經知道這件事情的真相了"}
+{"id": "T6-0", "keys": "opdsucfmvmokrythuyymrohqjllnpqmbhapijbmcdbunn", "contains": "他已經知道這件事情的真相了", "typo_at": [2, 0]}
+{"id": "T6-1", "keys": "opfsuvfmvmokrythuyymrohqjllnpqmbhapijbmcdbunn", "contains": "他已經知道這件事情的真相了", "typo_at": [0, 2]}
+{"id": "T6-2", "keys": "opdsuvfmvmokrythuyymrohqjllnpqmbuapijbmcdbunn", "contains": "他已經知道這件事情的真相了", "typo_at": [9, 0]}
+{"id": "E7", "keys": "mnppklbmbwuafhhh", "truth": "恐怖電影"}
+{"id": "T7-0", "keys": "mnppklbkbwuafhhh", "contains": "恐怖電影", "typo_at": [2, 0]}
+{"id": "T7-1", "keys": "mnppmlbmbwuafhhh", "contains": "恐怖電影", "typo_at": [1, 1]}
+{"id": "T7-2", "keys": "mnppklbmbwuavhhh", "contains": "恐怖電影", "typo_at": [3, 1]}
+{"id": "E8", "keys": "hqihoavjqmrphayymrhdhjgmnppklbhapijllnpqmb", "truth": "我很害怕這種恐怖的事情"}
+{"id": "T8-0", "keys": "hqihoavjqmrphayymrhdhjgmnppmlbhapijllnpqmb", "contains": "我很害怕這種恐怖的事情", "typo_at": [7, 1]}
+{"id": "T8-1", "keys": "hqohoavjqmrphayymrhdhjgmnppklbhapijllnpqmb", "contains": "我很害怕這種恐怖的事情", "typo_at": [0, 2]}
+{"id": "T8-2", "keys": "hwihoavjqmrphayymrhdhjgmnppklbhapijllnpqmb", "contains": "我很害怕這種恐怖的事情", "typo_at": [0, 1]}
+{"id": "E9", "keys": "mnpyv", "truth": "死亡"}
+{"id": "T9-0", "keys": "mnptv", "contains": "死亡", "typo_at": [1, 0]}
+{"id": "T9-1", "keys": "jnpyv", "contains": "死亡", "typo_at": [0, 0]}
+{"id": "T9-2", "keys": "mnphv", "contains": "死亡", "typo_at": [1, 0]}
+{"id": "E10", "keys": "okrythu", "truth": "知道"}
+{"id": "T10-0", "keys": "oirythu", "contains": "知道", "typo_at": [0, 1]}
+{"id": "T10-1", "keys": "kkrythu", "contains": "知道", "typo_at": [0, 0]}
+{"id": "T10-2", "keys": "okruthu", "contains": "知道", "typo_at": [1, 0]}
+{"id": "E11", "keys": "hqimfokrythuopdiknfojidviyymrdtgeyrcru", "truth": "我不知道他為什麼這樣說"}
+{"id": "T11-0", "keys": "hqimfokrythuopdiknfojidviyhmrdtgeyrcru", "contains": "我不知道他為什麼這樣說", "typo_at": [8, 1]}
+{"id": "T11-1", "keys": "hqimfokrytyuopdiknfojidviyymrdtgeyrcru", "contains": "我不知道他為什麼這樣說", "typo_at": [3, 2]}
+{"id": "T11-2", "keys": "hqimfokrythuopdiknfpjidviyymrdtgeyrcru", "contains": "我不知道他為什麼這樣說", "typo_at": [6, 0]}
+{"id": "E12", "keys": "oinmkmkonfdhoavvndhqioanm gorugiciwgrvtbokylmh", "truth": "今天天氣很好我們一起去公園散步"}
+{"id": "T12-0", "keys": "oinjkmkonfdhoavvndhqioanm gorugiciwgrvtbokylmh", "contains": "今天天氣很好我們一起去公園散步", "typo_at": [1, 0]}
+{"id": "T12-1", "keys": "oinmkmkonfdhoavvndhqioann gorugiciwgrvtbokylmh", "contains": "今天天氣很好我們一起去公園散步", "typo_at": [8, 0]}
+{"id": "T12-2", "keys": "oinmkmkonfdhoavvndhqioanm gorugiciwyrvtbokylmh", "contains": "今天天氣很好我們一起去公園散步", "typo_at": [12, 1]}
+{"id": "E13", "keys": "yrqmbanronfmnrviogihabhqiqauyymrocshykohqjkmrvfomrvfmvmmgwgrsqf", "truth": "請問你可以幫我把這份文件寄給經理嗎"}
+{"id": "T13-0", "keys": "yrqmbanronfmnrviogihabhqiqajyymrocshykohqjkmrvfomrvfmvmmgwgrsqf", "contains": "請問你可以幫我把這份文件寄給經理嗎", "typo_at": [7, 2]}
+{"id": "T13-1", "keys": "yrqmbanronfknrviogihabhqiqauyymrocshykohqjkmrvfomrvfmvmmgwgrsqf", "contains": "請問你可以幫我把這份文件寄給經理嗎", "typo_at": [3, 0]}
+{"id": "T13-2", "keys": "yrqmbanronfmnrviogihabhaiqauyymrocshykohqjkmrvfomrvfmvmmgwgrsqf", "contains": "請問你可以幫我把這份文件寄給經理嗎", "typo_at": [6, 1]}
+{"id": "E14", "keys": "yymrowjrybgrdjhqidupmwvgiirlmphqbumbwuafhhh", "truth": "這個週末我想要去台北看電影"}
+{"id": "T14-0", "keys": "yymrowjrybgrdjhqidupmwvgiirlmphqbumbwuadhhh", "contains": "這個週末我想要去台北看電影", "typo_at": [12, 1]}
+{"id": "T14-1", "keys": "yymrowjrybgrdjhqidupmwvgiirlmpuqbumbwuafhhh", "contains": "這個週末我想要去台北看電影", "typo_at": [10, 0]}
+{"id": "T14-2", "keys": "yymrowjrybgrdjhqidupmwvfiirlmphqbumbwuafhhh", "contains": "這個週末我想要去台北看電影", "typo_at": [7, 0]}
+{"id": "E15", "keys": "abmkajymhowfyranmtomwayrqmbk jmsoegjagdimgln", "truth": "明天早上八點開會請大家準時到"}
+{"id": "T15-0", "keys": "abmkajymhowfyrsnmtomwayrqmbk jmsoegjagdimgln", "contains": "明天早上八點開會請大家準時到", "typo_at": [6, 0]}
+{"id": "T15-1", "keys": "agmkajymhowfyranmtomwayrqmbk jmsoegjagdimgln", "contains": "明天早上八點開會請大家準時到", "typo_at": [0, 1]}
+{"id": "T15-2", "keys": "abmkajymhowfuranmtomwayrqmbk jmsoegjagdimgln", "contains": "明天早上八點開會請大家準時到", "typo_at": [5, 2]}
+{"id": "E16", "keys": "hqiahsmkanauymhqbunnm dmhoavkbgosjehapilga", "truth": "我昨天晚上看了一本很有趣的書"}
+{"id": "T16-0", "keys": "hqiahsmkanauymhqbunnm dmhoavkbgosjwhapilga", "contains": "我昨天晚上看了一本很有趣的書", "typo_at": [11, 4]}
+{"id": "T16-1", "keys": "hqiahsmkanauymhqbumnm dmhoavkbgosjehapilga", "contains": "我昨天晚上看了一本很有趣的書", "typo_at": [6, 0]}
+{"id": "T16-2", "keys": "hqiahsmkanauhmhqbunnm dmhoavkbgosjehapilga", "contains": "我昨天晚上看了一本很有趣的書", "typo_at": [4, 0]}
+{"id": "E17", "keys": "yymrjmsoyeoivisgphapihqobojnmwllmyyyfbrlbvndron", "truth": "這家餐廳的牛肉麵非常好吃"}
+{"id": "T17-0", "keys": "yymrjmsoyeoivisgphapihqobojnmwllmyyyfbrlbvndrom", "contains": "這家餐廳的牛肉麵非常好吃", "typo_at": [11, 2]}
+{"id": "T17-1", "keys": "yymrjmsoyeoivisbphapihqobojnmwllmyyyfbrlbvndron", "contains": "這家餐廳的牛肉麵非常好吃", "typo_at": [3, 2]}
+{"id": "T17-2", "keys": "yynrjmsoyeoivisgphapihqobojnmwllmyyyfbrlbvndron", "contains": "這家餐廳的牛肉麵非常好吃", "typo_at": [0, 2]}
+{"id": "E18", "keys": "mbwubvvwjcikbkffbrwdviinnhqienekbklnddfbw", "truth": "電腦突然當機了我沒有存檔"}
+{"id": "T18-0", "keys": "mbwubvvwjcikbkffbrwdviinnhqienekbklnddtbw", "contains": "電腦突然當機了我沒有存檔", "typo_at": [11, 1]}
+{"id": "T18-1", "keys": "mbwubvvwjcikbkffbrwdviinnhqienekbkljddfbw", "contains": "電腦突然當機了我沒有存檔", "typo_at": [10, 2]}
+{"id": "T18-2", "keys": "mbwubvvwjcikbkffgrwdviinnhqienekbklnddfbw", "contains": "電腦突然當機了我沒有存檔", "typo_at": [4, 1]}
+{"id": "E19", "keys": "onfokrythuasjeyhmlhapiqjloybjjytyrklgrsqllwgrsqf", "truth": "你知道最近的捷運站在哪裡嗎"}
+{"id": "T19-0", "keys": "onfokrythuasjeyhmlhapiqjlpybjjytyrklgrsqllwgrsqf", "contains": "你知道最近的捷運站在哪裡嗎", "typo_at": [6, 3]}
+{"id": "T19-1", "keys": "onfokrythuasjeyhmlhapiqjloybjjytyrklgrsqlowgrsqf", "contains": "你知道最近的捷運站在哪裡嗎", "typo_at": [11, 0]}
+{"id": "T19-2", "keys": "onfokrythuasjeyhmlhapiqjloybjjytyrklhrsqllwgrsqf", "contains": "你知道最近的捷運站在哪裡嗎", "typo_at": [9, 2]}
+{"id": "E20", "keys": "opdowyimksfkmrbcrlrmeajwjgiymmgilg", "truth": "他每天騎腳踏車去上班"}
+{"id": "T20-0", "keys": "opdowyimksfkmrbcrlrmeajwjgiynmgilg", "contains": "他每天騎腳踏車去上班", "typo_at": [8, 1]}
+{"id": "T20-1", "keys": "opdiwyimksfkmrbcrlrmeajwjgiymmgilg", "contains": "他每天騎腳踏車去上班", "typo_at": [1, 0]}
+{"id": "T20-2", "keys": "opdowyimksfkmrbcrlrmeajwjgkymmgilg", "contains": "他每天騎腳踏車去上班", "typo_at": [7, 1]}
+{"id": "E21", "keys": "hqidupmwvwlbucm irydhmlhapiq dvii", "truth": "我想要買一台新的手機"}
+{"id": "T21-0", "keys": "hqidupmwvwlbucm urydhmlhapiq dvii", "contains": "我想要買一台新的手機", "typo_at": [5, 0]}
+{"id": "T21-1", "keys": "hqidupmwvwlbucm irychmlhapiq dvii", "contains": "我想要買一台新的手機", "typo_at": [6, 1]}
+{"id": "T21-2", "keys": "hqidupmwvwlbucm irydhmlhapiq dvik", "contains": "我想要買一台新的手機", "typo_at": [9, 3]}
+{"id": "E22", "keys": "mmokiodijmamklbmyowjrb anmtviryrbgrdkmymtydliobuc", "truth": "政府宣布下個月開始調整薪資"}
+{"id": "T22-0", "keys": "mmokiodijmammlbmyowjrb anmtviryrbgrdkmymtydliobuc", "contains": "政府宣布下個月開始調整薪資", "typo_at": [3, 0]}
+{"id": "T22-1", "keys": "mmokiodikmamklbmyowjrb anmtviryrbgrdkmymtydliobuc", "contains": "政府宣布下個月開始調整薪資", "typo_at": [2, 0]}
+{"id": "T22-2", "keys": "mmokiodijmakklbmyowjrb anmtviryrbgrdkmymtydliobuc", "contains": "政府宣布下個月開始調整薪資", "typo_at": [2, 3]}
+{"id": "E23", "keys": "ndyvondoanklgqrrdgamhymanmtp gpdmgmmumbv", "truth": "孩子們在操場上開心地玩耍"}
+{"id": "T23-0", "keys": "ndyvondoanklgqrrdgamhymanmtp gpdmbmmumbv", "contains": "孩子們在操場上開心地玩耍", "typo_at": [10, 1]}
+{"id": "T23-1", "keys": "ndyvondoanklgqrrdgamhymanmtp vpdmgmmumbv", "contains": "孩子們在操場上開心地玩耍", "typo_at": [9, 0]}
+{"id": "T23-2", "keys": "ndyvondoanklgqrrdgamhymanmtp tpdmgmmumbv", "contains": "孩子們在操場上開心地玩耍", "typo_at": [9, 0]}
+{"id": "E24", "keys": "yrqmbqauananvitymyrhhiyrhhi", "truth": "請把門關上謝謝"}
+{"id": "T24-0", "keys": "yrqmbqauananvitynyrhhiyrhhi", "contains": "請把門關上謝謝", "typo_at": [4, 1]}
+{"id": "T24-1", "keys": "yrqmbqauananvitymyrhhiyrhji", "contains": "請把門關上謝謝", "typo_at": [6, 3]}
+{"id": "T24-2", "keys": "yrqmnqauananvitymyrhhiyrhhi", "contains": "請把門關上謝謝", "typo_at": [0, 4]}
+{"id": "E25", "keys": "mymlbyhapiagdiolnkyrsuhoamikpblboooj", "truth": "下雨的時候記得帶傘"}
+{"id": "T25-0", "keys": "myklbyhapiagdiolnkyrsuhoamikpblboooj", "contains": "下雨的時候記得帶傘", "typo_at": [1, 0]}
+{"id": "T25-1", "keys": "mymlbyhapiagdiolnkyrsuhosmikpblboooj", "contains": "下雨的時候記得帶傘", "typo_at": [6, 2]}
+{"id": "T25-2", "keys": "nymlbyhapiagdiolnkyrsuhoamikpblboooj", "contains": "下雨的時候記得帶傘", "typo_at": [0, 0]}
+{"id": "E26", "keys": "cismredkjmyoklgydhmlh ihsytydhmlhapimrmtnonhel p ", "truth": "公司決定在新竹成立新的研發中心"}
+{"id": "T26-0", "keys": "cismrddkjmyoklgydhmlh ihsytydhmlhapimrmtnonhel p ", "contains": "公司決定在新竹成立新的研發中心", "typo_at": [2, 0]}
+{"id": "T26-1", "keys": "ciskredkjmyoklgydhmlh ihsytydhmlhapimrmtnonhel p ", "contains": "公司決定在新竹成立新的研發中心", "typo_at": [1, 1]}
+{"id": "T26-2", "keys": "cismredkjmyoklgydhmlh ihsytydhmlhapimrmtnonhel l ", "contains": "公司決定在新竹成立新的研發中心", "typo_at": [14, 0]}
+{"id": "E27", "keys": "vpdgrtrtgnoklgrksrrlmyisgpjhxfohstctd", "truth": "她喜歡在咖啡廳寫作業"}
+{"id": "T27-0", "keys": "vpdgrtrtgnoklgrksrrlmyisgojhxfohstctd", "contains": "她喜歡在咖啡廳寫作業", "typo_at": [6, 3]}
+{"id": "T27-1", "keys": "vpdgrtrtgnoklgrksrrlmhisgpjhxfohstctd", "contains": "她喜歡在咖啡廳寫作業", "typo_at": [5, 3]}
+{"id": "T27-2", "keys": "vpdgrtrtgnoklgrksrrlmgisgpjhxfohstctd", "contains": "她喜歡在咖啡廳寫作業", "typo_at": [5, 3]}
+{"id": "E28", "keys": "hqioanmbmblmwvyrdiyrombm myyymrowjryrjlmlnhapinnmbchbut", "truth": "我們需要討論一下這個計劃的預算"}
+{"id": "T28-0", "keys": "hqioanmbmblmwvyrdiyrombm myyymrowjryrulmlnhapinnmbchbut", "contains": "我們需要討論一下這個計劃的預算", "typo_at": [10, 2]}
+{"id": "T28-1", "keys": "hqioanmbmblmwvyrdiyrombm myyymrowjeyrjlmlnhapinnmbchbut", "contains": "我們需要討論一下這個計劃的預算", "typo_at": [9, 3]}
+{"id": "T28-2", "keys": "hqioanmbmblmwvyrdiyrombn myyymrowjryrjlmlnhapinnmbchbut", "contains": "我們需要討論一下這個計劃的預算", "typo_at": [6, 0]}
+{"id": "E29", "keys": "tgdimfgoruhqidooanaunn", "truth": "對不起我來晚了"}
+{"id": "T29-0", "keys": "tgdikfgoruhqidooanaunn", "contains": "對不起我來晚了", "typo_at": [1, 0]}
+{"id": "T29-1", "keys": "tgdimfgoruhqifooanaunn", "contains": "對不起我來晚了", "typo_at": [4, 0]}
+{"id": "T29-2", "keys": "ggdimfgoruhqidooanaunn", "contains": "對不起我來晚了", "typo_at": [0, 0]}
+{"id": "E30", "keys": "semcwhqmyrcruhqimbmblmwvniniodhup", "truth": "醫生說我需要多休息"}
+{"id": "T30-0", "keys": "semcwhqmyrcruhqimbmblmwvniniodhuo", "contains": "醫生說我需要多休息", "typo_at": [8, 2]}
+{"id": "T30-1", "keys": "semcwhqmyrcruhqimbmblmwbniniodhup", "contains": "醫生說我需要多休息", "typo_at": [5, 2]}
+{"id": "T30-2", "keys": "semcwuqmyrcruhqimbmblmwvniniodhup", "contains": "醫生說我需要多休息", "typo_at": [1, 0]}
+{"id": "E31", "keys": "yymrimnoysohvhommnhqioanginna dmhdrjjdmqwirm", "truth": "這次旅行我們去了日本和韓國"}
+{"id": "T31-0", "keys": "yymrimnoysohvhokmnhqioanginna dmhdrjjdmqwirm", "contains": "這次旅行我們去了日本和韓國", "typo_at": [3, 2]}
+{"id": "T31-1", "keys": "yymrimnoysohvhommnhqioanginna dmhdrjjsmqwirm", "contains": "這次旅行我們去了日本和韓國", "typo_at": [11, 2]}
+{"id": "T31-2", "keys": "yymrimnoysohvhommnhqioangibna dmhdrjjdmqwirm", "contains": "這次旅行我們去了日本和韓國", "typo_at": [7, 0]}
+{"id": "E32", "keys": "yrmmrymmrdtakmngmnrviogihabbmksjjomnohegiyrucuumylmmrobghapijnd", "truth": "語言模型可以幫助輸入法選出正確的字"}
+{"id": "T32-0", "keys": "yrmmrymmrdtakmngnnrviogihabbmksjjomnohegiyrucuumylmmrobghapijnd", "contains": "語言模型可以幫助輸入法選出正確的字", "typo_at": [4, 0]}
+{"id": "T32-1", "keys": "yrmmrymmrdtakmngmhrviogihabbmksjjomnohegiyrucuumylmmrobghapijnd", "contains": "語言模型可以幫助輸入法選出正確的字", "typo_at": [4, 1]}
+{"id": "T32-2", "keys": "yrmmrymmrdtakmngmnrviogihabbmksjjomnohegiyrucuymylmmrobghapijnd", "contains": "語言模型可以幫助輸入法選出正確的字", "typo_at": [12, 1]}
+{"id": "E33", "keys": "opdhapiq dviirsypumrsqfamyoninifh", "truth": "他的手機號碼是多少"}
+{"id": "T33-0", "keys": "opdhapiw dviirsypumrsqfamyoninifh", "contains": "他的手機號碼是多少", "typo_at": [2, 0]}
+{"id": "T33-1", "keys": "opdhapiq dviirsypumrswfamyoninifh", "contains": "他的手機號碼是多少", "typo_at": [5, 3]}
+{"id": "T33-2", "keys": "opdhapiq dviirzypumrsqfamyoninifh", "contains": "他的手機號碼是多少", "typo_at": [4, 1]}
+{"id": "E34", "keys": "f jwjytyrnlodiyhmlkbhoavniniycbriyr", "truth": "火車站附近有很多商店"}
+{"id": "T34-0", "keys": "f jwjytyrnlodiyhmlkbhoafniniycbriyr", "contains": "火車站附近有很多商店", "typo_at": [6, 3]}
+{"id": "T34-1", "keys": "f jwjytyrnlodiyhmlkbhoavhiniycbriyr", "contains": "火車站附近有很多商店", "typo_at": [7, 0]}
+{"id": "T34-2", "keys": "f jwjytyrnlodiyhmlkbhoavniniycbrjyr", "contains": "火車站附近有很多商店", "typo_at": [9, 0]}
+{"id": "E35", "keys": "ahsmkhapiomwayrtgiyrsucvnesuvfmvmjkmruu", "truth": "昨天的會議記錄已經寄出"}
+{"id": "T35-0", "keys": "ahsmkhapiomwayrtgiyrsucvnezuvfmvmjkmruu", "contains": "昨天的會議記錄已經寄出", "typo_at": [7, 0]}
+{"id": "T35-1", "keys": "ahsmkgapiomwayrtgiyrsucvnesuvfmvmjkmruu", "contains": "昨天的會議記錄已經寄出", "typo_at": [2, 0]}
+{"id": "T35-2", "keys": "ahsmkhapiomwayrtgiyrsuxvnesuvfmvmjkmruu", "contains": "昨天的會議記錄已經寄出", "typo_at": [6, 0]}
+{"id": "E36", "keys": "hqihbbuuhoamiyymrowjranraombcenekbsqnlidvihanarrwj", "truth": "我覺得這個問題沒有那麼簡單"}
+{"id": "T36-0", "keys": "hqihbbuuhoamiyymrowjranraombcenekbdqnlidvihanarrwj", "contains": "我覺得這個問題沒有那麼簡單", "typo_at": [9, 0]}
+{"id": "T36-1", "keys": "hqihbbuuhoamiyymrowjrajraombcenekbsqnlidvihanarrwj", "contains": "我覺得這個問題沒有那麼簡單", "typo_at": [5, 1]}
+{"id": "T36-2", "keys": "hqihbbuuhoamiyymrowjranraombcenelbsqnlidvihanarrwj", "contains": "我覺得這個問題沒有那麼簡單", "typo_at": [8, 0]}
+{"id": "E37", "keys": "jkphrmlbmwvijehbndhqmklgybgrmdmviotblnyckgjslehgr", "truth": "老師要求學生在週五以前交報告"}
+{"id": "T37-0", "keys": "jkphrmlbmwvijehbndhqmklgybgrmdmvuotblnyckgjslehgr", "contains": "老師要求學生在週五以前交報告", "typo_at": [9, 1]}
+{"id": "T37-1", "keys": "jkphrmlbjwvijehbndhqmklgybgrmdmviotblnyckgjslehgr", "contains": "老師要求學生在週五以前交報告", "typo_at": [2, 0]}
+{"id": "T37-2", "keys": "jkphrmlbmwvijehbndhqmklgybgrmdmvioyblnyckgjslehgr", "contains": "老師要求學生在週五以前交報告", "typo_at": [10, 0]}
+{"id": "E38", "keys": "anauymhqioanm goruronf cbbrvndmfvnd", "truth": "晚上我們一起吃火鍋好不好"}
+{"id": "T38-0", "keys": "anauymhqioanm glruronf cbbrvndmfvnd", "contains": "晚上我們一起吃火鍋好不好", "typo_at": [5, 1]}
+{"id": "T38-1", "keys": "anauymhqioanm goruronf cbbrvndmcvnd", "contains": "晚上我們一起吃火鍋好不好", "typo_at": [10, 1]}
+{"id": "T38-2", "keys": "anauymhqioanm goruront cbbrvndmfvnd", "contains": "晚上我們一起吃火鍋好不好", "typo_at": [7, 0]}
+{"id": "E39", "keys": "yymryrnlmbwuafhhhhapiyolnpqmbhoavirpo ", "truth": "這部電影的劇情很感人"}
+{"id": "T39-0", "keys": "yymryrnlmbwuafhhhhapiyolnpqmbhoavirpl ", "contains": "這部電影的劇情很感人", "typo_at": [9, 0]}
+{"id": "T39-1", "keys": "yymryrnlmbwuafhhhhapiyolhpqmbhoavirpo ", "contains": "這部電影的劇情很感人", "typo_at": [5, 3]}
+{"id": "T39-2", "keys": "yymryrnlkbwuafhhhhapiyolnpqmbhoavirpo ", "contains": "這部電影的劇情很感人", "typo_at": [2, 0]}
+{"id": "E40", "keys": "yrqmbjjomnohonfhapilbsmvrsypuhdrjphumrsqf", "truth": "請輸入你的帳號和密碼"}
+{"id": "T40-0", "keys": "yrqmbjjomnohonfhapilbwmvrsypuhdrjphumrsqf", "contains": "請輸入你的帳號和密碼", "typo_at": [5, 2]}
+{"id": "T40-1", "keys": "yrqmbjjomnohonfhapilbsmvrsypuherjphumrsqf", "contains": "請輸入你的帳號和密碼", "typo_at": [7, 1]}
+{"id": "T40-2", "keys": "yrqmbjjomnlhonfhapilbsmvrsypuhdrjphumrsqf", "contains": "請輸入你的帳號和密碼", "typo_at": [2, 0]}
+{"id": "E41", "keys": "opdoanvfheyysoyqimglnnnylmchqohapiciipru", "truth": "他們終於找到了遺失的錢包"}
+{"id": "T41-0", "keys": "opdoanvfheyysoyqimglnnnylmchaohapiciipru", "contains": "他們終於找到了遺失的錢包", "typo_at": [8, 1]}
+{"id": "T41-1", "keys": "opdoanvfheyysoyqimglnnnylmcbqohapiciipru", "contains": "他們終於找到了遺失的錢包", "typo_at": [8, 0]}
+{"id": "T41-2", "keys": "opdianvfheyysoyqimglnnnylmchqohapiciipru", "contains": "他們終於找到了遺失的錢包", "typo_at": [1, 0]}
+{"id": "E42", "keys": "mkonfdnnmbcgjsleyrcruabmkomwamyk mlby", "truth": "天氣預報說明天會下大雨"}
+{"id": "T42-0", "keys": "mkonfdnnnbcgjsleyrcruabmkomwamyk mlby", "contains": "天氣預報說明天會下大雨", "typo_at": [2, 2]}
+{"id": "T42-1", "keys": "mkonfrnnmbcgjsleyrcruabmkomwamyk mlby", "contains": "天氣預報說明天會下大雨", "typo_at": [1, 3]}
+{"id": "T42-2", "keys": "mkonfdnnmbcgjsleyrcrusbmkomwamyk mlby", "contains": "天氣預報說明天會下大雨", "typo_at": [5, 0]}
+{"id": "E43", "keys": "hqihapibbkeoygklgyrbrkiog", "truth": "我的朋友住在高雄"}
+{"id": "T43-0", "keys": "hqihapibbkepygklgyrbrkiog", "contains": "我的朋友住在高雄", "typo_at": [4, 0]}
+{"id": "T43-1", "keys": "hqiyapibbkeoygklgyrbrkiog", "contains": "我的朋友住在高雄", "typo_at": [1, 0]}
+{"id": "T43-2", "keys": "hqihapibbkeoygklgtrbrkiog", "contains": "我的朋友住在高雄", "typo_at": [6, 0]}
+{"id": "E44", "keys": "yymrowjrjjnobbtwtmbmblmwvmlwkydhmldhibppojlkbq", "truth": "這個軟體需要更新才能使用"}
+{"id": "T44-0", "keys": "yymrowjrjjnobbtwtmbmblmwcmlwkydhmldhibppojlkbq", "contains": "這個軟體需要更新才能使用", "typo_at": [5, 2]}
+{"id": "T44-1", "keys": "yymrowjrjjhobbtwtmbmblmwvmlwkydhmldhibppojlkbq", "contains": "這個軟體需要更新才能使用", "typo_at": [2, 2]}
+{"id": "T44-2", "keys": "yymrowjrjjnobbtwtmbmblmwbmlwkydhmldhibppojlkbq", "contains": "這個軟體需要更新才能使用", "typo_at": [5, 2]}
+{"id": "E45", "keys": "k jmsojanlhoavtcbhogdiaboqhapiybjjhgksomwa", "truth": "大家都很期待明年的運動會"}
+{"id": "T45-0", "keys": "k jmsojanlhoagtcbhogdiaboqhapiybjjhgksomwa", "contains": "大家都很期待明年的運動會", "typo_at": [3, 3]}
+{"id": "T45-1", "keys": "k jmsojanlhoavtdbhogdiaboqhapiybjjhgksomwa", "contains": "大家都很期待明年的運動會", "typo_at": [4, 1]}
+{"id": "T45-2", "keys": "k jmsojanlhoavtcbhogdiaboqhapihbjjhgksomwa", "contains": "大家都很期待明年的運動會", "typo_at": [9, 0]}
+{"id": "E46", "keys": "onfgrtrtgnorapvtodywlvamyorksrrlmy", "truth": "你喜歡喝茶還是咖啡"}
+{"id": "T46-0", "keys": "onfgrtrtgnorapvtodywlvamyorlsrrlmy", "contains": "你喜歡喝茶還是咖啡", "typo_at": [7, 1]}
+{"id": "T46-1", "keys": "onfgrtrtgnoralvtodywlvamyorksrrlmy", "contains": "你喜歡喝茶還是咖啡", "typo_at": [3, 2]}
+{"id": "T46-2", "keys": "onfgrtrtgnorapvtodywlvamyodksrrlmy", "contains": "你喜歡喝茶還是咖啡", "typo_at": [7, 0]}
+{"id": "E47", "keys": "vsqfvsqfmylmklgigtihsyhsojrkanauyeoiv", "truth": "媽媽正在廚房做晚餐"}
+{"id": "T47-0", "keys": "vsqfvsqfmylmklgigtihsybsojrkanauyeoiv", "contains": "媽媽正在廚房做晚餐", "typo_at": [5, 3]}
+{"id": "T47-1", "keys": "vsqfvsqfmylmklgigtihsyhsojdkanauyeoiv", "contains": "媽媽正在廚房做晚餐", "typo_at": [6, 2]}
+{"id": "T47-2", "keys": "vsqfvsqfmylmjlgigtihsyhsojrkanauyeoiv", "contains": "媽媽正在廚房做晚餐", "typo_at": [3, 0]}
+{"id": "E48", "keys": "hqioangyormhermglnhbnddyckrcmwvj cshcytg", "truth": "我們走路到學校只要十分鐘"}
+{"id": "T48-0", "keys": "hqipangyormhermglnhbnddyckrcmwvj cshcytg", "contains": "我們走路到學校只要十分鐘", "typo_at": [1, 0]}
+{"id": "T48-1", "keys": "hqioangyormhermglnhbnddyckrdmwvj cshcytg", "contains": "我們走路到學校只要十分鐘", "typo_at": [7, 1]}
+{"id": "T48-2", "keys": "hqioangyormhermglnhbnddyckdcmwvj cshcytg", "contains": "我們走路到學校只要十分鐘", "typo_at": [7, 0]}
+{"id": "E49", "keys": "yymrdmlgahapiohsjkaamyom oyttjkanirhapihdyjhbndjmso", "truth": "這本書的作者是一位著名的科學家"}
+{"id": "T49-0", "keys": "yymrdmlgahapiohsjkaamyom otttjkanirhapihdyjhbndjmso", "contains": "這本書的作者是一位著名的科學家", "typo_at": [8, 1]}
+{"id": "T49-1", "keys": "yymrdmlgahapiohsjkaamyom oyttjkanirhapihdyjhbndjmsk", "contains": "這本書的作者是一位著名的科學家", "typo_at": [14, 3]}
+{"id": "T49-2", "keys": "yymrdmlgahapiohsjkaamyom iyttjkanirhapihdyjhbndjmso", "contains": "這本書的作者是一位著名的科學家", "typo_at": [8, 0]}
+{"id": "E50", "keys": "ybgrdjhapiyckyniblmyyyfbrlbqyvgqyx", "truth": "週末的交通非常擁擠"}
+{"id": "T50-0", "keys": "ybgrdjhapiyckyniblmyyyfbrlbqhvgqyx", "contains": "週末的交通非常擁擠", "typo_at": [7, 1]}
+{"id": "T50-1", "keys": "ybgrdjhapiyckyniblmyyyfbrlbqyvtqyx", "contains": "週末的交通非常擁擠", "typo_at": [7, 3]}
+{"id": "T50-2", "keys": "ybgrdjhapiyckyniblmyyyfbrlbqycgqyx", "contains": "週末的交通非常擁擠", "typo_at": [7, 2]}
+{"id": "E51", "keys": "hqigrtrtgnorontyhcwd", "truth": "我喜歡吃蘋果"}
+{"id": "T51-0", "keys": "hqigrtrtghorontyhcwd", "contains": "我喜歡吃蘋果", "typo_at": [2, 2]}
+{"id": "T51-1", "keys": "hqigrtrtgnorontyhcws", "contains": "我喜歡吃蘋果", "typo_at": [5, 1]}
+{"id": "T51-2", "keys": "hqigrtetgnorontyhcwd", "contains": "我喜歡吃蘋果", "typo_at": [1, 3]}
+{"id": "E52", "keys": "opdldhewdklgu ym", "truth": "他被困在山上"}
+{"id": "T52-0", "keys": "opdldhewdklgu um", "contains": "他被困在山上", "typo_at": [5, 0]}
+{"id": "T52-1", "keys": "opxldhewdklgu ym", "contains": "他被困在山上", "typo_at": [0, 2]}
+{"id": "T52-2", "keys": "opdldhewdklgu gm", "contains": "他被困在山上", "typo_at": [5, 0]}
+{"id": "E53", "keys": "yymrogebhtwhoavmnrbbpe", "truth": "這隻貓很可愛"}
+{"id": "T53-0", "keys": "yymrogebhtwhoavmjrbbpe", "contains": "這隻貓很可愛", "typo_at": [4, 1]}
+{"id": "T53-1", "keys": "tymrogebhtwhoavmnrbbpe", "contains": "這隻貓很可愛", "typo_at": [0, 0]}
+{"id": "T53-2", "keys": "yymrogebhtwhoavmnrhbpe", "contains": "這隻貓很可愛", "typo_at": [5, 0]}
+{"id": "E54", "keys": "m ogeydhmltjggnd", "truth": "一雙新鞋子"}
+{"id": "T54-0", "keys": "m ogeydgmltjggnd", "contains": "一雙新鞋子", "typo_at": [2, 2]}
+{"id": "T54-1", "keys": "m ogeydhmotjggnd", "contains": "一雙新鞋子", "typo_at": [2, 4]}
+{"id": "T54-2", "keys": "m oheydhmltjggnd", "contains": "一雙新鞋子", "typo_at": [1, 1]}
+{"id": "E55", "keys": "opdywlvenekbwrdoo", "truth": "他還沒有回來"}
+{"id": "T55-0", "keys": "opdywlvehekbwrdoo", "contains": "他還沒有回來", "typo_at": [2, 1]}
+{"id": "T55-1", "keys": "opdywlvenekberdoo", "contains": "他還沒有回來", "typo_at": [4, 0]}
+{"id": "T55-2", "keys": "opdywlvenekbwrxoo", "contains": "他還沒有回來", "typo_at": [5, 0]}
+{"id": "E56", "keys": "mgiu amyoirevfnasjeyrbrhapiu ", "truth": "玉山是台灣最高的山"}
+{"id": "T56-0", "keys": "mgiu amyoirevfmasjeyrbrhapiu ", "contains": "玉山是台灣最高的山", "typo_at": [4, 3]}
+{"id": "T56-1", "keys": "mgiu amyoirevfnasjeyrbrhwpiu ", "contains": "玉山是台灣最高的山", "typo_at": [7, 1]}
+{"id": "T56-2", "keys": "mgiu amyoirevfnasjeyrbrhqpiu ", "contains": "玉山是台灣最高的山", "typo_at": [7, 1]}
+{"id": "E57", "keys": "mfmwvbbuhgigytgnhe", "truth": "不要亂丟垃圾"}
+{"id": "T57-0", "keys": "mfmqvbbuhgigytgnhe", "contains": "不要亂丟垃圾", "typo_at": [1, 1]}
+{"id": "T57-1", "keys": "kfmwvbbuhgigytgnhe", "contains": "不要亂丟垃圾", "typo_at": [0, 0]}
+{"id": "T57-2", "keys": "mtmwvbbuhgigytgnhe", "contains": "不要亂丟垃圾", "typo_at": [0, 1]}
+{"id": "E58", "keys": "yymroytrbucmlmojrkjllnhoavyrsipjbmc", "truth": "這位員工做事很認真"}
+{"id": "T58-0", "keys": "yymroytrbucmlmojrkjllnhoqvyrsipjbmc", "contains": "這位員工做事很認真", "typo_at": [6, 2]}
+{"id": "T58-1", "keys": "yymroytrbycmlmojrkjllnhoavyrsipjbmc", "contains": "這位員工做事很認真", "typo_at": [2, 2]}
+{"id": "T58-2", "keys": "yymroytrbucmlmojrkjllnhoavyrsipmbmc", "contains": "這位員工做事很認真", "typo_at": [8, 0]}
+{"id": "E59", "keys": "hqisgjwpnnm thbuvndsgjwphapimrno", "truth": "我聽了一首好聽的歌"}
+{"id": "T59-0", "keys": "hqiegjwpnnm thbuvndsgjwphapimrno", "contains": "我聽了一首好聽的歌", "typo_at": [1, 0]}
+{"id": "T59-1", "keys": "hqisgjwpnnn thbuvndsgjwphapimrno", "contains": "我聽了一首好聽的歌", "typo_at": [3, 0]}
+{"id": "T59-2", "keys": "hqisgjwpnnm thbuvndsgjwphapimrnl", "contains": "我聽了一首好聽的歌", "typo_at": [8, 3]}
+{"id": "E60", "keys": "opdomrqckhmlmtmbcgimrnodgti", "truth": "他拿斧頭去砍樹"}
+{"id": "T60-0", "keys": "oodomrqckhmlmtmbcgimrnodgti", "contains": "他拿斧頭去砍樹", "typo_at": [0, 1]}
+{"id": "T60-1", "keys": "opdomrqckhnlmtmbcgimrnodgti", "contains": "他拿斧頭去砍樹", "typo_at": [2, 3]}
+{"id": "T60-2", "keys": "opdomrqckhmlmtmbcgikrnodgti", "contains": "他拿斧頭去砍樹", "typo_at": [5, 0]}
+{"id": "E61", "keys": "hqihqbunnm yuprvndyoln", "truth": "我看了一齣好劇"}
+{"id": "T61-0", "keys": "haihqbunnm yuprvndyoln", "contains": "我看了一齣好劇", "typo_at": [0, 1]}
+{"id": "T61-1", "keys": "hqihqbunnm yiprvndyoln", "contains": "我看了一齣好劇", "typo_at": [4, 1]}
+{"id": "T61-2", "keys": "hqihqbunnm yuprvndyolj", "contains": "我看了一齣好劇", "typo_at": [6, 3]}
+{"id": "E62", "keys": "nohgdinnmfvndytapwp", "truth": "久等了不好意思"}
+{"id": "T62-0", "keys": "nongdinnmfvndytapwp", "contains": "久等了不好意思", "typo_at": [1, 0]}
+{"id": "T62-1", "keys": "nohgdinnmfvnxytapwp", "contains": "久等了不好意思", "typo_at": [4, 2]}
+{"id": "T62-2", "keys": "nohgdinnmfvndyrapwp", "contains": "久等了不好意思", "typo_at": [5, 1]}
+{"id": "E63", "keys": "hqinoonfm owjro pqmb", "truth": "我欠你一個人情"}
+{"id": "T63-0", "keys": "hqinoonfm owjro lqmb", "contains": "我欠你一個人情", "typo_at": [6, 0]}
+{"id": "T63-1", "keys": "hqinionfm owjro pqmb", "contains": "我欠你一個人情", "typo_at": [1, 1]}
+{"id": "T63-2", "keys": "hqimoonfm owjro pqmb", "contains": "我欠你一個人情", "typo_at": [1, 0]}
+{"id": "E64", "keys": "dhedhkbhapidhenolmihoavkbnir", "truth": "板橋的皮蛋很有名"}
+{"id": "T64-0", "keys": "dhedhkbhapifhenolmihoavkbnir", "contains": "板橋的皮蛋很有名", "typo_at": [3, 0]}
+{"id": "T64-1", "keys": "dhedhkbhalidhenolmihoavkbnir", "contains": "板橋的皮蛋很有名", "typo_at": [2, 2]}
+{"id": "T64-2", "keys": "dhedhkbhapkdhenolmihoavkbnir", "contains": "板橋的皮蛋很有名", "typo_at": [2, 3]}
+{"id": "E65", "keys": "opdjcmvhtjkadhetjgggyoklgdhedhkbhoggnym", "truth": "他穿著皮鞋走在板橋街上"}
+{"id": "T65-0", "keys": "opdjcmvhtjkadhetjgggyoklgdhedhkbhovgnym", "contains": "他穿著皮鞋走在板橋街上", "typo_at": [9, 2]}
+{"id": "T65-1", "keys": "opdjcmvhtjkaduetjgggyoklgdhedhkbhoggnym", "contains": "他穿著皮鞋走在板橋街上", "typo_at": [3, 1]}
+{"id": "T65-2", "keys": "opdjcmvhtjkadhetjgggyokkgdhedhkbhoggnym", "contains": "他穿著皮鞋走在板橋街上", "typo_at": [6, 1]}
+{"id": "E66", "keys": "jddoohapiptwollomwamlwkvnd", "truth": "未來的世界會更好"}
+{"id": "T66-0", "keys": "jddoohapiltwollomwamlwkvnd", "contains": "未來的世界會更好", "typo_at": [3, 0]}
+{"id": "T66-1", "keys": "jddoohapiptwollomwamlwkfnd", "contains": "未來的世界會更好", "typo_at": [7, 0]}
+{"id": "T66-2", "keys": "jxdoohapiptwollomwamlwkvnd", "contains": "未來的世界會更好", "typo_at": [0, 1]}
+{"id": "E67", "keys": "vfgrwduuhfdk jmsohapiytapfdyj", "truth": "結果出乎大家的意料"}
+{"id": "T67-0", "keys": "vfgrqduuhfdk jmsohapiytapfdyj", "contains": "結果出乎大家的意料", "typo_at": [1, 0]}
+{"id": "T67-1", "keys": "vfgrwduuhfdi jmsohapiytapfdyj", "contains": "結果出乎大家的意料", "typo_at": [4, 0]}
+{"id": "T67-2", "keys": "vfgrwduuhfdk jmsohaoiytapfdyj", "contains": "結果出乎大家的意料", "typo_at": [6, 2]}
+{"id": "E68", "keys": "wdtooghapijllnpqmbmwvm ylmhm ylmhojrk", "truth": "困難的事情要一步一步做"}
+{"id": "T68-0", "keys": "wdtooghapijllmpqmbmwvm ylmhm ylmhojrk", "contains": "困難的事情要一步一步做", "typo_at": [3, 3]}
+{"id": "T68-1", "keys": "wdtooghapijllnpqmbmwvm ylmhm ylnhojrk", "contains": "困難的事情要一步一步做", "typo_at": [9, 2]}
+{"id": "T68-2", "keys": "wdtooghapijllnpqmbmwvm ylmhm ykmhojrk", "contains": "困難的事情要一步一步做", "typo_at": [9, 1]}
+{"id": "E69", "keys": "dgtiymkbm ogehayf", "truth": "樹上有一隻鳥"}
+{"id": "T69-0", "keys": "dgtiymkbj ogehayf", "contains": "樹上有一隻鳥", "typo_at": [3, 0]}
+{"id": "T69-1", "keys": "dgyiymkbm ogehayf", "contains": "樹上有一隻鳥", "typo_at": [0, 2]}
+{"id": "T69-2", "keys": "dgtiymkbm lgehayf", "contains": "樹上有一隻鳥", "typo_at": [4, 0]}
+{"id": "E70", "keys": "ogeq omrj yrojmymfmbcybhg", "truth": "雙手合十許下願望"}
+{"id": "T70-0", "keys": "ogeq omrj ytojmymfmbcybhg", "contains": "雙手合十許下願望", "typo_at": [4, 1]}
+{"id": "T70-1", "keys": "ogeq omrj yrojmymtmbcybhg", "contains": "雙手合十許下願望", "typo_at": [6, 1]}
+{"id": "T70-2", "keys": "ogea omrj yrojmymfmbcybhg", "contains": "雙手合十許下願望", "typo_at": [1, 0]}
+{"id": "E71", "keys": "mgifdetwveamhhoavvndrapv", "truth": "玉米濃湯很好喝"}
+{"id": "T71-0", "keys": "mgkfdetwveamhhoavvndrapv", "contains": "玉米濃湯很好喝", "typo_at": [0, 2]}
+{"id": "T71-1", "keys": "mgifdetwvramhhoavvndrapv", "contains": "玉米濃湯很好喝", "typo_at": [3, 0]}
+{"id": "T71-2", "keys": "mgifdetwveamhyoavvndrapv", "contains": "玉米濃湯很好喝", "typo_at": [4, 0]}
+{"id": "E72", "keys": "hgiqyajmfbqhapitogxyhvbsle", "truth": "丟掉不用的舊衣服"}
+{"id": "T72-0", "keys": "hgiqyammfbqhapitogxyhvbsle", "contains": "丟掉不用的舊衣服", "typo_at": [1, 3]}
+{"id": "T72-1", "keys": "hgiqyajmfbqhapitogxyhvbsld", "contains": "丟掉不用的舊衣服", "typo_at": [7, 3]}
+{"id": "T72-2", "keys": "hgiqyzjmfbqhapitogxyhvbsle", "contains": "丟掉不用的舊衣服", "typo_at": [1, 2]}
+{"id": "E73", "keys": "opdqaudhekooyvpklgdhedhkbjwjytyrnn", "truth": "他把皮夾忘在板橋車站了"}
+{"id": "T73-0", "keys": "opdqaudhekooyvpklgdhedhkbjwjytyrjn", "contains": "他把皮夾忘在板橋車站了", "typo_at": [10, 0]}
+{"id": "T73-1", "keys": "opdqauduekooyvpklgdhedhkbjwjytyrnn", "contains": "他把皮夾忘在板橋車站了", "typo_at": [2, 1]}
+{"id": "T73-2", "keys": "opdqaudhekooyfpklgdhedhkbjwjytyrnn", "contains": "他把皮夾忘在板橋車站了", "typo_at": [4, 1]}
+{"id": "E74", "keys": "mnpphaabmkomwamymlby", "truth": "恐怕明天會下雨"}
+{"id": "T74-0", "keys": "mnpphazbmkomwamymlby", "contains": "恐怕明天會下雨", "typo_at": [2, 0]}
+{"id": "T74-1", "keys": "mnpphasbmkomwamymlby", "contains": "恐怕明天會下雨", "typo_at": [2, 0]}
+{"id": "T74-2", "keys": "mnpphaabmkomwakymlby", "contains": "恐怕明天會下雨", "typo_at": [5, 0]}
+{"id": "E75", "keys": "mnpyvyiojsuvfmvmnlheqohpmnn", "truth": "死亡率已經降低了"}
+{"id": "T75-0", "keys": "mnpyvyiojsuvfmvmnlheqojpmnn", "contains": "死亡率已經降低了", "typo_at": [6, 1]}
+{"id": "T75-1", "keys": "mnpybyiojsuvfmvmnlheqohpmnn", "contains": "死亡率已經降低了", "typo_at": [1, 1]}
+{"id": "T75-2", "keys": "mnpyvyiojsuvfmvmnpheqohpmnn", "contains": "死亡率已經降低了", "typo_at": [5, 1]}
+{"id": "E76", "keys": "okronfmfjjv", "truth": "佑你平安"}
+{"id": "T76-0", "keys": "okronrmfjjv", "contains": "佑你平安", "typo_at": [1, 2]}
+{"id": "T76-1", "keys": "okronfmfjnv", "contains": "佑你平安", "typo_at": [3, 0]}
+{"id": "T76-2", "keys": "okronfmfjjc", "contains": "佑你平安", "typo_at": [3, 1]}
+{"id": "E77", "keys": "hqiokrythuonfsuvfmvmhoavveksksnn", "truth": "我知道你已經很努力了"}
+{"id": "T77-0", "keys": "bqiokrythuonfsuvfmvmhoavveksksnn", "contains": "我知道你已經很努力了", "typo_at": [0, 0]}
+{"id": "T77-1", "keys": "hqiokruthuonfsuvfmvmhoavveksksnn", "contains": "我知道你已經很努力了", "typo_at": [2, 0]}
+{"id": "T77-2", "keys": "hqiokrythuojfsuvfmvmhoavveksksnn", "contains": "我知道你已經很努力了", "typo_at": [3, 1]}
+{"id": "E78", "keys": "opdyrcruopdsuvfmvmmnpp nn", "truth": "他說他已經死心了"}
+{"id": "T78-0", "keys": "opdyrcruopdshvfmvmmnpp nn", "contains": "他說他已經死心了", "typo_at": [3, 1]}
+{"id": "T78-1", "keys": "opdyrcruopdsuvfmvjmnpp nn", "contains": "他說他已經死心了", "typo_at": [4, 4]}
+{"id": "T78-2", "keys": "opdyrcruopdsjvfmvmmnpp nn", "contains": "他說他已經死心了", "typo_at": [3, 1]}
+{"id": "E79", "keys": "yymrowjrmbwubvvwkbm owjranraombc", "truth": "這個電腦有一個問題"}
+{"id": "T79-0", "keys": "yymrowjrmbwubvbwkbm owjranraombc", "contains": "這個電腦有一個問題", "typo_at": [3, 2]}
+{"id": "T79-1", "keys": "yymrowjrmbwubvvwkbm owjrahraombc", "contains": "這個電腦有一個問題", "typo_at": [7, 1]}
+{"id": "T79-2", "keys": "yymrowjrmbwubvvwkbm owjeanraombc", "contains": "這個電腦有一個問題", "typo_at": [6, 3]}
+{"id": "E80", "keys": "kbkbo okrythuhomrjvd", "truth": "冇有人知道答案"}
+{"id": "T80-0", "keys": "kbkbi okrythuhomrjvd", "contains": "冇有人知道答案", "typo_at": [2, 0]}
+{"id": "T80-1", "keys": "kbkbo okrythuhonrjvd", "contains": "冇有人知道答案", "typo_at": [5, 2]}
+{"id": "T80-2", "keys": "kbkbo okrythuhomrjcd", "contains": "冇有人知道答案", "typo_at": [6, 1]}
+{"id": "E81", "keys": "jdokrhapimnppbugyryrvo buhjmmftjka", "truth": "未知的恐懼讓人睡不著"}
+{"id": "T81-0", "keys": "jdokrhapimnppbugyryrgo buhjmmftjka", "contains": "未知的恐懼讓人睡不著", "typo_at": [5, 4]}
+{"id": "T81-1", "keys": "jdokrhapimnppbugyryrvo buhjmnftjka", "contains": "未知的恐懼讓人睡不著", "typo_at": [8, 0]}
+{"id": "T81-2", "keys": "jdokrhapimnppbugyryrvo buhjmmgtjka", "contains": "未知的恐懼讓人睡不著", "typo_at": [8, 1]}
+{"id": "E82", "keys": "vpdhapimrnogesjonaomgim dtgeewoteang", "truth": "她的歌聲像玉一樣溫潤"}
+{"id": "T82-0", "keys": "vpdhapimenogesjonaomgim dtgeewoteang", "contains": "她的歌聲像玉一樣溫潤", "typo_at": [2, 1]}
+{"id": "T82-1", "keys": "vpdhapikrnogesjonaomgim dtgeewoteang", "contains": "她的歌聲像玉一樣溫潤", "typo_at": [2, 0]}
+{"id": "T82-2", "keys": "vpdhapimrnogesjonaomgim ctgeewoteang", "contains": "她的歌聲像玉一樣溫潤", "typo_at": [7, 0]}
+{"id": "E83", "keys": "ldhemrnoomgnhapidgtimkggywvnndheymyjwj", "truth": "被砍倒的樹壓壞了皮卡車"}
+{"id": "T83-0", "keys": "ldhemrmoomgnhapidgtimkggywvnndheymyjwj", "contains": "被砍倒的樹壓壞了皮卡車", "typo_at": [1, 2]}
+{"id": "T83-1", "keys": "ldhemrnoomgnhapidgtimkggywvnndueymyjwj", "contains": "被砍倒的樹壓壞了皮卡車", "typo_at": [8, 1]}
+{"id": "T83-2", "keys": "ldhemrnoomgnhapidgtimkggywvnneheymyjwj", "contains": "被砍倒的樹壓壞了皮卡車", "typo_at": [8, 0]}
+{"id": "E84", "keys": "ogej hailhapiehjrhgksvfgrwdhoavihsmks", "truth": "雙十節的活動結果很成功"}
+{"id": "T84-0", "keys": "ogej hailhapiehjfhgksvfgrwdhoavihsmks", "contains": "雙十節的活動結果很成功", "typo_at": [4, 3]}
+{"id": "T84-1", "keys": "ogej hailhapiehjrhgksvfgrwdhoavihsnks", "contains": "雙十節的活動結果很成功", "typo_at": [10, 0]}
+{"id": "T84-2", "keys": "ogej hailhapiehjrhgksffgrwdhoavihsmks", "contains": "雙十節的活動結果很成功", "typo_at": [6, 0]}
+{"id": "E85", "keys": "opdqautyhcwdhgivfomrwdofquhapicnlhcnlh", "truth": "他把蘋果丟給困倦的弟弟"}
+{"id": "T85-0", "keys": "opdqautyhdwdhgivfomrwdofquhapicnlhcnlh", "contains": "他把蘋果丟給困倦的弟弟", "typo_at": [2, 3]}
+{"id": "T85-1", "keys": "opdqautyhcwdhgivfpmrwdofquhapicnlhcnlh", "contains": "他把蘋果丟給困倦的弟弟", "typo_at": [5, 2]}
+{"id": "T85-2", "keys": "opdqautyhcwdhgivfomrwdofquhapicnlhcnoh", "contains": "他把蘋果丟給困倦的弟弟", "typo_at": [10, 2]}
+{"id": "E86", "keys": "yymrogedhepruhapiomwcdherkiyrbrnn", "truth": "這隻皮包的價格太高了"}
+{"id": "T86-0", "keys": "yymrogedhepruhwpiomwcdherkiyrbrnn", "contains": "這隻皮包的價格太高了", "typo_at": [4, 1]}
+{"id": "T86-1", "keys": "yymrogedhepruhapiomwxdherkiyrbrnn", "contains": "這隻皮包的價格太高了", "typo_at": [5, 3]}
+{"id": "T86-2", "keys": "yyjrogedhepruhapiomwcdherkiyrbrnn", "contains": "這隻皮包的價格太高了", "typo_at": [0, 2]}
+{"id": "E87", "keys": "hqioanklgdhedhkbqjloybjjytyrmrttcmwyl", "truth": "我們在板橋捷運站碰面"}
+{"id": "T87-0", "keys": "hqkoanklgdhedhkbqjloybjjytyrmrttcmwyl", "contains": "我們在板橋捷運站碰面", "typo_at": [0, 2]}
+{"id": "T87-1", "keys": "hqioanklgdhedhkbqjpoybjjytyrmrttcmwyl", "contains": "我們在板橋捷運站碰面", "typo_at": [5, 2]}
+{"id": "T87-2", "keys": "hqioanklgdhedhkbqjloybjkytyrmrttcmwyl", "contains": "我們在板橋捷運站碰面", "typo_at": [6, 3]}
+{"id": "E88", "keys": "okryryiayfikuamyoksamwg", "truth": "知識就是力量"}
+{"id": "T88-0", "keys": "okryryiayfikuamyoksanwg", "contains": "知識就是力量", "typo_at": [5, 1]}
+{"id": "T88-1", "keys": "okryryiayfikuakyoksamwg", "contains": "知識就是力量", "typo_at": [3, 1]}
+{"id": "T88-2", "keys": "okryryiayfokuamyoksamwg", "contains": "知識就是力量", "typo_at": [2, 2]}
+{"id": "E89", "keys": "suokrhapijllnjwjcmfibppsuokvfok", "truth": "已知的事實不能改變"}
+{"id": "T89-0", "keys": "suokehapijllnjwjcmfibppsuokvfok", "contains": "已知的事實不能改變", "typo_at": [1, 2]}
+{"id": "T89-1", "keys": "suokrhapijllnjwjcmfibppsuolvfok", "contains": "已知的事實不能改變", "typo_at": [7, 3]}
+{"id": "T89-2", "keys": "suokrhapijllnjwjcmfibppsulkvfok", "contains": "已知的事實不能改變", "typo_at": [7, 2]}
+{"id": "E90", "keys": "oinmkl ojhqidupronsuvfmvmimoiiqyajhapiomlkfbrw", "truth": "今天中午我想吃已經冷掉的便當"}
+{"id": "T90-0", "keys": "oinmjl ojhqidupronsuvfmvmimoiiqyajhapiomlkfbrw", "contains": "今天中午我想吃已經冷掉的便當", "typo_at": [1, 1]}
+{"id": "T90-1", "keys": "oinmkl ojhqidupronsuvfnvmimoiiqyajhapiomlkfbrw", "contains": "今天中午我想吃已經冷掉的便當", "typo_at": [8, 2]}
+{"id": "T90-2", "keys": "oinmkp ojhqidupronsuvfmvmimoiiqyajhapiomlkfbrw", "contains": "今天中午我想吃已經冷掉的便當", "typo_at": [2, 0]}

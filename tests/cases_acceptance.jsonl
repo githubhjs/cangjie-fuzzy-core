@@ -1,0 +1,5 @@
+{"id":"exact","keys":"yhmbc","contains":"顏"}
+{"id":"one-c-v","keys":"yhmbv","contains":"顏"}
+{"id":"one-m-n","keys":"yhnbc","contains":"顏"}
+{"id":"two-errors","keys":"yhnbv","excludes":"顏"}
+{"id":"non-neighbor","keys":"yhmbp","excludes":"顏"}

@@ -1,0 +1,5 @@
+{"id": "exact", "keys": "yhmbc", "truth": null, "top": "頻", "cands": ["頻", "顏", "顪", "顔", "須"], "ms_per_key": 0.29, "ms_max_key": 0.74, "candidate_count": 19, "pages_complete": true, "target_rank": 2, "ok": true}
+{"id": "one-c-v", "keys": "yhmbv", "truth": null, "top": "广耍", "cands": ["广耍", "頻", "顏", "顪", "顔"], "ms_per_key": 0.21, "ms_max_key": 0.53, "candidate_count": 16, "pages_complete": true, "target_rank": 3, "ok": true}
+{"id": "one-m-n", "keys": "yhnbc", "truth": null, "top": "亢貼", "cands": ["亢貼", "頻", "顏", "顪", "顔"], "ms_per_key": 0.23, "ms_max_key": 0.51, "candidate_count": 12, "pages_complete": true, "target_rank": 3, "ok": true}
+{"id": "two-errors", "keys": "yhnbv", "truth": null, "top": "亢妥", "cands": ["亢妥", "主角", "亢", "躬", "乧"], "ms_per_key": 0.19, "ms_max_key": 0.51, "candidate_count": 17, "pages_complete": true, "ok": true}
+{"id": "non-neighbor", "keys": "yhmbp", "truth": null, "top": "广恧", "cands": ["广恧", "频", "颜", "亢", "迗"], "ms_per_key": 0.22, "ms_max_key": 0.5, "candidate_count": 14, "pages_complete": true, "ok": true}
