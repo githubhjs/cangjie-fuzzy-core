@@ -54,7 +54,7 @@ The three tolerance knobs, their defaults and the evidence behind them: [DEFAULT
 | Windows 11 (Weasel) | [cangjie-fuzzy-windows](https://github.com/githubhjs/cangjie-fuzzy-windows) | `irm https://raw.githubusercontent.com/githubhjs/cangjie-fuzzy-windows/main/install.ps1 \| iex` |
 | macOS (Squirrel) | [cangjie-fuzzy-macos](https://github.com/githubhjs/cangjie-fuzzy-macos) | `curl -fsSL https://raw.githubusercontent.com/githubhjs/cangjie-fuzzy-macos/main/install.sh \| bash` |
 | Linux (ibus-rime, fcitx5-rime) | [cangjie-fuzzy-linux](https://github.com/githubhjs/cangjie-fuzzy-linux) | `curl -fsSL https://raw.githubusercontent.com/githubhjs/cangjie-fuzzy-linux/main/install.sh \| bash` |
-| Android | 私有、之後收費 / private, to be sold | （建置與測試進行中 / build and tests in progress） |
+| Android | 私有、之後收費 / private, to be sold | v0.1.0 已發布於私有倉庫（模擬器端到端測試通過；實機未驗證）/ v0.1.0 released in a private repository (emulator end-to-end test passes; real phones not verified) |
 
 預設方案是普通倉頡的版本：[cangjie-fluency](https://github.com/githubhjs/cangjie-fluency)（Windows）、[-macos](https://github.com/githubhjs/cangjie-fluency-macos)、[-linux](https://github.com/githubhjs/cangjie-fluency-linux)，容錯方案隨附但排第二。
 The versions whose default is plain Cangjie are cangjie-fluency (Windows), -macos and -linux; the typo-tolerant schema is included there too, listed second.
