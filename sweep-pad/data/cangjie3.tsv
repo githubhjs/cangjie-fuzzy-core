@@ -1,0 +1,30 @@
+# Original demonstration lexicon; uniform weights, not a full Cangjie dictionary.
+# code<TAB>character<TAB>weight
+# Cangjie radicals and the example from the Sweep Pad brief.
+a	日	1
+b	月	1
+c	金	1
+d	木	1
+e	水	1
+f	火	1
+g	土	1
+h	竹	1
+i	戈	1
+j	十	1
+k	大	1
+l	中	1
+m	一	1
+n	弓	1
+o	人	1
+p	心	1
+q	手	1
+r	口	1
+s	尸	1
+t	廿	1
+u	山	1
+v	女	1
+w	田	1
+x	難	1
+y	卜	1
+z	重	1
+yhmbc	顏	1
