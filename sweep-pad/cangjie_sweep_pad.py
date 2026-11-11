@@ -18,9 +18,11 @@ if not (HERE / 'sweep').is_dir():
     sys.path.insert(0, str(HERE.parent))
 from sweep.keyboard import default_layout, key_sequence, to_key_units
 from sweep.decoder import Lexicon, SweepConfig, SweepDecoder
+from pad_words import make_decoder, DecoderLoader
 
 DEFAULTS = dict(strictness=1.0, top_k=5, mode='keys', window_size='640x300',
-                keysize=48.0, always_on_top=True)
+                keysize=48.0, always_on_top=True, profile='mouse',
+                word_separator='', lift_ms=250.0)
 
 
 def config_path():
@@ -54,6 +56,12 @@ def parse_args(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, parents=[pre])
     modes = ap.add_mutually_exclusive_group()
     modes.add_argument('--decode-file', type=Path)
+    modes.add_argument('--decode-string')
+    ap.add_argument('--boundary', choices=('continuous', 'lift', 'dwell'), default='continuous')
+    ap.add_argument('--expect')
+    ap.add_argument('--profile', choices=('mouse', 'touchpad', 'touchscreen'), default=defaults['profile'])
+    ap.add_argument('--word-separator', default=defaults['word_separator'])
+    ap.add_argument('--lift-ms', type=positive, default=defaults['lift_ms'])
     modes.add_argument('--inject-test')
     modes.add_argument('--print-layout', action='store_true')
     modes.add_argument('--self-check', action='store_true')
@@ -69,6 +77,7 @@ def parse_args(argv=None):
     ap.add_argument('--delay', type=float, default=3.0, help='seconds before --inject-test')
     ap.add_argument('--save-config', action='store_true')
     ap.add_argument('--table', type=Path, default=HERE / 'data/cangjie3.tsv')
+    ap.add_argument('--essay', type=Path, default=HERE / 'data/essay.txt')
     a = ap.parse_args(argv)
     a.pixel_input = a.keysize is not None
     a.keysize = a.keysize if a.keysize is not None else defaults['keysize']
@@ -76,7 +85,11 @@ def parse_args(argv=None):
             or a.mode not in ('keys', 'commit') or not isinstance(a.always_on_top, bool)
             or not isinstance(a.window_size, str) or not re.fullmatch(r'[1-9]\d*x[1-9]\d*', a.window_size)):
         ap.error('invalid settings: top-k 1..100, mode keys/commit, window-size WIDTHxHEIGHT, topmost boolean')
-    for name in ('strictness', 'keysize'):
+    if a.profile not in ('mouse', 'touchpad', 'touchscreen') or a.word_separator not in ('', ' ', "'"):
+        ap.error('profile must be mouse/touchpad/touchscreen; separator must be empty, space, or apostrophe')
+    if a.expect is not None and not (a.decode_file or a.decode_string):
+        ap.error('--expect requires --decode-file or --decode-string')
+    for name in ('strictness', 'keysize', 'lift_ms'):
         val = getattr(a, name)
         if isinstance(val, bool) or not isinstance(val, (int, float)) or not math.isfinite(val) or val <= 0:
             ap.error(name + ' must be a finite positive number')
@@ -109,11 +122,18 @@ def path_keys(points):
     return sequence
 
 
-def read_points(path, scale=1.0):
+def read_gesture(path, scale=1.0):
     with Path(path).open(encoding='utf-8') as f:
-        pts = json.load(f)
+        data = json.load(f)
+    lifts = []
+    if isinstance(data, dict):
+        if set(data) - {'points', 'lifts'}:
+            raise ValueError('unknown gesture fields')
+        pts, lifts = data.get('points'), data.get('lifts', [])
+    else:
+        pts = data
     if not isinstance(pts, list) or not pts:
-        raise ValueError('path must be a nonempty JSON list of [x,y,t_ms]')
+        raise ValueError('path must contain a nonempty list of [x,y,t_ms]')
     last = -float('inf')
     for p in pts:
         if (not isinstance(p, list) or len(p) != 3 or
@@ -122,13 +142,41 @@ def read_points(path, scale=1.0):
         if p[2] < last:
             raise ValueError('timestamps must be nondecreasing')
         last = p[2]
-    return to_key_units(pts, scale)
+    if (not isinstance(lifts, list) or any(type(i) is not int or not 0 <= i < len(pts)-1 for i in lifts)):
+        raise ValueError('lifts must be indices between consecutive points')
+    return to_key_units(pts, scale), sorted(set(lifts))
 
 
-def make_decoder(a):
-    cfg = SweepConfig(top_k=a.top_k, loc_weight=4 * a.strictness,
-                      end_weight=4 * a.strictness, prune_radius=1.5 / math.sqrt(a.strictness))
-    return SweepDecoder(Lexicon.from_tsv(str(a.table), min_len=1), cfg)
+def read_points(path, scale=1.0):
+    return read_gesture(path, scale)[0]
+
+
+def literal_gesture(sequence, boundary):
+    if not re.fullmatch(r'[a-z]+ [a-z]+', sequence):
+        raise ValueError('--decode-string requires two lowercase key sequences separated by one space')
+    # report_words imports resource for report metrics (absent on Windows).
+    # Import only when this headless diagnostic is requested.
+    try:
+        from sweep.report_words import literal
+    except ModuleNotFoundError as error:
+        if error.name != 'resource':
+            raise
+        # Windows lacks report_words' Unix-only reporting dependency. Keep the
+        # same literal sampling contract there without importing report metrics.
+        from sweep.make_vectors import polyline_path
+        a, b = sequence.split(' ')
+        layout = default_layout()
+        pa, pb = polyline_path(a, layout), polyline_path(b, layout)
+        if boundary == 'lift':
+            return pa + [(x, y, t + pa[-1][2] + 250) for x, y, t in pb], [len(pa)-1]
+        points = polyline_path(a + b, layout)
+        if boundary == 'dwell':
+            cut = len(pa)-1
+            x, y, t = points[cut]
+            points = (points[:cut+1] + [(x, y, t+10*i) for i in range(1, 36)]
+                      + [(x, y, t+350) for x, y, t in points[cut+1:]])
+        return points, []
+    return literal(sequence, boundary)
 
 
 def injector():
@@ -215,7 +263,13 @@ class Pad:
     def __init__(self, root, a):
         import tkinter as tk
         self.root, self.args = root, a
-        self.decoder = make_decoder(a)
+        self.decoder = None
+        self.loading_error = None
+        self.loader = DecoderLoader(a)
+        self.pending = None
+        self.lifts = []
+        self.finish_timer = None
+        self.released_at = None
         self.points = []
         self.start = 0
         self.results = []
@@ -229,7 +283,7 @@ class Pad:
         handle.bind('<ButtonPress-1>', lambda e: setattr(self, 'move', (e.x_root-root.winfo_x(), e.y_root-root.winfo_y())))
         handle.bind('<B1-Motion>', lambda e: root.geometry('+%d+%d' % (e.x_root-self.move[0], e.y_root-self.move[1])))
         tk.Button(bar, text='×', command=root.destroy, takefocus=False).pack(side='right')
-        self.code = tk.StringVar(value='Drag across letter keys; release to rank, then choose a candidate.')
+        self.code = tk.StringVar(value='Loading word lexicon… / 載入詞庫中…')
         # Read-only code box: editable widgets would require stealing target focus.
         box = tk.Entry(root, textvariable=self.code, state='disabled', takefocus=False)
         box.pack(fill='x')
@@ -248,6 +302,7 @@ class Pad:
         root.update_idletasks()
         self.focus.install()
         root.deiconify()
+        root.after(30, self.poll_loader)
 
     def draw(self, event=None):
         c = self.canvas; c.delete('all')
@@ -263,38 +318,92 @@ class Pad:
         ox,oy = self.origin
         return ((event.x-ox)/self.scale, (event.y-oy)/self.scale, (time.monotonic()-self.start)*1000)
 
+    def poll_loader(self):
+        result = self.loader.poll()
+        if result is None:
+            self.root.after(30, self.poll_loader)
+            return
+        self.decoder, error = result
+        if error:
+            self.loading_error = error
+            self.pending = None
+            self.code.set('Loading failed: ' + error)
+            return
+        self.code.set('Ready / 就緒 — ' + self.args.profile)
+        if self.pending is not None:
+            points, lifts = self.pending
+            self.pending = None
+            self.rank(points, lifts)
+
     def press(self, event):
-        self.canvas.delete('trail'); self.start = time.monotonic()
-        self.points = [self.sample(event)]
+        now = time.monotonic()
+        continuing = (self.finish_timer is not None and self.released_at is not None
+                      and (now - self.released_at) * 1000 < self.args.lift_ms)
+        if self.finish_timer is not None:
+            self.root.after_cancel(self.finish_timer)
+            self.finish_timer = None
+            if not continuing:
+                self.finish()
+        if continuing:
+            self.lifts.append(len(self.points) - 1)
+            self.points.append(self.sample(event))
+        else:
+            self.canvas.delete('trail'); self.start = now
+            self.points = [self.sample(event)]
+            self.lifts = []
+            self.pending = None
+        self.released_at = None
         self.results = []
         for b in self.buttons:
             b.configure(text='—', state='disabled')
 
     def motion(self, event):
-        if not self.points:
+        if not self.points or self.released_at is not None:
             return
         p = self.sample(event); old = self.points[-1]; self.points.append(p)
         ox,oy = self.origin; s = self.scale
         self.canvas.create_line(ox+old[0]*s, oy+old[1]*s, ox+p[0]*s, oy+p[1]*s, fill='#ffcd59', width=3, tags='trail')
 
     def release(self, event):
-        if not self.points:
+        if not self.points or self.released_at is not None:
             return
         self.motion(event)
-        points, self.points = self.points, []
-        seq = path_keys(points)
-        if len(set(seq)) < 2:
+        seq = path_keys(self.points)
+        if not self.lifts and len(set(seq)) < 2:
+            self.points = []
             if seq:
                 self.send(seq[0], seq[0], single=True)
             return
-        self.results = self.decoder.decode(points, top_k=self.args.top_k)
+        self.released_at = time.monotonic()
+        self.finish_timer = self.root.after(math.ceil(self.args.lift_ms), self.finish)
+
+    def finish(self):
+        self.finish_timer = None
+        points, lifts = self.points, self.lifts
+        self.points, self.lifts = [], []
+        self.released_at = None
+        if not points:
+            return
+        if self.decoder is None:
+            if getattr(self, 'loading_error', None):
+                self.code.set('Loading failed: ' + self.loading_error)
+                return
+            self.pending = (points, lifts)
+            self.code.set('Loading word lexicon… sweep queued / 手勢已暫存')
+            return
+        self.rank(points, lifts)
+
+    def rank(self, points, lifts):
+        self.results = self.decoder.decode(points, lifts, top_k=self.args.top_k)
         self.code.set('  |  '.join('%s %s' % (ch, code) for ch,code,_ in self.results))
-        for b, result in zip(self.buttons, self.results):
-            b.configure(text='%s %s' % result[:2], state='normal')
+        for b in self.buttons:
+            b.configure(text='—', state='disabled')
+        for b, (text, code, score) in zip(self.buttons, self.results):
+            b.configure(text=text + '\n' + code, state='normal')
 
     def choose(self, index):
         ch,code,_ = self.results[index]
-        self.send(code, ch)
+        self.send(self.decoder.injection_code(ch, self.args.word_separator), ch)
 
     def send(self, code, char, single=False):
         try:
@@ -322,21 +431,27 @@ def main(argv=None):
             save_config(a)
         if a.print_layout:
             print(json.dumps(key_rects(), sort_keys=True)); return 0
-        if a.decode_file:
-            pts = read_points(a.decode_file, a.keysize if a.pixel_input else 1)
-            print(json.dumps([dict(char=ch, code=code, score=sc) for ch,code,sc in make_decoder(a).decode(pts)], ensure_ascii=False)); return 0
+        if a.decode_file or a.decode_string:
+            if a.decode_file:
+                pts, lifts = read_gesture(a.decode_file, a.keysize if a.pixel_input else 1)
+            else:
+                pts, lifts = literal_gesture(a.decode_string, a.boundary)
+            results = make_decoder(a).decode(pts, lifts)
+            print(json.dumps([dict(char=ch, code=code, score=sc) for ch,code,sc in results], ensure_ascii=False))
+            return 0 if a.expect is None or (results and results[0][0] == a.expect) else 1
         if a.self_check:
             import tkinter
             ok, msg = injector().availability()
             table_ok = a.table.is_file()
+            essay_ok = a.essay.is_file()
             print(json.dumps(dict(platform=sys.platform, session=os.environ.get('XDG_SESSION_TYPE', ''),
                                   display=bool(os.environ.get('DISPLAY')), tkinter=tkinter.TkVersion,
-                                  injector_available=ok, injector_message=msg, table_available=table_ok), ensure_ascii=False))
+                                  injector_available=ok, injector_message=msg, table_available=table_ok, essay_available=essay_ok), ensure_ascii=False))
             if wayland():
                 print('Wayland: requires ydotool/uinput; non-activating GUI is unavailable.', file=sys.stderr)
-            if table_ok:
+            if table_ok and essay_ok:
                 make_decoder(a)
-            return 0 if ok and table_ok else 1
+            return 0 if ok and table_ok and essay_ok else 1
         if a.inject_test is not None:
             if not re.fullmatch('[a-z]+', a.inject_test):
                 raise ValueError('--inject-test accepts lowercase ASCII letters a-z only')

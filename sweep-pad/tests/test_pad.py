@@ -21,6 +21,9 @@ class PadTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory(dir=str(PAD))
         self.addCleanup(self.tmp.cleanup)
         self.config = Path(self.tmp.name) / 'config.json'
+        cache = patch('pad_words.cache_dir', return_value=Path(self.tmp.name) / 'cache')
+        cache.start()
+        self.addCleanup(cache.stop)
 
     def args(self, *args):
         return pad.parse_args(['--config', str(self.config)] + list(args))
@@ -79,7 +82,9 @@ class PadTests(unittest.TestCase):
         a = self.args()
         d = pad.make_decoder(a)
         pts = [(*pad.default_layout().centers[k], i*80) for i,k in enumerate('yhmbc')]
-        self.assertEqual(d.decode(pts)[0][:2], ('顏', 'yhmbc'))
+        results = d.decode(pts)
+        self.assertIn(('顏', 'yhmbc'), [r[:2] for r in results])
+        self.assertIn(results[0][0], ('顏', '頻'))  # same code; no word context
 
     def test_headless_cli(self):
         r = subprocess.run([sys.executable, str(PAD/'cangjie_sweep_pad.py'), '--config', str(self.config), '--print-layout'], capture_output=True, text=True)

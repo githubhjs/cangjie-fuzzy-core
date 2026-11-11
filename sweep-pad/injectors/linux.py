@@ -10,6 +10,7 @@ KEY_CODES = dict(zip("qwertyuiop", range(16, 26)))
 KEY_CODES.update(zip("asdfghjkl", range(30, 39)))
 KEY_CODES.update(zip("zxcvbnm", range(44, 51)))
 
+KEY_CODES.update({" ": 57, "'": 40})
 
 def is_wayland():
     return os.environ.get("XDG_SESSION_TYPE", "").lower() == "wayland" or bool(os.environ.get("WAYLAND_DISPLAY"))
@@ -31,7 +32,7 @@ def build_command(text, delay_ms=8):
     if is_wayland():
         events = [event for c in text for event in ("%d:1" % KEY_CODES[c], "%d:0" % KEY_CODES[c])]
         return ["ydotool", "key", "--key-delay", str(int(delay_ms))] + events
-    return ["xdotool", "key", "--clearmodifiers", "--delay", str(int(delay_ms))] + list(text)
+    return ["xdotool", "key", "--clearmodifiers", "--delay", str(int(delay_ms))] + [{" ": "space", "'": "apostrophe"}.get(c, c) for c in text]
 
 
 def inject_keys(text: str, delay_ms=8):

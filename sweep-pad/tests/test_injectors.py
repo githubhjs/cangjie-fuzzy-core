@@ -23,6 +23,20 @@ class LinuxInjectorTests(unittest.TestCase):
         with patch.dict(os.environ, {"WAYLAND_DISPLAY": "wayland-0"}, clear=True):
             self.assertTrue(linux.is_wayland())
 
+    def test_separator_keys(self):
+        with patch.dict(os.environ, {'XDG_SESSION_TYPE': 'x11'}, clear=True):
+            self.assertEqual(linux.build_command("a'b c")[-5:], ['a', 'apostrophe', 'b', 'space', 'c'])
+        with patch.dict(os.environ, {'XDG_SESSION_TYPE': 'wayland'}, clear=True):
+            self.assertEqual(linux.build_command(" '")[-4:], ['57:1', '57:0', '40:1', '40:0'])
+        self.assertEqual((macos.KEY_CODES[' '], macos.KEY_CODES["'"]), (49, 39))
+        api = Mock()
+        api.MapVirtualKeyW.return_value = 40
+        api.SendInput.return_value = 1
+        with patch.object(windows, '_api', return_value=api), patch.object(windows.time, 'sleep'):
+            windows.inject_keys(" '")
+        self.assertEqual(api.MapVirtualKeyW.call_args_list,
+                         [unittest.mock.call(32, 0), unittest.mock.call(0xDE, 0)])
+
     def test_missing_tool_and_display(self):
         with patch.dict(os.environ, {}, clear=True), patch.object(linux.shutil, "which", return_value=None):
             self.assertFalse(linux.availability()[0])

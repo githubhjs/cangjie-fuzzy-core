@@ -68,7 +68,7 @@ def inject_keys(text: str, delay_ms=8):
         return
     api = _api()
     for c in text:
-        scan = api.MapVirtualKeyW(ord(c.upper()), 0)
+        scan = api.MapVirtualKeyW(0xDE if c == "'" else ord(c.upper()), 0)
         if not scan:
             raise RuntimeError("No Windows scancode for letter " + c)
         _send_pair(api, scan, 0x0008)  # KEYEVENTF_SCANCODE

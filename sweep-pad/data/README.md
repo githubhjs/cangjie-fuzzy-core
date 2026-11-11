@@ -1,13 +1,17 @@
-# 示範碼表 / Demonstration lexicon
+# 資料來源與授權 / Data provenance and licenses
 
-`cangjie3.tsv` 是本次撰寫的 27 筆小型示範資料：26 個倉頡字根與需求文件提供的「顏 = yhmbc」。所有權重均為 1，依本專案 MIT 授權。這不是完整字典，無法用來輸入任意中文字。它用來讓獨立發行包可驗證繪圖、解碼及候選操作。
+`cangjie3.tsv` 是完整的倉頡三代碼表（22,174 列，`code<TAB>character<TAB>weight`），與 cangjie-fluency 各安裝程式、Android 輸入法使用的是同一份：由 cangjie-fluency 的 `tables/mscj3.cin`（微倉三）轉成，權重取自詞頻。**此碼表資料為 LGPL-3.0，不是 MIT**；來源與授權說明見 cangjie-fluency 的 `tables/README.md`。
 
-`cangjie3.tsv` is an original 27-entry demonstration lexicon: the 26 Cangjie radicals and `顏 = yhmbc`, supplied in the product brief. Every weight is 1. It is released under this project's MIT license. It is not a complete dictionary and cannot support arbitrary Chinese text. It makes the standalone package usable for decoder and candidate demonstrations.
+`cangjie3.tsv` is the full Cangjie 3 table (22,174 rows, `code<TAB>character<TAB>weight`), the same file the cangjie-fluency installers and the Android IME use: converted from cangjie-fluency's `tables/mscj3.cin` with weights from word frequency. **This table data is LGPL-3.0, not MIT**; provenance and licence are described in cangjie-fluency's `tables/README.md`.
 
-完整碼表未隨附：現有研究 TSV 由 `mscj3.cin` 與 `essay.txt` 詞頻產生。現有來源文件未提供 `mscj3.cin` 的明確逐檔著作權授權，且 essay 詞頻有 LGPL-3.0 條款；因此不將這些資料重新標示為 MIT 或複製進本發行包。
+`essay.txt` 完整複製自本機 `~/projects/cangjie-fluency/data/essay.txt`，未修改。依該專案 `data/README.md` 的來源紀錄：上游為 [rime/rime-essay](https://github.com/rime/rime-essay)，commit `054920de4f54c9e5994276a96a4fc2a35cb51aa3`；5,887,319 bytes；SHA-256 `3e8512ebaa6657e35961b1f5762060717c647e3bf471d5e3b86e783b4e934ffb`。本次未連線驗證上游。
 
-The full research table is not bundled. Local provenance records show it was generated from `mscj3.cin` and frequencies from `essay.txt`. The available records provide no explicit per-file copyright license for `mscj3.cin`, and identify the essay frequencies as LGPL-3.0. This package does not relabel those assets as MIT or copy them into the archive.
+`essay.txt` is copied unchanged in full from local `~/projects/cangjie-fluency/data/essay.txt`. That project's `data/README.md` records upstream [rime/rime-essay](https://github.com/rime/rime-essay), commit `054920de4f54c9e5994276a96a4fc2a35cb51aa3`, 5,887,319 bytes, SHA-256 `3e8512ebaa6657e35961b1f5762060717c647e3bf471d5e3b86e783b4e934ffb`. Upstream was not contacted during this work.
 
-若您有權使用完整碼表，可用 `--table /path/to/table.tsv`。格式是 UTF-8，每行 `code<TAB>character<TAB>weight`，碼為小寫英文字母，權重為非負數。`#` 開頭是註解。自訂碼表的排序與權重會改變候選；請依原資料授權處理。為自己的發行包選用另一碼表時，先放到 `sweep-pad/data/cangjie3.tsv` 並更新本說明及應附授權，再執行建置；建置腳本不會從研究目錄自動取用資料。
+**essay.txt 資料為 LGPL-3.0，不是 MIT。** 授權全文見 `LICENSE-essay.txt`（複製自 cangjie-fluency 的 LICENSE）。本發行保留此區別，未將詞表重新授權為 MIT；沒有包含 GPL 程式碼。Pad 僅讀取詞頻 ≥100 且長度 2–4 的詞，並排除示範碼表缺字的詞；檔案本身沒有刪減。
 
-If you have a table you are entitled to use, pass `--table /path/to/table.tsv`. Use UTF-8 rows of `code<TAB>character<TAB>weight`, lowercase ASCII codes and nonnegative numeric weights. Lines beginning with `#` are comments. Custom tables and weights change candidate ranking and retain their own license obligations. To make your own archive with a different table, replace `sweep-pad/data/cangjie3.tsv` and update this notice and required license texts before building. The builder never automatically imports research data.
+**essay.txt data is LGPL-3.0, not MIT.** See `LICENSE-essay.txt`, copied from cangjie-fluency's LICENSE. The data is not relicensed as MIT; no GPL code is included. The pad loads frequency ≥100 words of 2–4 characters and excludes words with missing character codes; the bundled data file itself is unabridged.
+
+也可用 `--table /path/to/table.tsv` 換成自己的碼表。格式為 UTF-8 `code<TAB>character<TAB>weight`，小寫 ASCII 碼及非負權重，`#` 開頭為註解。自訂碼表保留原授權；換用發行資料時請更新授權與來源說明。建置腳本只讀取此目錄，不會自動複製研究碼表。
+
+Supply your own table through `--table /path/to/table.tsv`: UTF-8 `code<TAB>character<TAB>weight`, lowercase ASCII codes and nonnegative weights, with `#` comments. Custom data retains its own license; update notices when substituting release data. The builder reads this directory and never automatically imports the research table.

@@ -4,8 +4,8 @@ import sys
 
 
 def validate(text, delay_ms):
-    if not isinstance(text, str) or any(c not in "abcdefghijklmnopqrstuvwxyz" for c in text):
-        raise ValueError("key injection accepts lowercase ASCII letters a-z only")
+    if not isinstance(text, str) or any(c not in "abcdefghijklmnopqrstuvwxyz '" for c in text):
+        raise ValueError("key injection accepts lowercase ASCII letters, space, and apostrophe")
     if isinstance(delay_ms, bool) or not isinstance(delay_ms, (int, float)) or not math.isfinite(delay_ms) or delay_ms < 0:
         raise ValueError("delay_ms must be a finite non-negative number")
 

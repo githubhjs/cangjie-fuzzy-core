@@ -1,12 +1,20 @@
 # 倉頡 Sweep Pad / Cangjie Sweep Pad
 
-以滑鼠拖過螢幕上的 ANSI QWERTY 字母鍵盤，在放開時辨識倉頡碼，按候選按鈕把該碼的**字母按鍵**送進原本的應用程式。先在目標程式啟用 Rime（小狼毫／鼠鬚管／ibus-rime）；容錯、組字及選字窗仍由 Rime 處理。例：顏的碼是 `yhmbc`，手勢可能經過 `y h y j m n b v c`。單鍵點擊直接送出該字母。觸控板及以滑鼠事件運作的觸控螢幕也可使用。
+一筆滑行可輸入 2–4 字詞，也可輸入單字。以滑鼠拖過螢幕上的 ANSI QWERTY 字母鍵盤，候選清單會依詞解碼器的分數混排詞語與單字，每個候選下方顯示倉頡碼。先在目標程式啟用 Rime；按候選後送出的是**碼的字母按鍵**，由 Rime 組字及選字。單鍵點擊直接送出該字母。
 
-Drag the mouse over the drawn ANSI QWERTY keyboard, release to decode, then click a candidate to send its **code letter keystrokes** to the target application. Enable your Rime IME in that application first. Rime owns composition, fuzzy matching, and its candidate window. A single-key click sends that letter. Touchpads and touchscreens that produce mouse events can also work.
+One sweep can cover a 2–4 character word or a single character. Drag over the drawn ANSI QWERTY keyboard; words and characters share the decoder's ranked candidate list, with codes below each candidate. Enable Rime in the target application first. Choosing a candidate sends its **code letter keystrokes**; Rime handles composition and selection. A single-key click sends that letter.
 
-隨附的是 **27 筆示範碼表**（字根與「顏」），不是完整倉頡字典；輸入其他字需以 `--table` 指定您有權使用的完整 TSV。完整研究碼表因授權來源未釐清而未隨附，見 `data/README.md`。
+範例：`yhmnbvc ojhbnm → 顏值`、`yhjmnbvc yuiokjhj → 頻率`（空格標示字界，不是必須按的鍵）。連續滑行即可辨識；在滑行途中放開後 **250 ms 內重新按下**，會接續同一手勢並傳入抬起字界提示。超過等待時間即解碼。按住停留的時間戳由解碼器處理，可作為字界或重複字根提示。
 
-The bundled **27-entry demo lexicon** contains radicals and 顏, not a complete dictionary. For other characters, supply a full TSV you are entitled to use through `--table`. The research table is excluded because its redistribution provenance is unresolved; see `data/README.md`.
+Examples: `yhmnbvc ojhbnm → 顏值` and `yhjmnbvc yuiokjhj → 頻率` (the space labels a character boundary). Continuous strokes work. Releasing and pressing again **within 250 ms** continues the gesture and supplies a lift boundary; otherwise the pad decodes after that interval. Held pauses retain timestamps so the decoder can recognize dwell boundaries and repeated letters.
+
+啟動時會顯示 loading，背景執行緒建立詞典，不阻塞介面；完成後處理等待中的手勢。詞典使用 `essay.txt` 詞頻 ≥100、長度 2–4 的詞，並保留碼表中的單字；只有全部字元都有碼的詞才可用。建立後以資料檔雜湊作鍵，在使用者快取目錄存成 JSON；沒有二進位物件序列化。一般位置：Linux `$XDG_CACHE_HOME/cangjie-sweep-pad`（預設 `~/.cache`）、macOS `~/Library/Caches/cangjie-sweep-pad`、Windows `%LOCALAPPDATA%/cangjie-sweep-pad`。
+
+Startup shows loading while a background thread builds the lexicon and keeps the UI responsive; queued gestures decode when ready. The lexicon uses 2–4 character essay words with frequency ≥100, plus table characters. A word is available only when every character has a code. The built lexicon is cached as JSON, keyed by data-file hashes, in the user cache directory; no binary object serialization is used. Typical locations are Linux `$XDG_CACHE_HOME/cangjie-sweep-pad` (default `~/.cache`), macOS `~/Library/Caches/cangjie-sweep-pad`, and Windows `%LOCALAPPDATA%/cangjie-sweep-pad`.
+
+隨附完整倉頡三代碼表（22,174 列，與 cangjie-fluency 相同）與完整 `essay.txt`。程式碼為 MIT；**碼表與 essay.txt 資料為 LGPL-3.0**，授權全文及來源見 `data/LICENSE-essay.txt`、`data/README.md`。不包含 GPL 程式碼。可用 `--table` 換成自己的碼表。
+
+The bundle includes the full Cangjie 3 table (22,174 rows, same as cangjie-fluency) and the full `essay.txt`. Code is MIT; **the table and essay.txt data are LGPL-3.0**, with license and provenance in `data/LICENSE-essay.txt` and `data/README.md`. No GPL code is bundled. Use `--table` to substitute your own table.
 
 ## 執行 / Run
 
@@ -20,15 +28,16 @@ python3 sweep-pad/cangjie_sweep_pad.py
 python3 cangjie_sweep_pad.py
 ```
 
-拖曳後最多顯示五個候選，按候選送字母；碼欄可檢視辨識結果。預設不送空白或 Enter，因此不會自動提交 Rime 的組字。使用目標程式本身的鍵盤操作選字／提交。
+拖曳後最多顯示五個候選。詞的送出碼 = 各字主碼串接，預設 `word_separator=""`，例如顏值送出 `yhmbcojbm`。不擅自加入空白，因為 Rime 的空白常用於選字或提交，實際分詞方式取決於啟用的 schema；若 schema 需要分隔，請設定 `word_separator`（空字串、空格或單引號）。實際 Rime 連碼組詞尚未驗證，請依自己的 schema 測試。
 
-After a drag, up to five candidate buttons show decoded characters and codes. Click one to send its letters; inspect the recognized code in the code box. No Space or Enter is appended: choose and commit through your normal Rime controls.
+Up to five candidates are shown. A word sends its characters' main codes joined together, with `word_separator=""` by default: 顏值 sends `yhmbcojbm`. Rime commonly uses Space for selection or commit, so the pad does not insert it automatically. Configure `word_separator` (empty, Space, or apostrophe) if your schema requires a delimiter. Actual concatenated-code composition in Rime remains unverified and depends on the active schema.
 
 ## 選項與設定 / Options and settings
 
 ```sh
 python3 sweep-pad/cangjie_sweep_pad.py --strictness 1 --top-k 5 --keysize 48 --window-size 640x300
 python3 sweep-pad/cangjie_sweep_pad.py --mode keys --always-on-top --save-config
+python3 sweep-pad/cangjie_sweep_pad.py --profile touchpad --lift-ms 250 --word-separator ""
 python3 sweep-pad/cangjie_sweep_pad.py --no-always-on-top
 python3 sweep-pad/cangjie_sweep_pad.py --config /path/to/config.json --table /path/to/cangjie3.tsv
 ```
@@ -37,9 +46,13 @@ python3 sweep-pad/cangjie_sweep_pad.py --config /path/to/config.json --table /pa
 
 `--strictness` scales geometric matching strictness (positive, default 1); `--top-k` controls decoded result count, while the GUI shows at most five. `--keysize` sets pixel key width and `--window-size` sets window geometry. `keys` is the default mode. Windows also supports `--mode commit`, which sends the selected character as Unicode directly and bypasses Rime composition. Commit mode is unavailable elsewhere.
 
-設定 JSON 支援 `strictness`、`top_k`、`mode`、`window_size`、`keysize`、`always_on_top`。命令列優先於設定檔；`--save-config` 儲存設定。預設位置為 Windows `%APPDATA%/cangjie-sweep-pad/config.json`、macOS `~/Library/Application Support/cangjie-sweep-pad/config.json`、Linux `$XDG_CONFIG_HOME/cangjie-sweep-pad/config.json`（未設定時用 `~/.config`）。
+設定 JSON 支援 `strictness`、`top_k`、`mode`、`window_size`、`keysize`、`always_on_top`、`profile`、`word_separator`、`lift_ms`。命令列優先於設定檔；`--save-config` 儲存設定。預設位置為 Windows `%APPDATA%/cangjie-sweep-pad/config.json`、macOS `~/Library/Application Support/cangjie-sweep-pad/config.json`、Linux `$XDG_CONFIG_HOME/cangjie-sweep-pad/config.json`（未設定時用 `~/.config`）。
 
-JSON settings accept `strictness`, `top_k`, `mode`, `window_size`, `keysize`, and `always_on_top`. CLI options override the file; `--save-config` persists settings. Default locations: Windows `%APPDATA%/cangjie-sweep-pad/config.json`; macOS `~/Library/Application Support/cangjie-sweep-pad/config.json`; Linux `$XDG_CONFIG_HOME/cangjie-sweep-pad/config.json`, falling back to `~/.config`.
+JSON settings accept `strictness`, `top_k`, `mode`, `window_size`, `keysize`, `always_on_top`, `profile`, `word_separator`, and `lift_ms`. CLI options override the file; `--save-config` persists settings. Default locations: Windows `%APPDATA%/cangjie-sweep-pad/config.json`; macOS `~/Library/Application Support/cangjie-sweep-pad/config.json`; Linux `$XDG_CONFIG_HOME/cangjie-sweep-pad/config.json`, falling back to `~/.config`.
+
+`profile` 可選 `mouse`（預設）、`touchpad`、`touchscreen`，可保存為設定。目前三者都載入 `sweep/results/defaults_words.json` 的滑鼠整詞預設值；上游沒有另外調整的觸控板／觸控螢幕整詞設定，這項選擇不代表有裝置專屬的實測校準。`lift_ms` 預設 250 ms。
+
+`profile` accepts `mouse` (default), `touchpad`, or `touchscreen` and persists in settings. All currently use the tuned mouse word defaults from `sweep/results/defaults_words.json`; upstream has no separately tuned touchpad/touchscreen word configuration. The choice does not imply measured device-specific calibration. `lift_ms` defaults to 250 ms.
 
 ## 各平台 / Platforms
 
@@ -53,6 +66,8 @@ JSON settings accept `strictness`, `top_k`, `mode`, `window_size`, `keysize`, an
 ## 無介面指令 / Headless commands
 
 ```sh
+python3 sweep-pad/cangjie_sweep_pad.py --decode-string "yhmnbvc ojhbnm" --boundary continuous --expect 顏值
+python3 sweep-pad/cangjie_sweep_pad.py --decode-string "yhjmnbvc yuiokjhj" --boundary lift --expect 頻率
 python3 sweep-pad/cangjie_sweep_pad.py --print-layout
 python3 sweep-pad/cangjie_sweep_pad.py --decode-file path.json --top-k 5
 python3 sweep-pad/cangjie_sweep_pad.py --decode-file pixels.json --keysize 48
@@ -60,28 +75,34 @@ python3 sweep-pad/cangjie_sweep_pad.py --self-check
 python3 sweep-pad/cangjie_sweep_pad.py --inject-test yhmbc --delay 5
 ```
 
-`path.json` 是 `[[x,y,t_ms], ...]`，座標預設為 `sweep.keyboard.default_layout()` 的鍵寬單位；明確指定 `--keysize` 時視為像素並除以該值。`--print-layout` 可查看座標。`--decode-file` 輸出排名 JSON。`--inject-test` 會在倒數後實際送字母，倒數期間切到目標程式。`--self-check` 不注入按鍵，回傳 0（基本需求可用）或 1（有缺項），不代表實際輸入／IME 整合已驗證。
+`path.json` 可用 `{"points":[[x,y,t_ms], ...],"lifts":[idx,...]}`；`lifts` 的索引 i 表示在 points[i] 與 points[i+1] 之間抬起。也接受原本的 `[[x,y,t_ms], ...]`。座標預設為 `sweep.keyboard.default_layout()` 的鍵寬單位；明確指定 `--keysize` 時視為像素並除以該值。`--print-layout` 可查看座標。`--decode-file` 輸出排名 JSON。`--inject-test` 會在倒數後實際送字母，倒數期間切到目標程式。`--self-check` 不注入按鍵，回傳 0（基本需求可用）或 1（有缺項），不代表實際輸入／IME 整合已驗證。
 
-`path.json` contains `[[x,y,t_ms], ...]` in key-width units from `sweep.keyboard.default_layout()`. An explicit `--keysize` treats coordinates as pixels and divides by that value. `--print-layout` exposes the geometry; `--decode-file` prints ranked JSON. `--inject-test` actually types after the countdown: focus the target application during it. `--self-check` sends no keys and returns 0 for available prerequisites or 1 for missing prerequisites. Passing it does not prove real injection or IME integration.
+`path.json` accepts `{"points":[[x,y,t_ms], ...],"lifts":[idx,...]}`; index i marks a lift between points[i] and points[i+1]. The original point list is also accepted. Coordinates are in key-width units from `sweep.keyboard.default_layout()`. An explicit `--keysize` treats coordinates as pixels and divides by that value. `--print-layout` exposes the geometry; `--decode-file` prints ranked JSON. `--inject-test` actually types after the countdown: focus the target application during it. `--self-check` sends no keys and returns 0 for available prerequisites or 1 for missing prerequisites. Passing it does not prove real injection or IME integration.
+
+`--decode-string` 使用上游 `sweep.report_words.literal`，`--boundary` 可選 `continuous`、`lift`、`dwell`。加上 `--expect` 時，只有第一候選符合預期才回傳 0；不符合回傳非零。
+
+`--decode-string` reuses upstream `sweep.report_words.literal`; `--boundary` accepts `continuous`, `lift`, or `dwell`. With `--expect`, exit status is 0 only when the first candidate matches.
 
 ## 測試與發行 / Tests and release
 
 ```sh
 python3 -m unittest discover -s sweep-pad/tests
-./sweep-pad/make-release.sh 0.1.0
+./sweep-pad/make-release.sh 0.2.0
 ```
 
-產物位於 `sweep-pad/dist/cangjie-sweep-pad-0.1.0.zip` 與 `.zip.sha256`。建置只讀取相鄰解碼器原始碼，不修改 `sweep/`、不連線、不上傳 GitHub。驗證雜湊可在 dist 目錄執行 `sha256sum -c cangjie-sweep-pad-0.1.0.zip.sha256`。
+產物位於 `sweep-pad/dist/cangjie-sweep-pad-0.2.0.zip` 與 `.zip.sha256`。建置只讀取相鄰解碼器原始碼，不修改 `sweep/`、不連線、不上傳 GitHub。驗證雜湊可在 dist 目錄執行 `sha256sum -c cangjie-sweep-pad-0.2.0.zip.sha256`。
 
 Artifacts are written under `sweep-pad/dist/` as a zip plus `.zip.sha256`. The builder reads neighboring decoder sources without modifying `sweep/`, contacting the network, or publishing to GitHub. Verify the checksum with `sha256sum -c` inside dist.
 
+建置會將 zip 解壓至獨立暫存目錄，以空白快取、非原始碼工作目錄執行兩個 `--decode-string --expect` 與 `--self-check`，並印出結果。缺少桌面注入工具時，self-check 可回傳 1；建置會明確列出此限制，不宣稱實際注入已通過。
+
+The builder extracts the archive into a temporary directory, uses an empty cache and foreign working directory, and runs both owner `--decode-string --expect` checks plus `--self-check`, printing their output. Missing desktop injection prerequisites may produce self-check status 1; the builder reports that limitation explicitly.
+
 ## 已驗證／尚未驗證 / Verified / not verified
 
-- 已在 Linux GX10 驗證發行 zip 的 SHA-256，並將 zip 解壓至獨立目錄，確認 26 鍵配置及 `yhmbc → 顏` 解碼正常。Verified on Linux GX10: archive SHA-256, independent extraction, 26-key layout, and `yhmbc → 顏` decoding.
-- 已有可執行的 unittest：鍵盤幾何、路徑映射、解碼、設定與模擬注入；實際執行結果見本次交付報告。Executable unit tests cover geometry, path mapping, decoding, configuration, and mocked injection; actual run results are recorded in the delivery report.
-- 本次 Linux GX10 執行 26 個測試：25 通過，1 因上游向量檔尚未提供而跳過。`--self-check` 回傳 1：tkinter 8.6 與示範碼表可用，但沒有 `xdotool`、`DISPLAY` 或 Wayland 桌面（session 為 `tty`）。On this Linux GX10 run: 26 tests, 25 passed and one skipped because upstream vectors were absent. Self-check exited 1: tkinter 8.6 and demo data are available, but xdotool and a desktop display are absent (`tty` session).
-- 尚未驗證真實 Windows/macOS SendInput/CGEvent、Rime 組字、原生視窗焦點；需 Windows 11 與 MacBook Air 測試機。Real Windows/macOS injection, Rime composition, and native window focus require those test rigs.
-- 尚未驗證真實 Linux 目標應用程式的按鍵注入、所有視窗管理員、Wayland compositor、ydotoold/uinput 權限、觸控螢幕與長時間使用。Real Linux target injection, all window managers, Wayland compositors, uinput permissions, touchscreen operation, and prolonged use remain unverified.
-- 手勢解碼候選可能誤判；同碼字、重複字根停留與手勢品質會影響排序。Candidate ranking can be wrong; shared codes, repeated-letter dwells, and path quality affect results.
+- 自動驗證範圍：pad unittest、兩個上游 sweep 測試、兩個 literal owner 路徑，以及獨立 zip 解壓檢查；實際測試數與輸出見本次交付報告。Automated verification covers pad unittests, both upstream sweep tests, both literal owner paths, and extracted archive checks; see the delivery report for actual counts and output.
+- 合成路徑測試不等於真人準確率；詞庫門檻與準確率數字見 `sweep/results/WORDS.md`。Synthetic paths do not establish human accuracy; lexicon threshold and accuracy numbers are in `sweep/results/WORDS.md`.
+- 尚未驗證實際 GUI 操作、真人滑鼠／觸控板／觸控螢幕軌跡、長時間使用、實際 Rime 連碼組詞與分隔符行為。Live GUI interaction, human pointer traces, prolonged use, Rime concatenated-code composition, and schema separators remain unverified.
+- 尚未驗證真實 Windows/macOS SendInput/CGEvent、原生視窗焦點、Linux 目標程式注入、所有視窗管理員或 Wayland compositor、ydotoold/uinput 權限。Live Windows/macOS injection, native focus, Linux target injection, window managers, Wayland compositors, and ydotoold/uinput permissions remain unverified.
 
-程式碼為 MIT，見 `LICENSE`；資料來源及限制見 `data/README.md`。Code is MIT; see `LICENSE`. Data provenance and limitations are documented in `data/README.md`.
+程式碼為 MIT，見 `LICENSE`；LGPL-3.0 詞頻資料保留原授權，見 `data/README.md`。Code is MIT; see `LICENSE`. The LGPL-3.0 word-frequency data retains its own license; see `data/README.md`.
