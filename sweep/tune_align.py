@@ -1,6 +1,6 @@
 """Tune the spur / backtrack tolerance (key-sequence alignment rerank) on the TRAIN split of characters, synthetic sweeps.
   python3 -m sweep.tune_align --out sweep/results/tune_align.json
-Scenarios (profile x backtrack rate, level mid): mouse 0 / 0.15 / 0.4 and finger 0 / 0.15 / 0.4. Objective = mean over scenarios of
+Scenarios (profile x layout x backtrack rate, level mid): mouse/ANSI, finger/ANSI, finger/phone pitch 1.5 normalised; rates 0 / 0.15 / 0.4. Objective = mean over scenarios of
 0.5*(top1 + w1) + 0.25*(top5 + w5), with the clean scenarios (rate 0) counted double so clean accuracy is protected."""
 import argparse
 import json
@@ -27,8 +27,8 @@ def logu(r, lo, hi):
 
 
 SPACE = {
-    "align_weight": lambda r: logu(r, 0.2, 6.0),
-    "align_gate": lambda r: logu(r, 0.5, 20.0),
+    "align_weight": lambda r: logu(r, 0.2, 10.0),
+    "align_gate": lambda r: logu(r, 0.5, 30.0),
     "align_ins": lambda r: r.uniform(0.05, 0.6),
     "hit_radius": lambda r: r.uniform(0.35, 0.65),
 }
@@ -36,14 +36,14 @@ SPACE = {
 
 def objective(lex, tr, cfg, workers):
     tot, wsum, per = 0.0, 0.0, {}
-    for prof in ("mouse", "finger"):
+    for prof, layout in (('mouse', 'pc'), ('finger', 'pc'), ('finger', 'phone:1.5:norm')):
         for rate in RATES:
             pr = replace(PROFILES[prof], backtrack_prob=rate)
-            r = run_trial(lex, tr, cfg, pr, "mid", seed=101, workers=workers)["all"]
+            r = run_trial(lex, tr, cfg, pr, 'mid', seed=101, workers=workers, layout=layout)['all']
             wgt = 2.0 if rate == 0.0 else 1.0
-            tot += wgt * (0.5 * (r["top1"] + r["w1"]) + 0.25 * (r["top5"] + r["w5"]))
+            tot += wgt * (0.5 * (r['top1'] + r['w1']) + 0.25 * (r['top5'] + r['w5']))
             wsum += wgt
-            per["%s/%.2f" % (prof, rate)] = (r["top1"], r["top5"], r["w1"])
+            per['%s/%s/%.2f' % (prof, layout, rate)] = (r['top1'], r['top5'], r['w1'])
     return tot / wsum, per
 
 

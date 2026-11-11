@@ -52,7 +52,9 @@ A path decoder for Cangjie 3 sweeps, platform neutral (finger on a phone, **mous
 | word, finger, mid noise | 76.6 / 91.1 |
 | latency, pure Python, one core | 7 ms per character, 11 ms per word (mean) |
 
-**Spur／折返容錯 / spur and backtrack tolerance:** the owner example `y h y j m n b v c` (顏) now decodes to the right code first (before: ytmbc 顱); on simulated backtrack noise (rate 0.4, mouse) characters 54.0 -> 61.1 top-1, words 52.6 -> 62.7; cost: clean-sweep frequency-weighted top-1 91.3 -> 88.3, +3.5 ms per character (SPEC.md section 2b, [sweep/results/SPUR.md](sweep/results/SPUR.md)).
+**Spur／折返容錯 / spur and backtrack tolerance:** the owner example `y h y j m n b v c` (顏) now decodes to the right code first (before: ytmbc 顱); on simulated backtrack noise (rate 0.4, mouse) characters 54.0 -> 62.9 top-1, words 52.6 -> 63.7; cost: clean-sweep frequency-weighted top-1 91.3 -> 86.6, +3.5 ms per character (SPEC.md section 2b, [sweep/results/SPUR.md](sweep/results/SPUR.md)).
+
+**手機鍵盤幾何 / phone geometry:** 手機鍵列距是 1.5 個鍵寬；移植必須先做「每軸正規化」（x/sx、y/sy，SPEC.md 2c），否則 `y h y j m n b v c` 在手機上仍會先出錯碼。Ports must normalise each axis (SPEC.md section 2c; [sweep/results/PHONE.md](sweep/results/PHONE.md)); vectors: `sweep/vectors/phone_vectors.json`.
 
 **Not validated:** real finger and mouse data, real users' dwell behaviour, any phone or browser latency. The Cangjie 3 table and the word list (essay.txt) are not in this repository.
 

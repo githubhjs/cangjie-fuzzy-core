@@ -80,6 +80,48 @@ class Basics(unittest.TestCase):
         self.assertEqual(detect_dwells(short, cfg), [])
 
 
+class PhoneGeometry(unittest.TestCase):
+    def test_axis_scales(self):
+        from sweep.keyboard import axis_scales, layout_from_rects_xy, phone_qwerty
+        self.assertEqual(axis_scales(default_layout().centers), (1.0, 1.0))
+        sx, sy = axis_scales(phone_qwerty(row_pitch=1.5).centers)
+        self.assertAlmostEqual(sx, 1.0)
+        self.assertAlmostEqual(sy, 1.5)
+        # keys drawn with gaps: rect 28 x 40 px on a 32 x 48 px grid -> still sx 32, sy 48
+        rects = {k: (x * 32 - 14, y * 48 - 20, x * 32 + 14, y * 48 + 20) for k, (x, y) in phone_qwerty(row_pitch=1.0).centers.items()}
+        lay, sx, sy = layout_from_rects_xy(rects)
+        self.assertAlmostEqual(sx, 32.0)
+        self.assertAlmostEqual(sy, 48.0)
+        self.assertAlmostEqual(lay.centers["h"][1] - lay.centers["y"][1], 1.0)
+
+    def test_phone_vectors(self):
+        path = os.path.join(ROOT, "sweep", "vectors", "phone_vectors.json")
+        if not os.path.exists(path):
+            self.skipTest("phone vectors not generated yet")
+        from sweep.keyboard import layout_from_centers_xy, to_key_units_xy
+        from sweep.words import WordConfig, WordDecoder, WordLexicon
+        with open(path, encoding="utf-8") as f:
+            v = json.load(f)
+        lay, sx, sy = layout_from_centers_xy({k: tuple(c) for k, c in v["centers_px"].items()})
+        self.assertAlmostEqual(sx, v["sx"])
+        self.assertAlmostEqual(sy, v["sy"])
+        cdec = SweepDecoder(Lexicon([tuple(e) for e in v["chars"]], lay, v["config"]["n"]), SweepConfig(**v["config"]))
+        wcfg = WordConfig(**v["word_config"])
+        wdec = WordDecoder(WordLexicon([tuple(e) for e in v["word_chars"]], [tuple(w) for w in v["words"]], lay, wcfg), wcfg)
+        for c in v["cases"]:
+            pts = to_key_units_xy([tuple(p) for p in c["points"]], sx, sy)
+            if c["kind"] == "char":
+                r = cdec.decode(pts, top_k=len(c["expected"]))
+                self.assertEqual([x[0] for x in r], c["expected"], c["id"])
+                self.assertEqual([x[1] for x in r], c["expected_codes"], c["id"])
+                if c["id"] != "slip-yuyjmnbc-ambiguous":
+                    self.assertEqual(r[0][1], c["target_code"], c["id"])  # the owner path decodes yhmbc FIRST on the phone geometry
+            else:
+                r = wdec.decode(pts, c["lifts"], top_k=len(c["expected"]))
+                self.assertEqual([x[0] for x in r], c["expected"], c["id"])
+                self.assertEqual(r[0][0], c["target"], c["id"])
+
+
 class Alignment(unittest.TestCase):
     def test_align_cost(self):
         from sweep.decoder import align_cost

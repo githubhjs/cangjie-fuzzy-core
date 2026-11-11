@@ -82,14 +82,32 @@ def level_value(level):
     return float(level)
 
 
+def parse_layout(name):
+    """'pc' | 'phone' (raw pitch 1.3) | 'phone:<pitch>:raw' | 'phone:<pitch>:norm'. Returns (layout the strokes are simulated on,
+    layout the decoder uses, y divisor applied to the strokes before decoding). 'norm' = per-axis normalisation: strokes' y / pitch, decoder
+    layout with pitch 1 (the SPEC rule); 'raw' = decode in key widths on both axes."""
+    if name == "pc":
+        return default_layout(), default_layout(), 1.0
+    if name == "phone":
+        lay = phone_qwerty()
+        return lay, lay, 1.0
+    _, pitch, mode = name.split(":")
+    pitch = float(pitch)
+    raw = phone_qwerty(row_pitch=pitch)
+    if mode == "norm":
+        return raw, phone_qwerty(row_pitch=1.0), pitch
+    return raw, raw, 1.0
+
+
 _G = {}
 
 
 def _init(layout_name, lex_entries, cfg_dict, profile, level, seed):
-    layout = default_layout() if layout_name == "pc" else phone_qwerty()
-    lex = Lexicon(lex_entries, layout, cfg_dict["n"])
+    layout, dec_layout, ysc = parse_layout(layout_name)
+    lex = Lexicon(lex_entries, dec_layout, cfg_dict["n"])
     _G["dec"] = SweepDecoder(lex, SweepConfig(**cfg_dict))
     _G["layout"] = layout
+    _G["ysc"] = ysc
     _G["profile"] = PROFILES[profile] if isinstance(profile, str) else profile
     _G["level"] = level_value(level)
     _G["seed"] = seed
@@ -99,6 +117,8 @@ def _work(item):
     code, ch, w = item
     rng = random.Random(entry_seed(_G["seed"], code, ch))
     pts = generate(code, _G["layout"], _G["profile"], _G["level"], rng)
+    if _G["ysc"] != 1.0:
+        pts = [(x, y / _G["ysc"], t) for (x, y, t) in pts]
     res = _G["dec"].decode(pts, top_k=5)
     chars = [r[0] for r in res]
     return chars.index(ch) + 1 if ch in chars else 99
@@ -162,7 +182,7 @@ def main(argv=None):
     ap.add_argument("--sample", type=int, default=0, help="0 = all entries of the split")
     ap.add_argument("--seeds", type=int, default=1)
     ap.add_argument("--config", default="", help="JSON file with SweepConfig overrides")
-    ap.add_argument("--layout", default="pc", choices=["pc", "phone"])
+    ap.add_argument("--layout", default="pc", type=str)
     ap.add_argument("--out", default="")
     a = ap.parse_args(argv)
     lex_entries = load_entries(a.table)

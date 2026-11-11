@@ -39,9 +39,9 @@ class SweepConfig:
     dwell_assign_radius: float = 0.9  # a dwell counts for the template key nearest to it if within this distance
     repeat_miss_penalty: float = 2.332   # log-score cost: code has a repeated letter at a key but no dwell was seen there
     dwell_extra_penalty: float = 2.165   # log-score cost: dwell seen at a key but code has no repeated letter there
-    align_weight: float = 2.34      # key-sequence alignment rerank (spur / backtrack tolerance); 0 = off
-    align_gate: float = 0.661        # geometry trust divisor: geometry log-score is scaled by 1 / (1 + align_gate * excess)
-    align_ins: float = 0.4        # cost of a key the path touches that the code does not contain (extra touch, spur, backtrack)
+    align_weight: float = 2.49      # key-sequence alignment rerank (spur / backtrack tolerance); 0 = off
+    align_gate: float = 2.0        # geometry trust divisor: geometry log-score is scaled by 1 / (1 + align_gate * excess)
+    align_ins: float = 0.42        # cost of a key the path touches that the code does not contain (extra touch, spur, backtrack)
     align_miss: float = 1.0        # cost of a code key the path never touches
     hit_radius: float = 0.582        # a key is "touched" when the path passes within this many key widths of its centre
     align_top: int = 40            # only the best `align_top` candidates by score are reranked
@@ -133,6 +133,11 @@ def hit_sequence(points, centers, radius, step=0.15):
             visit(ax + (bx - ax) * f, ay + (by - ay) * f)
         visit(bx, by)
     return seq
+
+
+def backtrack_count(hits):
+    """Revisits: touches of a key the path had already touched and left (y h y: the second y). Evidence that the path doubled back."""
+    return len(hits) - len(set(hits))
 
 
 def align_cost(tkeys, hits, ins, miss):
@@ -374,7 +379,8 @@ class SweepDecoder:
                             m = d2
                     xc += m
                 xc /= len(t.vkeys)
-            base = -(shape_w * xs + wl * xl + we * xe + cfg.cover_weight * xc)
+            gated = -(shape_w * xs + wl * xl + cfg.cover_weight * xc)  # what a backtrack distorts (not the start/end term)
+            base = gated - we * xe
             dset = None
             if use_dwell:
                 dset = set()
@@ -392,11 +398,11 @@ class SweepDecoder:
                     sc -= cfg.repeat_miss_penalty * len(rep - dset) + cfg.dwell_extra_penalty * len(dset - rep)
                 cur = best.get(ch)
                 if cur is None or sc > cur[0] or (sc == cur[0] and code < cur[1]):
-                    best[ch] = (sc, code, base)
+                    best[ch] = (sc, code, gated)
         ranked = sorted(((sc, ch, code, geo) for ch, (sc, code, geo) in best.items()), key=lambda r: (-r[0], r[2], r[1]))
         if cfg.align_weight > 0.0 and ranked:
             hits = hit_sequence(points, self.lex.layout.centers, cfg.hit_radius)
-            rev = len(hits) - len(set(hits))  # keys touched again after leaving them: backtrack / spur evidence
+            rev = backtrack_count(hits)  # revisited keys: backtrack / spur evidence
             top = []
             for sc, ch, code, geo in ranked[:cfg.align_top]:
                 ex = self.lex.excess(collapse(code), hits, cfg)

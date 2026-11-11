@@ -14,7 +14,7 @@ from array import array
 from bisect import bisect_left, bisect_right
 from dataclasses import dataclass, asdict, replace
 
-from sweep.decoder import SweepConfig, align_cost, concat_template, detect_dwells, end_alphas, hit_sequence, resample
+from sweep.decoder import SweepConfig, align_cost, concat_template, detect_dwells, backtrack_count, end_alphas, hit_sequence, resample
 from sweep.keyboard import default_layout
 
 
@@ -48,9 +48,9 @@ class WordConfig:
     boundary_dwell_bonus: float = 0.19  # log-score bonus when a dwell sits on a character boundary
     lift_weight: float = 2.495       # weight of squared distance between lift/landing points and a boundary of the candidate
     lift_extra_penalty: float = 4.0  # per lift beyond the candidate's number of boundaries
-    align_weight: float = 2.34      # key-sequence alignment rerank of the best `align_top` candidates; 0 = off
-    align_gate: float = 0.661
-    align_ins: float = 0.4
+    align_weight: float = 2.49      # key-sequence alignment rerank of the best `align_top` candidates; 0 = off
+    align_gate: float = 0.2
+    align_ins: float = 0.42
     align_miss: float = 1.0
     hit_radius: float = 0.582
     align_top: int = 25
@@ -274,7 +274,8 @@ class WordDecoder:
                     xc += mm
                 xc /= t.nv
             scale = (max(t.nv - 1, 1) / cfg.evidence_ref) ** cfg.evidence_power
-            base = -scale * (cfg.loc_weight * xl + cfg.end_weight * xe + cfg.cover_weight * xc + cfg.shape_weight * xs)
+            gated = -scale * (cfg.loc_weight * xl + cfg.cover_weight * xc + cfg.shape_weight * xs)
+            base = gated - scale * cfg.end_weight * xe
             dset = set()
             for (dx_, dy_, _) in dwells:
                 bi, bd = -1, cfg.dwell_assign_radius
@@ -309,11 +310,11 @@ class WordDecoder:
                         s -= cfg.lift_extra_penalty * (len(hints) - len(bounds))
                 cur = best.get(text)
                 if cur is None or s > cur[0]:
-                    best[text] = (s, kind, t.keys, base)
+                    best[text] = (s, kind, t.keys, gated)
         ranked = sorted(((s, text, kind, keys, geo) for text, (s, kind, keys, geo) in best.items()), key=lambda r: (-r[0], r[1]))
         if cfg.align_weight > 0.0 and ranked:
             hits = hit_sequence(points, self.lex.layout.centers, cfg.hit_radius)
-            rev = len(hits) - len(set(hits))  # keys touched again after leaving them: backtrack / spur evidence
+            rev = backtrack_count(hits)  # revisited keys: backtrack / spur evidence
             top = []
             for s, text, kind, keys, geo in ranked[:cfg.align_top]:
                 ex = self.lex.excess(keys, hits, cfg)
