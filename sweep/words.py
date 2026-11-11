@@ -14,7 +14,7 @@ from array import array
 from bisect import bisect_left, bisect_right
 from dataclasses import dataclass, asdict, replace
 
-from sweep.decoder import SweepConfig, concat_template, detect_dwells, end_alphas, resample
+from sweep.decoder import SweepConfig, align_cost, concat_template, detect_dwells, end_alphas, hit_sequence, resample
 from sweep.keyboard import default_layout
 
 
@@ -48,6 +48,12 @@ class WordConfig:
     boundary_dwell_bonus: float = 0.19  # log-score bonus when a dwell sits on a character boundary
     lift_weight: float = 2.495       # weight of squared distance between lift/landing points and a boundary of the candidate
     lift_extra_penalty: float = 4.0  # per lift beyond the candidate's number of boundaries
+    align_weight: float = 2.34      # key-sequence alignment rerank of the best `align_top` candidates; 0 = off
+    align_gate: float = 0.661
+    align_ins: float = 0.4
+    align_miss: float = 1.0
+    hit_radius: float = 0.582
+    align_top: int = 25
     top_k: int = 10
 
     def to_dict(self):
@@ -82,6 +88,18 @@ def main_codes(char_entries):
         if cur is None or (len(code), -w, code) < (len(cur[0]), -cur[1], cur[0]):
             best[ch] = (code, w)
     return {ch: cw[0] for ch, cw in best.items()}
+
+
+def _excess(self, keys, hits, cfg):
+    cache = self.__dict__.setdefault("_ideal", {})
+    key = (keys, cfg.align_ins, cfg.align_miss, cfg.hit_radius)
+    ideal = cache.get(key)
+    if ideal is None:
+        cen = self.layout.centers
+        ih = hit_sequence([(cen[k][0], cen[k][1], 0.0) for k in keys], cen, cfg.hit_radius)
+        ideal = align_cost(keys, ih, cfg.align_ins, cfg.align_miss)
+        cache[key] = ideal
+    return max(0.0, align_cost(keys, hits, cfg.align_ins, cfg.align_miss) - ideal)
 
 
 class _WT:
@@ -138,8 +156,11 @@ class WordLexicon:
             lst.sort(key=lambda t: t.length)
         self.bucket_len = {k: [t.length for t in v] for k, v in self.buckets.items()}
 
+    excess = _excess
+
 
 class WordDecoder:
+    # Lexicon.excess() is shared: WordLexicon gets the same helper below
     def __init__(self, lexicon, config=None):
         self.lex = lexicon
         self.cfg = config or lexicon.cfg
@@ -288,9 +309,20 @@ class WordDecoder:
                         s -= cfg.lift_extra_penalty * (len(hints) - len(bounds))
                 cur = best.get(text)
                 if cur is None or s > cur[0]:
-                    best[text] = (s, kind)
-        ranked = sorted(((s, text, kind) for text, (s, kind) in best.items()), key=lambda r: (-r[0], r[1]))[:top_k]
-        return [(text, kind, s) for s, text, kind in ranked]
+                    best[text] = (s, kind, t.keys, base)
+        ranked = sorted(((s, text, kind, keys, geo) for text, (s, kind, keys, geo) in best.items()), key=lambda r: (-r[0], r[1]))
+        if cfg.align_weight > 0.0 and ranked:
+            hits = hit_sequence(points, self.lex.layout.centers, cfg.hit_radius)
+            rev = len(hits) - len(set(hits))  # keys touched again after leaving them: backtrack / spur evidence
+            top = []
+            for s, text, kind, keys, geo in ranked[:cfg.align_top]:
+                ex = self.lex.excess(keys, hits, cfg)
+                top.append((s - geo + geo / (1.0 + cfg.align_gate * rev) - cfg.align_weight * ex, text, kind, keys))
+            top.sort(key=lambda r: (-r[0], r[1]))
+            ranked = top + [(s - cfg.align_weight * 1e3, text, kind, keys) for s, text, kind, keys, geo in ranked[cfg.align_top:]]
+        else:
+            ranked = [(s, text, kind, keys) for s, text, kind, keys, geo in ranked]
+        return [(text, kind, s) for s, text, kind, keys in ranked[:top_k]]
 
 
 def corner_candidates(points, count):

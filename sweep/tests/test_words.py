@@ -134,6 +134,11 @@ class OwnerCases(unittest.TestCase):
         for mode in ("continuous", "lift", "dwell"):
             self.assertEqual(self.run_case("yhmnbvc ojhbnm", mode)[0], "顏值", mode)
 
+    def test_backtrack_inside_word(self):
+        from sweep.report_words import literal
+        pts, lifts = literal("yhyjmnbvc ojhbnm", "continuous")  # y-h-y-j-m-n-b-v-c then the second character
+        self.assertEqual(self.dec.decode(pts, lifts, top_k=1)[0][0], "顏值")
+
     def test_pin_lv_in_top5(self):
         for mode in ("continuous", "lift", "dwell"):
             self.assertIn("頻率", self.run_case("yhjmnbvc yuiokjhj", mode), mode)

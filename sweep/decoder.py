@@ -39,6 +39,12 @@ class SweepConfig:
     dwell_assign_radius: float = 0.9  # a dwell counts for the template key nearest to it if within this distance
     repeat_miss_penalty: float = 2.332   # log-score cost: code has a repeated letter at a key but no dwell was seen there
     dwell_extra_penalty: float = 2.165   # log-score cost: dwell seen at a key but code has no repeated letter there
+    align_weight: float = 2.34      # key-sequence alignment rerank (spur / backtrack tolerance); 0 = off
+    align_gate: float = 0.661        # geometry trust divisor: geometry log-score is scaled by 1 / (1 + align_gate * excess)
+    align_ins: float = 0.4        # cost of a key the path touches that the code does not contain (extra touch, spur, backtrack)
+    align_miss: float = 1.0        # cost of a code key the path never touches
+    hit_radius: float = 0.582        # a key is "touched" when the path passes within this many key widths of its centre
+    align_top: int = 40            # only the best `align_top` candidates by score are reranked
     top_k: int = 10
 
     def to_dict(self):
@@ -99,6 +105,55 @@ def concat_template(codes):
         ends.append(len(keys) - 1)
     bounds = [(ends[i], starts[i + 1]) for i in range(len(codes) - 1)]
     return "".join(keys), bounds, frozenset(repeats)
+
+
+def hit_sequence(points, centers, radius, step=0.15):
+    """Keys the path touches, in order, consecutive repeats collapsed. The path is walked in steps of at most `step` key widths
+    (so fast strokes with sparse samples are not missed); a point touches the nearest key if that key is within `radius`."""
+    seq = []
+    r2 = radius * radius
+    items = list(centers.items())
+
+    def visit(x, y):
+        bk, bd = None, r2
+        for k, (cx, cy) in items:
+            d = (cx - x) ** 2 + (cy - y) ** 2
+            if d <= bd:
+                bk, bd = k, d
+        if bk is not None and (not seq or seq[-1] != bk):
+            seq.append(bk)
+
+    visit(points[0][0], points[0][1])
+    for i in range(1, len(points)):
+        ax, ay, bx, by = points[i - 1][0], points[i - 1][1], points[i][0], points[i][1]
+        d = math.hypot(bx - ax, by - ay)
+        n = int(d / step)
+        for j in range(1, n + 1):
+            f = j / (n + 1.0)
+            visit(ax + (bx - ax) * f, ay + (by - ay) * f)
+        visit(bx, by)
+    return seq
+
+
+def align_cost(tkeys, hits, ins, miss):
+    """Edit distance between the code's keys and the keys the path touched with NO substitution: a code key must be touched, in order
+    (cost 0), else it is missing (cost `miss`); a touched key the code does not need costs `ins` (cheap: spurs and backtracks)."""
+    nt, nh = len(tkeys), len(hits)
+    INF = 1e9
+    prev = [j * ins for j in range(nh + 1)]
+    for i in range(1, nt + 1):
+        cur = [prev[0] + miss] + [INF] * nh
+        tk = tkeys[i - 1]
+        for j in range(1, nh + 1):
+            best = prev[j] + miss
+            v = cur[j - 1] + ins
+            if v < best:
+                best = v
+            if tk == hits[j - 1] and prev[j - 1] < best:
+                best = prev[j - 1]
+            cur[j] = best
+        prev = cur
+    return prev[nh]
 
 
 def resample(pts, n):
@@ -196,6 +251,19 @@ class Lexicon:
         self.buckets = {}
         for t in self.templates:
             self.buckets.setdefault((t.first, t.last), []).append(t)
+
+    def excess(self, keys, hits, cfg):
+        """Unexplained cost of a candidate: alignment cost of the touched keys minus the cost the candidate's own ideal straight sweep would
+        have (a perfect sweep also touches keys in between, and that is not a slip). 0 for a clean sweep."""
+        cache = self.__dict__.setdefault("_ideal", {})
+        key = (keys, cfg.align_ins, cfg.align_miss, cfg.hit_radius)
+        ideal = cache.get(key)
+        if ideal is None:
+            cen = self.layout.centers
+            ih = hit_sequence([(cen[k][0], cen[k][1], 0.0) for k in keys], cen, cfg.hit_radius)
+            ideal = align_cost(keys, ih, cfg.align_ins, cfg.align_miss)
+            cache[key] = ideal
+        return max(0.0, align_cost(keys, hits, cfg.align_ins, cfg.align_miss) - ideal)
 
     @classmethod
     def from_tsv(cls, path, layout=None, n=32, min_len=2):
@@ -324,6 +392,18 @@ class SweepDecoder:
                     sc -= cfg.repeat_miss_penalty * len(rep - dset) + cfg.dwell_extra_penalty * len(dset - rep)
                 cur = best.get(ch)
                 if cur is None or sc > cur[0] or (sc == cur[0] and code < cur[1]):
-                    best[ch] = (sc, code)
-        ranked = sorted(((sc, ch, code) for ch, (sc, code) in best.items()), key=lambda r: (-r[0], r[2], r[1]))[:top_k]
+                    best[ch] = (sc, code, base)
+        ranked = sorted(((sc, ch, code, geo) for ch, (sc, code, geo) in best.items()), key=lambda r: (-r[0], r[2], r[1]))
+        if cfg.align_weight > 0.0 and ranked:
+            hits = hit_sequence(points, self.lex.layout.centers, cfg.hit_radius)
+            rev = len(hits) - len(set(hits))  # keys touched again after leaving them: backtrack / spur evidence
+            top = []
+            for sc, ch, code, geo in ranked[:cfg.align_top]:
+                ex = self.lex.excess(collapse(code), hits, cfg)
+                top.append((sc - geo + geo / (1.0 + cfg.align_gate * rev) - cfg.align_weight * ex, ch, code))
+            top.sort(key=lambda r: (-r[0], r[2], r[1]))
+            ranked = top + [(sc - cfg.align_weight * 1e3, ch, code) for sc, ch, code, geo in ranked[cfg.align_top:]]
+        else:
+            ranked = [(sc, ch, code) for sc, ch, code, geo in ranked]
+        ranked = ranked[:top_k]
         return [(ch, code, sc) for sc, ch, code in ranked]

@@ -64,6 +64,9 @@ def main(argv=None):
     wanted = []  # (id, code, char, how)
     wanted.append(("yan-exact", "yhmbc", "顏", "exact"))
     wanted.append(("yan-slip-y-h-y-j-m-n-b-v-c", "yhmbc", "顏", "slip"))
+    wanted.append(("spur-yhyjmnbvc", "yhmbc", "顏", "keys:yhyjmnbvc"))
+    wanted.append(("spur-yhyhmbc", "yhmbc", "顏", "keys:yhyhmbc"))
+    wanted.append(("spur-yuyjmnbc-ambiguous", "yjmbc", "贑", "keys:yuyjmnbc"))
     pool = {n: [e for e in full if len(e[0]) == n and not repeat_positions(e[0]) and len(by_code[e[0]]) <= 2] for n in (2, 3, 4, 5)}
     for n in (2, 3, 4, 5):
         for i, e in enumerate(rng.sample(pool[n], 4)):
@@ -81,6 +84,8 @@ def main(argv=None):
     for cid, code, ch, how in wanted:
         if how == "exact":
             pts = generate(code, L, PROFILES["mouse"], 0.0, random.Random(1))
+        elif isinstance(how, str) and how.startswith("keys:"):
+            pts = polyline_path(how[5:], L)
         elif how == "slip":
             pts = polyline_path("yhyjmnbvc", L)
         elif how == "dwell":
@@ -120,6 +125,7 @@ def main(argv=None):
             print("drop (tie)", c["id"])
             continue
         c["expected"] = [r[0] for r in res[:TOPK]]
+        c["expected_codes"] = [r[1] for r in res[:TOPK]]
         c["expected_scores"] = [round(r[2], 6) for r in res[:TOPK]]
         c["expected_full"] = [r[0] for r in dec_full.decode(pts, top_k=TOPK)]
         kept.append(c)

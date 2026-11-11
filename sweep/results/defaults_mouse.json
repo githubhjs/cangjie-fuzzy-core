@@ -19,5 +19,11 @@
  "dwell_assign_radius": 0.9,
  "repeat_miss_penalty": 2.332,
  "dwell_extra_penalty": 2.165,
- "top_k": 10
+ "top_k": 10,
+ "align_weight": 2.34,
+ "align_gate": 0.661,
+ "align_ins": 0.4,
+ "hit_radius": 0.582,
+ "align_top": 40,
+ "align_miss": 1.0
 }

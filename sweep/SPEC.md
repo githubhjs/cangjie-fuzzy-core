@@ -64,6 +64,35 @@ lexicon: entries (code, char, weight) with len(code) >= 2   (single-letter codes
 
 Why not SHARK2 as published: its channels' distances are converted to Gaussian probabilities and multiplied (eq. 7-9); here the same Gaussian assumption is used directly in the log domain with per-channel weights (= 1/(2 sigma^2)), which is what the tuner sets. SHARK2's "tunnel" location distance and its speed-dependent channel weighting are not implemented (the tunnel is approximated by `loc_tolerance` and `cover_weight`; speed weighting is not used because sweeps here are short and mostly visually guided).
 
+## 2b. 迴旋／折返容錯 / Spur and backtrack tolerance (key-sequence alignment rerank)
+
+**Problem (owner example).** The slip path `y h y j m n b v c` for 顏 (`yhmbc`) went to a wrong code first (`ytmbc` 顱) because the extra `y h y` out-and-back lengthens the path and shifts the equidistant resampling, so the location channel prefers a code whose shape happens to fit the shifted points. Paths without the backtrack were fine.
+
+**Stage (after the normal scoring, applied to the best `align_top` candidates; `align_weight` = 0 switches it off):**
+
+1. `hits` = keys the path touches, in order, repeats collapsed: walk the path in steps of at most 0.15 key widths (linear interpolation between samples, so fast sparse strokes do not skip keys); a point touches the nearest key if within `hit_radius` of its centre.
+2. `alignCost(codeKeys, hits)` = edit distance with no substitution: `D[i][j] = min(D[i-1][j] + miss, D[i][j-1] + ins, D[i-1][j-1] if codeKeys[i-1] == hits[j-1])`, `D[0][j] = j * ins`, `D[i][0] = i * miss`. A code key that is never touched costs `align_miss` (1.0); a touched key the code does not need costs `align_ins` (0.40): extra touches, spurs and backtracks are cheap, missing keys are expensive.
+3. `excess = max(0, alignCost(code, hits) - alignCost(code, hitsOfIdealPath(code)))`, where `hitsOfIdealPath` = `hits` of the polyline through the code's key centres (cached per code): a perfect straight sweep also touches the keys in between and must score 0, so a clean sweep is unchanged.
+4. `revisits = len(hits) - len(distinct keys in hits)` (a key touched again after leaving it: backtrack evidence); a property of the PATH, not of the candidate.
+5. For each reranked candidate: `geo` = the geometry part of its score (`-(shape + location + start/end + cover terms)`, i.e. the score without prior and dwell terms); `score' = score - geo + geo / (1 + align_gate * revisits) - align_weight * excess`. Geometry is trusted less when the path doubled back, and a candidate whose keys the path really touched in order is preferred. Candidates below `align_top` keep their order after the reranked ones. Words: same, with the template's key string and `align_top` 25.
+
+Defaults (tuned on train characters by `tune_align.py`: mouse and finger at backtrack rates 0 / 0.15 / 0.4, clean scenarios counted double; the same values are used for characters, words and all profiles): `align_weight` 2.34, `align_gate` 0.66, `align_ins` 0.40, `align_miss` 1.0 (fixed), `hit_radius` 0.58, `align_top` 40 (chars) / 25 (words).
+
+**Evidence (synthetic; `results/SPUR.md`; held-out characters and words, level mid; top-1 / top-5 %, before -> after):**
+
+| | rate 0 | rate 0.15 | rate 0.4 |
+|---|---|---|---|
+| char, mouse | 81.3 / 99.2 -> 81.1 / 99.2 | 70.4 / 89.9 -> 73.4 / 93.3 | 54.0 / 75.6 -> 61.1 / 84.1 |
+| char, finger | 50.0 / 82.0 -> 52.7 / 83.8 | 43.4 / 74.3 -> 47.8 / 78.1 | 33.5 / 61.5 -> 39.9 / 69.0 |
+| word, mouse | 95.9 / 99.9 -> 95.6 / 99.9 | 75.8 / 84.6 -> 80.8 / 88.3 | 52.6 / 65.0 -> 62.7 / 71.9 |
+| word, finger | 76.6 / 91.1 -> 75.8 / 92.9 | 57.5 / 75.3 -> 63.5 / 81.3 | 41.6 / 57.1 -> 47.4 / 64.1 |
+
+The owner example, noiseless polylines, top-3 codes before -> after: `yhyjmnbvc` ytmbc yhmbc htmc -> **yhmbc** ytmbc yjmbc; `yhyhmbc` ytmbc htmc yhmbc -> **yhmbc** ynmbc ytmbc; `yhmbc`, `yhjmnbvc`, `yhmnbvc` unchanged (yhmbc first). `yuyjmnbc` stays ambiguous by construction: `yujbc` and `yjmbc` both are subsequences of the touched keys at the same alignment cost (before: ytmbc first). The owner word cases (顏值, 頻率) stay top-1 in all six boundary modes, and `yhyjmnbvc ojhbnm` (the slip inside a word) decodes to 顏值.
+
+**Costs and limits.** Frequency-weighted top-1 on CLEAN mouse sweeps drops 91.3 -> 88.3 (unweighted unchanged, 81.3 -> 81.1): the rerank sometimes promotes a rarer character whose keys are all touched; finger clean improves. Latency (pure Python): single character 7.1 -> 10.6 ms mean (p95 14.1 -> 17.7); word (243k) 11.8 -> 21.5 ms mean (p95 18.6 -> 31.8), mostly `hit_sequence` and warming the per-code ideal-hit cache; a port with flat arrays and a warm cache should be a small fraction of that. The noise class is MY model of a backtrack (go back 70-100% toward the previous key, then on); real spurs, loops and corrections may look different. Not handled: a spur that skips a code key entirely (that key is then "missing").
+
+**Kotlin port notes.** Implement `hit_sequence`, `align_cost`, `excess` (with a per-code cache of the ideal-path cost), the `revisits` count and the rerank formula exactly as above, `align_top` 40 / 25. Reference vectors: `vectors/vectors.json` now includes `spur-yhyjmnbvc` and `spur-yhyhmbc` (the top CODE must be `yhmbc`; every case has `expected_codes`) and `spur-yuyjmnbc-ambiguous` (order recorded, not meaningful); the word vectors were regenerated. Deliberate vector change: all expected scores moved because the default config now includes the alignment stage; the top-1 of every older case is unchanged except the owner slip example (顱 first before, 頻 first now); lower ranks of 15 of the 27 older cases moved (the mini lexicon was also rebuilt).
+
 ## 3. 參數與預設值 / Parameters and defaults
 
 `SweepConfig` (decoder.py). Defaults = tuned **mouse** profile. Per-profile files: `results/defaults_<mouse|touchpad|finger|touchscreen>.json`. Tuned by random search + local refinement on the train split (25% of characters by hash). Objective: mean over levels low/mid/high/vhigh of `0.5*(top1 + w1) + 0.25*(top5 + w5)` where `w` = frequency-weighted (unweighted metrics cannot see the prior; weighted ones can). `prior_weight` is searched only in 0.05-0.4 (an unbounded search let the prior drown clean paths: oracle top-1 54% for one profile, kept in `results/round2/`). `n` = 24, `prune_radius` = 1.2 and `dwell_ms` = 250 are fixed, not tuned: larger n / radius (n 48, radius 2.8 in round 1) gave the same accuracy at up to 7x the latency, and a tuned `dwell_ms` was seen to exploit the simulator's assumed hold time (406 ms for finger).

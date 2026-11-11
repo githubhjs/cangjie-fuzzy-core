@@ -80,6 +80,38 @@ class Basics(unittest.TestCase):
         self.assertEqual(detect_dwells(short, cfg), [])
 
 
+class Alignment(unittest.TestCase):
+    def test_align_cost(self):
+        from sweep.decoder import align_cost
+        hits = list("yhyjmnbvc")
+        self.assertAlmostEqual(align_cost("yhmbc", hits, 0.25, 1.0), 1.0)  # 4 extra touches
+        self.assertAlmostEqual(align_cost("ytmbc", hits, 0.25, 1.0), 1.0 + 5 * 0.25)  # t never touched
+        self.assertAlmostEqual(align_cost("yhmbc", list("yhmbc"), 0.25, 1.0), 0.0)
+
+    def test_hit_sequence(self):
+        from sweep.decoder import hit_sequence
+        pts = [(L.centers["y"][0], L.centers["y"][1], 0.0), (L.centers["p"][0], L.centers["p"][1], 100.0)]
+        seq = hit_sequence(pts, L.centers, 0.5)
+        self.assertEqual(seq[0], "y")
+        self.assertEqual(seq[-1], "p")
+        self.assertIn("u", seq)  # fast stroke with two samples still touches the keys in between
+
+    def test_spur_example_ranks_right_code_first(self):
+        from sweep.make_vectors import polyline_path
+        ents = [("yhmbc", "顏", 1586), ("ytmbc", "顱", 100), ("yjmbc", "贑", 50), ("htmc", "箕", 80), ("ynmbc", "頏", 30)]
+        dec = SweepDecoder(Lexicon(ents, L, 24))
+        for keys in ("yhyjmnbvc", "yhyhmbc", "yhmbc", "yhjmnbvc"):
+            self.assertEqual(dec.decode(polyline_path(keys, L), top_k=1)[0][1], "yhmbc", keys)
+        off = SweepDecoder(Lexicon(ents, L, 24), SweepConfig(align_weight=0.0))
+        self.assertEqual(off.decode(polyline_path("yhyjmnbvc", L), top_k=1)[0][1], "ytmbc")  # the bug this stage fixes
+
+    def test_clean_sweep_unchanged_by_alignment(self):
+        ents = [("yhmbc", "顏", 1586), ("ytmbc", "顱", 100)]
+        a = SweepDecoder(Lexicon(ents, L, 24)).decode(straight("yhmbc"), top_k=2)
+        b = SweepDecoder(Lexicon(ents, L, 24), SweepConfig(align_weight=0.0)).decode(straight("yhmbc"), top_k=2)
+        self.assertEqual([x[:2] for x in a], [x[:2] for x in b])
+
+
 class DecoderMini(unittest.TestCase):
     ents = [("ab", "A", 100), ("ab", "B", 10), ("aab", "C", 50), ("abb", "D", 50), ("ak", "E", 100), ("yhmbc", "顏", 1586),
             ("yhmbv", "X", 1000), ("a", "T", 99999)]
@@ -221,6 +253,8 @@ class Vectors(unittest.TestCase):
         for c in v["cases"]:
             got = [r[0] for r in dec.decode([tuple(p) for p in c["points"]], top_k=len(c["expected"]))]
             self.assertEqual(got, c["expected"], c["id"])
+            if c["id"] in ("spur-yhyjmnbvc", "spur-yhyhmbc"):  # the owner's slip example: the right CODE must be first
+                self.assertEqual(dec.decode([tuple(p) for p in c["points"]], top_k=1)[0][1], "yhmbc", c["id"])
 
 
 @unittest.skipUnless(os.path.exists(TABLE), "Cangjie 3 table not found")

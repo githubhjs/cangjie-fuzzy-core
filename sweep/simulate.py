@@ -35,6 +35,7 @@ class NoiseProfile:
     overshoot_amt: float = 0.2
     detour_prob: float = 0.1
     detour_amp: float = 0.5
+    backtrack_prob: float = 0.0  # per interior waypoint: after reaching it the path goes BACK toward the previous waypoint, then on (y-h-y-j-m ...)
     tremor: float = 0.03
     spline: int = 0           # Catmull-Rom samples per segment; 0 = straight segments
     dt_min: float = 8.0        # ms between samples
@@ -55,12 +56,12 @@ class NoiseProfile:
         """Noise level k: spatial errors x k, probabilities x k (capped). k = 0 is a noiseless path (dwell kept)."""
         if k == 0:
             return replace(self, sigma_wp=0, sigma_bias=0, sigma_start=0, sigma_end=0, corner_cut_max=0, overshoot_prob=0,
-                           overshoot_amt=0, detour_prob=0, detour_amp=0, tremor=0, spline=0, speed_sigma=0,
+                           overshoot_amt=0, detour_prob=0, detour_amp=0, backtrack_prob=0, tremor=0, spline=0, speed_sigma=0,
                            p_dwell=1.0, dwell_sd_ms=0, p_hesitate=0, linger_max_ms=0)
         return replace(self, sigma_wp=self.sigma_wp * k, sigma_bias=self.sigma_bias * k, sigma_start=self.sigma_start * k,
                        sigma_end=self.sigma_end * k, corner_cut_max=min(0.9, self.corner_cut_max * k),
                        overshoot_prob=min(0.9, self.overshoot_prob * k), overshoot_amt=self.overshoot_amt * k,
-                       detour_prob=min(0.6, self.detour_prob * k), detour_amp=self.detour_amp * k, tremor=self.tremor * k)
+                       detour_prob=min(0.6, self.detour_prob * k), backtrack_prob=min(0.8, self.backtrack_prob * k), detour_amp=self.detour_amp * k, tremor=self.tremor * k)
 
 
 # Assumed typical behaviour. 'mid' level = x1.0. See SPEC.md for the (limited) grounding.
@@ -169,6 +170,9 @@ def generate(code, layout, profile, level, rng, dwell=None, keys=None, reps=None
     for i in range(len(w)):
         wp_idx.append(len(ctrl))
         ctrl.append((w[i][0], w[i][1]))
+        if 0 < i < len(w) - 1 and p.backtrack_prob > 0 and rng.random() < p.backtrack_prob:
+            f = rng.uniform(0.7, 1.0)
+            ctrl.append((w[i][0] + (w[i - 1][0] - w[i][0]) * f + g(0, p.sigma_wp * 0.5), w[i][1] + (w[i - 1][1] - w[i][1]) * f + g(0, p.sigma_wp * 0.5)))
         if i < len(w) - 1 and p.detour_prob > 0 and rng.random() < p.detour_prob:
             dx, dy = w[i + 1][0] - w[i][0], w[i + 1][1] - w[i][1]
             n = math.hypot(dx, dy)

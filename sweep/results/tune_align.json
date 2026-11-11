@@ -1,0 +1,5308 @@
+{
+ "best": {
+  "align_weight": 2.340126252743399,
+  "align_gate": 0.6612539846768647,
+  "align_ins": 0.39990996906309006,
+  "hit_radius": 0.5821581191333093
+ },
+ "best_obj": 1.223259936510387,
+ "best_per": {
+  "mouse/0.00": [
+   0.83125,
+   0.9925,
+   0.9762745172762919
+  ],
+  "mouse/0.15": [
+   0.75625,
+   0.93625,
+   0.950349007155239
+  ],
+  "mouse/0.40": [
+   0.63125,
+   0.84125,
+   0.8662793272612852
+  ],
+  "finger/0.00": [
+   0.5475,
+   0.855,
+   0.8647426040043382
+  ],
+  "finger/0.15": [
+   0.5125,
+   0.7975,
+   0.8527753201420954
+  ],
+  "finger/0.40": [
+   0.42,
+   0.6975,
+   0.7976736976218899
+  ]
+ },
+ "trials": [
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.0,
+    "align_gate": 0.0,
+    "align_ins": 0.25,
+    "align_miss": 1.0,
+    "hit_radius": 0.5,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1817254117278275,
+   "per": {
+    "mouse/0.00": [
+     0.84,
+     0.99375,
+     0.9777607717399477
+    ],
+    "mouse/0.15": [
+     0.73875,
+     0.90375,
+     0.9333322690254476
+    ],
+    "mouse/0.40": [
+     0.55125,
+     0.75125,
+     0.8298702128032118
+    ],
+    "finger/0.00": [
+     0.5325,
+     0.82125,
+     0.8576244441995392
+    ],
+    "finger/0.15": [
+     0.4725,
+     0.745,
+     0.8217251675512438
+    ],
+    "finger/0.40": [
+     0.365,
+     0.59125,
+     0.7657908099417343
+    ]
+   },
+   "phase": "off"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.7308760913615838,
+    "align_gate": 1.1711053957674933,
+    "align_ins": 0.14132019837277435,
+    "align_miss": 1.0,
+    "hit_radius": 0.6241500304318139,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2086199986407542,
+   "per": {
+    "mouse/0.00": [
+     0.815,
+     0.9925,
+     0.9732525695310625
+    ],
+    "mouse/0.15": [
+     0.73625,
+     0.92375,
+     0.9463887518449434
+    ],
+    "mouse/0.40": [
+     0.59625,
+     0.81125,
+     0.9161208655501047
+    ],
+    "finger/0.00": [
+     0.52,
+     0.83375,
+     0.851934345249805
+    ],
+    "finger/0.15": [
+     0.48,
+     0.765,
+     0.8623206169140496
+    ],
+    "finger/0.40": [
+     0.39125,
+     0.64625,
+     0.8445545717001907
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 1.42795990690872,
+    "align_gate": 6.376816550953726,
+    "align_ins": 0.35418271163279125,
+    "align_miss": 1.0,
+    "hit_radius": 0.46506321918658183,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1761792877649484,
+   "per": {
+    "mouse/0.00": [
+     0.77,
+     0.9875,
+     0.9665227104419933
+    ],
+    "mouse/0.15": [
+     0.71375,
+     0.9275,
+     0.9506497599642393
+    ],
+    "mouse/0.40": [
+     0.6075,
+     0.83125,
+     0.92641031952926
+    ],
+    "finger/0.00": [
+     0.4525,
+     0.77875,
+     0.8523262508793414
+    ],
+    "finger/0.15": [
+     0.40625,
+     0.725,
+     0.8064336381717113
+    ],
+    "finger/0.40": [
+     0.35375,
+     0.63375,
+     0.833948400293749
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.408394694053811,
+    "align_gate": 4.192201753497718,
+    "align_ins": 0.4796652621551523,
+    "align_miss": 1.0,
+    "hit_radius": 0.5484742917072265,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1809971695311139,
+   "per": {
+    "mouse/0.00": [
+     0.77,
+     0.98875,
+     0.9549813213966054
+    ],
+    "mouse/0.15": [
+     0.71,
+     0.935,
+     0.940102297154075
+    ],
+    "mouse/0.40": [
+     0.60375,
+     0.845,
+     0.8621058670487188
+    ],
+    "finger/0.00": [
+     0.46875,
+     0.8025,
+     0.844948022292787
+    ],
+    "finger/0.15": [
+     0.44,
+     0.7425,
+     0.8355917260018313
+    ],
+    "finger/0.40": [
+     0.38875,
+     0.66,
+     0.8222973188711058
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 3.473561050192351,
+    "align_gate": 2.5287527650718107,
+    "align_ins": 0.1352771814366121,
+    "align_miss": 1.0,
+    "hit_radius": 0.3949505172222203,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.121150947187884,
+   "per": {
+    "mouse/0.00": [
+     0.74,
+     0.97625,
+     0.947770978795897
+    ],
+    "mouse/0.15": [
+     0.6975,
+     0.9225,
+     0.9313681059885858
+    ],
+    "mouse/0.40": [
+     0.58,
+     0.81125,
+     0.8887765643523463
+    ],
+    "finger/0.00": [
+     0.385,
+     0.73,
+     0.7824475716785612
+    ],
+    "finger/0.15": [
+     0.37,
+     0.6675,
+     0.7687097601496348
+    ],
+    "finger/0.40": [
+     0.3,
+     0.56875,
+     0.7417841439411184
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.9275393057434503,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5362320316965595,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2197951967195027,
+   "per": {
+    "mouse/0.00": [
+     0.81375,
+     0.9925,
+     0.9707141952235923
+    ],
+    "mouse/0.15": [
+     0.7625,
+     0.93625,
+     0.9522668213003027
+    ],
+    "mouse/0.40": [
+     0.645,
+     0.845,
+     0.9077919696940047
+    ],
+    "finger/0.00": [
+     0.5275,
+     0.84625,
+     0.8613241157403927
+    ],
+    "finger/0.15": [
+     0.4975,
+     0.7825,
+     0.850013956166308
+    ],
+    "finger/0.40": [
+     0.4175,
+     0.69625,
+     0.8323977723692626
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.24485977610189452,
+    "align_gate": 9.025859470566232,
+    "align_ins": 0.06815342335349751,
+    "align_miss": 1.0,
+    "hit_radius": 0.6100675097446949,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.0493376068245395,
+   "per": {
+    "mouse/0.00": [
+     0.68,
+     0.90625,
+     0.4558006668060567
+    ],
+    "mouse/0.15": [
+     0.59875,
+     0.83,
+     0.9386999856833423
+    ],
+    "mouse/0.40": [
+     0.48125,
+     0.72375,
+     0.9146701452368274
+    ],
+    "finger/0.00": [
+     0.385,
+     0.6875,
+     0.867071893311031
+    ],
+    "finger/0.15": [
+     0.33625,
+     0.64375,
+     0.8406499350600527
+    ],
+    "finger/0.40": [
+     0.28,
+     0.545,
+     0.8355639166667524
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 3.4942721398078462,
+    "align_gate": 1.108694914855586,
+    "align_ins": 0.44943089185739393,
+    "align_miss": 1.0,
+    "hit_radius": 0.5697020347606812,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2043345535912924,
+   "per": {
+    "mouse/0.00": [
+     0.82125,
+     0.99125,
+     0.9681593413101492
+    ],
+    "mouse/0.15": [
+     0.74625,
+     0.94,
+     0.9479604942645822
+    ],
+    "mouse/0.40": [
+     0.62625,
+     0.84625,
+     0.8820966590688817
+    ],
+    "finger/0.00": [
+     0.50125,
+     0.82875,
+     0.8483114068742617
+    ],
+    "finger/0.15": [
+     0.48,
+     0.7725,
+     0.8432501078899204
+    ],
+    "finger/0.40": [
+     0.395,
+     0.67875,
+     0.7891362317526988
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.3059678180042402,
+    "align_gate": 5.919346808189644,
+    "align_ins": 0.1180721678158553,
+    "align_miss": 1.0,
+    "hit_radius": 0.6239664706817014,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1475663850107813,
+   "per": {
+    "mouse/0.00": [
+     0.72,
+     0.935,
+     0.9610519962467697
+    ],
+    "mouse/0.15": [
+     0.64625,
+     0.8525,
+     0.9476267822436365
+    ],
+    "mouse/0.40": [
+     0.5275,
+     0.7475,
+     0.9219484662121729
+    ],
+    "finger/0.00": [
+     0.4275,
+     0.745,
+     0.8735215990985655
+    ],
+    "finger/0.15": [
+     0.38375,
+     0.69625,
+     0.8476341980663242
+    ],
+    "finger/0.40": [
+     0.3225,
+     0.59,
+     0.8440617284840719
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.082318730963858,
+    "align_gate": 18.577903151296375,
+    "align_ins": 0.07944124301231666,
+    "align_miss": 1.0,
+    "hit_radius": 0.44534006765183237,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.0935518642409416,
+   "per": {
+    "mouse/0.00": [
+     0.705,
+     0.94375,
+     0.9406162548653462
+    ],
+    "mouse/0.15": [
+     0.655,
+     0.8875,
+     0.9255853092552557
+    ],
+    "mouse/0.40": [
+     0.56875,
+     0.7875,
+     0.9069370901341749
+    ],
+    "finger/0.00": [
+     0.35875,
+     0.65875,
+     0.781979962859088
+    ],
+    "finger/0.15": [
+     0.31875,
+     0.61375,
+     0.7984760484376818
+    ],
+    "finger/0.40": [
+     0.27,
+     0.525,
+     0.7439131030377064
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 1.6470142064811752,
+    "align_gate": 4.713609654690503,
+    "align_ins": 0.15014974317843682,
+    "align_miss": 1.0,
+    "hit_radius": 0.6163340966327726,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1872686202166656,
+   "per": {
+    "mouse/0.00": [
+     0.77875,
+     0.97875,
+     0.9704803908138556
+    ],
+    "mouse/0.15": [
+     0.72,
+     0.92375,
+     0.9456775538496874
+    ],
+    "mouse/0.40": [
+     0.635,
+     0.83125,
+     0.928920369513965
+    ],
+    "finger/0.00": [
+     0.45125,
+     0.77625,
+     0.8496617045886433
+    ],
+    "finger/0.15": [
+     0.43625,
+     0.71875,
+     0.8573540756640509
+    ],
+    "finger/0.40": [
+     0.385,
+     0.63375,
+     0.8471362049733391
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 3.560029051299874,
+    "align_gate": 1.5200469157614798,
+    "align_ins": 0.13024917810180286,
+    "align_miss": 1.0,
+    "hit_radius": 0.5502977581922404,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.195923930396324,
+   "per": {
+    "mouse/0.00": [
+     0.80625,
+     0.99375,
+     0.9710793214934231
+    ],
+    "mouse/0.15": [
+     0.75625,
+     0.94375,
+     0.95209687536371
+    ],
+    "mouse/0.40": [
+     0.65,
+     0.85375,
+     0.9277647371451349
+    ],
+    "finger/0.00": [
+     0.465,
+     0.7975,
+     0.8300324339245049
+    ],
+    "finger/0.15": [
+     0.44125,
+     0.73,
+     0.8228859497969404
+    ],
+    "finger/0.40": [
+     0.3875,
+     0.635,
+     0.8346539334244518
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.7989151854489224,
+    "align_gate": 5.776704076370531,
+    "align_ins": 0.32129550108853994,
+    "align_miss": 1.0,
+    "hit_radius": 0.4684473385596349,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1845812135018572,
+   "per": {
+    "mouse/0.00": [
+     0.77,
+     0.97875,
+     0.9678415939074897
+    ],
+    "mouse/0.15": [
+     0.71625,
+     0.915,
+     0.9541104772184897
+    ],
+    "mouse/0.40": [
+     0.60625,
+     0.81625,
+     0.9278193258399192
+    ],
+    "finger/0.00": [
+     0.47625,
+     0.78375,
+     0.8610161531037793
+    ],
+    "finger/0.15": [
+     0.42,
+     0.74,
+     0.8153022411234148
+    ],
+    "finger/0.40": [
+     0.3725,
+     0.635,
+     0.8598074770032249
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.2152937872736687,
+    "align_gate": 0.8225585833830296,
+    "align_ins": 0.3021294800203522,
+    "align_miss": 1.0,
+    "hit_radius": 0.5684636743407905,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1969264433270212,
+   "per": {
+    "mouse/0.00": [
+     0.8225,
+     0.99125,
+     0.9747429438962114
+    ],
+    "mouse/0.15": [
+     0.73125,
+     0.91,
+     0.9432339372765597
+    ],
+    "mouse/0.40": [
+     0.56625,
+     0.77875,
+     0.8556257769876722
+    ],
+    "finger/0.00": [
+     0.5275,
+     0.84,
+     0.8623901402517465
+    ],
+    "finger/0.15": [
+     0.4875,
+     0.7575,
+     0.8420218622572734
+    ],
+    "finger/0.40": [
+     0.37875,
+     0.62125,
+     0.7835465554018604
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.850722515022528,
+    "align_gate": 7.791304332244842,
+    "align_ins": 0.3468829863924603,
+    "align_miss": 1.0,
+    "hit_radius": 0.6141057670434897,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1785607790398982,
+   "per": {
+    "mouse/0.00": [
+     0.7625,
+     0.95375,
+     0.9696337510570122
+    ],
+    "mouse/0.15": [
+     0.68625,
+     0.89875,
+     0.942932154492186
+    ],
+    "mouse/0.40": [
+     0.59125,
+     0.81625,
+     0.9199776083353847
+    ],
+    "finger/0.00": [
+     0.465,
+     0.77875,
+     0.8558497966313625
+    ],
+    "finger/0.15": [
+     0.4375,
+     0.74125,
+     0.8571269660942407
+    ],
+    "finger/0.40": [
+     0.3725,
+     0.66375,
+     0.8252744626875972
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 1.856606008299636,
+    "align_gate": 1.639176964717313,
+    "align_ins": 0.1263466186369367,
+    "align_miss": 1.0,
+    "hit_radius": 0.36971901666269513,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.169958603760878,
+   "per": {
+    "mouse/0.00": [
+     0.7925,
+     0.99,
+     0.9653361788119647
+    ],
+    "mouse/0.15": [
+     0.7225,
+     0.9275,
+     0.9513686827747948
+    ],
+    "mouse/0.40": [
+     0.5925,
+     0.81375,
+     0.8993369018546766
+    ],
+    "finger/0.00": [
+     0.4475,
+     0.7975,
+     0.8486986776146183
+    ],
+    "finger/0.15": [
+     0.41375,
+     0.72375,
+     0.8236944804649721
+    ],
+    "finger/0.40": [
+     0.34,
+     0.595,
+     0.7666420845877575
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.22883294891672765,
+    "align_gate": 12.042614958118003,
+    "align_ins": 0.5310252872738236,
+    "align_miss": 1.0,
+    "hit_radius": 0.5754108537110427,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.0817884248567304,
+   "per": {
+    "mouse/0.00": [
+     0.6925,
+     0.905,
+     0.46016261251193485
+    ],
+    "mouse/0.15": [
+     0.6175,
+     0.84125,
+     0.9463985366109896
+    ],
+    "mouse/0.40": [
+     0.51375,
+     0.755,
+     0.9181401322694375
+    ],
+    "finger/0.00": [
+     0.4275,
+     0.75875,
+     0.8778871497182502
+    ],
+    "finger/0.15": [
+     0.39125,
+     0.71125,
+     0.8497152633080544
+    ],
+    "finger/0.40": [
+     0.34,
+     0.6225,
+     0.8476733371305092
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.2900831952673386,
+    "align_gate": 5.716620604054368,
+    "align_ins": 0.12021042139942414,
+    "align_miss": 1.0,
+    "hit_radius": 0.616720257878135,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.150926758765026,
+   "per": {
+    "mouse/0.00": [
+     0.725,
+     0.935,
+     0.9615000355341504
+    ],
+    "mouse/0.15": [
+     0.64875,
+     0.855,
+     0.9477838534880632
+    ],
+    "mouse/0.40": [
+     0.52625,
+     0.74875,
+     0.921536991050544
+    ],
+    "finger/0.00": [
+     0.4375,
+     0.74875,
+     0.8748229729827159
+    ],
+    "finger/0.15": [
+     0.39,
+     0.695,
+     0.8482511533149243
+    ],
+    "finger/0.40": [
+     0.3275,
+     0.5925,
+     0.8447203977352902
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 1.8586282579527902,
+    "align_gate": 7.941499495837228,
+    "align_ins": 0.38498107039131324,
+    "align_miss": 1.0,
+    "hit_radius": 0.47551426723873363,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1756675191536794,
+   "per": {
+    "mouse/0.00": [
+     0.76125,
+     0.985,
+     0.9587906853147141
+    ],
+    "mouse/0.15": [
+     0.715,
+     0.93,
+     0.9483894790075569
+    ],
+    "mouse/0.40": [
+     0.61375,
+     0.84,
+     0.9302243183365486
+    ],
+    "finger/0.00": [
+     0.4325,
+     0.785,
+     0.84696110915988
+    ],
+    "finger/0.15": [
+     0.41125,
+     0.7225,
+     0.8550088217390722
+    ],
+    "finger/0.40": [
+     0.35,
+     0.6275,
+     0.8414126318239731
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 3.582812565193762,
+    "align_gate": 17.363426441252383,
+    "align_ins": 0.18296441973250482,
+    "align_miss": 1.0,
+    "hit_radius": 0.48121632120727775,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.136147771926695,
+   "per": {
+    "mouse/0.00": [
+     0.73875,
+     0.97625,
+     0.9570701114536352
+    ],
+    "mouse/0.15": [
+     0.70125,
+     0.925,
+     0.9399915748014465
+    ],
+    "mouse/0.40": [
+     0.61875,
+     0.84,
+     0.9226241300570504
+    ],
+    "finger/0.00": [
+     0.37375,
+     0.69125,
+     0.831673184694154
+    ],
+    "finger/0.15": [
+     0.36875,
+     0.64875,
+     0.7855853916532856
+    ],
+    "finger/0.40": [
+     0.31625,
+     0.5575,
+     0.8139189841970879
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.4231605256414235,
+    "align_gate": 6.141810432316417,
+    "align_ins": 0.27583706329694624,
+    "align_miss": 1.0,
+    "hit_radius": 0.4850044848389758,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1770146738740697,
+   "per": {
+    "mouse/0.00": [
+     0.77625,
+     0.9875,
+     0.9608248866769595
+    ],
+    "mouse/0.15": [
+     0.735,
+     0.93375,
+     0.9510535103105685
+    ],
+    "mouse/0.40": [
+     0.62875,
+     0.84375,
+     0.9328311860063426
+    ],
+    "finger/0.00": [
+     0.43375,
+     0.77,
+     0.8470471121035495
+    ],
+    "finger/0.15": [
+     0.41125,
+     0.71125,
+     0.8475698246054937
+    ],
+    "finger/0.40": [
+     0.34625,
+     0.62,
+     0.824137884863173
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 5.374492726160024,
+    "align_gate": 1.383711688553458,
+    "align_ins": 0.16634283558266139,
+    "align_miss": 1.0,
+    "hit_radius": 0.5558389363784566,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1998935696674053,
+   "per": {
+    "mouse/0.00": [
+     0.815,
+     0.9925,
+     0.975070991052604
+    ],
+    "mouse/0.15": [
+     0.75875,
+     0.94375,
+     0.9527375200458957
+    ],
+    "mouse/0.40": [
+     0.6625,
+     0.8575,
+     0.9337355043840901
+    ],
+    "finger/0.00": [
+     0.46875,
+     0.79,
+     0.8347790754323064
+    ],
+    "finger/0.15": [
+     0.4375,
+     0.73125,
+     0.8258208646231269
+    ],
+    "finger/0.40": [
+     0.38875,
+     0.64,
+     0.8375692787185458
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.5130216500553629,
+    "align_gate": 13.70055370434858,
+    "align_ins": 0.22915649223590356,
+    "align_miss": 1.0,
+    "hit_radius": 0.6273871398479166,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.0817641293067777,
+   "per": {
+    "mouse/0.00": [
+     0.7025,
+     0.91875,
+     0.4585805703385632
+    ],
+    "mouse/0.15": [
+     0.64125,
+     0.8525,
+     0.9468141316741117
+    ],
+    "mouse/0.40": [
+     0.5575,
+     0.78,
+     0.9278105710492462
+    ],
+    "finger/0.00": [
+     0.41125,
+     0.72125,
+     0.869447016521835
+    ],
+    "finger/0.15": [
+     0.3875,
+     0.6925,
+     0.8466201873113214
+    ],
+    "finger/0.40": [
+     0.33875,
+     0.62125,
+     0.8430827368917609
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.727879164657362,
+    "align_gate": 13.09129679060884,
+    "align_ins": 0.4631177685601451,
+    "align_miss": 1.0,
+    "hit_radius": 0.5696051256669453,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.0971518796696509,
+   "per": {
+    "mouse/0.00": [
+     0.7275,
+     0.95125,
+     0.4599452877081709
+    ],
+    "mouse/0.15": [
+     0.66125,
+     0.89625,
+     0.9408031953955981
+    ],
+    "mouse/0.40": [
+     0.55875,
+     0.81,
+     0.8748713818252606
+    ],
+    "finger/0.00": [
+     0.45,
+     0.775,
+     0.853602905354533
+    ],
+    "finger/0.15": [
+     0.42125,
+     0.72625,
+     0.8594310210042878
+    ],
+    "finger/0.40": [
+     0.365,
+     0.645,
+     0.7914191721675935
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.4145732701904194,
+    "align_gate": 0.9164581458417198,
+    "align_ins": 0.06706326733567289,
+    "align_miss": 1.0,
+    "hit_radius": 0.4041876661824841,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1853510868605912,
+   "per": {
+    "mouse/0.00": [
+     0.825,
+     0.9925,
+     0.9755684691579024
+    ],
+    "mouse/0.15": [
+     0.7325,
+     0.91,
+     0.9436181180907964
+    ],
+    "mouse/0.40": [
+     0.56375,
+     0.7725,
+     0.8449500822435335
+    ],
+    "finger/0.00": [
+     0.5175,
+     0.8225,
+     0.8609883437687005
+    ],
+    "finger/0.15": [
+     0.45875,
+     0.7525,
+     0.8325373340323433
+    ],
+    "finger/0.40": [
+     0.3575,
+     0.61375,
+     0.7767868270269658
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 1.9302387011218696,
+    "align_gate": 0.6339982730126968,
+    "align_ins": 0.1804644603371967,
+    "align_miss": 1.0,
+    "hit_radius": 0.520110699436138,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2078367971592892,
+   "per": {
+    "mouse/0.00": [
+     0.83,
+     0.99375,
+     0.9758336878165244
+    ],
+    "mouse/0.15": [
+     0.76125,
+     0.9325,
+     0.9504149255791294
+    ],
+    "mouse/0.40": [
+     0.6225,
+     0.83,
+     0.8650752860499106
+    ],
+    "finger/0.00": [
+     0.51125,
+     0.83375,
+     0.8581059576865517
+    ],
+    "finger/0.15": [
+     0.485,
+     0.76125,
+     0.8383118909626871
+    ],
+    "finger/0.40": [
+     0.39375,
+     0.6625,
+     0.8216432845090674
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.33900431504971656,
+    "align_gate": 1.683294548314928,
+    "align_ins": 0.17560551957274356,
+    "align_miss": 1.0,
+    "hit_radius": 0.5528264054393681,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.193829130593925,
+   "per": {
+    "mouse/0.00": [
+     0.8,
+     0.98375,
+     0.9713368153367453
+    ],
+    "mouse/0.15": [
+     0.715,
+     0.9025,
+     0.9441192011099014
+    ],
+    "mouse/0.40": [
+     0.57,
+     0.78375,
+     0.8747539646327056
+    ],
+    "finger/0.00": [
+     0.5125,
+     0.82125,
+     0.8550881298428155
+    ],
+    "finger/0.15": [
+     0.47375,
+     0.75875,
+     0.8456211111992312
+    ],
+    "finger/0.40": [
+     0.375,
+     0.6325,
+     0.8440447338904127
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.2992903117605664,
+    "align_gate": 19.818057921848144,
+    "align_ins": 0.3793054562577518,
+    "align_miss": 1.0,
+    "hit_radius": 0.5639140997671448,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.0691450198566377,
+   "per": {
+    "mouse/0.00": [
+     0.67125,
+     0.89625,
+     0.4576041536846854
+    ],
+    "mouse/0.15": [
+     0.605,
+     0.84,
+     0.9433894635579263
+    ],
+    "mouse/0.40": [
+     0.5125,
+     0.7625,
+     0.9226292799339167
+    ],
+    "finger/0.00": [
+     0.41875,
+     0.725,
+     0.87442179757482
+    ],
+    "finger/0.15": [
+     0.3725,
+     0.68125,
+     0.8472747366610465
+    ],
+    "finger/0.40": [
+     0.32625,
+     0.59625,
+     0.8487949803120207
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 1.3098439028245286,
+    "align_gate": 3.136932388234443,
+    "align_ins": 0.5838775206068428,
+    "align_miss": 1.0,
+    "hit_radius": 0.6181160321928317,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1874940876597235,
+   "per": {
+    "mouse/0.00": [
+     0.795,
+     0.9875,
+     0.96559779255678
+    ],
+    "mouse/0.15": [
+     0.72125,
+     0.9275,
+     0.9446995922327497
+    ],
+    "mouse/0.40": [
+     0.59,
+     0.83,
+     0.8589119134161503
+    ],
+    "finger/0.00": [
+     0.4975,
+     0.81125,
+     0.8413060293728377
+    ],
+    "finger/0.15": [
+     0.46625,
+     0.7625,
+     0.8548811047927845
+    ],
+    "finger/0.40": [
+     0.38,
+     0.66875,
+     0.7838740875705662
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 3.274482528599032,
+    "align_gate": 0.5581894958389376,
+    "align_ins": 0.3742326836263334,
+    "align_miss": 1.0,
+    "hit_radius": 0.6325109425654619,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2195123140234623,
+   "per": {
+    "mouse/0.00": [
+     0.83875,
+     0.99375,
+     0.9763064465128639
+    ],
+    "mouse/0.15": [
+     0.765,
+     0.9375,
+     0.956540189124078
+    ],
+    "mouse/0.40": [
+     0.63625,
+     0.84375,
+     0.8727254281350133
+    ],
+    "finger/0.00": [
+     0.54125,
+     0.84,
+     0.8559188049813728
+    ],
+    "finger/0.15": [
+     0.505,
+     0.7925,
+     0.8434803073858504
+    ],
+    "finger/0.40": [
+     0.41375,
+     0.6875,
+     0.7869094249956483
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 1.7534184220169209,
+    "align_gate": 3.3174688898952964,
+    "align_ins": 0.4073354468188207,
+    "align_miss": 1.0,
+    "hit_radius": 0.40310260745415893,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.177610606480399,
+   "per": {
+    "mouse/0.00": [
+     0.7825,
+     0.98875,
+     0.9663723340374931
+    ],
+    "mouse/0.15": [
+     0.73625,
+     0.93375,
+     0.9543726059509917
+    ],
+    "mouse/0.40": [
+     0.61,
+     0.82375,
+     0.9023042609051217
+    ],
+    "finger/0.00": [
+     0.46125,
+     0.79375,
+     0.862366450818161
+    ],
+    "finger/0.15": [
+     0.40875,
+     0.74,
+     0.7993628572340835
+    ],
+    "finger/0.40": [
+     0.34875,
+     0.635,
+     0.7879538200241633
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.3764324791067706,
+    "align_gate": 9.005641269474275,
+    "align_ins": 0.08944569917814234,
+    "align_miss": 1.0,
+    "hit_radius": 0.502938318997239,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.138922291021537,
+   "per": {
+    "mouse/0.00": [
+     0.745,
+     0.9675,
+     0.9589184022610019
+    ],
+    "mouse/0.15": [
+     0.71,
+     0.90875,
+     0.9506322503828933
+    ],
+    "mouse/0.40": [
+     0.60875,
+     0.82,
+     0.9267424865871458
+    ],
+    "finger/0.00": [
+     0.38,
+     0.69,
+     0.8149062155923852
+    ],
+    "finger/0.15": [
+     0.36625,
+     0.6525,
+     0.8168065201561031
+    ],
+    "finger/0.40": [
+     0.3275,
+     0.5575,
+     0.8297327110908779
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 1.5144608142188662,
+    "align_gate": 1.8319881902971884,
+    "align_ins": 0.42493357076951194,
+    "align_miss": 1.0,
+    "hit_radius": 0.6265796011658344,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2105863901258966,
+   "per": {
+    "mouse/0.00": [
+     0.815,
+     0.995,
+     0.9732077656023245
+    ],
+    "mouse/0.15": [
+     0.74125,
+     0.935,
+     0.9470190967733961
+    ],
+    "mouse/0.40": [
+     0.61125,
+     0.83875,
+     0.8814106954702713
+    ],
+    "finger/0.00": [
+     0.52875,
+     0.8375,
+     0.84796327519809
+    ],
+    "finger/0.15": [
+     0.49625,
+     0.785,
+     0.8629798011529545
+    ],
+    "finger/0.40": [
+     0.4075,
+     0.69,
+     0.7921453048057621
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 4.361065270413156,
+    "align_gate": 1.5560895603691336,
+    "align_ins": 0.13346632340879783,
+    "align_miss": 1.0,
+    "hit_radius": 0.6061798961007123,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1980852781548275,
+   "per": {
+    "mouse/0.00": [
+     0.81375,
+     0.9925,
+     0.9722622482096454
+    ],
+    "mouse/0.15": [
+     0.7475,
+     0.94375,
+     0.9478760362839724
+    ],
+    "mouse/0.40": [
+     0.65625,
+     0.855,
+     0.9296871861793784
+    ],
+    "finger/0.00": [
+     0.47,
+     0.7825,
+     0.8291857941676615
+    ],
+    "finger/0.15": [
+     0.44625,
+     0.72875,
+     0.8450968537342272
+    ],
+    "finger/0.40": [
+     0.3925,
+     0.63625,
+     0.8385652649045161
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 1.6031625689823668,
+    "align_gate": 10.663662334632885,
+    "align_ins": 0.5279095097529692,
+    "align_miss": 1.0,
+    "hit_radius": 0.4338333918639443,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1424987882098332,
+   "per": {
+    "mouse/0.00": [
+     0.73625,
+     0.97625,
+     0.9514206965311459
+    ],
+    "mouse/0.15": [
+     0.7025,
+     0.92625,
+     0.9394508377304699
+    ],
+    "mouse/0.40": [
+     0.57875,
+     0.8275,
+     0.90265136260592
+    ],
+    "finger/0.00": [
+     0.4225,
+     0.765,
+     0.8066736224336876
+    ],
+    "finger/0.15": [
+     0.37625,
+     0.7125,
+     0.792239547552418
+    ],
+    "finger/0.40": [
+     0.3175,
+     0.6175,
+     0.7825376945237239
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 1.4746029410002113,
+    "align_gate": 1.530226495676696,
+    "align_ins": 0.4886205842369855,
+    "align_miss": 1.0,
+    "hit_radius": 0.5574679885451955,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2133537379367352,
+   "per": {
+    "mouse/0.00": [
+     0.81625,
+     0.9925,
+     0.9751312446119413
+    ],
+    "mouse/0.15": [
+     0.74875,
+     0.9325,
+     0.9496079398741576
+    ],
+    "mouse/0.40": [
+     0.61875,
+     0.83875,
+     0.880498652277224
+    ],
+    "finger/0.00": [
+     0.5225,
+     0.84875,
+     0.860715400294779
+    ],
+    "finger/0.15": [
+     0.4975,
+     0.7825,
+     0.8450592596331021
+    ],
+    "finger/0.40": [
+     0.415,
+     0.68,
+     0.7948165459363866
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.45095394571277064,
+    "align_gate": 3.1638193912836643,
+    "align_ins": 0.37678014518817915,
+    "align_miss": 1.0,
+    "hit_radius": 0.41990998420970405,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1886694567304772,
+   "per": {
+    "mouse/0.00": [
+     0.80125,
+     0.9825,
+     0.9716277833796994
+    ],
+    "mouse/0.15": [
+     0.7225,
+     0.92,
+     0.9541676408517072
+    ],
+    "mouse/0.40": [
+     0.58875,
+     0.80375,
+     0.8740865405908145
+    ],
+    "finger/0.00": [
+     0.5,
+     0.81625,
+     0.8758920874201898
+    ],
+    "finger/0.15": [
+     0.45125,
+     0.7425,
+     0.840765292301861
+    ],
+    "finger/0.40": [
+     0.37,
+     0.63125,
+     0.7849437169957266
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.37204219202505107,
+    "align_gate": 2.875587278160229,
+    "align_ins": 0.08965027955075251,
+    "align_miss": 1.0,
+    "hit_radius": 0.4985481637826058,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1832663001488575,
+   "per": {
+    "mouse/0.00": [
+     0.77875,
+     0.9775,
+     0.9700282316249819
+    ],
+    "mouse/0.15": [
+     0.7,
+     0.89375,
+     0.9506451250750595
+    ],
+    "mouse/0.40": [
+     0.56125,
+     0.78,
+     0.9238626754434301
+    ],
+    "finger/0.00": [
+     0.48875,
+     0.80625,
+     0.8648955553472717
+    ],
+    "finger/0.15": [
+     0.44125,
+     0.73125,
+     0.8456674600910292
+    ],
+    "finger/0.40": [
+     0.35875,
+     0.6075,
+     0.8475209007752624
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 4.892090632776514,
+    "align_gate": 10.525743485651992,
+    "align_ins": 0.07987456422886621,
+    "align_miss": 1.0,
+    "hit_radius": 0.5977255701992785,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1443293737807667,
+   "per": {
+    "mouse/0.00": [
+     0.7475,
+     0.96875,
+     0.9621185357458103
+    ],
+    "mouse/0.15": [
+     0.7,
+     0.91625,
+     0.9418043314584348
+    ],
+    "mouse/0.40": [
+     0.635,
+     0.82875,
+     0.926658028606536
+    ],
+    "finger/0.00": [
+     0.41125,
+     0.67,
+     0.7916895407030818
+    ],
+    "finger/0.15": [
+     0.39875,
+     0.635,
+     0.8376012079551178
+    ],
+    "finger/0.40": [
+     0.365,
+     0.5625,
+     0.8334323826317313
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.287280423935722,
+    "align_gate": 6.815697125288408,
+    "align_ins": 0.06474097383365793,
+    "align_miss": 1.0,
+    "hit_radius": 0.5779693453694194,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.1490902843098958,
+   "per": {
+    "mouse/0.00": [
+     0.7525,
+     0.96625,
+     0.9606075618731956
+    ],
+    "mouse/0.15": [
+     0.695,
+     0.905,
+     0.9426556061044581
+    ],
+    "mouse/0.40": [
+     0.60875,
+     0.81875,
+     0.9183682718146209
+    ],
+    "finger/0.00": [
+     0.4125,
+     0.7125,
+     0.7984662636716356
+    ],
+    "finger/0.15": [
+     0.39625,
+     0.6775,
+     0.8384390929212883
+    ],
+    "finger/0.40": [
+     0.355,
+     0.58375,
+     0.8294875769520351
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 0.38878445872033685,
+    "align_gate": 9.671497083038853,
+    "align_ins": 0.22734692026018527,
+    "align_miss": 1.0,
+    "hit_radius": 0.4599936781370619,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.0969829249636547,
+   "per": {
+    "mouse/0.00": [
+     0.7325,
+     0.94625,
+     0.46257790476229715
+    ],
+    "mouse/0.15": [
+     0.67375,
+     0.8775,
+     0.9511395132542381
+    ],
+    "mouse/0.40": [
+     0.56125,
+     0.7725,
+     0.9250682616178647
+    ],
+    "finger/0.00": [
+     0.45,
+     0.7625,
+     0.8669076122389914
+    ],
+    "finger/0.15": [
+     0.3925,
+     0.70625,
+     0.8475826992976598
+    ],
+    "finger/0.40": [
+     0.33375,
+     0.6025,
+     0.8535977554776665
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.883237262090437,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5362320316965595,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.220024160446152,
+   "per": {
+    "mouse/0.00": [
+     0.815,
+     0.9925,
+     0.9708295524654006
+    ],
+    "mouse/0.15": [
+     0.7625,
+     0.935,
+     0.9522668213003027
+    ],
+    "mouse/0.40": [
+     0.645,
+     0.8425,
+     0.9077919696940047
+    ],
+    "finger/0.00": [
+     0.52875,
+     0.8475,
+     0.8613246307280793
+    ],
+    "finger/0.15": [
+     0.49625,
+     0.78375,
+     0.8498537949957616
+    ],
+    "finger/0.40": [
+     0.4175,
+     0.695,
+     0.8327047050305028
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.9046010746242261,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5362320316965595,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2195581341275132,
+   "per": {
+    "mouse/0.00": [
+     0.81375,
+     0.9925,
+     0.9707141952235923
+    ],
+    "mouse/0.15": [
+     0.7625,
+     0.935,
+     0.9522668213003027
+    ],
+    "mouse/0.40": [
+     0.645,
+     0.8425,
+     0.9077919696940047
+    ],
+    "finger/0.00": [
+     0.5275,
+     0.84625,
+     0.8613241157403927
+    ],
+    "finger/0.15": [
+     0.49625,
+     0.7825,
+     0.8498537949957616
+    ],
+    "finger/0.40": [
+     0.4175,
+     0.695,
+     0.8327047050305028
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.883237262090437,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.695906174352889,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2152229000282728,
+   "per": {
+    "mouse/0.00": [
+     0.82875,
+     0.99375,
+     0.9747944426648759
+    ],
+    "mouse/0.15": [
+     0.76,
+     0.93875,
+     0.955352627518676
+    ],
+    "mouse/0.40": [
+     0.63,
+     0.84375,
+     0.8718468591415979
+    ],
+    "finger/0.00": [
+     0.53875,
+     0.8425,
+     0.8560568216813936
+    ],
+    "finger/0.15": [
+     0.49625,
+     0.78875,
+     0.8369698330512917
+    ],
+    "finger/0.40": [
+     0.4,
+     0.68875,
+     0.7772322913759132
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.883237262090437,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.7622528714952842,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2155154003607618,
+   "per": {
+    "mouse/0.00": [
+     0.82875,
+     0.99375,
+     0.9747944426648759
+    ],
+    "mouse/0.15": [
+     0.76,
+     0.93875,
+     0.955352627518676
+    ],
+    "mouse/0.40": [
+     0.63,
+     0.84375,
+     0.8718468591415979
+    ],
+    "finger/0.00": [
+     0.54,
+     0.84375,
+     0.8566119784075963
+    ],
+    "finger/0.15": [
+     0.49625,
+     0.7875,
+     0.8369698330512917
+    ],
+    "finger/0.40": [
+     0.4,
+     0.68875,
+     0.7772322913759132
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.486454002648383,
+    "align_gate": 0.883237262090437,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5362320316965595,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2192015782988568,
+   "per": {
+    "mouse/0.00": [
+     0.81375,
+     0.9925,
+     0.9707141952235923
+    ],
+    "mouse/0.15": [
+     0.76,
+     0.9375,
+     0.9509232184258475
+    ],
+    "mouse/0.40": [
+     0.64375,
+     0.845,
+     0.9074809171312714
+    ],
+    "finger/0.00": [
+     0.525,
+     0.845,
+     0.8605902582869244
+    ],
+    "finger/0.15": [
+     0.49875,
+     0.7825,
+     0.8513292347179979
+    ],
+    "finger/0.40": [
+     0.41875,
+     0.695,
+     0.8324271266674014
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 4.180414987223554,
+    "align_gate": 0.883237262090437,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5362320316965595,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2100442255331925,
+   "per": {
+    "mouse/0.00": [
+     0.805,
+     0.99125,
+     0.9616349623080512
+    ],
+    "mouse/0.15": [
+     0.7525,
+     0.93875,
+     0.9485007163478721
+    ],
+    "mouse/0.40": [
+     0.6425,
+     0.8475,
+     0.9045846263815832
+    ],
+    "finger/0.00": [
+     0.50375,
+     0.82875,
+     0.8558946005601006
+    ],
+    "finger/0.15": [
+     0.4875,
+     0.76875,
+     0.8435508606989207
+    ],
+    "finger/0.40": [
+     0.41625,
+     0.6825,
+     0.8262343997355023
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.7639568728483289,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5362320316965595,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2188423451779644,
+   "per": {
+    "mouse/0.00": [
+     0.81625,
+     0.9925,
+     0.9711272153482811
+    ],
+    "mouse/0.15": [
+     0.7625,
+     0.935,
+     0.9522668213003027
+    ],
+    "mouse/0.40": [
+     0.64125,
+     0.8425,
+     0.8686008917526782
+    ],
+    "finger/0.00": [
+     0.5325,
+     0.84625,
+     0.8618952370848812
+    ],
+    "finger/0.15": [
+     0.5025,
+     0.785,
+     0.8518220779341166
+    ],
+    "finger/0.40": [
+     0.4225,
+     0.6925,
+     0.8339205909586702
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.883237262090437,
+    "align_ins": 0.46542913003580855,
+    "align_miss": 1.0,
+    "hit_radius": 0.5362320316965595,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.21741374101089,
+   "per": {
+    "mouse/0.00": [
+     0.815,
+     0.9925,
+     0.9709958934881867
+    ],
+    "mouse/0.15": [
+     0.7575,
+     0.93625,
+     0.9504973236089925
+    ],
+    "mouse/0.40": [
+     0.63625,
+     0.8425,
+     0.8678428298779376
+    ],
+    "finger/0.00": [
+     0.5275,
+     0.8475,
+     0.8609976135470601
+    ],
+    "finger/0.15": [
+     0.50375,
+     0.785,
+     0.8527300012256707
+    ],
+    "finger/0.40": [
+     0.4225,
+     0.69125,
+     0.8342084690755044
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.5993371138761955,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5362320316965595,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2198854225219695,
+   "per": {
+    "mouse/0.00": [
+     0.82125,
+     0.99375,
+     0.9717580752644204
+    ],
+    "mouse/0.15": [
+     0.76375,
+     0.935,
+     0.9522673362879893
+    ],
+    "mouse/0.40": [
+     0.6375,
+     0.83875,
+     0.8677537370081482
+    ],
+    "finger/0.00": [
+     0.52875,
+     0.85,
+     0.8613884892012232
+    ],
+    "finger/0.15": [
+     0.505,
+     0.79375,
+     0.8536065102683394
+    ],
+    "finger/0.40": [
+     0.42125,
+     0.69625,
+     0.8350396592017485
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.4004203876264762,
+    "align_gate": 0.883237262090437,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5362320316965595,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2194505865532725,
+   "per": {
+    "mouse/0.00": [
+     0.81375,
+     0.9925,
+     0.9707141952235923
+    ],
+    "mouse/0.15": [
+     0.7625,
+     0.93625,
+     0.9522668213003027
+    ],
+    "mouse/0.40": [
+     0.645,
+     0.84375,
+     0.9077919696940047
+    ],
+    "finger/0.00": [
+     0.52625,
+     0.845,
+     0.861183009114252
+    ],
+    "finger/0.15": [
+     0.49625,
+     0.7825,
+     0.8498537949957616
+    ],
+    "finger/0.40": [
+     0.4175,
+     0.69625,
+     0.8327047050305028
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.7491528729657203,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5362320316965595,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2191182127761107,
+   "per": {
+    "mouse/0.00": [
+     0.81625,
+     0.9925,
+     0.9711272153482811
+    ],
+    "mouse/0.15": [
+     0.76375,
+     0.935,
+     0.9522673362879893
+    ],
+    "mouse/0.40": [
+     0.6425,
+     0.8425,
+     0.8686014067403648
+    ],
+    "finger/0.00": [
+     0.5325,
+     0.84875,
+     0.8618952370848812
+    ],
+    "finger/0.15": [
+     0.5025,
+     0.78375,
+     0.8518220779341166
+    ],
+    "finger/0.40": [
+     0.4225,
+     0.6925,
+     0.8339205909586702
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.7920062470050517,
+    "align_gate": 0.883237262090437,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5362320316965595,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2172985333971447,
+   "per": {
+    "mouse/0.00": [
+     0.815,
+     0.9925,
+     0.9699638581641513
+    ],
+    "mouse/0.15": [
+     0.76125,
+     0.93875,
+     0.9509237334135341
+    ],
+    "mouse/0.40": [
+     0.645,
+     0.84625,
+     0.9075808247424804
+    ],
+    "finger/0.00": [
+     0.51375,
+     0.83875,
+     0.8579215920947331
+    ],
+    "finger/0.15": [
+     0.49,
+     0.78125,
+     0.8506818951958859
+    ],
+    "finger/0.40": [
+     0.4125,
+     0.6925,
+     0.8319708475770344
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.883237262090437,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.6935137010190877,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2150662637875078,
+   "per": {
+    "mouse/0.00": [
+     0.82875,
+     0.99375,
+     0.9747944426648759
+    ],
+    "mouse/0.15": [
+     0.76,
+     0.93875,
+     0.955352627518676
+    ],
+    "mouse/0.40": [
+     0.63,
+     0.84375,
+     0.8718468591415979
+    ],
+    "finger/0.00": [
+     0.53875,
+     0.8425,
+     0.8560568216813936
+    ],
+    "finger/0.15": [
+     0.495,
+     0.78875,
+     0.8369667431251718
+    ],
+    "finger/0.40": [
+     0.39875,
+     0.68875,
+     0.7772292014497933
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.883237262090437,
+    "align_ins": 0.4213683101721248,
+    "align_miss": 1.0,
+    "hit_radius": 0.5362320316965595,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2199098175691523,
+   "per": {
+    "mouse/0.00": [
+     0.815,
+     0.9925,
+     0.970934609953476
+    ],
+    "mouse/0.15": [
+     0.7625,
+     0.93375,
+     0.9522668213003027
+    ],
+    "mouse/0.40": [
+     0.6425,
+     0.8425,
+     0.9074634075499255
+    ],
+    "finger/0.00": [
+     0.5275,
+     0.8475,
+     0.8611546847914866
+    ],
+    "finger/0.15": [
+     0.4975,
+     0.785,
+     0.850013956166308
+    ],
+    "finger/0.40": [
+     0.41875,
+     0.695,
+     0.8328648662010492
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.883237262090437,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.6104388579050407,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2149942006351473,
+   "per": {
+    "mouse/0.00": [
+     0.825,
+     0.9925,
+     0.9757584996142742
+    ],
+    "mouse/0.15": [
+     0.755,
+     0.93875,
+     0.9477148451380527
+    ],
+    "mouse/0.40": [
+     0.62875,
+     0.84125,
+     0.8663823247986141
+    ],
+    "finger/0.00": [
+     0.53875,
+     0.8425,
+     0.8564343076557039
+    ],
+    "finger/0.15": [
+     0.50375,
+     0.79375,
+     0.8447909510483604
+    ],
+    "finger/0.40": [
+     0.40875,
+     0.69,
+     0.7867291793053228
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.883237262090437,
+    "align_ins": 0.288038644737838,
+    "align_miss": 1.0,
+    "hit_radius": 0.5362320316965595,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.216164084765171,
+   "per": {
+    "mouse/0.00": [
+     0.81375,
+     0.99375,
+     0.9702929352959171
+    ],
+    "mouse/0.15": [
+     0.7575,
+     0.935,
+     0.9518733707077064
+    ],
+    "mouse/0.40": [
+     0.6425,
+     0.84375,
+     0.907697211959662
+    ],
+    "finger/0.00": [
+     0.52,
+     0.83625,
+     0.8599897826442969
+    ],
+    "finger/0.15": [
+     0.495,
+     0.77625,
+     0.8455093588712294
+    ],
+    "finger/0.40": [
+     0.40875,
+     0.6875,
+     0.8298310737390269
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.883237262090437,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5386309486760038,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2164250397280814,
+   "per": {
+    "mouse/0.00": [
+     0.81625,
+     0.99375,
+     0.9709567544240018
+    ],
+    "mouse/0.15": [
+     0.76,
+     0.93625,
+     0.9504483997787613
+    ],
+    "mouse/0.40": [
+     0.64,
+     0.845,
+     0.8684124062593663
+    ],
+    "finger/0.00": [
+     0.5225,
+     0.84875,
+     0.8616923319363434
+    ],
+    "finger/0.15": [
+     0.4925,
+     0.785,
+     0.8497173232588009
+    ],
+    "finger/0.40": [
+     0.41375,
+     0.69875,
+     0.8323483335513447
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5362320316965595,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2200912639854564,
+   "per": {
+    "mouse/0.00": [
+     0.81875,
+     0.99375,
+     0.9712796517035278
+    ],
+    "mouse/0.15": [
+     0.76375,
+     0.93375,
+     0.9522673362879893
+    ],
+    "mouse/0.40": [
+     0.6425,
+     0.83875,
+     0.8686163413832775
+    ],
+    "finger/0.00": [
+     0.52875,
+     0.85,
+     0.8611835241019388
+    ],
+    "finger/0.15": [
+     0.50625,
+     0.79375,
+     0.8537383471161204
+    ],
+    "finger/0.40": [
+     0.42375,
+     0.6975,
+     0.8353950007055332
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 3.0594897381144484,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5362320316965595,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2176612540307443,
+   "per": {
+    "mouse/0.00": [
+     0.81375,
+     0.9925,
+     0.9698871249988413
+    ],
+    "mouse/0.15": [
+     0.7625,
+     0.93625,
+     0.9514922798195895
+    ],
+    "mouse/0.40": [
+     0.645,
+     0.84375,
+     0.8690030971359475
+    ],
+    "finger/0.00": [
+     0.52125,
+     0.8475,
+     0.8595880922487144
+    ],
+    "finger/0.15": [
+     0.49875,
+     0.78375,
+     0.8499701822129433
+    ],
+    "finger/0.40": [
+     0.42125,
+     0.695,
+     0.8326542362372116
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.7529815403471545,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5362320316965595,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2190317514129332,
+   "per": {
+    "mouse/0.00": [
+     0.81625,
+     0.9925,
+     0.9711272153482811
+    ],
+    "mouse/0.15": [
+     0.76375,
+     0.935,
+     0.9522673362879893
+    ],
+    "mouse/0.40": [
+     0.6425,
+     0.8425,
+     0.8686014067403648
+    ],
+    "finger/0.00": [
+     0.5325,
+     0.8475,
+     0.8618952370848812
+    ],
+    "finger/0.15": [
+     0.5025,
+     0.78375,
+     0.8518220779341166
+    ],
+    "finger/0.40": [
+     0.4225,
+     0.6925,
+     0.8339205909586702
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.223176033992277,
+   "per": {
+    "mouse/0.00": [
+     0.83125,
+     0.9925,
+     0.9762745172762919
+    ],
+    "mouse/0.15": [
+     0.7575,
+     0.93625,
+     0.9503495221429256
+    ],
+    "mouse/0.40": [
+     0.6325,
+     0.84125,
+     0.8662798422489718
+    ],
+    "finger/0.00": [
+     0.54625,
+     0.855,
+     0.8646272467625299
+    ],
+    "finger/0.15": [
+     0.51125,
+     0.79625,
+     0.8528896474085305
+    ],
+    "finger/0.40": [
+     0.42,
+     0.69875,
+     0.797848793435349
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.7361618332426443,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2208251683108506,
+   "per": {
+    "mouse/0.00": [
+     0.83375,
+     0.9925,
+     0.9767184366621794
+    ],
+    "mouse/0.15": [
+     0.755,
+     0.93625,
+     0.9490548430987015
+    ],
+    "mouse/0.40": [
+     0.62875,
+     0.84,
+     0.865719020658216
+    ],
+    "finger/0.00": [
+     0.54375,
+     0.85,
+     0.8614626474281
+    ],
+    "finger/0.15": [
+     0.50875,
+     0.79,
+     0.8521959589946204
+    ],
+    "finger/0.40": [
+     0.415,
+     0.69375,
+     0.7972261733221959
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.7022399484051403,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2213950490178156,
+   "per": {
+    "mouse/0.00": [
+     0.83375,
+     0.9925,
+     0.9767184366621794
+    ],
+    "mouse/0.15": [
+     0.755,
+     0.93625,
+     0.9490548430987015
+    ],
+    "mouse/0.40": [
+     0.62875,
+     0.84,
+     0.865719020658216
+    ],
+    "finger/0.00": [
+     0.545,
+     0.85125,
+     0.8615831545467748
+    ],
+    "finger/0.15": [
+     0.51,
+     0.79,
+     0.8526656277648401
+    ],
+    "finger/0.40": [
+     0.4175,
+     0.69375,
+     0.797877632745801
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.32975224579496976,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2200320496954107,
+   "per": {
+    "mouse/0.00": [
+     0.82875,
+     0.995,
+     0.9756668318060515
+    ],
+    "mouse/0.15": [
+     0.7575,
+     0.9375,
+     0.950731128018729
+    ],
+    "mouse/0.40": [
+     0.63125,
+     0.8425,
+     0.8676744289044049
+    ],
+    "finger/0.00": [
+     0.5375,
+     0.85125,
+     0.8626805933070141
+    ],
+    "finger/0.15": [
+     0.5075,
+     0.79625,
+     0.849790966497991
+    ],
+    "finger/0.40": [
+     0.41,
+     0.69625,
+     0.7916359819836708
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.45427076923752113,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2214936696426089,
+   "per": {
+    "mouse/0.00": [
+     0.83375,
+     0.9925,
+     0.9767184366621794
+    ],
+    "mouse/0.15": [
+     0.75375,
+     0.93625,
+     0.9490532981356415
+    ],
+    "mouse/0.40": [
+     0.62125,
+     0.84,
+     0.864409921958766
+    ],
+    "finger/0.00": [
+     0.545,
+     0.85625,
+     0.8621928999677617
+    ],
+    "finger/0.15": [
+     0.51125,
+     0.7925,
+     0.853093067544755
+    ],
+    "finger/0.40": [
+     0.41625,
+     0.69375,
+     0.7967405399336902
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.49165654365166644,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2154867339735187,
+   "per": {
+    "mouse/0.00": [
+     0.82125,
+     0.99625,
+     0.9724136545895188
+    ],
+    "mouse/0.15": [
+     0.76375,
+     0.94,
+     0.9560988446766238
+    ],
+    "mouse/0.40": [
+     0.63375,
+     0.84,
+     0.9149554484152284
+    ],
+    "finger/0.00": [
+     0.51125,
+     0.835,
+     0.871265953031063
+    ],
+    "finger/0.15": [
+     0.48,
+     0.78,
+     0.8520584572822864
+    ],
+    "finger/0.40": [
+     0.395,
+     0.67625,
+     0.8340910518829495
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 3.9715419791830238,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.210321090557881,
+   "per": {
+    "mouse/0.00": [
+     0.825,
+     0.9925,
+     0.9681042376276783
+    ],
+    "mouse/0.15": [
+     0.75,
+     0.94,
+     0.9484682721236135
+    ],
+    "mouse/0.40": [
+     0.63125,
+     0.84375,
+     0.8659172909175742
+    ],
+    "finger/0.00": [
+     0.51875,
+     0.84125,
+     0.8525770498827373
+    ],
+    "finger/0.15": [
+     0.49375,
+     0.78,
+     0.8463956526799444
+    ],
+    "finger/0.40": [
+     0.40375,
+     0.68375,
+     0.7883323359738469
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.2740139728879383,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2195428718236847,
+   "per": {
+    "mouse/0.00": [
+     0.82875,
+     0.99375,
+     0.97539543329519
+    ],
+    "mouse/0.15": [
+     0.75625,
+     0.9375,
+     0.9506131958384875
+    ],
+    "mouse/0.40": [
+     0.6325,
+     0.8425,
+     0.8679947512454977
+    ],
+    "finger/0.00": [
+     0.5325,
+     0.84875,
+     0.8618143840180781
+    ],
+    "finger/0.15": [
+     0.505,
+     0.79625,
+     0.8499197134196521
+    ],
+    "finger/0.40": [
+     0.40625,
+     0.69375,
+     0.7913110247533981
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.3698690613392389,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.222461791413958,
+   "per": {
+    "mouse/0.00": [
+     0.83,
+     0.99375,
+     0.976125170847165
+    ],
+    "mouse/0.15": [
+     0.75875,
+     0.9375,
+     0.9507316430064158
+    ],
+    "mouse/0.40": [
+     0.63125,
+     0.84375,
+     0.8674123001719029
+    ],
+    "finger/0.00": [
+     0.54375,
+     0.85375,
+     0.8634628596030269
+    ],
+    "finger/0.15": [
+     0.51125,
+     0.8,
+     0.8499701822129433
+    ],
+    "finger/0.40": [
+     0.4175,
+     0.7,
+     0.7947444476602564
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.6763838031069562,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2193026155033695,
+   "per": {
+    "mouse/0.00": [
+     0.835,
+     0.99375,
+     0.975538599872077
+    ],
+    "mouse/0.15": [
+     0.76125,
+     0.9375,
+     0.9557790373232176
+    ],
+    "mouse/0.40": [
+     0.63125,
+     0.84125,
+     0.872731607987253
+    ],
+    "finger/0.00": [
+     0.545,
+     0.84625,
+     0.8594227812013014
+    ],
+    "finger/0.15": [
+     0.50125,
+     0.795,
+     0.8433778248362082
+    ],
+    "finger/0.40": [
+     0.40875,
+     0.68875,
+     0.7883302760231002
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.46361102313748714,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2080762175902156,
+   "per": {
+    "mouse/0.00": [
+     0.81375,
+     0.99375,
+     0.9722725479633781
+    ],
+    "mouse/0.15": [
+     0.75875,
+     0.94125,
+     0.9547367022454493
+    ],
+    "mouse/0.40": [
+     0.625,
+     0.83875,
+     0.9149430887107489
+    ],
+    "finger/0.00": [
+     0.5175,
+     0.83125,
+     0.8763555763381697
+    ],
+    "finger/0.15": [
+     0.465,
+     0.765,
+     0.803333412298112
+    ],
+    "finger/0.40": [
+     0.38875,
+     0.65875,
+     0.8210392039526335
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.4196820636994324,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2231243021112177,
+   "per": {
+    "mouse/0.00": [
+     0.83125,
+     0.9925,
+     0.9762745172762919
+    ],
+    "mouse/0.15": [
+     0.7575,
+     0.93625,
+     0.9503495221429256
+    ],
+    "mouse/0.40": [
+     0.63125,
+     0.84125,
+     0.8660429479131154
+    ],
+    "finger/0.00": [
+     0.5475,
+     0.85625,
+     0.8648332418371877
+    ],
+    "finger/0.15": [
+     0.51,
+     0.795,
+     0.8527742901667221
+    ],
+    "finger/0.40": [
+     0.41875,
+     0.6975,
+     0.7977334361935406
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.7961629560935057,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2202892089979036,
+   "per": {
+    "mouse/0.00": [
+     0.82875,
+     0.9925,
+     0.9761699747759031
+    ],
+    "mouse/0.15": [
+     0.75625,
+     0.93625,
+     0.9502341649011172
+    ],
+    "mouse/0.40": [
+     0.6275,
+     0.84125,
+     0.8659574599571325
+    ],
+    "finger/0.00": [
+     0.5425,
+     0.855,
+     0.8620821776151332
+    ],
+    "finger/0.15": [
+     0.505,
+     0.79125,
+     0.8518045683527706
+    ],
+    "finger/0.40": [
+     0.41375,
+     0.695,
+     0.7971921841348774
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.0593024760838334,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.41006036050738315,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2225861692283657,
+   "per": {
+    "mouse/0.00": [
+     0.83,
+     0.99375,
+     0.976125170847165
+    ],
+    "mouse/0.15": [
+     0.755,
+     0.93625,
+     0.9503299526108331
+    ],
+    "mouse/0.40": [
+     0.6225,
+     0.84,
+     0.8675580416872233
+    ],
+    "finger/0.00": [
+     0.5425,
+     0.86125,
+     0.8630956733824494
+    ],
+    "finger/0.15": [
+     0.51875,
+     0.8025,
+     0.8526831373461861
+    ],
+    "finger/0.40": [
+     0.4175,
+     0.7,
+     0.7965144603392533
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.33752464719471326,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2200103519364696,
+   "per": {
+    "mouse/0.00": [
+     0.83,
+     0.99375,
+     0.97585583228705
+    ],
+    "mouse/0.15": [
+     0.7575,
+     0.93625,
+     0.950731128018729
+    ],
+    "mouse/0.40": [
+     0.63125,
+     0.84125,
+     0.8676744289044049
+    ],
+    "finger/0.00": [
+     0.53875,
+     0.85125,
+     0.8625791407327451
+    ],
+    "finger/0.15": [
+     0.50625,
+     0.79625,
+     0.8497904515103044
+    ],
+    "finger/0.40": [
+     0.4075,
+     0.6975,
+     0.7915427692123881
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.39887462038428306,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2229133829496075,
+   "per": {
+    "mouse/0.00": [
+     0.83,
+     0.9925,
+     0.976125170847165
+    ],
+    "mouse/0.15": [
+     0.75625,
+     0.93625,
+     0.950349007155239
+    ],
+    "mouse/0.40": [
+     0.63125,
+     0.84125,
+     0.8662793272612852
+    ],
+    "finger/0.00": [
+     0.54625,
+     0.855,
+     0.8646195219472302
+    ],
+    "finger/0.15": [
+     0.5125,
+     0.7975,
+     0.8527753201420954
+    ],
+    "finger/0.40": [
+     0.42,
+     0.6975,
+     0.7976736976218899
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.3552663761775936,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.220792801133578,
+   "per": {
+    "mouse/0.00": [
+     0.83,
+     0.99375,
+     0.97585583228705
+    ],
+    "mouse/0.15": [
+     0.7575,
+     0.9375,
+     0.950731128018729
+    ],
+    "mouse/0.40": [
+     0.62875,
+     0.8425,
+     0.8674112701965296
+    ],
+    "finger/0.00": [
+     0.54,
+     0.855,
+     0.862858779046593
+    ],
+    "finger/0.15": [
+     0.5075,
+     0.79875,
+     0.8499686372498834
+    ],
+    "finger/0.40": [
+     0.41125,
+     0.6975,
+     0.7922220379710722
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.8012809889635388,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.2017671483818573,
+   "per": {
+    "mouse/0.00": [
+     0.82,
+     0.99375,
+     0.9629121317709294
+    ],
+    "mouse/0.15": [
+     0.74,
+     0.935,
+     0.9424120169286753
+    ],
+    "mouse/0.40": [
+     0.59375,
+     0.8275,
+     0.8545509976856454
+    ],
+    "finger/0.00": [
+     0.52125,
+     0.85375,
+     0.8538490694687491
+    ],
+    "finger/0.15": [
+     0.48875,
+     0.7825,
+     0.8393542260404554
+    ],
+    "finger/0.40": [
+     0.40125,
+     0.6775,
+     0.7861364284779951
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.39990996906309006,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.223259936510387,
+   "per": {
+    "mouse/0.00": [
+     0.83125,
+     0.9925,
+     0.9762745172762919
+    ],
+    "mouse/0.15": [
+     0.75625,
+     0.93625,
+     0.950349007155239
+    ],
+    "mouse/0.40": [
+     0.63125,
+     0.84125,
+     0.8662793272612852
+    ],
+    "finger/0.00": [
+     0.5475,
+     0.855,
+     0.8647426040043382
+    ],
+    "finger/0.15": [
+     0.5125,
+     0.7975,
+     0.8527753201420954
+    ],
+    "finger/0.40": [
+     0.42,
+     0.6975,
+     0.7976736976218899
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "align_weight": 2.340126252743399,
+    "align_gate": 0.6612539846768647,
+    "align_ins": 0.4460617800222886,
+    "align_miss": 1.0,
+    "hit_radius": 0.5821581191333093,
+    "align_top": 40,
+    "top_k": 10
+   },
+   "obj": 1.221933817829994,
+   "per": {
+    "mouse/0.00": [
+     0.8325,
+     0.9925,
+     0.9764949320061758
+    ],
+    "mouse/0.15": [
+     0.75625,
+     0.93625,
+     0.9493169718312036
+    ],
+    "mouse/0.40": [
+     0.62625,
+     0.84125,
+     0.865041296862592
+    ],
+    "finger/0.00": [
+     0.545,
+     0.85625,
+     0.8621928999677617
+    ],
+    "finger/0.15": [
+     0.51125,
+     0.79375,
+     0.8527279412749241
+    ],
+    "finger/0.40": [
+     0.41625,
+     0.695,
+     0.7966771964482329
+    ]
+   },
+   "phase": "refine"
+  }
+ ]
+}
