@@ -1,0 +1,4677 @@
+{
+ "profile": "finger",
+ "best": {
+  "n": 24,
+  "shape_weight": 0.0,
+  "loc_weight": 2.8261757071090123,
+  "end_weight": 2.0857581605874045,
+  "cover_weight": 3.269205926578753,
+  "loc_tolerance": 0.0,
+  "end_alpha": 1.342946296515832,
+  "shape_short_scale": 0.00047090850617714786,
+  "shape_single_scale": 0.0,
+  "prior_weight": 0.196956412221237,
+  "prior_floor": 1.0,
+  "prune_radius": 1.2,
+  "prune_fallback": true,
+  "use_index": true,
+  "repeat_mode": "dwell",
+  "dwell_ms": 406.07978089540063,
+  "dwell_radius": 0.35,
+  "dwell_assign_radius": 0.9,
+  "repeat_miss_penalty": 0.5925559672818489,
+  "dwell_extra_penalty": 4.2684666122473605,
+  "top_k": 10
+ },
+ "best_obj": 0.8849311751269489,
+ "best_per": {
+  "low": [
+   0.689,
+   0.921,
+   0.964,
+   0.9478063142079798,
+   0.9951863493561697
+  ],
+  "mid": [
+   0.423,
+   0.676,
+   0.779,
+   0.8752955661635128,
+   0.969273666137528
+  ],
+  "high": [
+   0.176,
+   0.334,
+   0.428,
+   0.6215591484456519,
+   0.7184380668981277
+  ],
+  "vhigh": [
+   0.054,
+   0.114,
+   0.15,
+   0.5121173020242994,
+   0.5574440579564671
+  ]
+ },
+ "train_n": 1000,
+ "trials": [
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.807,
+    "loc_weight": 17.552,
+    "end_weight": 10.655,
+    "cover_weight": 2.806,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.746,
+    "shape_short_scale": 0.357,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.101,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "top_k": 10
+   },
+   "obj": 0.7692701536458355,
+   "per": {
+    "low": [
+     0.809,
+     0.97,
+     0.988,
+     0.9646393182125421,
+     0.9985101279727622
+    ],
+    "mid": [
+     0.521,
+     0.741,
+     0.824,
+     0.7350205327921602,
+     0.9288985794205811
+    ],
+    "high": [
+     0.209,
+     0.369,
+     0.456,
+     0.1805424575076841,
+     0.6781042643286348
+    ],
+    "vhigh": [
+     0.059,
+     0.121,
+     0.15,
+     0.09569220158644455,
+     0.13702046641372706
+    ]
+   },
+   "phase": "default"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 2.8809065078781293,
+    "loc_weight": 2.874809915471956,
+    "end_weight": 0.0,
+    "cover_weight": 1.0219475088364014,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.8896481606504056,
+    "shape_short_scale": 0.4465931527569984,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.06714655963430687,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 3.3922908406986103,
+    "dwell_extra_penalty": 2.395000016008853,
+    "top_k": 10
+   },
+   "obj": 0.7532064357634856,
+   "per": {
+    "low": [
+     0.732,
+     0.89,
+     0.908,
+     0.9514546995525932,
+     0.974715888163673
+    ],
+    "mid": [
+     0.442,
+     0.669,
+     0.759,
+     0.8388457114270472,
+     0.9471465773418027
+    ],
+    "high": [
+     0.195,
+     0.352,
+     0.426,
+     0.21171806003362634,
+     0.6916940342787943
+    ],
+    "vhigh": [
+     0.042,
+     0.103,
+     0.15,
+     0.10958876941670356,
+     0.14953199157155797
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.5880049104177205,
+    "loc_weight": 20.93922338272396,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.178653315506565,
+    "shape_short_scale": 0.5996180849528505,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.25215751453541857,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.1227044693255734,
+    "dwell_extra_penalty": 3.7423484145401043,
+    "top_k": 10
+   },
+   "obj": 0.7391130609888281,
+   "per": {
+    "low": [
+     0.736,
+     0.93,
+     0.957,
+     0.9510370011195289,
+     0.99400975115373
+    ],
+    "mid": [
+     0.414,
+     0.647,
+     0.741,
+     0.8223126246113421,
+     0.9340817636587793
+    ],
+    "high": [
+     0.178,
+     0.338,
+     0.432,
+     0.19624905188122146,
+     0.6772640105039823
+    ],
+    "vhigh": [
+     0.056,
+     0.12,
+     0.148,
+     0.04373691150864417,
+     0.147782272263286
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 3.7302923824572694,
+    "loc_weight": 3.461060868569108,
+    "end_weight": 6.496919340707713,
+    "cover_weight": 6.307387631463415,
+    "loc_tolerance": 0.0,
+    "end_alpha": 3.992968601389253,
+    "shape_short_scale": 0.7078096214979495,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.0963149496967467,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.3944391178943878,
+    "dwell_extra_penalty": 0.3279664243903904,
+    "top_k": 10
+   },
+   "obj": 0.7860102052287588,
+   "per": {
+    "low": [
+     0.769,
+     0.951,
+     0.98,
+     0.9587097813478221,
+     0.9966944349778725
+    ],
+    "mid": [
+     0.47,
+     0.704,
+     0.792,
+     0.727962562563697,
+     0.9382976036576136
+    ],
+    "high": [
+     0.158,
+     0.288,
+     0.368,
+     0.5654256597975782,
+     0.6651762549773707
+    ],
+    "vhigh": [
+     0.042,
+     0.093,
+     0.129,
+     0.09490780278481811,
+     0.1349833770594516
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.355801358037328,
+    "end_weight": 13.251996128387521,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 3.541929319908413,
+    "shape_short_scale": 0.9270421483387942,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.05574706579946718,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 5.657149341431533,
+    "dwell_extra_penalty": 0.9866935849509694,
+    "top_k": 10
+   },
+   "obj": 0.7836323152372502,
+   "per": {
+    "low": [
+     0.715,
+     0.908,
+     0.931,
+     0.9430064249466341,
+     0.9816168167331935
+    ],
+    "mid": [
+     0.431,
+     0.644,
+     0.718,
+     0.7912208046199389,
+     0.9055863927449992
+    ],
+    "high": [
+     0.15,
+     0.281,
+     0.333,
+     0.5453073280980717,
+     0.6245008463250228
+    ],
+    "vhigh": [
+     0.041,
+     0.089,
+     0.111,
+     0.09482402025027907,
+     0.5106958321629412
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 10.182034487222776,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 3.892228649781292,
+    "shape_short_scale": 0.13459646885386067,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.2175049278850569,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.35895860477976427,
+    "dwell_extra_penalty": 3.2664058808273557,
+    "top_k": 10
+   },
+   "obj": 0.6373453752344495,
+   "per": {
+    "low": [
+     0.529,
+     0.74,
+     0.824,
+     0.7700675360082763,
+     0.9575821574771662
+    ],
+    "mid": [
+     0.294,
+     0.503,
+     0.591,
+     0.7692204014923815,
+     0.871490948653044
+    ],
+    "high": [
+     0.143,
+     0.264,
+     0.347,
+     0.17523299234786185,
+     0.6554129588510379
+    ],
+    "vhigh": [
+     0.05,
+     0.106,
+     0.137,
+     0.1062350395558797,
+     0.14052799996114435
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 2.5339474361914163,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.746144973646222,
+    "dwell_extra_penalty": 4.249690563418113,
+    "top_k": 10
+   },
+   "obj": 0.8182808328327967,
+   "per": {
+    "low": [
+     0.5,
+     0.741,
+     0.799,
+     0.9224019926481838,
+     0.9813241849821224
+    ],
+    "mid": [
+     0.321,
+     0.534,
+     0.634,
+     0.8345404224420625,
+     0.9465734562359704
+    ],
+    "high": [
+     0.153,
+     0.304,
+     0.385,
+     0.63094886351218,
+     0.7635434264709097
+    ],
+    "vhigh": [
+     0.057,
+     0.105,
+     0.137,
+     0.5205991705933827,
+     0.5670713592441278
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 1.1303806582047642,
+    "loc_weight": 23.616203536856656,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.14039714525156716,
+    "end_alpha": 1.6397301057325677,
+    "shape_short_scale": 0.8302894778275844,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.11161337086853085,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.39297633670099874,
+    "dwell_extra_penalty": 1.719003285127069,
+    "top_k": 10
+   },
+   "obj": 0.6882515969780814,
+   "per": {
+    "low": [
+     0.724,
+     0.93,
+     0.968,
+     0.9353368826906903,
+     0.9949285258078538
+    ],
+    "mid": [
+     0.408,
+     0.642,
+     0.737,
+     0.697780612802457,
+     0.922247379468503
+    ],
+    "high": [
+     0.165,
+     0.321,
+     0.408,
+     0.18078287695462225,
+     0.25362430292526517
+    ],
+    "vhigh": [
+     0.062,
+     0.112,
+     0.146,
+     0.044616830494575994,
+     0.14719093756298868
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 1.2809534475453754,
+    "loc_weight": 2.1081144036133415,
+    "end_weight": 2.890161817000869,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 3.599577003406667,
+    "shape_short_scale": 0.3108112879725078,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.08039346317447106,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.6334704685353958,
+    "dwell_extra_penalty": 0.5297337147160676,
+    "top_k": 10
+   },
+   "obj": 0.8127611327054636,
+   "per": {
+    "low": [
+     0.747,
+     0.941,
+     0.974,
+     0.9612564466005743,
+     0.9970643733187841
+    ],
+    "mid": [
+     0.483,
+     0.703,
+     0.801,
+     0.8628415150148825,
+     0.9522965723634204
+    ],
+    "high": [
+     0.178,
+     0.329,
+     0.409,
+     0.5789964066601854,
+     0.6890036840030405
+    ],
+    "vhigh": [
+     0.049,
+     0.105,
+     0.129,
+     0.09701936550312829,
+     0.13858602604463058
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 7.143960228286918,
+    "end_weight": 2.247214668751631,
+    "cover_weight": 5.17197735143547,
+    "loc_tolerance": 0.0881665424521548,
+    "end_alpha": 1.1422047116720604,
+    "shape_short_scale": 0.23840719267598276,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.21640568233940574,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.0583141091227297,
+    "dwell_extra_penalty": 4.511536733581084,
+    "top_k": 10
+   },
+   "obj": 0.8007608956251757,
+   "per": {
+    "low": [
+     0.686,
+     0.882,
+     0.931,
+     0.9326283188204715,
+     0.9742637862743971
+    ],
+    "mid": [
+     0.43,
+     0.659,
+     0.761,
+     0.8755088675920252,
+     0.9354117608012686
+    ],
+    "high": [
+     0.187,
+     0.35,
+     0.426,
+     0.6051361526898241,
+     0.691267836168313
+    ],
+    "vhigh": [
+     0.056,
+     0.118,
+     0.153,
+     0.11898576992101775,
+     0.15771272871215317
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 18.249047443459908,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.840658177712565,
+    "shape_short_scale": 0.7489851118369012,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.05773279482231853,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.1402432380822585,
+    "dwell_extra_penalty": 0.3595636433998236,
+    "top_k": 10
+   },
+   "obj": 0.7330767017973175,
+   "per": {
+    "low": [
+     0.789,
+     0.955,
+     0.973,
+     0.9581734921774635,
+     0.9936078378358688
+    ],
+    "mid": [
+     0.445,
+     0.672,
+     0.758,
+     0.696608062065454,
+     0.9263770084535363
+    ],
+    "high": [
+     0.174,
+     0.339,
+     0.425,
+     0.18658815663043646,
+     0.6587553558086391
+    ],
+    "vhigh": [
+     0.056,
+     0.12,
+     0.15,
+     0.04388302501090792,
+     0.145981554890512
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.9892250826458268,
+    "loc_weight": 3.90584665910491,
+    "end_weight": 0.0,
+    "cover_weight": 2.0315306346513573,
+    "loc_tolerance": 0.0,
+    "end_alpha": 3.941480264014712,
+    "shape_short_scale": 0.5898756312957445,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3412341654763862,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 4.584953734784385,
+    "dwell_extra_penalty": 2.4496513385075738,
+    "top_k": 10
+   },
+   "obj": 0.7420327425281764,
+   "per": {
+    "low": [
+     0.513,
+     0.718,
+     0.785,
+     0.9127253122821958,
+     0.9718814481183738
+    ],
+    "mid": [
+     0.322,
+     0.526,
+     0.63,
+     0.8635870581483169,
+     0.9371076488192329
+    ],
+    "high": [
+     0.156,
+     0.298,
+     0.374,
+     0.6199377337917222,
+     0.7531851529253866
+    ],
+    "vhigh": [
+     0.048,
+     0.098,
+     0.136,
+     0.12139724982818509,
+     0.17205492248698942
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 5.069660533133433,
+    "end_weight": 0.0,
+    "cover_weight": 8.45499458365315,
+    "loc_tolerance": 0.07535121982054421,
+    "end_alpha": 1.4098174199318354,
+    "shape_short_scale": 0.5460953590853206,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.23150068856838768,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.7300751385025555,
+    "dwell_extra_penalty": 0.4422445303819348,
+    "top_k": 10
+   },
+   "obj": 0.7700642841227644,
+   "per": {
+    "low": [
+     0.666,
+     0.879,
+     0.923,
+     0.9515486007507239,
+     0.9845884658567958
+    ],
+    "mid": [
+     0.381,
+     0.617,
+     0.735,
+     0.7430879409005287,
+     0.9450665848538986
+    ],
+    "high": [
+     0.159,
+     0.319,
+     0.4,
+     0.5982157962862076,
+     0.6925294311449227
+    ],
+    "vhigh": [
+     0.055,
+     0.098,
+     0.145,
+     0.11263974886286458,
+     0.162859890507965
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 20.827785038845356,
+    "loc_weight": 1.9520367800512697,
+    "end_weight": 0.0,
+    "cover_weight": 14.57140278187867,
+    "loc_tolerance": 0.060594380663450326,
+    "end_alpha": 3.8327180398374496,
+    "shape_short_scale": 0.5728074983845094,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.1833857628879074,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.9342027698010593,
+    "dwell_extra_penalty": 0.31139770202138983,
+    "top_k": 10
+   },
+   "obj": 0.6247366076957698,
+   "per": {
+    "low": [
+     0.682,
+     0.878,
+     0.938,
+     0.9364236271604358,
+     0.9926817777439589
+    ],
+    "mid": [
+     0.286,
+     0.48,
+     0.593,
+     0.7294682197061378,
+     0.8424167901818203
+    ],
+    "high": [
+     0.081,
+     0.179,
+     0.239,
+     0.1606058570062841,
+     0.24166647103917055
+    ],
+    "vhigh": [
+     0.024,
+     0.061,
+     0.075,
+     0.07759031716748654,
+     0.1198446420866789
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 5.9424139570750345,
+    "end_weight": 23.387523072355407,
+    "cover_weight": 8.380342547016864,
+    "loc_tolerance": 0.29295476528505615,
+    "end_alpha": 3.8027544558429303,
+    "shape_short_scale": 0.44052249537871946,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.2858206372000162,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.418932687373939,
+    "dwell_extra_penalty": 1.4013348069396476,
+    "top_k": 10
+   },
+   "obj": 0.8027502710789975,
+   "per": {
+    "low": [
+     0.605,
+     0.877,
+     0.951,
+     0.9251813871635444,
+     0.9958897988490627
+    ],
+    "mid": [
+     0.345,
+     0.597,
+     0.71,
+     0.8087430919883659,
+     0.9101300774442037
+    ],
+    "high": [
+     0.108,
+     0.236,
+     0.316,
+     0.5201134747409825,
+     0.6308994844338527
+    ],
+    "vhigh": [
+     0.038,
+     0.079,
+     0.113,
+     0.48845339060227094,
+     0.5401022875465155
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 3.2179140182896777,
+    "end_weight": 0.0,
+    "cover_weight": 3.427426741020753,
+    "loc_tolerance": 0.053957521757356616,
+    "end_alpha": 1.7674906603191447,
+    "shape_short_scale": 0.14322037755054962,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.17841961792256955,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.49863785824301887,
+    "dwell_extra_penalty": 4.523683625900755,
+    "top_k": 10
+   },
+   "obj": 0.7719455085174863,
+   "per": {
+    "low": [
+     0.626,
+     0.843,
+     0.895,
+     0.9418796105690656,
+     0.9833216091751185
+    ],
+    "mid": [
+     0.366,
+     0.599,
+     0.699,
+     0.8297943644710246,
+     0.9461735666508276
+    ],
+    "high": [
+     0.167,
+     0.333,
+     0.403,
+     0.6016460232437845,
+     0.7094138379605307
+    ],
+    "vhigh": [
+     0.056,
+     0.106,
+     0.136,
+     0.11986123669496924,
+     0.16285665253561568
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.435353623791001,
+    "loc_weight": 3.4415261762835856,
+    "end_weight": 1.2733927370956402,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.9025193847170905,
+    "shape_short_scale": 0.8802689180835283,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.11120765107135298,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 4.732755823648202,
+    "dwell_extra_penalty": 0.5625974352257996,
+    "top_k": 10
+   },
+   "obj": 0.7706450218502421,
+   "per": {
+    "low": [
+     0.76,
+     0.916,
+     0.932,
+     0.9630094038811956,
+     0.982038967378238
+    ],
+    "mid": [
+     0.474,
+     0.682,
+     0.773,
+     0.8689208081007592,
+     0.9429283088637065
+    ],
+    "high": [
+     0.193,
+     0.356,
+     0.427,
+     0.22262476514581803,
+     0.6883192575976997
+    ],
+    "vhigh": [
+     0.048,
+     0.103,
+     0.149,
+     0.11096045545319065,
+     0.15500295060230332
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.841754820939285,
+    "loc_weight": 12.774081305225327,
+    "end_weight": 0.0,
+    "cover_weight": 19.77650006921527,
+    "loc_tolerance": 0.08949028147553881,
+    "end_alpha": 3.4655728750481214,
+    "shape_short_scale": 0.27516282294490835,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.07803759009834892,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.9436866587108602,
+    "dwell_extra_penalty": 1.424376295400526,
+    "top_k": 10
+   },
+   "obj": 0.7647598007351816,
+   "per": {
+    "low": [
+     0.782,
+     0.963,
+     0.987,
+     0.9543810170633048,
+     0.9983644192170421
+    ],
+    "mid": [
+     0.424,
+     0.666,
+     0.764,
+     0.6961753880102741,
+     0.8851632868981115
+    ],
+    "high": [
+     0.166,
+     0.299,
+     0.378,
+     0.5551345741783038,
+     0.6597805788037473
+    ],
+    "vhigh": [
+     0.049,
+     0.098,
+     0.141,
+     0.016250978474769313,
+     0.13696461139070104
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.745462939127212,
+    "loc_weight": 1.72802201177412,
+    "end_weight": 12.366893250003756,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.14837462194043166,
+    "end_alpha": 3.0347641417823192,
+    "shape_short_scale": 0.3090303514099595,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.25928532681246047,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.0467399742744408,
+    "dwell_extra_penalty": 1.0099139472336,
+    "top_k": 10
+   },
+   "obj": 0.7279434322183107,
+   "per": {
+    "low": [
+     0.605,
+     0.847,
+     0.926,
+     0.9310534500190636,
+     0.9858464181145125
+    ],
+    "mid": [
+     0.343,
+     0.572,
+     0.692,
+     0.815299581249226,
+     0.9238991501132076
+    ],
+    "high": [
+     0.106,
+     0.233,
+     0.301,
+     0.5509264243637991,
+     0.6596648212922586
+    ],
+    "vhigh": [
+     0.029,
+     0.07,
+     0.095,
+     0.08736008923851794,
+     0.1284054362317773
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 1.0429627529370902,
+    "loc_weight": 1.253463869658592,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.27048748275180945,
+    "end_alpha": 2.3394423002530678,
+    "shape_short_scale": 0.9584606519190102,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.20755277743202896,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 3.5396388329393917,
+    "dwell_extra_penalty": 0.6460109277023571,
+    "top_k": 10
+   },
+   "obj": 0.6106773130860222,
+   "per": {
+    "low": [
+     0.193,
+     0.371,
+     0.467,
+     0.7932744885825047,
+     0.9148227088714775
+    ],
+    "mid": [
+     0.145,
+     0.313,
+     0.392,
+     0.7171060460229199,
+     0.8826530488342895
+    ],
+    "high": [
+     0.088,
+     0.2,
+     0.269,
+     0.5885723051368003,
+     0.7595914812185461
+    ],
+    "vhigh": [
+     0.04,
+     0.093,
+     0.122,
+     0.12987264245256977,
+     0.5741188060624556
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 7.938729835591995,
+    "loc_weight": 3.964417628317113,
+    "end_weight": 0.0,
+    "cover_weight": 1.4350411499345122,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.619067386477699,
+    "shape_short_scale": 0.3935162115749853,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.2595111837801071,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.38956832509138606,
+    "dwell_extra_penalty": 4.903055494492333,
+    "top_k": 10
+   },
+   "obj": 0.5001952373373021,
+   "per": {
+    "low": [
+     0.449,
+     0.605,
+     0.658,
+     0.33542196041416905,
+     0.8481783572309184
+    ],
+    "mid": [
+     0.261,
+     0.418,
+     0.495,
+     0.7366043060175288,
+     0.8492306982444523
+    ],
+    "high": [
+     0.109,
+     0.229,
+     0.289,
+     0.16318975894105353,
+     0.24401561997861318
+    ],
+    "vhigh": [
+     0.035,
+     0.08,
+     0.105,
+     0.09907345421223776,
+     0.13812016277287
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.860053318290302,
+    "end_weight": 0.0,
+    "cover_weight": 2.1501381146280787,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.3911231978193066,
+    "shape_short_scale": 0.0989646443868849,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3028230602832496,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 4.781595002371658,
+    "dwell_extra_penalty": 0.4342878937052145,
+    "top_k": 10
+   },
+   "obj": 0.8139535101542813,
+   "per": {
+    "low": [
+     0.495,
+     0.737,
+     0.799,
+     0.9261495408959955,
+     0.9814116102355543
+    ],
+    "mid": [
+     0.312,
+     0.538,
+     0.638,
+     0.8418736203202193,
+     0.9526608442527205
+    ],
+    "high": [
+     0.142,
+     0.292,
+     0.368,
+     0.6196054368793718,
+     0.7569703426017593
+    ],
+    "vhigh": [
+     0.052,
+     0.101,
+     0.144,
+     0.5196208981973398,
+     0.5667143727926135
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 1.2773829650147943,
+    "loc_weight": 22.254381219366465,
+    "end_weight": 21.98596112843157,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.07897040406612456,
+    "end_alpha": 2.045521129028184,
+    "shape_short_scale": 0.34205408804343584,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.1201012482088946,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.2921265889987896,
+    "dwell_extra_penalty": 0.3266509966914862,
+    "top_k": 10
+   },
+   "obj": 0.8075181126102023,
+   "per": {
+    "low": [
+     0.798,
+     0.969,
+     0.99,
+     0.9643932323139927,
+     0.999296550507107
+    ],
+    "mid": [
+     0.506,
+     0.717,
+     0.814,
+     0.7347995411793181,
+     0.928879151586485
+    ],
+    "high": [
+     0.194,
+     0.338,
+     0.417,
+     0.5673024695205615,
+     0.6670308036404523
+    ],
+    "vhigh": [
+     0.053,
+     0.114,
+     0.141,
+     0.0956954395587939,
+     0.1367019308838612
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.6309466708199354,
+    "end_weight": 0.5727812572533548,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.39993836567389757,
+    "end_alpha": 2.4116859692784147,
+    "shape_short_scale": 0.9457473969454969,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.1392564249875011,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.3881864917356795,
+    "dwell_extra_penalty": 0.5823548911546031,
+    "top_k": 10
+   },
+   "obj": 0.8136480847697114,
+   "per": {
+    "low": [
+     0.425,
+     0.689,
+     0.779,
+     0.9089065286426986,
+     0.9884202013856903
+    ],
+    "mid": [
+     0.322,
+     0.533,
+     0.655,
+     0.8808203564845658,
+     0.9618453528216095
+    ],
+    "high": [
+     0.155,
+     0.294,
+     0.385,
+     0.630886937290999,
+     0.7726518426895893
+    ],
+    "vhigh": [
+     0.049,
+     0.113,
+     0.138,
+     0.5139601130376147,
+     0.5673040885067362
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 3.8407694454491117,
+    "loc_weight": 12.483890672168991,
+    "end_weight": 0.0,
+    "cover_weight": 3.783501224678248,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.9350926877103445,
+    "shape_short_scale": 0.3044560242501738,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.06705658874033205,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.442629914252629,
+    "dwell_extra_penalty": 1.6695415625083503,
+    "top_k": 10
+   },
+   "obj": 0.7603947141922757,
+   "per": {
+    "low": [
+     0.789,
+     0.962,
+     0.983,
+     0.9588951552648216,
+     0.998041431475196
+    ],
+    "mid": [
+     0.472,
+     0.709,
+     0.8,
+     0.7211818437176456,
+     0.9444760596466887
+    ],
+    "high": [
+     0.2,
+     0.36,
+     0.451,
+     0.19635185750331285,
+     0.6822395597652794
+    ],
+    "vhigh": [
+     0.062,
+     0.12,
+     0.146,
+     0.11178492416264012,
+     0.13913081489240622
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 3.506929677302956,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.548053314924693,
+    "shape_short_scale": 0.4910404465587588,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.21037456429571333,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 4.877009421391568,
+    "dwell_extra_penalty": 1.1863402516002186,
+    "top_k": 10
+   },
+   "obj": 0.6459624978548434,
+   "per": {
+    "low": [
+     0.409,
+     0.613,
+     0.698,
+     0.8316108669590015,
+     0.9441550956375608
+    ],
+    "mid": [
+     0.248,
+     0.444,
+     0.536,
+     0.790729847062471,
+     0.9078120939886234
+    ],
+    "high": [
+     0.13,
+     0.257,
+     0.331,
+     0.18759799925688533,
+     0.7185465389718304
+    ],
+    "vhigh": [
+     0.044,
+     0.104,
+     0.142,
+     0.11208484135149728,
+     0.551839127819768
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 17.661530107662436,
+    "loc_weight": 1.4176967045261777,
+    "end_weight": 0.0,
+    "cover_weight": 1.8623246342971183,
+    "loc_tolerance": 0.0880147745237358,
+    "end_alpha": 2.574945352611273,
+    "shape_short_scale": 0.6178948806927674,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3424306966590932,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.458007020052563,
+    "dwell_extra_penalty": 5.605214723189357,
+    "top_k": 10
+   },
+   "obj": 0.4502891372200064,
+   "per": {
+    "low": [
+     0.377,
+     0.527,
+     0.577,
+     0.319695533459992,
+     0.8324584062214401
+    ],
+    "mid": [
+     0.205,
+     0.359,
+     0.431,
+     0.6989037844611325,
+     0.8198096719853061
+    ],
+    "high": [
+     0.076,
+     0.161,
+     0.222,
+     0.16788846156648246,
+     0.23584500150160967
+    ],
+    "vhigh": [
+     0.021,
+     0.056,
+     0.081,
+     0.07581914629240023,
+     0.12289926425173292
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 1.205168439174004,
+    "end_weight": 7.145620643471879,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.8592990077768867,
+    "shape_short_scale": 0.8519186788087267,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.18283950588500658,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5424658668525543,
+    "dwell_extra_penalty": 1.4693490068107327,
+    "top_k": 10
+   },
+   "obj": 0.7942314920030178,
+   "per": {
+    "low": [
+     0.526,
+     0.783,
+     0.866,
+     0.9271690974394924,
+     0.9917549081589617
+    ],
+    "mid": [
+     0.329,
+     0.559,
+     0.65,
+     0.830606690784164,
+     0.9287662273008019
+    ],
+    "high": [
+     0.124,
+     0.228,
+     0.292,
+     0.5786378012224964,
+     0.6353885283496622
+    ],
+    "vhigh": [
+     0.04,
+     0.075,
+     0.103,
+     0.4932897070525466,
+     0.5433876152414596
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 2.7120384833704834,
+    "loc_weight": 5.797046889890728,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.5888570520916137,
+    "shape_short_scale": 0.23265839304643499,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.23332076701567633,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 4.482618689831495,
+    "dwell_extra_penalty": 0.7728274542441554,
+    "top_k": 10
+   },
+   "obj": 0.7362227196276171,
+   "per": {
+    "low": [
+     0.672,
+     0.861,
+     0.91,
+     0.9514866745295428,
+     0.9823004336454468
+    ],
+    "mid": [
+     0.382,
+     0.62,
+     0.712,
+     0.8483778972769462,
+     0.9481904186779198
+    ],
+    "high": [
+     0.174,
+     0.328,
+     0.406,
+     0.21961223662130538,
+     0.6954019173653266
+    ],
+    "vhigh": [
+     0.048,
+     0.113,
+     0.151,
+     0.11209415052200161,
+     0.1595288264535865
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 1.163384344963336,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.08085054562109804,
+    "end_alpha": 1.3976246504465455,
+    "shape_short_scale": 0.09701587583718618,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.2821584590425015,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.5273572093512788,
+    "dwell_extra_penalty": 2.478208864881761,
+    "top_k": 10
+   },
+   "obj": 0.5733926580798339,
+   "per": {
+    "low": [
+     0.134,
+     0.303,
+     0.406,
+     0.3719527644593679,
+     0.49824056677468004
+    ],
+    "mid": [
+     0.115,
+     0.265,
+     0.371,
+     0.7168708882810495,
+     0.8823927968067117
+    ],
+    "high": [
+     0.083,
+     0.191,
+     0.264,
+     0.6226483213946594,
+     0.8404578169104725
+    ],
+    "vhigh": [
+     0.039,
+     0.084,
+     0.111,
+     0.5256317891173369,
+     0.5849838222806496
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 0.7252115581070917,
+    "end_weight": 4.54056050141821,
+    "cover_weight": 17.029732628686002,
+    "loc_tolerance": 0.22698832319774892,
+    "end_alpha": 1.3462307312647621,
+    "shape_short_scale": 0.5027854442491133,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.20806696027412444,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 3.3238776270765173,
+    "dwell_extra_penalty": 1.271491486614313,
+    "top_k": 10
+   },
+   "obj": 0.5806558365261089,
+   "per": {
+    "low": [
+     0.364,
+     0.662,
+     0.803,
+     0.8375432370495273,
+     0.9615077942041914
+    ],
+    "mid": [
+     0.171,
+     0.342,
+     0.455,
+     0.6336748314837766,
+     0.7313891468023809
+    ],
+    "high": [
+     0.06,
+     0.141,
+     0.194,
+     0.5014287552991441,
+     0.567521842147229
+    ],
+    "vhigh": [
+     0.024,
+     0.053,
+     0.078,
+     0.09803730306045051,
+     0.12070634747814571
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.549328442582458,
+    "loc_weight": 0.8817876542081832,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 3.9709041405415784,
+    "shape_short_scale": 0.579778768583723,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.06612880754225844,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.1975375755782296,
+    "dwell_extra_penalty": 2.96514226135591,
+    "top_k": 10
+   },
+   "obj": 0.754913241009972,
+   "per": {
+    "low": [
+     0.557,
+     0.76,
+     0.813,
+     0.9294717005264134,
+     0.9673231925435972
+    ],
+    "mid": [
+     0.338,
+     0.552,
+     0.649,
+     0.8588758083800343,
+     0.9385125240723007
+    ],
+    "high": [
+     0.161,
+     0.3,
+     0.381,
+     0.629157860056454,
+     0.7523845642620135
+    ],
+    "vhigh": [
+     0.047,
+     0.114,
+     0.14,
+     0.11551749678833617,
+     0.16534584377916706
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 1.7719256102352743,
+    "loc_weight": 2.605699018832461,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.902018935256379,
+    "shape_short_scale": 0.18126918679442883,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.12850753416287863,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.9093991777335659,
+    "dwell_extra_penalty": 4.747796074820977,
+    "top_k": 10
+   },
+   "obj": 0.7251214272516657,
+   "per": {
+    "low": [
+     0.637,
+     0.828,
+     0.886,
+     0.9417670910299262,
+     0.97707434627362
+    ],
+    "mid": [
+     0.367,
+     0.601,
+     0.7,
+     0.8612245525729333,
+     0.9418998478962489
+    ],
+    "high": [
+     0.169,
+     0.316,
+     0.403,
+     0.21220699385837594,
+     0.6999747438156751
+    ],
+    "vhigh": [
+     0.044,
+     0.106,
+     0.142,
+     0.11249930181221217,
+     0.16259801949421254
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 3.6367073549889604,
+    "end_weight": 0.0,
+    "cover_weight": 11.13862203460931,
+    "loc_tolerance": 0.11683174465969977,
+    "end_alpha": 2.7090518757612663,
+    "shape_short_scale": 0.8048214000641909,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.08554721165428497,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.790316051402748,
+    "dwell_extra_penalty": 3.0853678775545306,
+    "top_k": 10
+   },
+   "obj": 0.5263773959983519,
+   "per": {
+    "low": [
+     0.475,
+     0.64,
+     0.724,
+     0.7643881325075425,
+     0.8284833904160875
+    ],
+    "mid": [
+     0.235,
+     0.413,
+     0.534,
+     0.6235889523621413,
+     0.7172829202625024
+    ],
+    "high": [
+     0.103,
+     0.204,
+     0.281,
+     0.11959693720195476,
+     0.2048240121553482
+    ],
+    "vhigh": [
+     0.037,
+     0.085,
+     0.121,
+     0.0773073993334634,
+     0.14168517032948796
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 11.710603032516337,
+    "loc_weight": 0.837407115361736,
+    "end_weight": 1.7932031533342636,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.217236523482846,
+    "shape_short_scale": 0.7973330120870371,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.09363165323176714,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.30967429271359653,
+    "dwell_extra_penalty": 0.8705944620732134,
+    "top_k": 10
+   },
+   "obj": 0.6561640157454499,
+   "per": {
+    "low": [
+     0.693,
+     0.891,
+     0.939,
+     0.935566778727493,
+     0.992065753504498
+    ],
+    "mid": [
+     0.344,
+     0.548,
+     0.644,
+     0.7741995934725715,
+     0.9026143388748532
+    ],
+    "high": [
+     0.098,
+     0.232,
+     0.297,
+     0.17465825225585485,
+     0.2626129141670195
+    ],
+    "vhigh": [
+     0.033,
+     0.067,
+     0.086,
+     0.07542856587776169,
+     0.11962486471346778
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 1.2279995026277855,
+    "end_weight": 19.3730375256845,
+    "cover_weight": 1.848926067527056,
+    "loc_tolerance": 0.23657788691589154,
+    "end_alpha": 2.7087266262314027,
+    "shape_short_scale": 0.5146981179705784,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.14071586398289548,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.4517119515743726,
+    "dwell_extra_penalty": 2.938782591087204,
+    "top_k": 10
+   },
+   "obj": 0.5939540311642696,
+   "per": {
+    "low": [
+     0.429,
+     0.652,
+     0.733,
+     0.40722278302104437,
+     0.8605239363058459
+    ],
+    "mid": [
+     0.259,
+     0.424,
+     0.51,
+     0.7331109385991398,
+     0.842056161011413
+    ],
+    "high": [
+     0.103,
+     0.188,
+     0.236,
+     0.12769065383566158,
+     0.5992118775301718
+    ],
+    "vhigh": [
+     0.033,
+     0.065,
+     0.082,
+     0.4791389583928648,
+     0.49814585608346196
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 0.7796932618418722,
+    "end_weight": 0.0,
+    "cover_weight": 1.3503079255096235,
+    "loc_tolerance": 0.3164568380892734,
+    "end_alpha": 2.514283859367451,
+    "shape_short_scale": 0.010780230898030707,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.08559941464894917,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 4.5226221688559765,
+    "dwell_extra_penalty": 1.5587009852292848,
+    "top_k": 10
+   },
+   "obj": 0.6071729929731953,
+   "per": {
+    "low": [
+     0.348,
+     0.592,
+     0.666,
+     0.4512745873406614,
+     0.5167188654792483
+    ],
+    "mid": [
+     0.227,
+     0.417,
+     0.532,
+     0.789424944205689,
+     0.9048202075378378
+    ],
+    "high": [
+     0.119,
+     0.236,
+     0.309,
+     0.6050365850400821,
+     0.7018086504050298
+    ],
+    "vhigh": [
+     0.041,
+     0.086,
+     0.12,
+     0.12303040213188099,
+     0.5568871267123814
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 5.910484671856498,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.37851114650052825,
+    "end_alpha": 2.15926910780714,
+    "shape_short_scale": 0.4717615319048608,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.07107272650629116,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.521315422685601,
+    "dwell_extra_penalty": 1.7917055089230678,
+    "top_k": 10
+   },
+   "obj": 0.6156943227113,
+   "per": {
+    "low": [
+     0.547,
+     0.745,
+     0.801,
+     0.5100280003658909,
+     0.5422988470389957
+    ],
+    "mid": [
+     0.341,
+     0.577,
+     0.66,
+     0.8324462638251301,
+     0.909545218688605
+    ],
+    "high": [
+     0.172,
+     0.318,
+     0.407,
+     0.19964285164986834,
+     0.693130479762268
+    ],
+    "vhigh": [
+     0.053,
+     0.121,
+     0.151,
+     0.1125490856370832,
+     0.15180221493498555
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 2.6375140150176093,
+    "loc_weight": 2.5484416568430315,
+    "end_weight": 3.842179781549236,
+    "cover_weight": 2.058687030722001,
+    "loc_tolerance": 0.14441453252900754,
+    "end_alpha": 2.4497278851668134,
+    "shape_short_scale": 0.6635927760347856,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.23673054534508448,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.31286133734681837,
+    "dwell_extra_penalty": 0.6250334888042779,
+    "top_k": 10
+   },
+   "obj": 0.7768631734071806,
+   "per": {
+    "low": [
+     0.642,
+     0.885,
+     0.947,
+     0.9509851935619396,
+     0.9971408704155371
+    ],
+    "mid": [
+     0.385,
+     0.635,
+     0.732,
+     0.8655168896685207,
+     0.9554827371551661
+    ],
+    "high": [
+     0.145,
+     0.275,
+     0.368,
+     0.6092487823200233,
+     0.6899297440949503
+    ],
+    "vhigh": [
+     0.038,
+     0.089,
+     0.125,
+     0.09579622144816695,
+     0.15216324885193644
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.4337229463334973,
+    "end_weight": 0.0,
+    "cover_weight": 16.14190617152978,
+    "loc_tolerance": 0.3960693065306033,
+    "end_alpha": 1.1504746432992796,
+    "shape_short_scale": 0.07350428251617858,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3286729176617657,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.5865695916255613,
+    "dwell_extra_penalty": 0.636179133470422,
+    "top_k": 10
+   },
+   "obj": 0.5938153304431731,
+   "per": {
+    "low": [
+     0.303,
+     0.582,
+     0.719,
+     0.8609914185637811,
+     0.9651488941110188
+    ],
+    "mid": [
+     0.165,
+     0.362,
+     0.469,
+     0.6589791806472869,
+     0.7638943417242688
+    ],
+    "high": [
+     0.07,
+     0.177,
+     0.241,
+     0.5404167756109447,
+     0.6537644261786827
+    ],
+    "vhigh": [
+     0.024,
+     0.059,
+     0.093,
+     0.10239116163067526,
+     0.14668055217142473
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 3.791957651626546,
+    "end_weight": 18.82558934224718,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.09028264148265056,
+    "end_alpha": 2.8108698734582824,
+    "shape_short_scale": 0.45568868605766366,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.07636433043289403,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8733631107547027,
+    "dwell_extra_penalty": 0.47689414251398143,
+    "top_k": 10
+   },
+   "obj": 0.7804677399297035,
+   "per": {
+    "low": [
+     0.709,
+     0.929,
+     0.973,
+     0.937362639141743,
+     0.995721829033441
+    ],
+    "mid": [
+     0.412,
+     0.649,
+     0.73,
+     0.7890813143901158,
+     0.9050824832981339
+    ],
+    "high": [
+     0.149,
+     0.274,
+     0.325,
+     0.5362175302204006,
+     0.6159659559587191
+    ],
+    "vhigh": [
+     0.04,
+     0.086,
+     0.105,
+     0.0943249677619378,
+     0.5037406675565694
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 2.5339474361914163,
+    "loc_tolerance": 0.20500243975909344,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.746144973646222,
+    "dwell_extra_penalty": 4.249690563418113,
+    "top_k": 10
+   },
+   "obj": 0.7822349141856378,
+   "per": {
+    "low": [
+     0.395,
+     0.68,
+     0.746,
+     0.895783431457387,
+     0.9785140297294431
+    ],
+    "mid": [
+     0.271,
+     0.497,
+     0.603,
+     0.816169381571566,
+     0.9465572663742238
+    ],
+    "high": [
+     0.139,
+     0.278,
+     0.364,
+     0.6217841875239306,
+     0.7623299963329964
+    ],
+    "vhigh": [
+     0.05,
+     0.094,
+     0.135,
+     0.518748264649194,
+     0.5653868041293861
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 2.5339474361914163,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.2016984046258651,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.746144973646222,
+    "dwell_extra_penalty": 4.249690563418113,
+    "top_k": 10
+   },
+   "obj": 0.7910137937116147,
+   "per": {
+    "low": [
+     0.587,
+     0.808,
+     0.867,
+     0.9382591527359652,
+     0.9824526183458656
+    ],
+    "mid": [
+     0.36,
+     0.582,
+     0.688,
+     0.8394649736388576,
+     0.9464253190009884
+    ],
+    "high": [
+     0.167,
+     0.322,
+     0.4,
+     0.6085218575275977,
+     0.7125765274527438
+    ],
+    "vhigh": [
+     0.056,
+     0.109,
+     0.14,
+     0.12170485720137193,
+     0.563864552378655
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 2.5339474361914163,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.746144973646222,
+    "dwell_extra_penalty": 3.1590529582144127,
+    "top_k": 10
+   },
+   "obj": 0.8190266220521297,
+   "per": {
+    "low": [
+     0.5,
+     0.743,
+     0.803,
+     0.9224019926481838,
+     0.9821555343828141
+    ],
+    "mid": [
+     0.321,
+     0.535,
+     0.636,
+     0.8345404224420625,
+     0.9541385738836483
+    ],
+    "high": [
+     0.153,
+     0.305,
+     0.385,
+     0.63094886351218,
+     0.7635434264709097
+    ],
+    "vhigh": [
+     0.056,
+     0.105,
+     0.137,
+     0.5203672508238616,
+     0.5670713592441278
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 2.5339474361914163,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00032224706544579175,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.746144973646222,
+    "dwell_extra_penalty": 3.1590529582144127,
+    "top_k": 10
+   },
+   "obj": 0.8190266220521297,
+   "per": {
+    "low": [
+     0.5,
+     0.743,
+     0.803,
+     0.9224019926481838,
+     0.9821555343828141
+    ],
+    "mid": [
+     0.321,
+     0.535,
+     0.636,
+     0.8345404224420625,
+     0.9541385738836483
+    ],
+    "high": [
+     0.153,
+     0.305,
+     0.385,
+     0.63094886351218,
+     0.7635434264709097
+    ],
+    "vhigh": [
+     0.056,
+     0.105,
+     0.137,
+     0.5203672508238616,
+     0.5670713592441278
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 2.5339474361914163,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.746144973646222,
+    "dwell_extra_penalty": 3.1590529582144127,
+    "top_k": 10
+   },
+   "obj": 0.8190266220521297,
+   "per": {
+    "low": [
+     0.5,
+     0.743,
+     0.803,
+     0.9224019926481838,
+     0.9821555343828141
+    ],
+    "mid": [
+     0.321,
+     0.535,
+     0.636,
+     0.8345404224420625,
+     0.9541385738836483
+    ],
+    "high": [
+     0.153,
+     0.305,
+     0.385,
+     0.63094886351218,
+     0.7635434264709097
+    ],
+    "vhigh": [
+     0.056,
+     0.105,
+     0.137,
+     0.5203672508238616,
+     0.5670713592441278
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 3.917447449496612,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.746144973646222,
+    "dwell_extra_penalty": 3.1590529582144127,
+    "top_k": 10
+   },
+   "obj": 0.816287619622841,
+   "per": {
+    "low": [
+     0.53,
+     0.761,
+     0.822,
+     0.9252166001128433,
+     0.985537191755151
+    ],
+    "mid": [
+     0.318,
+     0.55,
+     0.641,
+     0.8330388127650584,
+     0.952977356049868
+    ],
+    "high": [
+     0.146,
+     0.301,
+     0.383,
+     0.6154333095072535,
+     0.7105074631215187
+    ],
+    "vhigh": [
+     0.05,
+     0.1,
+     0.135,
+     0.5161429111476102,
+     0.5629166359733871
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 2.5339474361914163,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.4,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.746144973646222,
+    "dwell_extra_penalty": 3.1590529582144127,
+    "top_k": 10
+   },
+   "obj": 0.7869124356655369,
+   "per": {
+    "low": [
+     0.417,
+     0.693,
+     0.762,
+     0.9009649967094105,
+     0.9811934518485179
+    ],
+    "mid": [
+     0.275,
+     0.495,
+     0.596,
+     0.814790410097293,
+     0.951169353239308
+    ],
+    "high": [
+     0.137,
+     0.281,
+     0.365,
+     0.6249189495046307,
+     0.7702176969759766
+    ],
+    "vhigh": [
+     0.047,
+     0.096,
+     0.128,
+     0.5185317252483322,
+     0.5666063054654544
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 2.5339474361914163,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.746144973646222,
+    "dwell_extra_penalty": 3.1590529582144127,
+    "top_k": 10
+   },
+   "obj": 0.8191562871101987,
+   "per": {
+    "low": [
+     0.504,
+     0.754,
+     0.823,
+     0.925766245919143,
+     0.9906179751178015
+    ],
+    "mid": [
+     0.323,
+     0.543,
+     0.647,
+     0.8266834825364009,
+     0.9593031397808378
+    ],
+    "high": [
+     0.149,
+     0.298,
+     0.381,
+     0.6232643456341205,
+     0.7498897065668507
+    ],
+    "vhigh": [
+     0.055,
+     0.108,
+     0.137,
+     0.5198803407318303,
+     0.5655009426547002
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 2.5339474361914163,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8755729705369172,
+    "dwell_extra_penalty": 3.1590529582144127,
+    "top_k": 10
+   },
+   "obj": 0.8186405192473172,
+   "per": {
+    "low": [
+     0.502,
+     0.749,
+     0.817,
+     0.9254962799745171,
+     0.9894919702333201
+    ],
+    "mid": [
+     0.323,
+     0.541,
+     0.65,
+     0.8266284370064622,
+     0.9601267989972
+    ],
+    "high": [
+     0.15,
+     0.3,
+     0.378,
+     0.6233845553575895,
+     0.7493489651845118
+    ],
+    "vhigh": [
+     0.055,
+     0.107,
+     0.138,
+     0.5198803407318303,
+     0.5655013474012439
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 2.5339474361914163,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 3.1590529582144127,
+    "top_k": 10
+   },
+   "obj": 0.8192330670235992,
+   "per": {
+    "low": [
+     0.501,
+     0.758,
+     0.827,
+     0.9256743684537306,
+     0.9911987864079634
+    ],
+    "mid": [
+     0.323,
+     0.547,
+     0.646,
+     0.8330582405991545,
+     0.9592792597347615
+    ],
+    "high": [
+     0.149,
+     0.298,
+     0.379,
+     0.6232643456341205,
+     0.7507979578108392
+    ],
+    "vhigh": [
+     0.052,
+     0.108,
+     0.138,
+     0.5184086822990575,
+     0.5656417944518963
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 2.5339474361914163,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 2.9028047735193967,
+    "top_k": 10
+   },
+   "obj": 0.8192330670235992,
+   "per": {
+    "low": [
+     0.501,
+     0.758,
+     0.827,
+     0.9256743684537306,
+     0.9911987864079634
+    ],
+    "mid": [
+     0.323,
+     0.548,
+     0.646,
+     0.8330582405991545,
+     0.9592792597347615
+    ],
+    "high": [
+     0.149,
+     0.298,
+     0.379,
+     0.6232643456341205,
+     0.7507979578108392
+    ],
+    "vhigh": [
+     0.052,
+     0.107,
+     0.138,
+     0.5184086822990575,
+     0.5656417944518963
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 1.4829343345028503,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 3.1590529582144127,
+    "top_k": 10
+   },
+   "obj": 0.7591843218795458,
+   "per": {
+    "low": [
+     0.47,
+     0.725,
+     0.804,
+     0.9204409956441177,
+     0.9906697826753909
+    ],
+    "mid": [
+     0.311,
+     0.529,
+     0.635,
+     0.8139687746136491,
+     0.9580739245277214
+    ],
+    "high": [
+     0.145,
+     0.297,
+     0.377,
+     0.6226770583992598,
+     0.7565194549521145
+    ],
+    "vhigh": [
+     0.051,
+     0.108,
+     0.14,
+     0.1251071566474358,
+     0.5672980173085812
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 2.5339474361914163,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 3.015977739327272,
+    "top_k": 10
+   },
+   "obj": 0.8192330670235992,
+   "per": {
+    "low": [
+     0.501,
+     0.758,
+     0.827,
+     0.9256743684537306,
+     0.9911987864079634
+    ],
+    "mid": [
+     0.323,
+     0.547,
+     0.646,
+     0.8330582405991545,
+     0.9592792597347615
+    ],
+    "high": [
+     0.149,
+     0.298,
+     0.379,
+     0.6232643456341205,
+     0.7507979578108392
+    ],
+    "vhigh": [
+     0.052,
+     0.108,
+     0.138,
+     0.5184086822990575,
+     0.5656417944518963
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 3.1590529582144127,
+    "top_k": 10
+   },
+   "obj": 0.8219428557074524,
+   "per": {
+    "low": [
+     0.518,
+     0.773,
+     0.838,
+     0.9274665861490876,
+     0.9923579805090255
+    ],
+    "mid": [
+     0.329,
+     0.56,
+     0.646,
+     0.8344934718429972,
+     0.9595342500572717
+    ],
+    "high": [
+     0.143,
+     0.298,
+     0.379,
+     0.6172340268800275,
+     0.7498743261981914
+    ],
+    "vhigh": [
+     0.053,
+     0.1,
+     0.14,
+     0.5184341813313085,
+     0.5650626021479089
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 878.9471299094378,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 3.1590529582144127,
+    "top_k": 10
+   },
+   "obj": 0.8063688011549037,
+   "per": {
+    "low": [
+     0.493,
+     0.739,
+     0.815,
+     0.9203171432017556,
+     0.9918366669607825
+    ],
+    "mid": [
+     0.312,
+     0.535,
+     0.617,
+     0.8312542852540311,
+     0.9546020086761469
+    ],
+    "high": [
+     0.131,
+     0.278,
+     0.358,
+     0.6058145078970099,
+     0.7415304762004985
+    ],
+    "vhigh": [
+     0.051,
+     0.093,
+     0.135,
+     0.5180978369535213,
+     0.563964120028397
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 2.8615048194002646,
+    "top_k": 10
+   },
+   "obj": 0.8221464098779203,
+   "per": {
+    "low": [
+     0.518,
+     0.773,
+     0.839,
+     0.9274665861490876,
+     0.9946148472365121
+    ],
+    "mid": [
+     0.329,
+     0.56,
+     0.646,
+     0.8344934718429972,
+     0.9595342500572717
+    ],
+    "high": [
+     0.143,
+     0.298,
+     0.379,
+     0.6172340268800275,
+     0.7498743261981914
+    ],
+    "vhigh": [
+     0.053,
+     0.099,
+     0.14,
+     0.5184341813313085,
+     0.5650626021479089
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.349523962919117,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 2.8615048194002646,
+    "top_k": 10
+   },
+   "obj": 0.8221464098779203,
+   "per": {
+    "low": [
+     0.518,
+     0.773,
+     0.839,
+     0.9274665861490876,
+     0.9946148472365121
+    ],
+    "mid": [
+     0.329,
+     0.56,
+     0.646,
+     0.8344934718429972,
+     0.9595342500572717
+    ],
+    "high": [
+     0.143,
+     0.298,
+     0.379,
+     0.6172340268800275,
+     0.7498743261981914
+    ],
+    "vhigh": [
+     0.053,
+     0.099,
+     0.14,
+     0.5184341813313085,
+     0.5650626021479089
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 2.8615048194002646,
+    "top_k": 10
+   },
+   "obj": 0.8222846653272256,
+   "per": {
+    "low": [
+     0.518,
+     0.773,
+     0.839,
+     0.9274665861490876,
+     0.9946148472365121
+    ],
+    "mid": [
+     0.33,
+     0.56,
+     0.646,
+     0.8345995154374379,
+     0.9595342500572717
+    ],
+    "high": [
+     0.143,
+     0.298,
+     0.379,
+     0.6172340268800275,
+     0.7498743261981914
+    ],
+    "vhigh": [
+     0.053,
+     0.099,
+     0.14,
+     0.5184341813313085,
+     0.5650626021479089
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.743440344624029,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 2.8615048194002646,
+    "top_k": 10
+   },
+   "obj": 0.7726665556817915,
+   "per": {
+    "low": [
+     0.535,
+     0.78,
+     0.855,
+     0.9334985238893553,
+     0.9948249106926751
+    ],
+    "mid": [
+     0.331,
+     0.563,
+     0.664,
+     0.8353062029026803,
+     0.9616296229138351
+    ],
+    "high": [
+     0.144,
+     0.304,
+     0.379,
+     0.6022499050869355,
+     0.7052959466252638
+    ],
+    "vhigh": [
+     0.05,
+     0.106,
+     0.131,
+     0.12370794784597937,
+     0.5623892512269891
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 3.066448738704981,
+    "end_weight": 0.0,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 2.8615048194002646,
+    "top_k": 10
+   },
+   "obj": 0.7792639922903879,
+   "per": {
+    "low": [
+     0.532,
+     0.781,
+     0.854,
+     0.935978810708946,
+     0.9950576399552836
+    ],
+    "mid": [
+     0.336,
+     0.563,
+     0.654,
+     0.835352748755202,
+     0.960038159504137
+    ],
+    "high": [
+     0.149,
+     0.303,
+     0.383,
+     0.618212704022614,
+     0.7487337504381382
+    ],
+    "vhigh": [
+     0.054,
+     0.105,
+     0.139,
+     0.12432640056470237,
+     0.564652998645718
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 3.373415349350716,
+    "end_weight": 0.0,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 2.8615048194002646,
+    "top_k": 10
+   },
+   "obj": 0.7873204371809079,
+   "per": {
+    "low": [
+     0.555,
+     0.791,
+     0.868,
+     0.9397692620903864,
+     0.9953640330888395
+    ],
+    "mid": [
+     0.348,
+     0.573,
+     0.671,
+     0.8375614506439922,
+     0.9610540733287408
+    ],
+    "high": [
+     0.157,
+     0.311,
+     0.388,
+     0.6132225838857449,
+     0.7497674731106634
+    ],
+    "vhigh": [
+     0.056,
+     0.108,
+     0.14,
+     0.12289440729320893,
+     0.5650460075396186
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 2.934892476325352,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 2.8615048194002646,
+    "top_k": 10
+   },
+   "obj": 0.8200918369401649,
+   "per": {
+    "low": [
+     0.51,
+     0.767,
+     0.838,
+     0.9271545265639204,
+     0.9925453781587432
+    ],
+    "mid": [
+     0.324,
+     0.552,
+     0.644,
+     0.8341101768661446,
+     0.9591853585366308
+    ],
+    "high": [
+     0.144,
+     0.299,
+     0.38,
+     0.6183571985387031,
+     0.7502871676727316
+    ],
+    "vhigh": [
+     0.052,
+     0.103,
+     0.137,
+     0.5183030434511604,
+     0.5646015958346724
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.8223072391550187,
+   "per": {
+    "low": [
+     0.518,
+     0.773,
+     0.838,
+     0.9274665861490876,
+     0.9923579805090255
+    ],
+    "mid": [
+     0.33,
+     0.559,
+     0.647,
+     0.8345995154374379,
+     0.9596884584904087
+    ],
+    "high": [
+     0.143,
+     0.298,
+     0.379,
+     0.6172340268800275,
+     0.7498743261981914
+    ],
+    "vhigh": [
+     0.054,
+     0.1,
+     0.14,
+     0.5186661011008297,
+     0.5650626021479089
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.12372142127446363,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3016763973630907,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.8014976772607726,
+   "per": {
+    "low": [
+     0.462,
+     0.73,
+     0.8,
+     0.917372612096579,
+     0.9897392703715007
+    ],
+    "mid": [
+     0.296,
+     0.533,
+     0.637,
+     0.8284174167294699,
+     0.9596916964627581
+    ],
+    "high": [
+     0.133,
+     0.283,
+     0.368,
+     0.6116881897387038,
+     0.7481816761525765
+    ],
+    "vhigh": [
+     0.047,
+     0.099,
+     0.133,
+     0.5166787955714253,
+     0.5640361649131698
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.2879061262780138,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.825942488855304,
+   "per": {
+    "low": [
+     0.529,
+     0.778,
+     0.844,
+     0.9337000876681013,
+     0.9925478066380052
+    ],
+    "mid": [
+     0.333,
+     0.562,
+     0.653,
+     0.8349297886170701,
+     0.9591404316702837
+    ],
+    "high": [
+     0.145,
+     0.302,
+     0.384,
+     0.6174270909813566,
+     0.7502029803916489
+    ],
+    "vhigh": [
+     0.053,
+     0.104,
+     0.141,
+     0.5169192150183634,
+     0.565236238415142
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.2879061262780138,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.825942488855304,
+   "per": {
+    "low": [
+     0.529,
+     0.778,
+     0.844,
+     0.9337000876681013,
+     0.9925478066380052
+    ],
+    "mid": [
+     0.333,
+     0.562,
+     0.653,
+     0.8349297886170701,
+     0.9591404316702837
+    ],
+    "high": [
+     0.145,
+     0.302,
+     0.384,
+     0.6174270909813566,
+     0.7502029803916489
+    ],
+    "vhigh": [
+     0.053,
+     0.104,
+     0.141,
+     0.5169192150183634,
+     0.565236238415142
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 1.5279320187910723,
+    "end_weight": 0.0,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.2879061262780138,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.7199399968814277,
+   "per": {
+    "low": [
+     0.39,
+     0.68,
+     0.767,
+     0.9022225442205837,
+     0.9880235497728967
+    ],
+    "mid": [
+     0.242,
+     0.456,
+     0.588,
+     0.808335916965437,
+     0.9529154298286869
+    ],
+    "high": [
+     0.117,
+     0.241,
+     0.341,
+     0.6098235224120304,
+     0.7456196305311651
+    ],
+    "vhigh": [
+     0.037,
+     0.091,
+     0.123,
+     0.12070958545049505,
+     0.559298201873005
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 4.038746439497034,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.2879061262780138,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.8218622700634887,
+   "per": {
+    "low": [
+     0.539,
+     0.787,
+     0.855,
+     0.9346735031056203,
+     0.9930201458544645
+    ],
+    "mid": [
+     0.327,
+     0.558,
+     0.664,
+     0.8335560788478646,
+     0.9600276360940015
+    ],
+    "high": [
+     0.145,
+     0.298,
+     0.376,
+     0.6023118313081165,
+     0.7030852210037553
+    ],
+    "vhigh": [
+     0.05,
+     0.102,
+     0.14,
+     0.5161404826683482,
+     0.5632995262036959
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 0.0,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.22637058370879068,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.7891523872254707,
+   "per": {
+    "low": [
+     0.579,
+     0.825,
+     0.895,
+     0.942694365361467,
+     0.9935572445179104
+    ],
+    "mid": [
+     0.355,
+     0.593,
+     0.692,
+     0.8303658665906822,
+     0.9606833254947419
+    ],
+    "high": [
+     0.158,
+     0.317,
+     0.384,
+     0.6051442476206974,
+     0.7027832800821797
+    ],
+    "vhigh": [
+     0.054,
+     0.107,
+     0.144,
+     0.12067922945972002,
+     0.5646469274475631
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 2.0857581605874045,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.2879061262780138,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.867345686079795,
+   "per": {
+    "low": [
+     0.63,
+     0.876,
+     0.926,
+     0.9504169294146313,
+     0.9949341922594652
+    ],
+    "mid": [
+     0.394,
+     0.636,
+     0.736,
+     0.8805949126597433,
+     0.9682229441101687
+    ],
+    "high": [
+     0.166,
+     0.31,
+     0.408,
+     0.6266439792737389,
+     0.717639501967473
+    ],
+    "vhigh": [
+     0.052,
+     0.112,
+     0.141,
+     0.5139451374154991,
+     0.5585324214123873
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 2.0857581605874045,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.5198426685372781,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.2879061262780138,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.8658124554778802,
+   "per": {
+    "low": [
+     0.625,
+     0.875,
+     0.926,
+     0.9497495023641246,
+     0.9949341922594652
+    ],
+    "mid": [
+     0.39,
+     0.63,
+     0.734,
+     0.879929509341955,
+     0.968084116045691
+    ],
+    "high": [
+     0.167,
+     0.309,
+     0.407,
+     0.6268244962322145,
+     0.7175670523361566
+    ],
+    "vhigh": [
+     0.05,
+     0.109,
+     0.142,
+     0.5136355063095939,
+     0.5591358985089947
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 2.0857581605874045,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.2879061262780138,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 421.36189849335256,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.8653486596514648,
+   "per": {
+    "low": [
+     0.626,
+     0.874,
+     0.924,
+     0.9465981457751341,
+     0.9948042686189481
+    ],
+    "mid": [
+     0.392,
+     0.635,
+     0.733,
+     0.8793191515541053,
+     0.9647154105627515
+    ],
+    "high": [
+     0.166,
+     0.308,
+     0.407,
+     0.6266439792737389,
+     0.7175136257923925
+    ],
+    "vhigh": [
+     0.052,
+     0.112,
+     0.141,
+     0.5139451374154991,
+     0.5585324214123873
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 1.0848696317131261,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.2879061262780138,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.8509730678614245,
+   "per": {
+    "low": [
+     0.599,
+     0.852,
+     0.901,
+     0.9440935741629234,
+     0.9943315246559452
+    ],
+    "mid": [
+     0.37,
+     0.61,
+     0.709,
+     0.8324660964057697,
+     0.9673713573822936
+    ],
+    "high": [
+     0.17,
+     0.318,
+     0.399,
+     0.627736390195096,
+     0.7179928457000941
+    ],
+    "vhigh": [
+     0.051,
+     0.114,
+     0.141,
+     0.5159563229909798,
+     0.5653685905349212
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 2.0857581605874045,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00036229868121400225,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.2879061262780138,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.867345686079795,
+   "per": {
+    "low": [
+     0.63,
+     0.876,
+     0.926,
+     0.9504169294146313,
+     0.9949341922594652
+    ],
+    "mid": [
+     0.394,
+     0.636,
+     0.736,
+     0.8805949126597433,
+     0.9682229441101687
+    ],
+    "high": [
+     0.166,
+     0.31,
+     0.408,
+     0.6266439792737389,
+     0.717639501967473
+    ],
+    "vhigh": [
+     0.052,
+     0.112,
+     0.141,
+     0.5139451374154991,
+     0.5585324214123873
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 2.0857581605874045,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.196956412221237,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.8849311751269489,
+   "per": {
+    "low": [
+     0.689,
+     0.921,
+     0.964,
+     0.9478063142079798,
+     0.9951863493561697
+    ],
+    "mid": [
+     0.423,
+     0.676,
+     0.779,
+     0.8752955661635128,
+     0.969273666137528
+    ],
+    "high": [
+     0.176,
+     0.334,
+     0.428,
+     0.6215591484456519,
+     0.7184380668981277
+    ],
+    "vhigh": [
+     0.054,
+     0.114,
+     0.15,
+     0.5121173020242994,
+     0.5574440579564671
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 2.0857581605874045,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.196956412221237,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.8849311751269489,
+   "per": {
+    "low": [
+     0.689,
+     0.921,
+     0.964,
+     0.9478063142079798,
+     0.9951863493561697
+    ],
+    "mid": [
+     0.423,
+     0.676,
+     0.779,
+     0.8752955661635128,
+     0.969273666137528
+    ],
+    "high": [
+     0.176,
+     0.334,
+     0.428,
+     0.6215591484456519,
+     0.7184380668981277
+    ],
+    "vhigh": [
+     0.054,
+     0.114,
+     0.15,
+     0.5121173020242994,
+     0.5574440579564671
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 2.0857581605874045,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.0003250271260422056,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.196956412221237,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.8849311751269489,
+   "per": {
+    "low": [
+     0.689,
+     0.921,
+     0.964,
+     0.9478063142079798,
+     0.9951863493561697
+    ],
+    "mid": [
+     0.423,
+     0.676,
+     0.779,
+     0.8752955661635128,
+     0.969273666137528
+    ],
+    "high": [
+     0.176,
+     0.334,
+     0.428,
+     0.6215591484456519,
+     0.7184380668981277
+    ],
+    "vhigh": [
+     0.054,
+     0.114,
+     0.15,
+     0.5121173020242994,
+     0.5574440579564671
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 2.0857581605874045,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.196956412221237,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 3.6436192294386904,
+    "top_k": 10
+   },
+   "obj": 0.8848746370941303,
+   "per": {
+    "low": [
+     0.689,
+     0.921,
+     0.965,
+     0.9478063142079798,
+     0.9974432160836563
+    ],
+    "mid": [
+     0.423,
+     0.677,
+     0.779,
+     0.8752955661635128,
+     0.969273666137528
+    ],
+    "high": [
+     0.176,
+     0.334,
+     0.428,
+     0.6215591484456519,
+     0.7184380668981277
+    ],
+    "vhigh": [
+     0.054,
+     0.114,
+     0.149,
+     0.5121173020242994,
+     0.554282582703885
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8261757071090123,
+    "end_weight": 2.0857581605874045,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.1640415779719602,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.8369009750647797,
+   "per": {
+    "low": [
+     0.716,
+     0.934,
+     0.973,
+     0.9495058449448371,
+     0.9955121703238216
+    ],
+    "mid": [
+     0.448,
+     0.685,
+     0.792,
+     0.8781401248724037,
+     0.968045260377499
+    ],
+    "high": [
+     0.182,
+     0.336,
+     0.425,
+     0.5915900953663806,
+     0.7015860398060131
+    ],
+    "vhigh": [
+     0.053,
+     0.113,
+     0.151,
+     0.09755848789929258,
+     0.5526830243633134
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 5.030951682891809,
+    "end_weight": 2.0857581605874045,
+    "cover_weight": 3.269205926578753,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.342946296515832,
+    "shape_short_scale": 0.00047090850617714786,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.196956412221237,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 406.07978089540063,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5925559672818489,
+    "dwell_extra_penalty": 4.2684666122473605,
+    "top_k": 10
+   },
+   "obj": 0.8236284739901777,
+   "per": {
+    "low": [
+     0.732,
+     0.95,
+     0.981,
+     0.9510544052209066,
+     0.9983267777884811
+    ],
+    "mid": [
+     0.46,
+     0.705,
+     0.79,
+     0.8753918958409055,
+     0.9637298527289226
+    ],
+    "high": [
+     0.185,
+     0.357,
+     0.441,
+     0.6154446424104761,
+     0.6920032606381558
+    ],
+    "vhigh": [
+     0.061,
+     0.122,
+     0.155,
+     0.1195022265107367,
+     0.15820935272123243
+    ]
+   },
+   "phase": "refine"
+  }
+ ]
+}

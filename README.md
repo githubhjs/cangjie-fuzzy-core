@@ -33,12 +33,30 @@ Adjacent-key typo tolerance for Cangjie input (Rime): contract, neighbour maps, 
 ## 重現與限制（請先讀）
 
 - `tests/eval_driver.py` 等腳本是在作者的環境跑的（GX10 ARM64、自己編的 librime 與 `rime_deployer`），**路徑寫死在 `/home/hjs/...`**，在別的機器上要改路徑；它們是驗收標準的參考實作，還沒做成一鍵重現。
-- 倉庫裡**沒有任何碼表、詞表或語言模型**；那些在 cangjie-fluency 倉庫。
+- 倉庫裡**沒有任何碼表、詞表或語言模型**；那些在 cangjie-fluency 倉庫。（例外：`sweep/vectors/` 的移植對照向量內含幾百列真實碼表／詞表列，見授權一節。）
 - 沒有在 Windows、macOS 的圖形介面實際打字驗證過。
+
+## Sweep（滑行輸入）/ Sweep (swipe) decoder
+
+`sweep/`：倉頡三代**滑行輸入**解碼器的設計、模擬與調參；手機手指、電腦**滑鼠拖曳**（觸控板、觸控螢幕為變體）共用同一個與平台無關的解碼器：輸入 `(x, y, t_ms)` 加鍵位，輸出排序後的字。一次滑行可以是**一個字**，也可以是**整個詞（2-4 字）**，字界可以不標（連續）、停留、或抬起。規格見 [sweep/SPEC.md](sweep/SPEC.md)（含摘要、演算法、參數、證據、限制、Kotlin／桌面移植指引），結果見 [sweep/results/REPORT.md](sweep/results/REPORT.md)（單字）與 [sweep/results/WORDS.md](sweep/results/WORDS.md)（整詞），移植對照用的參考向量在 `sweep/vectors/`。純 Python 3.8+ 標準庫，測試：`python3 sweep/tests/test_sweep.py`、`python3 sweep/tests/test_words.py`。
+
+**所有數字都來自合成軌跡（不是真人的手指或滑鼠資料），雜訊參數是假設；真人資料驗證還沒做。**
+
+A path decoder for Cangjie 3 sweeps, platform neutral (finger on a phone, **mouse drag on a drawn keyboard** on desktop; touchpad and touch screen as variants): input `(x, y, t_ms)` + key geometry, output ranked characters. One sweep = one character, or a whole word of 2-4 characters (continuous, or with a dwell or lift at the boundaries). Spec: [sweep/SPEC.md](sweep/SPEC.md); results: [sweep/results/REPORT.md](sweep/results/REPORT.md) (characters), [sweep/results/WORDS.md](sweep/results/WORDS.md) (words); reference vectors for ports: `sweep/vectors/`. Pure Python 3.8+ standard library.
+
+| synthetic, held-out | top-1 / top-5 |
+|---|---|
+| one character, mouse, mid noise (ceiling 91.4 / 100) | 81.5 / 99.2 |
+| one character, finger, mid noise | 42.0 / 75.9 |
+| word (243k words), mouse, mid noise | 95.9 / 99.9 |
+| word, finger, mid noise | 76.6 / 91.1 |
+| latency, pure Python, one core | 7 ms per character, 11 ms per word (mean) |
+
+**Not validated:** real finger and mouse data, real users' dwell behaviour, any phone or browser latency. The Cangjie 3 table and the word list (essay.txt) are not in this repository.
 
 ## 授權
 
-MIT（見 `LICENSE`）。本倉庫只含程式與設定，不含第三方資料。
+MIT（見 `LICENSE`）。本倉庫只含程式與設定，不含第三方資料；唯一例外是 `sweep/vectors/*.json`：移植對照用的參考向量，內含幾百列真實的倉頡三代碼表／essay.txt 列（只有各案例需要的字與其排名靠前的競爭者），其餘為合成填充列（隨機碼、私用區字元）。
 
 ## 預設值與可調整的旋鈕 / Defaults and configurable knobs
 

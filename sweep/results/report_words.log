@@ -1,0 +1,14 @@
+acc mouse
+acc touchpad
+acc finger
+acc touchscreen
+chars vs words
+lexsize 3000
+lexsize 1000
+lexsize 300
+lexsize 100
+lexsize 30
+owner done
+seg mouse
+seg finger
+wrote WORDS.md

@@ -1,0 +1,4322 @@
+{
+ "best": {
+  "n": 40,
+  "m": 8,
+  "keep": 150,
+  "shape_weight": 0.0,
+  "loc_weight": 22.41031264322045,
+  "end_weight": 22.45583763070106,
+  "cover_weight": 2.7688805413124715,
+  "end_alpha": 1.9303363260738862,
+  "evidence_power": 0.0649390589245931,
+  "evidence_ref": 4.0,
+  "word_prior_weight": 0.09284502991640263,
+  "char_prior_weight": 0.1,
+  "prior_floor": 1.0,
+  "char_offset": 0.9492719585689345,
+  "prune_radius": 1.2,
+  "len_lo": 0.7,
+  "len_hi": 1.6,
+  "min_candidates": 30,
+  "dwell_ms": 250.0,
+  "dwell_radius": 0.35,
+  "dwell_assign_radius": 0.9,
+  "repeat_miss_penalty": 2.332,
+  "dwell_extra_penalty": 2.165,
+  "boundary_dwell_ok": true,
+  "boundary_dwell_bonus": 0.19049349504820928,
+  "lift_weight": 2.495327294323326,
+  "lift_extra_penalty": 4.0,
+  "top_k": 10
+ },
+ "best_obj": 1.0137205014749262,
+ "best_per": {
+  "mouse/mid": [
+   0.9498525073746312,
+   1.0,
+   0.84,
+   0.99
+  ],
+  "mouse/high": [
+   0.8377581120943953,
+   0.9705014749262537,
+   0.5733333333333334,
+   0.8833333333333333
+  ],
+  "finger/mid": [
+   0.7168141592920354,
+   0.8908554572271387,
+   0.5133333333333333,
+   0.7833333333333333
+  ],
+  "finger/high": [
+   0.35103244837758113,
+   0.5339233038348082,
+   0.14,
+   0.3233333333333333
+  ]
+ },
+ "train_n": 339,
+ "trials": [
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 4.892,
+    "end_weight": 3.07,
+    "cover_weight": 3.646,
+    "end_alpha": 2.053,
+    "evidence_power": 0.084,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 1.008,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": -2.569,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.363,
+    "lift_weight": 7.473,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.6233075221238937,
+   "per": {
+    "mouse/mid": [
+     0.9498525073746312,
+     0.9911504424778761,
+     0.0,
+     0.01
+    ],
+    "mouse/high": [
+     0.8908554572271387,
+     0.967551622418879,
+     0.0,
+     0.016666666666666666
+    ],
+    "finger/mid": [
+     0.831858407079646,
+     0.9528023598820059,
+     0.0,
+     0.013333333333333334
+    ],
+    "finger/high": [
+     0.5162241887905604,
+     0.6371681415929203,
+     0.0,
+     0.006666666666666667
+    ]
+   },
+   "phase": "default"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 8.401446782055984,
+    "end_weight": 2.2185434783734275,
+    "cover_weight": 0.0,
+    "end_alpha": 2.0101683069400234,
+    "evidence_power": 0.7619999284856648,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09823700832571311,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 1.138601545305404,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.472112726992421,
+    "lift_weight": 0.5059010320541281,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9347068584070797,
+   "per": {
+    "mouse/mid": [
+     0.9144542772861357,
+     0.9852507374631269,
+     0.71,
+     0.95
+    ],
+    "mouse/high": [
+     0.7640117994100295,
+     0.9056047197640118,
+     0.53,
+     0.8133333333333334
+    ],
+    "finger/mid": [
+     0.6519174041297935,
+     0.8141592920353983,
+     0.43,
+     0.7466666666666667
+    ],
+    "finger/high": [
+     0.31563421828908556,
+     0.4749262536873156,
+     0.14333333333333334,
+     0.3466666666666667
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 21.563729940923857,
+    "end_weight": 0.0,
+    "cover_weight": 6.466497305238166,
+    "end_alpha": 2.9951224177386315,
+    "evidence_power": 0.08311771581997358,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.22842684585457737,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.5121749830927449,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 1.4773755039379217,
+    "lift_weight": 12.613505811094907,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9601438053097345,
+   "per": {
+    "mouse/mid": [
+     0.9587020648967551,
+     0.9970501474926253,
+     0.7,
+     0.98
+    ],
+    "mouse/high": [
+     0.8407079646017699,
+     0.9587020648967551,
+     0.47,
+     0.8333333333333334
+    ],
+    "finger/mid": [
+     0.7315634218289085,
+     0.9085545722713865,
+     0.38666666666666666,
+     0.6966666666666667
+    ],
+    "finger/high": [
+     0.41297935103244837,
+     0.5634218289085545,
+     0.08,
+     0.2633333333333333
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 8.878927011062057,
+    "end_weight": 1.5329721467804127,
+    "cover_weight": 0.0,
+    "end_alpha": 1.2497542024942172,
+    "evidence_power": 0.394715215624714,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.6224661455537289,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": -2.7955796439901395,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 1.8558877262405977,
+    "lift_weight": 2.6601589883060424,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.6090394542772861,
+   "per": {
+    "mouse/mid": [
+     0.9410029498525073,
+     0.9941002949852508,
+     0.0,
+     0.13333333333333333
+    ],
+    "mouse/high": [
+     0.8525073746312685,
+     0.9528023598820059,
+     0.006666666666666667,
+     0.10666666666666667
+    ],
+    "finger/mid": [
+     0.7374631268436578,
+     0.9056047197640118,
+     0.0033333333333333335,
+     0.07
+    ],
+    "finger/high": [
+     0.4365781710914454,
+     0.5870206489675516,
+     0.0,
+     0.04
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 3.501095072725275,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "end_alpha": 1.4171244304447523,
+    "evidence_power": 0.5816443665423773,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.4791975695550623,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": -0.9424714564676622,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 1.9375379950242277,
+    "lift_weight": 13.525611058860589,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.5654959439528023,
+   "per": {
+    "mouse/mid": [
+     0.8790560471976401,
+     0.9557522123893806,
+     0.0,
+     0.013333333333333334
+    ],
+    "mouse/high": [
+     0.7964601769911505,
+     0.9144542772861357,
+     0.0,
+     0.02666666666666667
+    ],
+    "finger/mid": [
+     0.7109144542772862,
+     0.8643067846607669,
+     0.0,
+     0.016666666666666666
+    ],
+    "finger/high": [
+     0.4336283185840708,
+     0.5899705014749262,
+     0.0,
+     0.02666666666666667
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 17.801894875923203,
+    "end_weight": 1.571147275912419,
+    "cover_weight": 3.9303350015457243,
+    "end_alpha": 1.4021588465754855,
+    "evidence_power": 0.6969188510371965,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 1.0992719486075275,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 1.576755876722606,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 1.8463348917089566,
+    "lift_weight": 13.209729214710183,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.7504811946902654,
+   "per": {
+    "mouse/mid": [
+     0.9557522123893806,
+     0.9941002949852508,
+     0.19666666666666666,
+     0.6633333333333333
+    ],
+    "mouse/high": [
+     0.855457227138643,
+     0.9587020648967551,
+     0.13,
+     0.49333333333333335
+    ],
+    "finger/mid": [
+     0.7315634218289085,
+     0.9026548672566371,
+     0.08666666666666667,
+     0.42333333333333334
+    ],
+    "finger/high": [
+     0.41297935103244837,
+     0.584070796460177,
+     0.03,
+     0.19
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 6.352407279753674,
+    "end_weight": 39.24621059857756,
+    "cover_weight": 0.0,
+    "end_alpha": 1.3178874659254038,
+    "evidence_power": 0.541585953546516,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.2674876667996878,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": -0.8086767216991633,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 1.4319959281805663,
+    "lift_weight": 18.742201556991976,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.7778945427728614,
+   "per": {
+    "mouse/mid": [
+     0.9174041297935103,
+     0.9911504424778761,
+     0.42333333333333334,
+     0.87
+    ],
+    "mouse/high": [
+     0.6932153392330384,
+     0.8672566371681416,
+     0.23666666666666666,
+     0.65
+    ],
+    "finger/mid": [
+     0.6194690265486725,
+     0.8141592920353983,
+     0.25666666666666665,
+     0.62
+    ],
+    "finger/high": [
+     0.2743362831858407,
+     0.39823008849557523,
+     0.08666666666666667,
+     0.22
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 9.558561165468957,
+    "end_weight": 8.23392305281091,
+    "cover_weight": 0.0,
+    "end_alpha": 1.3613547186505235,
+    "evidence_power": 0.7192536659375668,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.05058313170701298,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": -2.5793001852736968,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.3401836995258489,
+    "lift_weight": 1.8064208714150103,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.818648598820059,
+   "per": {
+    "mouse/mid": [
+     0.9321533923303835,
+     0.9941002949852508,
+     0.44,
+     0.8533333333333334
+    ],
+    "mouse/high": [
+     0.7905604719764012,
+     0.9469026548672567,
+     0.23666666666666666,
+     0.6833333333333333
+    ],
+    "finger/mid": [
+     0.6991150442477876,
+     0.8702064896755162,
+     0.22,
+     0.6033333333333334
+    ],
+    "finger/high": [
+     0.31563421828908556,
+     0.49557522123893805,
+     0.06333333333333334,
+     0.25666666666666665
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 5.011225506893422,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "end_alpha": 2.554037175010373,
+    "evidence_power": 0.7166838878068653,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 2.2255999316248283,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": -0.9203194784290143,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.7497511082870523,
+    "lift_weight": 6.219286610619567,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.5625,
+   "per": {
+    "mouse/mid": [
+     0.8023598820058997,
+     0.967551622418879,
+     0.0,
+     0.0
+    ],
+    "mouse/high": [
+     0.7846607669616519,
+     0.9321533923303835,
+     0.0,
+     0.0
+    ],
+    "finger/mid": [
+     0.7256637168141593,
+     0.9085545722713865,
+     0.0,
+     0.0
+    ],
+    "finger/high": [
+     0.4631268436578171,
+     0.640117994100295,
+     0.0,
+     0.0
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 6.769682130113049,
+    "end_weight": 0.0,
+    "cover_weight": 12.997528306996102,
+    "end_alpha": 2.012267818682792,
+    "evidence_power": 1.1499361417432397,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.7958397056899497,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 2.392185806839775,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 1.3338723368526664,
+    "lift_weight": 15.810975849727594,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.7235582595870206,
+   "per": {
+    "mouse/mid": [
+     0.9174041297935103,
+     0.9882005899705014,
+     0.22,
+     0.6566666666666666
+    ],
+    "mouse/high": [
+     0.7699115044247787,
+     0.9144542772861357,
+     0.13,
+     0.5
+    ],
+    "finger/mid": [
+     0.6666666666666666,
+     0.8613569321533924,
+     0.13666666666666666,
+     0.4533333333333333
+    ],
+    "finger/high": [
+     0.35398230088495575,
+     0.5103244837758112,
+     0.04,
+     0.22333333333333333
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 6.778797692407942,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "end_alpha": 2.7066143640574305,
+    "evidence_power": 0.5270800155873457,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.13682568185291638,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.370900470137677,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 1.3168524993937412,
+    "lift_weight": 0.5684076986238547,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.8965394542772861,
+   "per": {
+    "mouse/mid": [
+     0.911504424778761,
+     0.976401179941003,
+     0.6166666666666667,
+     0.9
+    ],
+    "mouse/high": [
+     0.7787610619469026,
+     0.9174041297935103,
+     0.43666666666666665,
+     0.7866666666666666
+    ],
+    "finger/mid": [
+     0.6902654867256637,
+     0.8495575221238938,
+     0.35,
+     0.6533333333333333
+    ],
+    "finger/high": [
+     0.3480825958702065,
+     0.5073746312684366,
+     0.11333333333333333,
+     0.2633333333333333
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 13.828048932447446,
+    "end_weight": 0.0,
+    "cover_weight": 7.831822063597556,
+    "end_alpha": 1.0988042094143449,
+    "evidence_power": 1.0444627613253805,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.13835940344390135,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": -0.6328483490891195,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.27917739687677523,
+    "lift_weight": 5.504400803302854,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.8620796460176992,
+   "per": {
+    "mouse/mid": [
+     0.9351032448377581,
+     0.9852507374631269,
+     0.5633333333333334,
+     0.9133333333333333
+    ],
+    "mouse/high": [
+     0.7492625368731564,
+     0.9026548672566371,
+     0.37666666666666665,
+     0.75
+    ],
+    "finger/mid": [
+     0.6519174041297935,
+     0.831858407079646,
+     0.3,
+     0.6666666666666666
+    ],
+    "finger/high": [
+     0.31563421828908556,
+     0.4896755162241888,
+     0.09666666666666666,
+     0.27666666666666667
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 29.595589542492537,
+    "end_weight": 0.0,
+    "cover_weight": 12.915471696079962,
+    "end_alpha": 1.9689170506766365,
+    "evidence_power": 1.1433949578889444,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 2.0876485927286015,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": -0.12560033671709503,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 1.8051775224408813,
+    "lift_weight": 2.9034270800595157,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.6163145280235988,
+   "per": {
+    "mouse/mid": [
+     0.9498525073746312,
+     0.9911504424778761,
+     0.06,
+     0.30666666666666664
+    ],
+    "mouse/high": [
+     0.7876106194690266,
+     0.9262536873156342,
+     0.043333333333333335,
+     0.22666666666666666
+    ],
+    "finger/mid": [
+     0.6637168141592921,
+     0.8525073746312685,
+     0.03666666666666667,
+     0.20666666666666667
+    ],
+    "finger/high": [
+     0.31268436578171094,
+     0.48672566371681414,
+     0.02,
+     0.11666666666666667
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 17.328865873826135,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "end_alpha": 1.528842055703499,
+    "evidence_power": 0.16717293949355874,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.08826096653648732,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.5304748390308829,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.6523393190482094,
+    "lift_weight": 1.256345784020886,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9633075221238938,
+   "per": {
+    "mouse/mid": [
+     0.943952802359882,
+     0.9941002949852508,
+     0.7766666666666666,
+     0.98
+    ],
+    "mouse/high": [
+     0.8141592920353983,
+     0.9380530973451328,
+     0.5366666666666666,
+     0.8333333333333334
+    ],
+    "finger/mid": [
+     0.6784660766961652,
+     0.8525073746312685,
+     0.41333333333333333,
+     0.71
+    ],
+    "finger/high": [
+     0.37168141592920356,
+     0.5250737463126843,
+     0.11333333333333333,
+     0.2833333333333333
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 19.007800154874325,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "end_alpha": 1.7939217849662725,
+    "evidence_power": 0.8197751051688758,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 2.5021070388473206,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": -0.47340192241087165,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.3733607385354787,
+    "lift_weight": 5.33422301707758,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.585759587020649,
+   "per": {
+    "mouse/mid": [
+     0.943952802359882,
+     0.9970501474926253,
+     0.0,
+     0.016666666666666666
+    ],
+    "mouse/high": [
+     0.8407079646017699,
+     0.9557522123893806,
+     0.0,
+     0.023333333333333334
+    ],
+    "finger/mid": [
+     0.7256637168141593,
+     0.8967551622418879,
+     0.0,
+     0.02
+    ],
+    "finger/high": [
+     0.40707964601769914,
+     0.5811209439528023,
+     0.006666666666666667,
+     0.03333333333333333
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 4.64581120222835,
+    "end_weight": 3.0695016686148735,
+    "cover_weight": 0.0,
+    "end_alpha": 2.2424020642948217,
+    "evidence_power": 0.14288693954339562,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 1.2498415233468574,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": -2.568662261932962,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.3631506291619402,
+    "lift_weight": 11.822978647763117,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.6084310471976402,
+   "per": {
+    "mouse/mid": [
+     0.9351032448377581,
+     0.9882005899705014,
+     0.0,
+     0.0
+    ],
+    "mouse/high": [
+     0.8731563421828908,
+     0.9646017699115044,
+     0.0,
+     0.0
+    ],
+    "finger/mid": [
+     0.7964601769911505,
+     0.9528023598820059,
+     0.0,
+     0.0033333333333333335
+    ],
+    "finger/high": [
+     0.4896755162241888,
+     0.6371681415929203,
+     0.0,
+     0.0
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 12.210105046442926,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "end_alpha": 1.77529606914341,
+    "evidence_power": 0.9084673677043444,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.1141517290600854,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 1.4651899583653814,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 1.72892582511144,
+    "lift_weight": 2.170145439633129,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9052249262536872,
+   "per": {
+    "mouse/mid": [
+     0.9085545722713865,
+     0.976401179941003,
+     0.6833333333333333,
+     0.9366666666666666
+    ],
+    "mouse/high": [
+     0.7551622418879056,
+     0.8849557522123894,
+     0.49666666666666665,
+     0.82
+    ],
+    "finger/mid": [
+     0.6312684365781711,
+     0.799410029498525,
+     0.36666666666666664,
+     0.7166666666666667
+    ],
+    "finger/high": [
+     0.30973451327433627,
+     0.48672566371681414,
+     0.12,
+     0.32
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 35.91082097977675,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "end_alpha": 1.6188231665811406,
+    "evidence_power": 0.27998083459948836,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.5094241216104988,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 2.126635985589963,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 1.801508724547681,
+    "lift_weight": 1.484639405272624,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.929118731563422,
+   "per": {
+    "mouse/mid": [
+     0.9616519174041298,
+     0.9970501474926253,
+     0.7,
+     0.98
+    ],
+    "mouse/high": [
+     0.8259587020648967,
+     0.9587020648967551,
+     0.4533333333333333,
+     0.79
+    ],
+    "finger/mid": [
+     0.6932153392330384,
+     0.8613569321533924,
+     0.35333333333333333,
+     0.66
+    ],
+    "finger/high": [
+     0.35693215339233036,
+     0.5132743362831859,
+     0.07666666666666666,
+     0.2633333333333333
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 2.6869769728650876,
+    "end_weight": 9.185983852703192,
+    "cover_weight": 17.714968085249616,
+    "end_alpha": 1.583237166694503,
+    "evidence_power": 1.1378604463307678,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.392279536880129,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.2959939907517688,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 1.249453641858498,
+    "lift_weight": 8.185236898963618,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.6932540560471976,
+   "per": {
+    "mouse/mid": [
+     0.8407079646017699,
+     0.9734513274336283,
+     0.3,
+     0.8166666666666667
+    ],
+    "mouse/high": [
+     0.5988200589970502,
+     0.7935103244837758,
+     0.18,
+     0.5666666666666667
+    ],
+    "finger/mid": [
+     0.5486725663716814,
+     0.7345132743362832,
+     0.20666666666666667,
+     0.5633333333333334
+    ],
+    "finger/high": [
+     0.25663716814159293,
+     0.3775811209439528,
+     0.07666666666666666,
+     0.25
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 3.6555814067351147,
+    "end_weight": 1.2724432142542532,
+    "cover_weight": 0.0,
+    "end_alpha": 2.3034258793790916,
+    "evidence_power": 0.39089039841456136,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.10864832487558239,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.6987551814923423,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 1.2530941786517087,
+    "lift_weight": 9.838109204411841,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9291021386430678,
+   "per": {
+    "mouse/mid": [
+     0.8820058997050148,
+     0.9528023598820059,
+     0.66,
+     0.9
+    ],
+    "mouse/high": [
+     0.7610619469026548,
+     0.9026548672566371,
+     0.48333333333333334,
+     0.8133333333333334
+    ],
+    "finger/mid": [
+     0.6932153392330384,
+     0.8466076696165191,
+     0.43,
+     0.7266666666666667
+    ],
+    "finger/high": [
+     0.37168141592920356,
+     0.5309734513274337,
+     0.14,
+     0.35
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 15.33178303010964,
+    "end_weight": 13.504986124498718,
+    "cover_weight": 3.3722374459012596,
+    "end_alpha": 2.7513284743057764,
+    "evidence_power": 1.1364608826021478,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 2.735874613821346,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.0302596817042442,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14070837535688163,
+    "lift_weight": 0.5482001850601432,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.5550239675516224,
+   "per": {
+    "mouse/mid": [
+     0.943952802359882,
+     0.9911504424778761,
+     0.006666666666666667,
+     0.05333333333333334
+    ],
+    "mouse/high": [
+     0.8023598820058997,
+     0.9351032448377581,
+     0.01,
+     0.04666666666666667
+    ],
+    "finger/mid": [
+     0.7079646017699115,
+     0.8584070796460177,
+     0.0,
+     0.05
+    ],
+    "finger/high": [
+     0.25663716814159293,
+     0.45722713864306785,
+     0.0033333333333333335,
+     0.02666666666666667
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 11.691410083058502,
+    "end_weight": 4.4480122128252075,
+    "cover_weight": 0.0,
+    "end_alpha": 1.7978783605308382,
+    "evidence_power": 0.33069882724445354,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.7502699484763558,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": -2.747760046405036,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.6549977434692478,
+    "lift_weight": 1.1584927896839252,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.649105825958702,
+   "per": {
+    "mouse/mid": [
+     0.9616519174041298,
+     0.9970501474926253,
+     0.04,
+     0.34
+    ],
+    "mouse/high": [
+     0.8731563421828908,
+     0.967551622418879,
+     0.016666666666666666,
+     0.20666666666666667
+    ],
+    "finger/mid": [
+     0.7522123893805309,
+     0.9085545722713865,
+     0.02,
+     0.14333333333333334
+    ],
+    "finger/high": [
+     0.4247787610619469,
+     0.5722713864306784,
+     0.01,
+     0.05333333333333334
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 3.3566805938435667,
+    "end_weight": 0.0,
+    "cover_weight": 8.867485384284393,
+    "end_alpha": 1.4906124842345745,
+    "evidence_power": 0.04491761755681551,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 2.1153801505530794,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.9260073193344285,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 1.8333578333061848,
+    "lift_weight": 2.0762957452971627,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.5472216076696165,
+   "per": {
+    "mouse/mid": [
+     0.7581120943952803,
+     0.9646017699115044,
+     0.0,
+     0.0
+    ],
+    "mouse/high": [
+     0.7256637168141593,
+     0.9380530973451328,
+     0.0,
+     0.0
+    ],
+    "finger/mid": [
+     0.6784660766961652,
+     0.9144542772861357,
+     0.0,
+     0.0
+    ],
+    "finger/high": [
+     0.4749262536873156,
+     0.6607669616519174,
+     0.0,
+     0.0033333333333333335
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 38.72756252902637,
+    "end_weight": 1.0238349540066891,
+    "cover_weight": 1.0535232779769357,
+    "end_alpha": 2.4328343740913496,
+    "evidence_power": 1.1564454738322956,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.6194651705261341,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 1.9490084286435465,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.18139614989226605,
+    "lift_weight": 0.9546426791849575,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.8327673303834808,
+   "per": {
+    "mouse/mid": [
+     0.9351032448377581,
+     0.9793510324483776,
+     0.6066666666666667,
+     0.9166666666666666
+    ],
+    "mouse/high": [
+     0.7463126843657817,
+     0.8967551622418879,
+     0.38,
+     0.7266666666666667
+    ],
+    "finger/mid": [
+     0.6017699115044248,
+     0.7817109144542773,
+     0.28,
+     0.6166666666666667
+    ],
+    "finger/high": [
+     0.2448377581120944,
+     0.40707964601769914,
+     0.08,
+     0.25
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 18.5209389011044,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "end_alpha": 2.357340221632924,
+    "evidence_power": 0.4505059874864412,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.42445674714326437,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.7198020343567864,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.7439502871271564,
+    "lift_weight": 4.274135347055881,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.8810047935103246,
+   "per": {
+    "mouse/mid": [
+     0.9557522123893806,
+     0.9970501474926253,
+     0.5533333333333333,
+     0.9333333333333333
+    ],
+    "mouse/high": [
+     0.831858407079646,
+     0.9528023598820059,
+     0.35,
+     0.74
+    ],
+    "finger/mid": [
+     0.7050147492625368,
+     0.8820058997050148,
+     0.26,
+     0.61
+    ],
+    "finger/high": [
+     0.3805309734513274,
+     0.5545722713864307,
+     0.06333333333333334,
+     0.22666666666666666
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 9.346219601443815,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "end_alpha": 1.4767697542603175,
+    "evidence_power": 0.03430894305209975,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.10831940186744027,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": -2.5080270341975175,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 1.3763293814273334,
+    "lift_weight": 7.02016515639929,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.7211338495575221,
+   "per": {
+    "mouse/mid": [
+     0.9292035398230089,
+     0.9882005899705014,
+     0.19666666666666666,
+     0.67
+    ],
+    "mouse/high": [
+     0.8141592920353983,
+     0.943952802359882,
+     0.10333333333333333,
+     0.46
+    ],
+    "finger/mid": [
+     0.7050147492625368,
+     0.8820058997050148,
+     0.056666666666666664,
+     0.35333333333333333
+    ],
+    "finger/high": [
+     0.4365781710914454,
+     0.584070796460177,
+     0.016666666666666666,
+     0.14
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 7.951308540082717,
+    "end_weight": 0.0,
+    "cover_weight": 5.869681781641336,
+    "end_alpha": 1.1979169277616846,
+    "evidence_power": 0.4820201346595376,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09515480945975355,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": -0.6439883947238778,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 1.9503484213469409,
+    "lift_weight": 1.105901046664792,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.8816076696165192,
+   "per": {
+    "mouse/mid": [
+     0.9174041297935103,
+     0.9882005899705014,
+     0.5566666666666666,
+     0.91
+    ],
+    "mouse/high": [
+     0.7935103244837758,
+     0.9321533923303835,
+     0.36333333333333334,
+     0.7566666666666667
+    ],
+    "finger/mid": [
+     0.6843657817109144,
+     0.8702064896755162,
+     0.2866666666666667,
+     0.6766666666666666
+    ],
+    "finger/high": [
+     0.3746312684365782,
+     0.5486725663716814,
+     0.09666666666666666,
+     0.27666666666666667
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 6.017333907661419,
+    "end_weight": 0.0,
+    "cover_weight": 2.171866271574571,
+    "end_alpha": 2.4008155979162042,
+    "evidence_power": 1.0466458234602123,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.2100815453585446,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.7767681301273321,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.4804546384633861,
+    "lift_weight": 0.5142197657627972,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.8662997787610619,
+   "per": {
+    "mouse/mid": [
+     0.9144542772861357,
+     0.976401179941003,
+     0.5933333333333334,
+     0.8833333333333333
+    ],
+    "mouse/high": [
+     0.7551622418879056,
+     0.8997050147492626,
+     0.38666666666666666,
+     0.7566666666666667
+    ],
+    "finger/mid": [
+     0.6430678466076696,
+     0.8141592920353983,
+     0.33,
+     0.6566666666666666
+    ],
+    "finger/high": [
+     0.30678466076696165,
+     0.4749262536873156,
+     0.11666666666666667,
+     0.30666666666666664
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 7.795311695173561,
+    "end_weight": 27.099976336455967,
+    "cover_weight": 0.9230753598293345,
+    "end_alpha": 2.0588310784220085,
+    "evidence_power": 0.37075514665516657,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.46451921110502004,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": -2.4328866911155123,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.09831826848751257,
+    "lift_weight": 0.9987908844401368,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.7045188053097345,
+   "per": {
+    "mouse/mid": [
+     0.9469026548672567,
+     0.9970501474926253,
+     0.17,
+     0.7166666666666667
+    ],
+    "mouse/high": [
+     0.7817109144542773,
+     0.9528023598820059,
+     0.12,
+     0.5133333333333333
+    ],
+    "finger/mid": [
+     0.696165191740413,
+     0.8672566371681416,
+     0.07666666666666666,
+     0.44
+    ],
+    "finger/high": [
+     0.27728613569321536,
+     0.4277286135693215,
+     0.03333333333333333,
+     0.15333333333333332
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.12800963225579,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 0.0,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.27014386273821006,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.2603231911824076,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9652986725663716,
+   "per": {
+    "mouse/mid": [
+     0.9646017699115044,
+     1.0,
+     0.72,
+     0.9766666666666667
+    ],
+    "mouse/high": [
+     0.8436578171091446,
+     0.9646017699115044,
+     0.48,
+     0.8566666666666667
+    ],
+    "finger/mid": [
+     0.7168141592920354,
+     0.8908554572271387,
+     0.4166666666666667,
+     0.7533333333333333
+    ],
+    "finger/high": [
+     0.3274336283185841,
+     0.5309734513274337,
+     0.11333333333333333,
+     0.30666666666666664
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 3.1544479954078675,
+    "end_weight": 6.263165736706051,
+    "cover_weight": 2.8425893302888543,
+    "end_alpha": 1.3054130862612834,
+    "evidence_power": 0.7896984117176546,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 1.512397475154793,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 2.9346928935919223,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.3069421999622326,
+    "lift_weight": 1.4465032032310015,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.5778318584070796,
+   "per": {
+    "mouse/mid": [
+     0.9026548672566371,
+     0.9911504424778761,
+     0.0,
+     0.02
+    ],
+    "mouse/high": [
+     0.831858407079646,
+     0.9469026548672567,
+     0.0,
+     0.02
+    ],
+    "finger/mid": [
+     0.7640117994100295,
+     0.8997050147492626,
+     0.006666666666666667,
+     0.023333333333333334
+    ],
+    "finger/high": [
+     0.36578171091445427,
+     0.5722713864306784,
+     0.0033333333333333335,
+     0.023333333333333334
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.12800963225579,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 0.0,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.27014386273821006,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.2887362704145346,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9624944690265487,
+   "per": {
+    "mouse/mid": [
+     0.9646017699115044,
+     1.0,
+     0.7133333333333334,
+     0.9766666666666667
+    ],
+    "mouse/high": [
+     0.8436578171091446,
+     0.9646017699115044,
+     0.4666666666666667,
+     0.8566666666666667
+    ],
+    "finger/mid": [
+     0.7197640117994101,
+     0.8938053097345132,
+     0.41333333333333333,
+     0.7466666666666667
+    ],
+    "finger/high": [
+     0.3274336283185841,
+     0.5339233038348082,
+     0.11333333333333333,
+     0.30333333333333334
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.12800963225579,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 0.0,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.27014386273821006,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.2603231911824076,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.16475729892040628,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9629830383480825,
+   "per": {
+    "mouse/mid": [
+     0.9646017699115044,
+     1.0,
+     0.7133333333333334,
+     0.9766666666666667
+    ],
+    "mouse/high": [
+     0.8436578171091446,
+     0.9646017699115044,
+     0.47333333333333333,
+     0.8566666666666667
+    ],
+    "finger/mid": [
+     0.7168141592920354,
+     0.8938053097345132,
+     0.41333333333333333,
+     0.7466666666666667
+    ],
+    "finger/high": [
+     0.3274336283185841,
+     0.5309734513274337,
+     0.11333333333333333,
+     0.30666666666666664
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.12800963225579,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 0.0,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.15972826265711912,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.2603231911824076,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9678005162241888,
+   "per": {
+    "mouse/mid": [
+     0.9646017699115044,
+     1.0,
+     0.71,
+     0.98
+    ],
+    "mouse/high": [
+     0.8495575221238938,
+     0.967551622418879,
+     0.48,
+     0.86
+    ],
+    "finger/mid": [
+     0.7256637168141593,
+     0.8967551622418879,
+     0.4066666666666667,
+     0.7466666666666667
+    ],
+    "finger/high": [
+     0.3421828908554572,
+     0.5398230088495575,
+     0.12,
+     0.2966666666666667
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 21.284090568085,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 0.0,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.15972826265711912,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.2603231911824076,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9679848820058997,
+   "per": {
+    "mouse/mid": [
+     0.9616519174041298,
+     1.0,
+     0.71,
+     0.98
+    ],
+    "mouse/high": [
+     0.8495575221238938,
+     0.967551622418879,
+     0.48333333333333334,
+     0.86
+    ],
+    "finger/mid": [
+     0.7286135693215339,
+     0.8967551622418879,
+     0.4033333333333333,
+     0.7433333333333333
+    ],
+    "finger/high": [
+     0.34513274336283184,
+     0.5368731563421829,
+     0.12,
+     0.3
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 21.284090568085,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 0.0,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.15972826265711912,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.2603231911824076,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9679848820058997,
+   "per": {
+    "mouse/mid": [
+     0.9616519174041298,
+     1.0,
+     0.71,
+     0.98
+    ],
+    "mouse/high": [
+     0.8495575221238938,
+     0.967551622418879,
+     0.48333333333333334,
+     0.86
+    ],
+    "finger/mid": [
+     0.7286135693215339,
+     0.8967551622418879,
+     0.4033333333333333,
+     0.7433333333333333
+    ],
+    "finger/high": [
+     0.34513274336283184,
+     0.5368731563421829,
+     0.12,
+     0.3
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 21.284090568085,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 0.0,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.2378259322442087,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.2603231911824076,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9636559734513274,
+   "per": {
+    "mouse/mid": [
+     0.9646017699115044,
+     1.0,
+     0.7133333333333334,
+     0.9766666666666667
+    ],
+    "mouse/high": [
+     0.8377581120943953,
+     0.9646017699115044,
+     0.48,
+     0.86
+    ],
+    "finger/mid": [
+     0.7168141592920354,
+     0.8938053097345132,
+     0.41333333333333333,
+     0.75
+    ],
+    "finger/high": [
+     0.3274336283185841,
+     0.5368731563421829,
+     0.11333333333333333,
+     0.30333333333333334
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 21.284090568085,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 0.0,
+    "end_alpha": 2.547450275981319,
+    "evidence_power": 0.15972826265711912,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.2603231911824076,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9651640855457226,
+   "per": {
+    "mouse/mid": [
+     0.9616519174041298,
+     1.0,
+     0.71,
+     0.9766666666666667
+    ],
+    "mouse/high": [
+     0.8436578171091446,
+     0.967551622418879,
+     0.4766666666666667,
+     0.8566666666666667
+    ],
+    "finger/mid": [
+     0.7286135693215339,
+     0.8967551622418879,
+     0.4033333333333333,
+     0.74
+    ],
+    "finger/high": [
+     0.34513274336283184,
+     0.5368731563421829,
+     0.11666666666666667,
+     0.2966666666666667
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 21.284090568085,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 0.0,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.20498396473037803,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.2603231911824076,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9629830383480825,
+   "per": {
+    "mouse/mid": [
+     0.9616519174041298,
+     1.0,
+     0.7133333333333334,
+     0.9766666666666667
+    ],
+    "mouse/high": [
+     0.8407079646017699,
+     0.9646017699115044,
+     0.4766666666666667,
+     0.8633333333333333
+    ],
+    "finger/mid": [
+     0.7197640117994101,
+     0.8938053097345132,
+     0.41,
+     0.7433333333333333
+    ],
+    "finger/high": [
+     0.3274336283185841,
+     0.5368731563421829,
+     0.11333333333333333,
+     0.30333333333333334
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 21.284090568085,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 3.6456297907647968,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.15972826265711912,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.2603231911824076,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9732817109144543,
+   "per": {
+    "mouse/mid": [
+     0.9616519174041298,
+     1.0,
+     0.7233333333333334,
+     0.98
+    ],
+    "mouse/high": [
+     0.8495575221238938,
+     0.9705014749262537,
+     0.48,
+     0.8533333333333334
+    ],
+    "finger/mid": [
+     0.7256637168141593,
+     0.8997050147492626,
+     0.42333333333333334,
+     0.76
+    ],
+    "finger/high": [
+     0.35103244837758113,
+     0.5398230088495575,
+     0.11666666666666667,
+     0.30666666666666664
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 3.6456297907647968,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.15972826265711912,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.2603231911824076,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.97351401179941,
+   "per": {
+    "mouse/mid": [
+     0.9616519174041298,
+     1.0,
+     0.73,
+     0.98
+    ],
+    "mouse/high": [
+     0.8495575221238938,
+     0.9705014749262537,
+     0.4766666666666667,
+     0.8533333333333334
+    ],
+    "finger/mid": [
+     0.7256637168141593,
+     0.8997050147492626,
+     0.4266666666666667,
+     0.7533333333333333
+    ],
+    "finger/high": [
+     0.3480825958702065,
+     0.5427728613569321,
+     0.11666666666666667,
+     0.30666666666666664
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 21.119986532055943,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 3.6456297907647968,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.15972826265711912,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.2603231911824076,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9730733775811209,
+   "per": {
+    "mouse/mid": [
+     0.9616519174041298,
+     1.0,
+     0.7233333333333334,
+     0.98
+    ],
+    "mouse/high": [
+     0.8495575221238938,
+     0.9705014749262537,
+     0.48,
+     0.8533333333333334
+    ],
+    "finger/mid": [
+     0.7256637168141593,
+     0.8997050147492626,
+     0.42333333333333334,
+     0.7566666666666667
+    ],
+    "finger/high": [
+     0.35103244837758113,
+     0.5398230088495575,
+     0.11666666666666667,
+     0.30666666666666664
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 3.6456297907647968,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.15972826265711912,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.2603231911824076,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": -0.4131953261233401,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.95851401179941,
+   "per": {
+    "mouse/mid": [
+     0.9616519174041298,
+     1.0,
+     0.6933333333333334,
+     0.9766666666666667
+    ],
+    "mouse/high": [
+     0.8495575221238938,
+     0.9705014749262537,
+     0.46,
+     0.8466666666666667
+    ],
+    "finger/mid": [
+     0.7256637168141593,
+     0.8997050147492626,
+     0.38666666666666666,
+     0.7366666666666667
+    ],
+    "finger/high": [
+     0.3480825958702065,
+     0.5427728613569321,
+     0.11333333333333333,
+     0.2866666666666667
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 4.082856483474871,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.15972826265711912,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.2603231911824076,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9735140117994101,
+   "per": {
+    "mouse/mid": [
+     0.9616519174041298,
+     1.0,
+     0.7266666666666667,
+     0.98
+    ],
+    "mouse/high": [
+     0.8495575221238938,
+     0.9705014749262537,
+     0.4766666666666667,
+     0.8533333333333334
+    ],
+    "finger/mid": [
+     0.7256637168141593,
+     0.8997050147492626,
+     0.4266666666666667,
+     0.7566666666666667
+    ],
+    "finger/high": [
+     0.3480825958702065,
+     0.5427728613569321,
+     0.11666666666666667,
+     0.31
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 4.082856483474871,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.15972826265711912,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.21003363775390096,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9835213864306784,
+   "per": {
+    "mouse/mid": [
+     0.9587020648967551,
+     1.0,
+     0.7566666666666667,
+     0.9866666666666667
+    ],
+    "mouse/high": [
+     0.8466076696165191,
+     0.967551622418879,
+     0.49666666666666665,
+     0.8633333333333333
+    ],
+    "finger/mid": [
+     0.7227138643067846,
+     0.8997050147492626,
+     0.44666666666666666,
+     0.76
+    ],
+    "finger/high": [
+     0.34513274336283184,
+     0.5427728613569321,
+     0.12666666666666668,
+     0.31666666666666665
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.15972826265711912,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.21003363775390096,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9835693215339234,
+   "per": {
+    "mouse/mid": [
+     0.9587020648967551,
+     1.0,
+     0.7566666666666667,
+     0.9866666666666667
+    ],
+    "mouse/high": [
+     0.8436578171091446,
+     0.967551622418879,
+     0.5066666666666667,
+     0.8633333333333333
+    ],
+    "finger/mid": [
+     0.7256637168141593,
+     0.8967551622418879,
+     0.44666666666666666,
+     0.76
+    ],
+    "finger/high": [
+     0.34513274336283184,
+     0.5398230088495575,
+     0.12333333333333334,
+     0.31
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.11740458509734746,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.21003363775390096,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9825442477876106,
+   "per": {
+    "mouse/mid": [
+     0.9587020648967551,
+     1.0,
+     0.7533333333333333,
+     0.9866666666666667
+    ],
+    "mouse/high": [
+     0.8495575221238938,
+     0.9705014749262537,
+     0.5033333333333333,
+     0.8566666666666667
+    ],
+    "finger/mid": [
+     0.7286135693215339,
+     0.8967551622418879,
+     0.44333333333333336,
+     0.7566666666666667
+    ],
+    "finger/high": [
+     0.34513274336283184,
+     0.5427728613569321,
+     0.11666666666666667,
+     0.31333333333333335
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.15972826265711912,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.1895738234311924,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.983713126843658,
+   "per": {
+    "mouse/mid": [
+     0.9587020648967551,
+     1.0,
+     0.76,
+     0.9866666666666667
+    ],
+    "mouse/high": [
+     0.8407079646017699,
+     0.967551622418879,
+     0.5066666666666667,
+     0.8666666666666667
+    ],
+    "finger/mid": [
+     0.7227138643067846,
+     0.8967551622418879,
+     0.45,
+     0.76
+    ],
+    "finger/high": [
+     0.3421828908554572,
+     0.5398230088495575,
+     0.12333333333333334,
+     0.31333333333333335
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.10756780080069867,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.1895738234311924,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.14602387071313472,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.986959808259587,
+   "per": {
+    "mouse/mid": [
+     0.9587020648967551,
+     1.0,
+     0.7633333333333333,
+     0.9866666666666667
+    ],
+    "mouse/high": [
+     0.8495575221238938,
+     0.9734513274336283,
+     0.51,
+     0.8633333333333333
+    ],
+    "finger/mid": [
+     0.7286135693215339,
+     0.8967551622418879,
+     0.44666666666666666,
+     0.76
+    ],
+    "finger/high": [
+     0.35398230088495575,
+     0.5427728613569321,
+     0.11666666666666667,
+     0.31333333333333335
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.10756780080069867,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.1895738234311924,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 0.9873285398230088,
+   "per": {
+    "mouse/mid": [
+     0.9587020648967551,
+     1.0,
+     0.7633333333333333,
+     0.9866666666666667
+    ],
+    "mouse/high": [
+     0.8495575221238938,
+     0.9734513274336283,
+     0.51,
+     0.8633333333333333
+    ],
+    "finger/mid": [
+     0.7286135693215339,
+     0.8967551622418879,
+     0.44666666666666666,
+     0.76
+    ],
+    "finger/high": [
+     0.35693215339233036,
+     0.5427728613569321,
+     0.11666666666666667,
+     0.31333333333333335
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.10756780080069867,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0066132005899706,
+   "per": {
+    "mouse/mid": [
+     0.9498525073746312,
+     1.0,
+     0.8233333333333334,
+     0.99
+    ],
+    "mouse/high": [
+     0.8377581120943953,
+     0.9705014749262537,
+     0.5566666666666666,
+     0.87
+    ],
+    "finger/mid": [
+     0.7197640117994101,
+     0.8967551622418879,
+     0.5,
+     0.78
+    ],
+    "finger/high": [
+     0.34513274336283184,
+     0.5368731563421829,
+     0.14,
+     0.31666666666666665
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 18.117398422579104,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.10756780080069867,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0052507374631268,
+   "per": {
+    "mouse/mid": [
+     0.9528023598820059,
+     1.0,
+     0.8166666666666667,
+     0.99
+    ],
+    "mouse/high": [
+     0.8348082595870207,
+     0.967551622418879,
+     0.5533333333333333,
+     0.8733333333333333
+    ],
+    "finger/mid": [
+     0.7168141592920354,
+     0.8938053097345132,
+     0.5033333333333333,
+     0.7833333333333333
+    ],
+    "finger/high": [
+     0.34513274336283184,
+     0.5368731563421829,
+     0.14,
+     0.31333333333333335
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.10756780080069867,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.31139155824437204,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 1.5771615345120795,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0047695427728613,
+   "per": {
+    "mouse/mid": [
+     0.9498525073746312,
+     1.0,
+     0.8233333333333334,
+     0.99
+    ],
+    "mouse/high": [
+     0.8377581120943953,
+     0.9705014749262537,
+     0.5566666666666666,
+     0.87
+    ],
+    "finger/mid": [
+     0.7197640117994101,
+     0.8908554572271387,
+     0.5,
+     0.78
+    ],
+    "finger/high": [
+     0.3392330383480826,
+     0.5250737463126843,
+     0.14,
+     0.31666666666666665
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.10756780080069867,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.8976580438969538,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0121736725663717,
+   "per": {
+    "mouse/mid": [
+     0.9469026548672567,
+     1.0,
+     0.8333333333333334,
+     0.99
+    ],
+    "mouse/high": [
+     0.8348082595870207,
+     0.967551622418879,
+     0.57,
+     0.8766666666666667
+    ],
+    "finger/mid": [
+     0.7197640117994101,
+     0.8967551622418879,
+     0.5133333333333333,
+     0.7866666666666666
+    ],
+    "finger/high": [
+     0.34513274336283184,
+     0.5339233038348082,
+     0.14666666666666667,
+     0.3233333333333333
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.10756780080069867,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.8976580438969538,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.1785329309311692,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0121736725663717,
+   "per": {
+    "mouse/mid": [
+     0.9469026548672567,
+     1.0,
+     0.8333333333333334,
+     0.99
+    ],
+    "mouse/high": [
+     0.8348082595870207,
+     0.967551622418879,
+     0.57,
+     0.8766666666666667
+    ],
+    "finger/mid": [
+     0.7197640117994101,
+     0.8967551622418879,
+     0.5133333333333333,
+     0.7866666666666666
+    ],
+    "finger/high": [
+     0.34513274336283184,
+     0.5339233038348082,
+     0.14666666666666667,
+     0.3233333333333333
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 3.832871824052532,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.10756780080069867,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.8976580438969538,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0112924041297937,
+   "per": {
+    "mouse/mid": [
+     0.9469026548672567,
+     1.0,
+     0.8333333333333334,
+     0.99
+    ],
+    "mouse/high": [
+     0.8377581120943953,
+     0.967551622418879,
+     0.5633333333333334,
+     0.8766666666666667
+    ],
+    "finger/mid": [
+     0.7197640117994101,
+     0.8967551622418879,
+     0.5133333333333333,
+     0.7833333333333333
+    ],
+    "finger/high": [
+     0.34513274336283184,
+     0.5339233038348082,
+     0.14666666666666667,
+     0.32
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.9786230643862,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.10756780080069867,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.8976580438969538,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0113882743362832,
+   "per": {
+    "mouse/mid": [
+     0.9469026548672567,
+     1.0,
+     0.8333333333333334,
+     0.99
+    ],
+    "mouse/high": [
+     0.8348082595870207,
+     0.967551622418879,
+     0.57,
+     0.8766666666666667
+    ],
+    "finger/mid": [
+     0.7197640117994101,
+     0.8908554572271387,
+     0.5133333333333333,
+     0.7866666666666666
+    ],
+    "finger/high": [
+     0.34513274336283184,
+     0.5339233038348082,
+     0.14333333333333334,
+     0.3233333333333333
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.10756780080069867,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09453201044025622,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.8976580438969538,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0119174041297936,
+   "per": {
+    "mouse/mid": [
+     0.9469026548672567,
+     1.0,
+     0.8333333333333334,
+     0.99
+    ],
+    "mouse/high": [
+     0.8377581120943953,
+     0.967551622418879,
+     0.5666666666666667,
+     0.8766666666666667
+    ],
+    "finger/mid": [
+     0.7197640117994101,
+     0.8967551622418879,
+     0.5133333333333333,
+     0.7833333333333333
+    ],
+    "finger/high": [
+     0.34513274336283184,
+     0.5339233038348082,
+     0.14666666666666667,
+     0.3233333333333333
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.0649390589245931,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.8976580438969538,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0134882005899704,
+   "per": {
+    "mouse/mid": [
+     0.9498525073746312,
+     1.0,
+     0.8366666666666667,
+     0.99
+    ],
+    "mouse/high": [
+     0.8407079646017699,
+     0.967551622418879,
+     0.5733333333333334,
+     0.88
+    ],
+    "finger/mid": [
+     0.7197640117994101,
+     0.8938053097345132,
+     0.5166666666666667,
+     0.7833333333333333
+    ],
+    "finger/high": [
+     0.3480825958702065,
+     0.5309734513274337,
+     0.14,
+     0.32
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 2.3174268988083284,
+    "evidence_power": 0.09625044502234348,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.8976580438969538,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.012518436578171,
+   "per": {
+    "mouse/mid": [
+     0.9469026548672567,
+     1.0,
+     0.8366666666666667,
+     0.99
+    ],
+    "mouse/high": [
+     0.8377581120943953,
+     0.967551622418879,
+     0.57,
+     0.8766666666666667
+    ],
+    "finger/mid": [
+     0.7197640117994101,
+     0.8938053097345132,
+     0.5133333333333333,
+     0.7833333333333333
+    ],
+    "finger/high": [
+     0.3480825958702065,
+     0.5339233038348082,
+     0.14333333333333334,
+     0.3233333333333333
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 1.9303363260738862,
+    "evidence_power": 0.0649390589245931,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.8976580438969538,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0136725663716815,
+   "per": {
+    "mouse/mid": [
+     0.9528023598820059,
+     1.0,
+     0.84,
+     0.99
+    ],
+    "mouse/high": [
+     0.8377581120943953,
+     0.9705014749262537,
+     0.57,
+     0.8833333333333333
+    ],
+    "finger/mid": [
+     0.7168141592920354,
+     0.8908554572271387,
+     0.5133333333333333,
+     0.7833333333333333
+    ],
+    "finger/high": [
+     0.35103244837758113,
+     0.5339233038348082,
+     0.14,
+     0.3233333333333333
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 23.8528800935253,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 1.9303363260738862,
+    "evidence_power": 0.0649390589245931,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.8976580438969538,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0126548672566373,
+   "per": {
+    "mouse/mid": [
+     0.9528023598820059,
+     1.0,
+     0.84,
+     0.99
+    ],
+    "mouse/high": [
+     0.8377581120943953,
+     0.9705014749262537,
+     0.57,
+     0.8766666666666667
+    ],
+    "finger/mid": [
+     0.7138643067846607,
+     0.8908554572271387,
+     0.5166666666666667,
+     0.78
+    ],
+    "finger/high": [
+     0.35398230088495575,
+     0.5309734513274337,
+     0.13666666666666666,
+     0.32
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 34.0472384745007,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 1.9303363260738862,
+    "evidence_power": 0.0649390589245931,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.8976580438969538,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.001738569321534,
+   "per": {
+    "mouse/mid": [
+     0.9528023598820059,
+     1.0,
+     0.84,
+     0.99
+    ],
+    "mouse/high": [
+     0.8259587020648967,
+     0.9646017699115044,
+     0.57,
+     0.8666666666666667
+    ],
+    "finger/mid": [
+     0.7020648967551623,
+     0.8820058997050148,
+     0.5066666666666667,
+     0.7766666666666666
+    ],
+    "finger/high": [
+     0.3303834808259587,
+     0.5221238938053098,
+     0.13,
+     0.31
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 1.9303363260738862,
+    "evidence_power": 0.0649390589245931,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.8976580438969538,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.18198768851483824,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0136725663716815,
+   "per": {
+    "mouse/mid": [
+     0.9528023598820059,
+     1.0,
+     0.84,
+     0.99
+    ],
+    "mouse/high": [
+     0.8377581120943953,
+     0.9705014749262537,
+     0.57,
+     0.8833333333333333
+    ],
+    "finger/mid": [
+     0.7168141592920354,
+     0.8908554572271387,
+     0.5133333333333333,
+     0.7833333333333333
+    ],
+    "finger/high": [
+     0.35103244837758113,
+     0.5339233038348082,
+     0.14,
+     0.3233333333333333
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 1.3433438428543636,
+    "end_alpha": 1.9303363260738862,
+    "evidence_power": 0.0649390589245931,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.8976580438969538,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0127747050147493,
+   "per": {
+    "mouse/mid": [
+     0.9528023598820059,
+     1.0,
+     0.8366666666666667,
+     0.99
+    ],
+    "mouse/high": [
+     0.8377581120943953,
+     0.967551622418879,
+     0.5733333333333334,
+     0.88
+    ],
+    "finger/mid": [
+     0.7168141592920354,
+     0.887905604719764,
+     0.5133333333333333,
+     0.7866666666666666
+    ],
+    "finger/high": [
+     0.34513274336283184,
+     0.5339233038348082,
+     0.14333333333333334,
+     0.32
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 1.9303363260738862,
+    "evidence_power": 0.0649390589245931,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.9492719585689345,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0137205014749262,
+   "per": {
+    "mouse/mid": [
+     0.9498525073746312,
+     1.0,
+     0.84,
+     0.99
+    ],
+    "mouse/high": [
+     0.8377581120943953,
+     0.9705014749262537,
+     0.5733333333333334,
+     0.8833333333333333
+    ],
+    "finger/mid": [
+     0.7168141592920354,
+     0.8908554572271387,
+     0.5133333333333333,
+     0.7833333333333333
+    ],
+    "finger/high": [
+     0.35103244837758113,
+     0.5339233038348082,
+     0.14,
+     0.3233333333333333
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 4.441012529674591,
+    "end_alpha": 1.9303363260738862,
+    "evidence_power": 0.0649390589245931,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.9492719585689345,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0131839970501475,
+   "per": {
+    "mouse/mid": [
+     0.9498525073746312,
+     1.0,
+     0.8366666666666667,
+     0.99
+    ],
+    "mouse/high": [
+     0.8407079646017699,
+     0.967551622418879,
+     0.57,
+     0.88
+    ],
+    "finger/mid": [
+     0.7197640117994101,
+     0.8938053097345132,
+     0.5133333333333333,
+     0.7833333333333333
+    ],
+    "finger/high": [
+     0.35103244837758113,
+     0.5368731563421829,
+     0.13666666666666666,
+     0.3233333333333333
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 1.9303363260738862,
+    "evidence_power": 0.0649390589245931,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.9492719585689345,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 1.7918420193934046,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0126143067846607,
+   "per": {
+    "mouse/mid": [
+     0.9498525073746312,
+     1.0,
+     0.84,
+     0.99
+    ],
+    "mouse/high": [
+     0.8377581120943953,
+     0.9705014749262537,
+     0.5733333333333334,
+     0.8833333333333333
+    ],
+    "finger/mid": [
+     0.7168141592920354,
+     0.8908554572271387,
+     0.5133333333333333,
+     0.7833333333333333
+    ],
+    "finger/high": [
+     0.3480825958702065,
+     0.5221238938053098,
+     0.14,
+     0.3233333333333333
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 1.9303363260738862,
+    "evidence_power": 0.03495034493839718,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.09284502991640263,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.9492719585689345,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0130475663716816,
+   "per": {
+    "mouse/mid": [
+     0.9528023598820059,
+     1.0,
+     0.84,
+     0.99
+    ],
+    "mouse/high": [
+     0.8407079646017699,
+     0.9705014749262537,
+     0.5733333333333334,
+     0.8833333333333333
+    ],
+    "finger/mid": [
+     0.7168141592920354,
+     0.8908554572271387,
+     0.5133333333333333,
+     0.78
+    ],
+    "finger/high": [
+     0.3480825958702065,
+     0.5339233038348082,
+     0.13666666666666666,
+     0.31666666666666665
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 1.9303363260738862,
+    "evidence_power": 0.0649390589245931,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.1945692166366587,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.9492719585689345,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0110453539823008,
+   "per": {
+    "mouse/mid": [
+     0.9557522123893806,
+     1.0,
+     0.83,
+     0.99
+    ],
+    "mouse/high": [
+     0.8436578171091446,
+     0.9734513274336283,
+     0.5633333333333334,
+     0.88
+    ],
+    "finger/mid": [
+     0.7197640117994101,
+     0.8967551622418879,
+     0.5,
+     0.78
+    ],
+    "finger/high": [
+     0.35103244837758113,
+     0.5427728613569321,
+     0.13666666666666666,
+     0.31333333333333335
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 40,
+    "m": 8,
+    "keep": 150,
+    "shape_weight": 0.0,
+    "loc_weight": 22.41031264322045,
+    "end_weight": 22.45583763070106,
+    "cover_weight": 2.7688805413124715,
+    "end_alpha": 1.9303363260738862,
+    "evidence_power": 0.0649390589245931,
+    "evidence_ref": 4.0,
+    "word_prior_weight": 0.058693525811500356,
+    "char_prior_weight": 0.1,
+    "prior_floor": 1.0,
+    "char_offset": 0.9492719585689345,
+    "prune_radius": 1.2,
+    "len_lo": 0.7,
+    "len_hi": 1.6,
+    "min_candidates": 30,
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.332,
+    "dwell_extra_penalty": 2.165,
+    "boundary_dwell_ok": true,
+    "boundary_dwell_bonus": 0.19049349504820928,
+    "lift_weight": 2.495327294323326,
+    "lift_extra_penalty": 4.0,
+    "top_k": 10
+   },
+   "obj": 1.0123174778761062,
+   "per": {
+    "mouse/mid": [
+     0.943952802359882,
+     1.0,
+     0.84,
+     0.99
+    ],
+    "mouse/high": [
+     0.8377581120943953,
+     0.967551622418879,
+     0.5733333333333334,
+     0.8833333333333333
+    ],
+    "finger/mid": [
+     0.7138643067846607,
+     0.8849557522123894,
+     0.5133333333333333,
+     0.7866666666666666
+    ],
+    "finger/high": [
+     0.3480825958702065,
+     0.5339233038348082,
+     0.14,
+     0.33
+    ]
+   },
+   "phase": "refine"
+  }
+ ]
+}

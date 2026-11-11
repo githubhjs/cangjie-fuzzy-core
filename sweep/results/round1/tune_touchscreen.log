@@ -1,0 +1,17 @@
+default obj 0.5869
+[3 random] obj 0.6567  mid top1 0.624 top5 0.932  (41s)
+[9 random] obj 0.6865  mid top1 0.652 top5 0.925  (83s)
+[41 refine] obj 0.6906  mid top1 0.655 top5 0.924  (420s)
+[42 refine] obj 0.6908  mid top1 0.655 top5 0.924  (426s)
+[46 refine] obj 0.6935  mid top1 0.656 top5 0.922  (452s)
+[48 refine] obj 0.6979  mid top1 0.664 top5 0.932  (472s)
+[50 refine] obj 0.6996  mid top1 0.662 top5 0.935  (497s)
+[51 refine] obj 0.7000  mid top1 0.662 top5 0.935  (510s)
+[55 refine] obj 0.7290  mid top1 0.691 top5 0.946  (563s)
+[69 refine] obj 0.7298  mid top1 0.693 top5 0.946  (726s)
+[71 refine] obj 0.7321  mid top1 0.696 top5 0.948  (756s)
+[73 refine] obj 0.7331  mid top1 0.698 top5 0.949  (780s)
+[75 refine] obj 0.7335  mid top1 0.698 top5 0.951  (805s)
+[77 refine] obj 0.7390  mid top1 0.704 top5 0.950  (830s)
+[78 refine] obj 0.7419  mid top1 0.708 top5 0.951  (841s)
+BEST {"n": 16, "shape_weight": 2.0315306346513573, "loc_weight": 22.254404482981247, "end_weight": 8.732238395016022, "cover_weight": 2.7248424654275003, "loc_tolerance": 0.25359333286873664, "end_alpha": 1.4647055980287902, "shape_short_scale": 0.9627710136290032, "shape_single_scale": 0.0, "prior_weight": 0.07273433871111211, "prior_floor": 1.0, "prune_radius": 1.6361845215770128, "prune_fallback": true, "use_index": true, "repeat_mode": "dwell", "dwell_ms": 241.07329602844595, "dwell_radius": 0.35, "dwell_assign_radius": 0.9, "repeat_miss_penalty": 1.0939043261329566, "dwell_extra_penalty": 1.271771336541024, "top_k": 10} 0.741875

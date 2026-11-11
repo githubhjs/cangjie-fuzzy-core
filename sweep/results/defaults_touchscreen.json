@@ -1,0 +1,23 @@
+{
+ "n": 24,
+ "shape_weight": 1.277,
+ "loc_weight": 17.21,
+ "end_weight": 13.748,
+ "cover_weight": 0.0,
+ "loc_tolerance": 0.073,
+ "end_alpha": 2.046,
+ "shape_short_scale": 0.469,
+ "shape_single_scale": 0.0,
+ "prior_weight": 0.095,
+ "prior_floor": 1.0,
+ "prune_radius": 1.2,
+ "prune_fallback": true,
+ "use_index": true,
+ "repeat_mode": "dwell",
+ "dwell_ms": 250.0,
+ "dwell_radius": 0.35,
+ "dwell_assign_radius": 0.9,
+ "repeat_miss_penalty": 1.384,
+ "dwell_extra_penalty": 0.84,
+ "top_k": 10
+}

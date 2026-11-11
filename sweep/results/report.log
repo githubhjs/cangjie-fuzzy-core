@@ -1,0 +1,32 @@
+main mouse
+main touchpad
+main finger
+main touchscreen
+sweep mouse
+sweep touchpad
+sweep finger
+sweep touchscreen
+transfer done
+ablation full
+ablation no shape channel
+ablation no location channel
+ablation no start/end term, flat alphas
+ablation no prior
+ablation repeat_mode=ignore (no dwell)
+ablation 2-key shape weight x1 (shape_short_scale=1)
+ablation 2-key shape weight x0
+ablation cover_weight 4
+ablation loc_tolerance 0.25
+ablation N=16
+ablation N=24
+ablation N=32
+ablation N=48
+ablation N=64
+ablation prune_radius 0.8
+ablation prune_radius 1.0
+ablation prune_radius 2.0
+ablation no pruning (radius 99)
+bias stress done
+dwell done
+lexsize done
+wrote REPORT.md

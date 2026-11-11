@@ -1,0 +1,14 @@
+default obj 0.3598
+[3 random] obj 0.4508  mid top1 0.441 top5 0.794  (44s)
+[41 refine] obj 0.4531  mid top1 0.446 top5 0.797  (441s)
+[42 refine] obj 0.4535  mid top1 0.448 top5 0.796  (453s)
+[45 refine] obj 0.4544  mid top1 0.446 top5 0.799  (483s)
+[48 refine] obj 0.4550  mid top1 0.458 top5 0.794  (551s)
+[52 refine] obj 0.4602  mid top1 0.464 top5 0.797  (591s)
+[55 refine] obj 0.4637  mid top1 0.469 top5 0.804  (620s)
+[57 refine] obj 0.4642  mid top1 0.469 top5 0.804  (637s)
+[59 refine] obj 0.4675  mid top1 0.471 top5 0.804  (654s)
+[62 refine] obj 0.4677  mid top1 0.471 top5 0.805  (677s)
+[74 refine] obj 0.4781  mid top1 0.486 top5 0.815  (783s)
+[77 refine] obj 0.4785  mid top1 0.487 top5 0.815  (810s)
+BEST {"n": 24, "shape_weight": 1.8142493720989519, "loc_weight": 18.094704406614824, "end_weight": 0.7563795271690873, "cover_weight": 14.813628959962449, "loc_tolerance": 0.0, "end_alpha": 2.170968266979126, "shape_short_scale": 1.0, "shape_single_scale": 0.0, "prior_weight": 0.1961312517963441, "prior_floor": 1.0, "prune_radius": 1.0871441983521701, "prune_fallback": true, "use_index": true, "repeat_mode": "dwell", "dwell_ms": 241.07329602844595, "dwell_radius": 0.35, "dwell_assign_radius": 0.9, "repeat_miss_penalty": 1.3156926700200333, "dwell_extra_penalty": 1.0247308251979603, "top_k": 10} 0.47854166666666664

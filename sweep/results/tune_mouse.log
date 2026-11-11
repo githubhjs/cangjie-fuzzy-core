@@ -1,0 +1,11 @@
+default obj 1.1274
+[42 refine] obj 1.1278  mid top1 0.815 top5 0.989  (230s)
+[48 refine] obj 1.1290  mid top1 0.817 top5 0.992  (270s)
+[50 refine] obj 1.1291  mid top1 0.818 top5 0.992  (283s)
+[55 refine] obj 1.1291  mid top1 0.819 top5 0.992  (316s)
+[60 refine] obj 1.1330  mid top1 0.817 top5 0.992  (349s)
+[64 refine] obj 1.1335  mid top1 0.820 top5 0.994  (375s)
+[65 refine] obj 1.1337  mid top1 0.823 top5 0.996  (382s)
+[66 refine] obj 1.1338  mid top1 0.823 top5 0.995  (388s)
+[78 refine] obj 1.1338  mid top1 0.825 top5 0.995  (461s)
+BEST {"n": 24, "shape_weight": 6.807, "loc_weight": 17.551833462695328, "end_weight": 10.655440139314548, "cover_weight": 2.805891271691078, "loc_tolerance": 0.0, "end_alpha": 1.7462274773404363, "shape_short_scale": 0.357, "shape_single_scale": 0.0, "prior_weight": 0.101, "prior_floor": 1.0, "prune_radius": 1.2, "prune_fallback": true, "use_index": true, "repeat_mode": "dwell", "dwell_ms": 250.0, "dwell_radius": 0.35, "dwell_assign_radius": 0.9, "repeat_miss_penalty": 2.3321047975969043, "dwell_extra_penalty": 2.164565153080099, "top_k": 10} 1.1338025503349547

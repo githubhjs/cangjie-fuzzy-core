@@ -1,0 +1,3611 @@
+{
+ "profile": "touchscreen",
+ "best": {
+  "n": 16,
+  "shape_weight": 2.0315306346513573,
+  "loc_weight": 22.254404482981247,
+  "end_weight": 8.732238395016022,
+  "cover_weight": 2.7248424654275003,
+  "loc_tolerance": 0.25359333286873664,
+  "end_alpha": 1.4647055980287902,
+  "shape_short_scale": 0.9627710136290032,
+  "shape_single_scale": 0.0,
+  "prior_weight": 0.07273433871111211,
+  "prior_floor": 1.0,
+  "prune_radius": 1.6361845215770128,
+  "prune_fallback": true,
+  "use_index": true,
+  "repeat_mode": "dwell",
+  "dwell_ms": 241.07329602844595,
+  "dwell_radius": 0.35,
+  "dwell_assign_radius": 0.9,
+  "repeat_miss_penalty": 1.0939043261329566,
+  "dwell_extra_penalty": 1.271771336541024,
+  "top_k": 10
+ },
+ "best_obj": 0.741875,
+ "best_per": {
+  "mid": [
+   0.7075,
+   0.91,
+   0.95125
+  ],
+  "high": [
+   0.39125,
+   0.6175,
+   0.6975
+  ],
+  "vhigh": [
+   0.14125,
+   0.25,
+   0.3225
+  ]
+ },
+ "train_n": 800,
+ "trials": [
+  {
+   "cfg": {
+    "n": 32,
+    "shape_weight": 4.0,
+    "loc_weight": 4.0,
+    "end_weight": 4.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.0,
+    "shape_short_scale": 0.3,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.5,
+    "prior_floor": 1.0,
+    "prune_radius": 1.5,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.0,
+    "dwell_extra_penalty": 2.0,
+    "top_k": 10
+   },
+   "obj": 0.586875,
+   "per": {
+    "mid": [
+     0.515,
+     0.76125,
+     0.8275
+    ],
+    "high": [
+     0.2975,
+     0.4825,
+     0.57875
+    ],
+    "vhigh": [
+     0.10875,
+     0.22125,
+     0.2725
+    ]
+   },
+   "phase": "default"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 14.272223407752762,
+    "loc_weight": 2.874809915471956,
+    "end_weight": 0.0,
+    "cover_weight": 1.0219475088364014,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.8896481606504056,
+    "shape_short_scale": 0.4465931527569984,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.16197522774053788,
+    "prior_floor": 1.0,
+    "prune_radius": 1.5386935085776785,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.0070738661636955,
+    "dwell_extra_penalty": 1.7856733180060806,
+    "top_k": 10
+   },
+   "obj": 0.5645833333333333,
+   "per": {
+    "mid": [
+     0.555,
+     0.76625,
+     0.84375
+    ],
+    "high": [
+     0.26875,
+     0.425,
+     0.51125
+    ],
+    "vhigh": [
+     0.0875,
+     0.16125,
+     0.21
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 5.579551020526897,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.2598663297334977,
+    "end_alpha": 3.638694917603053,
+    "shape_short_scale": 0.32629335254826475,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.7463091300234918,
+    "prior_floor": 1.0,
+    "prune_radius": 1.1953213775092668,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.0424901589003057,
+    "dwell_extra_penalty": 1.3407293503496729,
+    "top_k": 10
+   },
+   "obj": 0.27229166666666665,
+   "per": {
+    "mid": [
+     0.15,
+     0.32875,
+     0.4375
+    ],
+    "high": [
+     0.1125,
+     0.2475,
+     0.33625
+    ],
+    "vhigh": [
+     0.07,
+     0.14875,
+     0.195
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 32,
+    "shape_weight": 0.6947948883802041,
+    "loc_weight": 2.414700060298279,
+    "end_weight": 0.0,
+    "cover_weight": 7.744060339461677,
+    "loc_tolerance": 0.0,
+    "end_alpha": 3.273970147140307,
+    "shape_short_scale": 0.0702234995599259,
+    "shape_single_scale": 0.0,
+    "prior_weight": 1.3548777920082604,
+    "prior_floor": 1.0,
+    "prune_radius": 1.4003998049184911,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.9549638971674534,
+    "dwell_extra_penalty": 5.291309103406428,
+    "top_k": 10
+   },
+   "obj": 0.17124999999999999,
+   "per": {
+    "mid": [
+     0.075,
+     0.23,
+     0.32125
+    ],
+    "high": [
+     0.04875,
+     0.18,
+     0.25625
+    ],
+    "vhigh": [
+     0.03375,
+     0.08625,
+     0.135
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 32,
+    "shape_weight": 0.0,
+    "loc_weight": 18.094704406614824,
+    "end_weight": 0.6122614338985293,
+    "cover_weight": 22.242821860863078,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.259374202930294,
+    "shape_short_scale": 0.7785108586766508,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.25031752341088953,
+    "prior_floor": 1.0,
+    "prune_radius": 1.0871441983521701,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.3139288456674577,
+    "dwell_extra_penalty": 1.0247308251979603,
+    "top_k": 10
+   },
+   "obj": 0.6566666666666667,
+   "per": {
+    "mid": [
+     0.62375,
+     0.85625,
+     0.9325
+    ],
+    "high": [
+     0.30375,
+     0.5325,
+     0.62375
+    ],
+    "vhigh": [
+     0.12125,
+     0.2325,
+     0.28625
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 0.0,
+    "loc_weight": 0.5216605864368903,
+    "end_weight": 3.024447474015693,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.342274632503065,
+    "shape_short_scale": 0.4192304957189792,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.36884841601285223,
+    "prior_floor": 1.0,
+    "prune_radius": 1.394853371536401,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.30042351340124235,
+    "dwell_extra_penalty": 3.9961855026686646,
+    "top_k": 10
+   },
+   "obj": 0.211875,
+   "per": {
+    "mid": [
+     0.1325,
+     0.29875,
+     0.385
+    ],
+    "high": [
+     0.0825,
+     0.18,
+     0.245
+    ],
+    "vhigh": [
+     0.04625,
+     0.1,
+     0.11875
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 32,
+    "shape_weight": 0.0,
+    "loc_weight": 1.1303806582047642,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.14039714525156716,
+    "end_alpha": 1.6397301057325677,
+    "shape_short_scale": 0.8302894778275844,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.37189458041395596,
+    "prior_floor": 1.0,
+    "prune_radius": 1.0742809928217318,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.719003285127069,
+    "dwell_extra_penalty": 0.6212814018699122,
+    "top_k": 10
+   },
+   "obj": 0.22020833333333334,
+   "per": {
+    "mid": [
+     0.10875,
+     0.2525,
+     0.355
+    ],
+    "high": [
+     0.08625,
+     0.1925,
+     0.29
+    ],
+    "vhigh": [
+     0.05625,
+     0.12,
+     0.17375
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 32,
+    "shape_weight": 2.0835405733653762,
+    "loc_weight": 0.8181997659616965,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.8817346279502356,
+    "shape_short_scale": 0.8178019494596482,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.2336359318218165,
+    "prior_floor": 1.0,
+    "prune_radius": 1.18980066596326,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.974420071483402,
+    "dwell_extra_penalty": 1.5768934614416172,
+    "top_k": 10
+   },
+   "obj": 0.3916666666666666,
+   "per": {
+    "mid": [
+     0.2825,
+     0.515,
+     0.62625
+    ],
+    "high": [
+     0.1675,
+     0.33625,
+     0.43875
+    ],
+    "vhigh": [
+     0.08375,
+     0.16625,
+     0.2175
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 32,
+    "shape_weight": 19.78689186407949,
+    "loc_weight": 5.17197735143547,
+    "end_weight": 0.0,
+    "cover_weight": 0.7626139787455988,
+    "loc_tolerance": 0.29660281119543197,
+    "end_alpha": 1.7152215780279483,
+    "shape_short_scale": 0.420815302608295,
+    "shape_single_scale": 0.0,
+    "prior_weight": 2.1703753638785863,
+    "prior_floor": 1.0,
+    "prune_radius": 1.490999507110084,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5074174122583199,
+    "dwell_extra_penalty": 2.596106719730881,
+    "top_k": 10
+   },
+   "obj": 0.18791666666666665,
+   "per": {
+    "mid": [
+     0.10875,
+     0.2475,
+     0.3525
+    ],
+    "high": [
+     0.0625,
+     0.1525,
+     0.2275
+    ],
+    "vhigh": [
+     0.04,
+     0.0875,
+     0.125
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 0.8156037050222705,
+    "loc_weight": 4.359129455469197,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.07420401345355714,
+    "end_alpha": 3.2469553355107035,
+    "shape_short_scale": 0.44570551998215935,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.12282880204555813,
+    "prior_floor": 1.0,
+    "prune_radius": 1.176253775372817,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.4722206107602114,
+    "dwell_extra_penalty": 5.534879232806246,
+    "top_k": 10
+   },
+   "obj": 0.5875,
+   "per": {
+    "mid": [
+     0.5175,
+     0.73,
+     0.79625
+    ],
+    "high": [
+     0.29125,
+     0.50375,
+     0.59375
+    ],
+    "vhigh": [
+     0.11125,
+     0.225,
+     0.295
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.424378691096882,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10749849497629226,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.3669799106130345,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.6864583333333333,
+   "per": {
+    "mid": [
+     0.6525,
+     0.86,
+     0.925
+    ],
+    "high": [
+     0.34375,
+     0.56375,
+     0.64625
+    ],
+    "vhigh": [
+     0.12625,
+     0.23375,
+     0.3025
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 0.0,
+    "loc_weight": 2.8888492291841565,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.37025090284321405,
+    "end_alpha": 3.379800028280452,
+    "shape_short_scale": 0.08492681894560117,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.5001377705466935,
+    "prior_floor": 1.0,
+    "prune_radius": 1.0776693066291605,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 5.076974332353947,
+    "dwell_extra_penalty": 0.3284755050698595,
+    "top_k": 10
+   },
+   "obj": 0.2508333333333333,
+   "per": {
+    "mid": [
+     0.12375,
+     0.2875,
+     0.41
+    ],
+    "high": [
+     0.10625,
+     0.2375,
+     0.32875
+    ],
+    "vhigh": [
+     0.065,
+     0.13625,
+     0.17625
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 4.591954664438801,
+    "loc_weight": 2.1699865280339807,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.3579271401888594,
+    "end_alpha": 3.9799665642649664,
+    "shape_short_scale": 0.38843633185514415,
+    "shape_single_scale": 0.0,
+    "prior_weight": 1.218261379401064,
+    "prior_floor": 1.0,
+    "prune_radius": 1.5809528787266895,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.199517682964055,
+    "dwell_extra_penalty": 1.5181200726110116,
+    "top_k": 10
+   },
+   "obj": 0.08750000000000001,
+   "per": {
+    "mid": [
+     0.0325,
+     0.0925,
+     0.1525
+    ],
+    "high": [
+     0.02875,
+     0.07625,
+     0.11375
+    ],
+    "vhigh": [
+     0.02375,
+     0.05375,
+     0.08875
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 32,
+    "shape_weight": 0.0,
+    "loc_weight": 1.661689455601113,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.2650761416632388,
+    "end_alpha": 2.4917517329740404,
+    "shape_short_scale": 0.25583022010638157,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10392071182712297,
+    "prior_floor": 1.0,
+    "prune_radius": 1.3010326411069957,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.875153707434742,
+    "dwell_extra_penalty": 1.4176473342337041,
+    "top_k": 10
+   },
+   "obj": 0.43999999999999995,
+   "per": {
+    "mid": [
+     0.3175,
+     0.56375,
+     0.67
+    ],
+    "high": [
+     0.2,
+     0.39,
+     0.4875
+    ],
+    "vhigh": [
+     0.095,
+     0.2025,
+     0.2575
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.435353623791001,
+    "loc_weight": 3.4415261762835856,
+    "end_weight": 1.2733927370956402,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.9025193847170905,
+    "shape_short_scale": 0.8802689180835283,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3696860026047196,
+    "prior_floor": 1.0,
+    "prune_radius": 1.583107187753941,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5625974352257996,
+    "dwell_extra_penalty": 0.44892976396629775,
+    "top_k": 10
+   },
+   "obj": 0.571875,
+   "per": {
+    "mid": [
+     0.50125,
+     0.75,
+     0.8425
+    ],
+    "high": [
+     0.27875,
+     0.46625,
+     0.57125
+    ],
+    "vhigh": [
+     0.0975,
+     0.19625,
+     0.2625
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 7.846909317903009,
+    "end_weight": 19.77650006921527,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.351948353752904,
+    "shape_short_scale": 0.8308961422293245,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.36734145190073403,
+    "prior_floor": 1.0,
+    "prune_radius": 1.5199753157338154,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.7716657506853537,
+    "dwell_extra_penalty": 3.7054373878518305,
+    "top_k": 10
+   },
+   "obj": 0.6454166666666666,
+   "per": {
+    "mid": [
+     0.6175,
+     0.85125,
+     0.91875
+    ],
+    "high": [
+     0.32625,
+     0.5275,
+     0.60375
+    ],
+    "vhigh": [
+     0.11,
+     0.2025,
+     0.2425
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 32,
+    "shape_weight": 0.0,
+    "loc_weight": 12.366893250003756,
+    "end_weight": 0.0,
+    "cover_weight": 6.906846414493344,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.7117458810109207,
+    "shape_short_scale": 0.6409855420580592,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.3967467393673304,
+    "prior_floor": 1.0,
+    "prune_radius": 1.1899184884483107,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.6109385031548101,
+    "dwell_extra_penalty": 0.45751278897108477,
+    "top_k": 10
+   },
+   "obj": 0.631875,
+   "per": {
+    "mid": [
+     0.56875,
+     0.82625,
+     0.9025
+    ],
+    "high": [
+     0.305,
+     0.51875,
+     0.61875
+    ],
+    "vhigh": [
+     0.1125,
+     0.24375,
+     0.2975
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 0.0,
+    "loc_weight": 2.815865332924896,
+    "end_weight": 5.729171946666185,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.598024267491053,
+    "shape_short_scale": 0.714222915550818,
+    "shape_single_scale": 0.0,
+    "prior_weight": 1.3040727575719602,
+    "prior_floor": 1.0,
+    "prune_radius": 1.5348485239905933,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.5130198594606175,
+    "dwell_extra_penalty": 0.6783646312721664,
+    "top_k": 10
+   },
+   "obj": 0.2575,
+   "per": {
+    "mid": [
+     0.14875,
+     0.35125,
+     0.48625
+    ],
+    "high": [
+     0.09625,
+     0.21875,
+     0.3075
+    ],
+    "vhigh": [
+     0.05125,
+     0.11125,
+     0.15875
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.293853548352663,
+    "end_weight": 0.0,
+    "cover_weight": 0.700794171007039,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.38972976320616,
+    "shape_short_scale": 0.37680276893089015,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.6921613017089273,
+    "prior_floor": 1.0,
+    "prune_radius": 1.8793208264011918,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.203424708384947,
+    "dwell_extra_penalty": 2.1111128524159457,
+    "top_k": 10
+   },
+   "obj": 0.16,
+   "per": {
+    "mid": [
+     0.08125,
+     0.19125,
+     0.27875
+    ],
+    "high": [
+     0.04875,
+     0.1475,
+     0.21875
+    ],
+    "vhigh": [
+     0.035,
+     0.08125,
+     0.1325
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 0.0,
+    "loc_weight": 1.1417552282514276,
+    "end_weight": 0.0,
+    "cover_weight": 21.98596112843157,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.7856494615224685,
+    "shape_short_scale": 0.3485070430093947,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.13251503076360505,
+    "prior_floor": 1.0,
+    "prune_radius": 1.4409011925909971,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.0602236198556034,
+    "dwell_extra_penalty": 0.6842874894384077,
+    "top_k": 10
+   },
+   "obj": 0.2547916666666667,
+   "per": {
+    "mid": [
+     0.20875,
+     0.39375,
+     0.4925
+    ],
+    "high": [
+     0.09125,
+     0.1975,
+     0.26
+    ],
+    "vhigh": [
+     0.03125,
+     0.07125,
+     0.11375
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 0.0,
+    "loc_weight": 2.6309466708199354,
+    "end_weight": 0.5727812572533548,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.39993836567389757,
+    "end_alpha": 2.4116859692784147,
+    "shape_short_scale": 0.9457473969454969,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.5340750673391892,
+    "prior_floor": 1.0,
+    "prune_radius": 1.9491543746669822,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.9046429372162463,
+    "dwell_extra_penalty": 1.118980669225045,
+    "top_k": 10
+   },
+   "obj": 0.14854166666666666,
+   "per": {
+    "mid": [
+     0.06625,
+     0.15875,
+     0.2375
+    ],
+    "high": [
+     0.055,
+     0.14,
+     0.1975
+    ],
+    "vhigh": [
+     0.03875,
+     0.09125,
+     0.13625
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 32,
+    "shape_weight": 0.0,
+    "loc_weight": 3.783501224678248,
+    "end_weight": 13.101000150268508,
+    "cover_weight": 1.67112447599855,
+    "loc_tolerance": 0.0,
+    "end_alpha": 3.8643537129147476,
+    "shape_short_scale": 0.3044560242501738,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.16162039231043412,
+    "prior_floor": 1.0,
+    "prune_radius": 1.5447120184021141,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.6695415625083503,
+    "dwell_extra_penalty": 0.547754107911684,
+    "top_k": 10
+   },
+   "obj": 0.6347916666666668,
+   "per": {
+    "mid": [
+     0.60875,
+     0.84125,
+     0.915
+    ],
+    "high": [
+     0.3175,
+     0.5175,
+     0.5925
+    ],
+    "vhigh": [
+     0.105,
+     0.20125,
+     0.23875
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 32,
+    "shape_weight": 0.0,
+    "loc_weight": 5.205996283728084,
+    "end_weight": 0.0,
+    "cover_weight": 3.685703213082473,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.6319902494788594,
+    "shape_short_scale": 0.4910404465587588,
+    "shape_single_scale": 0.0,
+    "prior_weight": 1.048748207870464,
+    "prior_floor": 1.0,
+    "prune_radius": 1.065900228402211,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.1863402516002186,
+    "dwell_extra_penalty": 4.732466355027428,
+    "top_k": 10
+   },
+   "obj": 0.4147916666666667,
+   "per": {
+    "mid": [
+     0.30625,
+     0.55,
+     0.65375
+    ],
+    "high": [
+     0.185,
+     0.37,
+     0.465
+    ],
+    "vhigh": [
+     0.0825,
+     0.1725,
+     0.2225
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 1.4176967045261777,
+    "loc_weight": 3.371967777513361,
+    "end_weight": 1.8623246342971183,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.26626320824246863,
+    "end_alpha": 1.5743551497058401,
+    "shape_short_scale": 0.1294614501454434,
+    "shape_single_scale": 0.0,
+    "prior_weight": 1.4161332298643114,
+    "prior_floor": 1.0,
+    "prune_radius": 1.0227859395416443,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.47804549350414416,
+    "dwell_extra_penalty": 0.31082503892998564,
+    "top_k": 10
+   },
+   "obj": 0.23416666666666666,
+   "per": {
+    "mid": [
+     0.13,
+     0.29,
+     0.41125
+    ],
+    "high": [
+     0.08625,
+     0.2175,
+     0.3025
+    ],
+    "vhigh": [
+     0.05375,
+     0.1075,
+     0.15125
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 1.739674363565659,
+    "loc_weight": 1.2881826145512965,
+    "end_weight": 3.4483496333588586,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 3.55575603642618,
+    "shape_short_scale": 0.701367561000227,
+    "shape_single_scale": 0.0,
+    "prior_weight": 1.98606319693076,
+    "prior_floor": 1.0,
+    "prune_radius": 1.023250008938731,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.0350698843078878,
+    "dwell_extra_penalty": 1.4649354564832608,
+    "top_k": 10
+   },
+   "obj": 0.13729166666666667,
+   "per": {
+    "mid": [
+     0.0625,
+     0.16,
+     0.2675
+    ],
+    "high": [
+     0.04375,
+     0.12875,
+     0.19375
+    ],
+    "vhigh": [
+     0.02375,
+     0.06625,
+     0.1025
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 0.0,
+    "loc_weight": 3.884967020512923,
+    "end_weight": 0.0,
+    "cover_weight": 1.230622606912174,
+    "loc_tolerance": 0.1605558295629518,
+    "end_alpha": 3.708032589729167,
+    "shape_short_scale": 0.8906426200476808,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.1938981269695165,
+    "prior_floor": 1.0,
+    "prune_radius": 1.7783145606395143,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 4.283902870177047,
+    "dwell_extra_penalty": 0.44809603007747784,
+    "top_k": 10
+   },
+   "obj": 0.5241666666666667,
+   "per": {
+    "mid": [
+     0.4375,
+     0.675,
+     0.77375
+    ],
+    "high": [
+     0.25375,
+     0.43625,
+     0.53125
+    ],
+    "vhigh": [
+     0.09,
+     0.21125,
+     0.2775
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 0.0,
+    "loc_weight": 1.365362344832503,
+    "end_weight": 0.7279090106665503,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.60193748927367,
+    "shape_short_scale": 0.09605683536033371,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.6947226758589984,
+    "prior_floor": 1.0,
+    "prune_radius": 1.3575875976038945,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.42390978720645717,
+    "dwell_extra_penalty": 1.3646689313593046,
+    "top_k": 10
+   },
+   "obj": 0.15479166666666666,
+   "per": {
+    "mid": [
+     0.06625,
+     0.1525,
+     0.25625
+    ],
+    "high": [
+     0.05375,
+     0.145,
+     0.21375
+    ],
+    "vhigh": [
+     0.04375,
+     0.0875,
+     0.13125
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 11.18778177305396,
+    "end_weight": 0.0,
+    "cover_weight": 0.5779745786657848,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.4396644649558765,
+    "shape_short_scale": 0.17249165356318863,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.17116912778934312,
+    "prior_floor": 1.0,
+    "prune_radius": 1.2830944502867185,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.3990613880694034,
+    "dwell_extra_penalty": 0.36117165909388166,
+    "top_k": 10
+   },
+   "obj": 0.66,
+   "per": {
+    "mid": [
+     0.61125,
+     0.84125,
+     0.90625
+    ],
+    "high": [
+     0.32625,
+     0.53375,
+     0.6275
+    ],
+    "vhigh": [
+     0.125,
+     0.23625,
+     0.30125
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 32,
+    "shape_weight": 0.0,
+    "loc_weight": 1.7719256102352743,
+    "end_weight": 3.0481910884714405,
+    "cover_weight": 2.642654194015214,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.0397380136103846,
+    "shape_short_scale": 0.18126918679442883,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.46831777675289465,
+    "prior_floor": 1.0,
+    "prune_radius": 1.7393342358633417,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 4.747796074820977,
+    "dwell_extra_penalty": 1.8368691288317207,
+    "top_k": 10
+   },
+   "obj": 0.4814583333333333,
+   "per": {
+    "mid": [
+     0.385,
+     0.6325,
+     0.72125
+    ],
+    "high": [
+     0.23125,
+     0.4125,
+     0.48875
+    ],
+    "vhigh": [
+     0.1025,
+     0.19125,
+     0.24125
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 0.0,
+    "loc_weight": 1.7505812520859783,
+    "end_weight": 0.6943548614132631,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.39393808707103944,
+    "end_alpha": 2.5128660332697965,
+    "shape_short_scale": 0.2795157649464832,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.14850833766487612,
+    "prior_floor": 1.0,
+    "prune_radius": 1.7429772896914777,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 3.4434562499721877,
+    "dwell_extra_penalty": 1.0112690574045737,
+    "top_k": 10
+   },
+   "obj": 0.37270833333333336,
+   "per": {
+    "mid": [
+     0.27125,
+     0.45625,
+     0.53125
+    ],
+    "high": [
+     0.18,
+     0.32125,
+     0.4075
+    ],
+    "vhigh": [
+     0.0825,
+     0.175,
+     0.23
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 15.072865858175158,
+    "loc_weight": 9.748451462995481,
+    "end_weight": 9.67174384300802,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.16960153136842915,
+    "end_alpha": 1.2116549640297816,
+    "shape_short_scale": 0.10086318858410859,
+    "shape_single_scale": 0.0,
+    "prior_weight": 2.0500045405771,
+    "prior_floor": 1.0,
+    "prune_radius": 1.9905790883206729,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.348027101040902,
+    "dwell_extra_penalty": 0.6796269663828705,
+    "top_k": 10
+   },
+   "obj": 0.441875,
+   "per": {
+    "mid": [
+     0.35125,
+     0.61,
+     0.71125
+    ],
+    "high": [
+     0.205,
+     0.37125,
+     0.46875
+    ],
+    "vhigh": [
+     0.07375,
+     0.15,
+     0.21125
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 32,
+    "shape_weight": 0.0,
+    "loc_weight": 6.429656804103007,
+    "end_weight": 0.0,
+    "cover_weight": 2.2592881691936704,
+    "loc_tolerance": 0.29543774345415574,
+    "end_alpha": 2.926795785424532,
+    "shape_short_scale": 0.9800867108621683,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.1080708734620305,
+    "prior_floor": 1.0,
+    "prune_radius": 1.615396418482493,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.6102472092046636,
+    "dwell_extra_penalty": 1.1332314817348128,
+    "top_k": 10
+   },
+   "obj": 0.6454166666666666,
+   "per": {
+    "mid": [
+     0.5825,
+     0.81375,
+     0.895
+    ],
+    "high": [
+     0.32,
+     0.5375,
+     0.62625
+    ],
+    "vhigh": [
+     0.1175,
+     0.24625,
+     0.31125
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 32,
+    "shape_weight": 0.0,
+    "loc_weight": 6.143706253708193,
+    "end_weight": 0.5213077400062497,
+    "cover_weight": 1.3206031858770475,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.6501730726768264,
+    "shape_short_scale": 0.6380125987853407,
+    "shape_single_scale": 0.0,
+    "prior_weight": 1.5695362199744667,
+    "prior_floor": 1.0,
+    "prune_radius": 1.0761959891722768,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.2221211586727923,
+    "dwell_extra_penalty": 5.24870803347916,
+    "top_k": 10
+   },
+   "obj": 0.34145833333333336,
+   "per": {
+    "mid": [
+     0.22125,
+     0.44875,
+     0.575
+    ],
+    "high": [
+     0.14,
+     0.2975,
+     0.41
+    ],
+    "vhigh": [
+     0.07,
+     0.155,
+     0.20125
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.227230534747142,
+    "end_weight": 21.374284013565,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.22308659365211692,
+    "end_alpha": 2.2887349340008214,
+    "shape_short_scale": 0.526758241642771,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.7639595618550951,
+    "prior_floor": 1.0,
+    "prune_radius": 1.365575332421124,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.2759522128743397,
+    "dwell_extra_penalty": 0.6731031940853508,
+    "top_k": 10
+   },
+   "obj": 0.35375,
+   "per": {
+    "mid": [
+     0.2575,
+     0.535,
+     0.65375
+    ],
+    "high": [
+     0.14625,
+     0.29,
+     0.38
+    ],
+    "vhigh": [
+     0.065,
+     0.1125,
+     0.15125
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 6.5257366595859505,
+    "loc_weight": 0.554792200028461,
+    "end_weight": 0.0,
+    "cover_weight": 5.796732514857758,
+    "loc_tolerance": 0.18648444539663944,
+    "end_alpha": 3.263933554686512,
+    "shape_short_scale": 0.748363117857062,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.11860138608904543,
+    "prior_floor": 1.0,
+    "prune_radius": 1.988769447230295,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.3738974739593063,
+    "dwell_extra_penalty": 4.521370414407575,
+    "top_k": 10
+   },
+   "obj": 0.29562499999999997,
+   "per": {
+    "mid": [
+     0.29375,
+     0.49,
+     0.57
+    ],
+    "high": [
+     0.10625,
+     0.21375,
+     0.26625
+    ],
+    "vhigh": [
+     0.02,
+     0.0625,
+     0.0975
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 8.09081449354586,
+    "loc_weight": 21.632180597205323,
+    "end_weight": 0.0,
+    "cover_weight": 18.82558934224718,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.4330936516557808,
+    "shape_short_scale": 0.6036232911527608,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.1479131216075267,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6242479713049378,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.4271664363846881,
+    "dwell_extra_penalty": 3.958002645660536,
+    "top_k": 10
+   },
+   "obj": 0.6679166666666667,
+   "per": {
+    "mid": [
+     0.64875,
+     0.8675,
+     0.9325
+    ],
+    "high": [
+     0.325,
+     0.51875,
+     0.6175
+    ],
+    "vhigh": [
+     0.11375,
+     0.2225,
+     0.2825
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 2.040649484835308,
+    "end_weight": 0.858956101412053,
+    "cover_weight": 2.9165217513386152,
+    "loc_tolerance": 0.28870221374061805,
+    "end_alpha": 2.9187794755899157,
+    "shape_short_scale": 0.7779667507400129,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.6081435811833454,
+    "prior_floor": 1.0,
+    "prune_radius": 1.9976345906926203,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.706747126305618,
+    "dwell_extra_penalty": 0.61277516161963,
+    "top_k": 10
+   },
+   "obj": 0.24479166666666666,
+   "per": {
+    "mid": [
+     0.13375,
+     0.32,
+     0.4525
+    ],
+    "high": [
+     0.09625,
+     0.215,
+     0.3075
+    ],
+    "vhigh": [
+     0.045,
+     0.10625,
+     0.15875
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 3.503867595752384,
+    "loc_weight": 10.413154949285403,
+    "end_weight": 5.619609562033642,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.899301892786637,
+    "shape_short_scale": 0.9518957007598954,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.5517407639747142,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6529382311979086,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 4.172878299856697,
+    "dwell_extra_penalty": 0.33769310926255186,
+    "top_k": 10
+   },
+   "obj": 0.6339583333333333,
+   "per": {
+    "mid": [
+     0.5575,
+     0.81375,
+     0.88875
+    ],
+    "high": [
+     0.31125,
+     0.5375,
+     0.6425
+    ],
+    "vhigh": [
+     0.1175,
+     0.24125,
+     0.3
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 0.5186818892445075,
+    "loc_weight": 2.593116133748928,
+    "end_weight": 0.0,
+    "cover_weight": 1.183447941311475,
+    "loc_tolerance": 0.0,
+    "end_alpha": 1.2174785082590918,
+    "shape_short_scale": 0.5506286117043651,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.8554984638292145,
+    "prior_floor": 1.0,
+    "prune_radius": 1.3731835967601056,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.866592713884722,
+    "dwell_extra_penalty": 0.8264215222331106,
+    "top_k": 10
+   },
+   "obj": 0.22729166666666667,
+   "per": {
+    "mid": [
+     0.10375,
+     0.2775,
+     0.38125
+    ],
+    "high": [
+     0.08625,
+     0.21375,
+     0.29875
+    ],
+    "vhigh": [
+     0.0625,
+     0.11375,
+     0.17875
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 0.0,
+    "loc_weight": 11.162208204445317,
+    "end_weight": 0.0,
+    "cover_weight": 2.792610926905103,
+    "loc_tolerance": 0.0,
+    "end_alpha": 2.1703768702568924,
+    "shape_short_scale": 0.6536576959218378,
+    "shape_single_scale": 0.0,
+    "prior_weight": 2.8916095786862392,
+    "prior_floor": 1.0,
+    "prune_radius": 1.3253906092858738,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 250.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 2.9146315106887806,
+    "dwell_extra_penalty": 3.564316316217227,
+    "top_k": 10
+   },
+   "obj": 0.25,
+   "per": {
+    "mid": [
+     0.1275,
+     0.315,
+     0.41625
+    ],
+    "high": [
+     0.09375,
+     0.2325,
+     0.32375
+    ],
+    "vhigh": [
+     0.0675,
+     0.12625,
+     0.1825
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.6179245116655356,
+    "loc_weight": 4.7323970000490485,
+    "end_weight": 2.990410231333467,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.2487887816108756,
+    "end_alpha": 2.2959653116214938,
+    "shape_short_scale": 0.2988706739507335,
+    "shape_single_scale": 0.0,
+    "prior_weight": 1.3980162539531846,
+    "prior_floor": 1.0,
+    "prune_radius": 1.0760792963962689,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 150.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 4.5914347729221845,
+    "dwell_extra_penalty": 1.8305338277663825,
+    "top_k": 10
+   },
+   "obj": 0.2995833333333333,
+   "per": {
+    "mid": [
+     0.185,
+     0.39375,
+     0.52125
+    ],
+    "high": [
+     0.1175,
+     0.2625,
+     0.36125
+    ],
+    "vhigh": [
+     0.0575,
+     0.13375,
+     0.195
+    ]
+   },
+   "phase": "random"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.424378691096882,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10749849497629226,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.304533182159983,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.6847916666666668,
+   "per": {
+    "mid": [
+     0.65,
+     0.85875,
+     0.925
+    ],
+    "high": [
+     0.3425,
+     0.5625,
+     0.64625
+    ],
+    "vhigh": [
+     0.125,
+     0.23375,
+     0.3025
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.424378691096882,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10749849497629226,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.6238246456540222,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.6906249999999999,
+   "per": {
+    "mid": [
+     0.655,
+     0.86375,
+     0.92375
+    ],
+    "high": [
+     0.34875,
+     0.56625,
+     0.65375
+    ],
+    "vhigh": [
+     0.12625,
+     0.23625,
+     0.30625
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.3295163761211186,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10749849497629226,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.6238246456540222,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.6908333333333334,
+   "per": {
+    "mid": [
+     0.655,
+     0.8625,
+     0.92375
+    ],
+    "high": [
+     0.35,
+     0.56625,
+     0.6525
+    ],
+    "vhigh": [
+     0.12625,
+     0.24,
+     0.30625
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.8176422676191972,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10749849497629226,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.6238246456540222,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.6893750000000001,
+   "per": {
+    "mid": [
+     0.65625,
+     0.8625,
+     0.9225
+    ],
+    "high": [
+     0.34625,
+     0.56875,
+     0.6525
+    ],
+    "vhigh": [
+     0.12625,
+     0.23375,
+     0.30375
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.3295163761211186,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10749849497629226,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 190.19244372180592,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.6238246456540222,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.6891666666666666,
+   "per": {
+    "mid": [
+     0.65375,
+     0.86125,
+     0.9225
+    ],
+    "high": [
+     0.3475,
+     0.56625,
+     0.65125
+    ],
+    "vhigh": [
+     0.12625,
+     0.24,
+     0.30625
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 1.4596925411804034,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.3295163761211186,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10749849497629226,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.6238246456540222,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.6902083333333332,
+   "per": {
+    "mid": [
+     0.65625,
+     0.86125,
+     0.9225
+    ],
+    "high": [
+     0.34625,
+     0.56625,
+     0.65375
+    ],
+    "vhigh": [
+     0.12625,
+     0.2425,
+     0.3075
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10749849497629226,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.6238246456540222,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.6935416666666666,
+   "per": {
+    "mid": [
+     0.65625,
+     0.86,
+     0.9225
+    ],
+    "high": [
+     0.3525,
+     0.56625,
+     0.65125
+    ],
+    "vhigh": [
+     0.12875,
+     0.24125,
+     0.3125
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 0.0,
+    "cover_weight": 0.0,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10749849497629226,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 128.87462372459476,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.6238246456540222,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.6666666666666666,
+   "per": {
+    "mid": [
+     0.625,
+     0.8375,
+     0.9125
+    ],
+    "high": [
+     0.32625,
+     0.5425,
+     0.635
+    ],
+    "vhigh": [
+     0.125,
+     0.23375,
+     0.3
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 0.0,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10749849497629226,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.6238246456540222,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.6979166666666666,
+   "per": {
+    "mid": [
+     0.66375,
+     0.86625,
+     0.9325
+    ],
+    "high": [
+     0.35625,
+     0.5725,
+     0.6575
+    ],
+    "vhigh": [
+     0.12375,
+     0.23625,
+     0.31
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 0.0,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.8322145725408667,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10749849497629226,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.6238246456540222,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.6977083333333334,
+   "per": {
+    "mid": [
+     0.66375,
+     0.865,
+     0.93125
+    ],
+    "high": [
+     0.35625,
+     0.57375,
+     0.6575
+    ],
+    "vhigh": [
+     0.12375,
+     0.23625,
+     0.31
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 0.0,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10749849497629226,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.6995833333333333,
+   "per": {
+    "mid": [
+     0.6625,
+     0.86625,
+     0.935
+    ],
+    "high": [
+     0.35875,
+     0.57875,
+     0.6625
+    ],
+    "vhigh": [
+     0.12375,
+     0.23875,
+     0.31
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 0.0,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.6999999999999998,
+   "per": {
+    "mid": [
+     0.6625,
+     0.86625,
+     0.935
+    ],
+    "high": [
+     0.35875,
+     0.57875,
+     0.6625
+    ],
+    "vhigh": [
+     0.125,
+     0.23875,
+     0.31
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 0.0,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.8930563771399402,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.69625,
+   "per": {
+    "mid": [
+     0.6625,
+     0.8675,
+     0.93375
+    ],
+    "high": [
+     0.35125,
+     0.5775,
+     0.65625
+    ],
+    "vhigh": [
+     0.125,
+     0.23375,
+     0.31
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 24,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 0.0,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.6891666666666666,
+   "per": {
+    "mid": [
+     0.6525,
+     0.8625,
+     0.92875
+    ],
+    "high": [
+     0.34,
+     0.565,
+     0.65625
+    ],
+    "vhigh": [
+     0.1275,
+     0.2275,
+     0.31
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 0.0,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 151.96297564498147,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.6875,
+   "per": {
+    "mid": [
+     0.645,
+     0.85375,
+     0.93
+    ],
+    "high": [
+     0.34875,
+     0.57125,
+     0.6575
+    ],
+    "vhigh": [
+     0.12375,
+     0.235,
+     0.3025
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.7289583333333334,
+   "per": {
+    "mid": [
+     0.69125,
+     0.89875,
+     0.94625
+    ],
+    "high": [
+     0.3875,
+     0.5975,
+     0.68875
+    ],
+    "vhigh": [
+     0.13375,
+     0.24375,
+     0.31375
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.94107985971112,
+    "top_k": 10
+   },
+   "obj": 0.7283333333333334,
+   "per": {
+    "mid": [
+     0.6925,
+     0.89875,
+     0.94375
+    ],
+    "high": [
+     0.38625,
+     0.5975,
+     0.6875
+    ],
+    "vhigh": [
+     0.13375,
+     0.24375,
+     0.31375
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.09192747054702236,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.72375,
+   "per": {
+    "mid": [
+     0.68625,
+     0.8975,
+     0.945
+    ],
+    "high": [
+     0.385,
+     0.595,
+     0.67875
+    ],
+    "vhigh": [
+     0.13375,
+     0.24,
+     0.30875
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.3833061083182507,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.7287500000000001,
+   "per": {
+    "mid": [
+     0.69125,
+     0.89875,
+     0.94625
+    ],
+    "high": [
+     0.3875,
+     0.59625,
+     0.6875
+    ],
+    "vhigh": [
+     0.13375,
+     0.245,
+     0.31375
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 28.942168354913996,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.7233333333333333,
+   "per": {
+    "mid": [
+     0.68625,
+     0.89625,
+     0.945
+    ],
+    "high": [
+     0.38,
+     0.5975,
+     0.6825
+    ],
+    "vhigh": [
+     0.135,
+     0.24625,
+     0.31
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 4.623330245028639,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.7275,
+   "per": {
+    "mid": [
+     0.69125,
+     0.89875,
+     0.94625
+    ],
+    "high": [
+     0.3825,
+     0.5975,
+     0.69125
+    ],
+    "vhigh": [
+     0.1375,
+     0.2425,
+     0.305
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 1.156293770313128,
+    "top_k": 10
+   },
+   "obj": 0.7289583333333334,
+   "per": {
+    "mid": [
+     0.6925,
+     0.8975,
+     0.945
+    ],
+    "high": [
+     0.38625,
+     0.59875,
+     0.69
+    ],
+    "vhigh": [
+     0.13375,
+     0.2425,
+     0.31375
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.11439775571849403,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.7279166666666667,
+   "per": {
+    "mid": [
+     0.68875,
+     0.89875,
+     0.94625
+    ],
+    "high": [
+     0.3875,
+     0.5975,
+     0.68875
+    ],
+    "vhigh": [
+     0.13375,
+     0.24375,
+     0.3125
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 9.692909069671169,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.723125,
+   "per": {
+    "mid": [
+     0.6875,
+     0.89125,
+     0.95375
+    ],
+    "high": [
+     0.3925,
+     0.59625,
+     0.675
+    ],
+    "vhigh": [
+     0.12875,
+     0.23125,
+     0.2925
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 137.45223841382284,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.7139583333333333,
+   "per": {
+    "mid": [
+     0.67625,
+     0.88125,
+     0.9425
+    ],
+    "high": [
+     0.375,
+     0.58625,
+     0.68125
+    ],
+    "vhigh": [
+     0.1275,
+     0.2375,
+     0.3025
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.5061244638933229,
+    "top_k": 10
+   },
+   "obj": 0.7250000000000001,
+   "per": {
+    "mid": [
+     0.685,
+     0.89875,
+     0.94625
+    ],
+    "high": [
+     0.38375,
+     0.6,
+     0.685
+    ],
+    "vhigh": [
+     0.13375,
+     0.24375,
+     0.31375
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 3.3807120683111123,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.7272916666666668,
+   "per": {
+    "mid": [
+     0.69,
+     0.89875,
+     0.94625
+    ],
+    "high": [
+     0.385,
+     0.60125,
+     0.68875
+    ],
+    "vhigh": [
+     0.13375,
+     0.2425,
+     0.31125
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.5625985637570926,
+    "top_k": 10
+   },
+   "obj": 0.72625,
+   "per": {
+    "mid": [
+     0.6875,
+     0.89875,
+     0.94625
+    ],
+    "high": [
+     0.385,
+     0.6,
+     0.685
+    ],
+    "vhigh": [
+     0.13375,
+     0.24375,
+     0.31375
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.4928278519220246,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 0.8608940082979439,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.728125,
+   "per": {
+    "mid": [
+     0.69,
+     0.89875,
+     0.94625
+    ],
+    "high": [
+     0.3875,
+     0.59875,
+     0.6875
+    ],
+    "vhigh": [
+     0.13375,
+     0.24375,
+     0.3125
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.0939043261329566,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.7297916666666667,
+   "per": {
+    "mid": [
+     0.6925,
+     0.90125,
+     0.94625
+    ],
+    "high": [
+     0.3875,
+     0.59875,
+     0.69125
+    ],
+    "vhigh": [
+     0.13375,
+     0.2425,
+     0.31375
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 32,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 200.0,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.0939043261329566,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.7233333333333333,
+   "per": {
+    "mid": [
+     0.6875,
+     0.89875,
+     0.94375
+    ],
+    "high": [
+     0.37875,
+     0.59875,
+     0.68875
+    ],
+    "vhigh": [
+     0.13125,
+     0.24125,
+     0.3125
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 241.07329602844595,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.0939043261329566,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.7320833333333333,
+   "per": {
+    "mid": [
+     0.69625,
+     0.9025,
+     0.9475
+    ],
+    "high": [
+     0.38875,
+     0.6025,
+     0.69375
+    ],
+    "vhigh": [
+     0.13375,
+     0.2425,
+     0.31375
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 37.703851481832494,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.17511521835133065,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 241.07329602844595,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.0939043261329566,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.7243749999999999,
+   "per": {
+    "mid": [
+     0.68875,
+     0.8925,
+     0.94625
+    ],
+    "high": [
+     0.38125,
+     0.6025,
+     0.68
+    ],
+    "vhigh": [
+     0.135,
+     0.24625,
+     0.31
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.25359333286873664,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 241.07329602844595,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.0939043261329566,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.7331249999999999,
+   "per": {
+    "mid": [
+     0.6975,
+     0.90125,
+     0.94875
+    ],
+    "high": [
+     0.38875,
+     0.60625,
+     0.6925
+    ],
+    "vhigh": [
+     0.13375,
+     0.24375,
+     0.3175
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 7.937558567948701,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.25359333286873664,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.10787879937583611,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 241.07329602844595,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.0939043261329566,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.7320833333333333,
+   "per": {
+    "mid": [
+     0.6975,
+     0.9,
+     0.9475
+    ],
+    "high": [
+     0.3875,
+     0.60625,
+     0.6925
+    ],
+    "vhigh": [
+     0.13125,
+     0.245,
+     0.32
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.25359333286873664,
+    "end_alpha": 2.076503083167741,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.07273433871111211,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 241.07329602844595,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.0939043261329566,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.7335416666666666,
+   "per": {
+    "mid": [
+     0.6975,
+     0.90375,
+     0.95125
+    ],
+    "high": [
+     0.38875,
+     0.605,
+     0.6925
+    ],
+    "vhigh": [
+     0.135,
+     0.24375,
+     0.315
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.25359333286873664,
+    "end_alpha": 2.144776442007723,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.07273433871111211,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 241.07329602844595,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.0939043261329566,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.7335416666666665,
+   "per": {
+    "mid": [
+     0.69875,
+     0.9025,
+     0.95125
+    ],
+    "high": [
+     0.38875,
+     0.605,
+     0.6925
+    ],
+    "vhigh": [
+     0.13375,
+     0.24125,
+     0.315
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.25359333286873664,
+    "end_alpha": 1.4647055980287902,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.07273433871111211,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 241.07329602844595,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.0939043261329566,
+    "dwell_extra_penalty": 0.761769566233846,
+    "top_k": 10
+   },
+   "obj": 0.7389583333333333,
+   "per": {
+    "mid": [
+     0.70375,
+     0.9075,
+     0.95
+    ],
+    "high": [
+     0.39,
+     0.6125,
+     0.69375
+    ],
+    "vhigh": [
+     0.14125,
+     0.2475,
+     0.32
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.25359333286873664,
+    "end_alpha": 1.4647055980287902,
+    "shape_short_scale": 0.9627710136290032,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.07273433871111211,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 241.07329602844595,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.0939043261329566,
+    "dwell_extra_penalty": 1.271771336541024,
+    "top_k": 10
+   },
+   "obj": 0.741875,
+   "per": {
+    "mid": [
+     0.7075,
+     0.91,
+     0.95125
+    ],
+    "high": [
+     0.39125,
+     0.6175,
+     0.6975
+    ],
+    "vhigh": [
+     0.14125,
+     0.25,
+     0.3225
+    ]
+   },
+   "phase": "refine"
+  },
+  {
+   "cfg": {
+    "n": 16,
+    "shape_weight": 2.0315306346513573,
+    "loc_weight": 22.254404482981247,
+    "end_weight": 8.732238395016022,
+    "cover_weight": 2.7248424654275003,
+    "loc_tolerance": 0.25359333286873664,
+    "end_alpha": 1.4647055980287902,
+    "shape_short_scale": 0.8680642834663042,
+    "shape_single_scale": 0.0,
+    "prior_weight": 0.07273433871111211,
+    "prior_floor": 1.0,
+    "prune_radius": 1.6361845215770128,
+    "prune_fallback": true,
+    "use_index": true,
+    "repeat_mode": "dwell",
+    "dwell_ms": 241.07329602844595,
+    "dwell_radius": 0.35,
+    "dwell_assign_radius": 0.9,
+    "repeat_miss_penalty": 1.0939043261329566,
+    "dwell_extra_penalty": 1.271771336541024,
+    "top_k": 10
+   },
+   "obj": 0.7414583333333334,
+   "per": {
+    "mid": [
+     0.70625,
+     0.91,
+     0.95125
+    ],
+    "high": [
+     0.39125,
+     0.61875,
+     0.6975
+    ],
+    "vhigh": [
+     0.14125,
+     0.25,
+     0.3225
+    ]
+   },
+   "phase": "refine"
+  }
+ ]
+}
