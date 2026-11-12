@@ -39,16 +39,17 @@ python3 sweep-pad/cangjie_sweep_pad.py --strictness 1 --top-k 5 --keysize 48 --w
 python3 sweep-pad/cangjie_sweep_pad.py --mode keys --always-on-top --save-config
 python3 sweep-pad/cangjie_sweep_pad.py --profile touchpad --lift-ms 250 --word-separator ""
 python3 sweep-pad/cangjie_sweep_pad.py --no-always-on-top
+python3 sweep-pad/cangjie_sweep_pad.py --log-sweeps /path/to/sweeps.jsonl
 python3 sweep-pad/cangjie_sweep_pad.py --config /path/to/config.json --table /path/to/cangjie3.tsv
 ```
 
-`--strictness` 控制幾何比對的嚴格程度（正數，預設 1），`--top-k` 控制解碼回傳數量，介面最多顯示五個。`--keysize` 是像素鍵寬，`--window-size` 是視窗尺寸。`--mode keys` 是預設；`--mode commit`（Windows、Linux、macOS 皆可，選用）直接送出所點候選的文字，繞過 Rime 組字，見下方「提交模式」。
+`--strictness` 控制幾何比對的嚴格程度（正數，預設 1），`--top-k` 控制解碼回傳數量，介面最多顯示五個。`--keysize` 是像素鍵寬，`--window-size` 是視窗尺寸。`--mode keys` 是預設；`--mode commit`（Windows、Linux、macOS 皆可，選用）直接送出所點候選的文字，繞過 Rime 組字，見下方「提交模式」。`--log-sweeps` 記錄滑行軌跡與候選至本機檔案（預設關閉，見下方「滑行紀錄」）。
 
-`--strictness` scales geometric matching strictness (positive, default 1); `--top-k` controls decoded result count, while the GUI shows at most five. `--keysize` sets pixel key width and `--window-size` sets window geometry. `keys` is the default mode. Opt-in `--mode commit` (Windows, Linux and macOS) types the clicked candidate's text directly and bypasses Rime composition; see Commit mode below.
+`--strictness` scales geometric matching strictness (positive, default 1); `--top-k` controls decoded result count, while the GUI shows at most five. `--keysize` sets pixel key width and `--window-size` sets window geometry. `keys` is the default mode. Opt-in `--mode commit` (Windows, Linux and macOS) types the clicked candidate's text directly and bypasses Rime composition; see Commit mode below. `--log-sweeps` logs completed sweeps and chosen candidates to a local file (default off; see Sweep logging below).
 
-設定 JSON 支援 `strictness`、`top_k`、`mode`、`window_size`、`keysize`、`always_on_top`、`profile`、`word_separator`、`lift_ms`。命令列優先於設定檔；`--save-config` 儲存設定。預設位置為 Windows `%APPDATA%/cangjie-sweep-pad/config.json`、macOS `~/Library/Application Support/cangjie-sweep-pad/config.json`、Linux `$XDG_CONFIG_HOME/cangjie-sweep-pad/config.json`（未設定時用 `~/.config`）。
+設定 JSON 支援 `strictness`、`top_k`、`mode`、`window_size`、`keysize`、`always_on_top`、`profile`、`word_separator`、`lift_ms`、`log_sweeps`。命令列優先於設定檔；`--save-config` 儲存設定。預設位置為 Windows `%APPDATA%/cangjie-sweep-pad/config.json`、macOS `~/Library/Application Support/cangjie-sweep-pad/config.json`、Linux `$XDG_CONFIG_HOME/cangjie-sweep-pad/config.json`（未設定時用 `~/.config`）。
 
-JSON settings accept `strictness`, `top_k`, `mode`, `window_size`, `keysize`, `always_on_top`, `profile`, `word_separator`, and `lift_ms`. CLI options override the file; `--save-config` persists settings. Default locations: Windows `%APPDATA%/cangjie-sweep-pad/config.json`; macOS `~/Library/Application Support/cangjie-sweep-pad/config.json`; Linux `$XDG_CONFIG_HOME/cangjie-sweep-pad/config.json`, falling back to `~/.config`.
+JSON settings accept `strictness`, `top_k`, `mode`, `window_size`, `keysize`, `always_on_top`, `profile`, `word_separator`, `lift_ms`, and `log_sweeps`. CLI options override the file; `--save-config` persists settings. Default locations: Windows `%APPDATA%/cangjie-sweep-pad/config.json`; macOS `~/Library/Application Support/cangjie-sweep-pad/config.json`; Linux `$XDG_CONFIG_HOME/cangjie-sweep-pad/config.json`, falling back to `~/.config`.
 
 `profile` 可選 `mouse`（預設）、`touchpad`、`touchscreen`，可保存為設定。目前三者都載入 `sweep/results/defaults_words.json` 的滑鼠整詞預設值；上游沒有另外調整的觸控板／觸控螢幕整詞設定，這項選擇不代表有裝置專屬的實測校準。`lift_ms` 預設 250 ms。
 
@@ -76,6 +77,91 @@ Differences and caveats compared with keys mode:
 - If Rime is still composing in the target (you typed a code on the keyboard, or just clicked a single letter key), GTK was measured to insert the text while Rime's preedit stays; in Qt the text was inserted correctly too, but the preedit was not logged there. Press Esc or finish the composition before using the pad.
 - Why `xdotool type` and not clipboard paste on Linux: both were exact while Rime was idle, but while Rime is composing it swallows Ctrl+V (0/5 in GTK and in Qt), Ctrl+V is not paste in every application (terminals use Ctrl+Shift+V), and pasting overwrites the clipboard (only text can be restored). On Wayland `ydotool type` cannot type non-ASCII, so the clipboard is used there.
 - `xdotool type` temporarily changes the X keyboard mapping; an application that caches the mapping could receive wrong characters. The default delay is 12 ms per character.
+
+## 滑行紀錄 / Sweep logging
+
+### 隱私權立場 / Privacy stance
+
+- **純本機儲存、絕不上傳（Strictly local）**：本功能完全於本機端執行，Pad 與重播工具沒有任何網路連線程式碼，絕不收集遙測資料，亦絕不上傳任何手勢或紀錄至外部伺服器。
+- **預設關閉、明確啟用（Opt-in only）**：預設不記錄任何手勢。唯有在命令列指定 `--log-sweeps PATH`，或在設定檔 `config.json` 設定 `"log_sweeps": "PATH"` 時才會啟用。啟用時，Pad 視窗標題與狀態列會明確顯示 `logging to PATH`，讓使用者隨時知悉記錄中。
+- **安全存取權限（0600 permissions）**：紀錄檔建立時以模式 `0600` 建立（僅限目前使用者帳號讀取與寫入，同一系統之其他使用者無權存取）。
+- **記錄內容（What is recorded）**：每次完成的滑行手勢會在紀錄檔末尾附加單行 JSON（JSON-Lines），內容包含：
+  - `v`：格式版本號（目前為 `1`）。
+  - `t`：Unix 時間戳記（秒）。
+  - `profile`：裝置設定檔名稱（如 `mouse`、`touchpad`）。
+  - `layout`：按鍵幾何資訊（鍵寬像素 `keysize` 與按鍵中心點座標 `centers`）。
+  - `points`：正規化之取樣軌跡 `[[x, y, t_ms], ...]`（以鍵寬為單位及相對時間毫秒）。
+  - `lifts`：滑行中的抬筆段落索引。
+  - `top`：解碼器排名前五名之候選清單 `[{"text", "code", "score"}, ...]`。
+  - `chosen`：使用者最終點選之候選 `{"text", "code"}`；若使用者未選取任何候選即關閉或進行下一手勢，則為 `null`。
+  - `mode`：送出模式（`keys` 或 `commit`）。
+- **如何刪除與停用（How to delete and disable）**：
+  - 停用記錄：啟動時移除 `--log-sweeps` 參數，或在 `config.json` 中將 `"log_sweeps"` 刪除或設為 `null`。
+  - 刪除記錄：紀錄檔為標準純文字 JSONL 檔案，直接刪除該檔案即可：
+    - Linux / macOS：`rm /path/to/sweeps.jsonl`
+    - Windows：`del C:\path\to\sweeps.jsonl`
+
+- **Strictly local**: Logging is strictly local. Neither the pad nor the replay tool contains any network code or telemetry; logs are never uploaded.
+- **Opt-in only**: Logging is disabled by default. It is activated only when `--log-sweeps PATH` is provided on the command line or `"log_sweeps": "PATH"` is set in `config.json`. When active, a one-line notice ("logging to PATH") appears in the pad window title and status bar.
+- **File permissions (0600)**: Log files are created with mode `0600` (read and write permissions restricted to the file owner; inaccessible to other local users).
+- **Recorded fields**: Every completed sweep appends a single JSON line to PATH:
+  - `v`: Version integer (`1`).
+  - `t`: Unix timestamp in seconds.
+  - `profile`: Profile name (e.g. `mouse`, `touchpad`).
+  - `layout`: Layout dimensions (`keysize` in pixels and key `centers`).
+  - `points`: Gesture coordinates and millisecond timestamps `[[x, y, t_ms], ...]`.
+  - `lifts`: Indices marking lift points between strokes.
+  - `top`: Top-5 decoder candidates `[{"text", "code", "score"}, ...]`.
+  - `chosen`: The candidate clicked by the user `{"text", "code"}`, or `null` if none was chosen.
+  - `mode`: Injection mode (`keys` or `commit`).
+- **How to disable and delete**:
+  - To stop logging, remove the `--log-sweeps` option or delete `"log_sweeps"` from `config.json`.
+  - To delete existing logs, remove the file directly:
+    - Linux / macOS: `rm /path/to/sweeps.jsonl`
+    - Windows: `del C:\path\to\sweeps.jsonl`
+
+### 重播與校準工具 / Replay and calibration tool (`tools/replay_log.py`)
+
+讀取一或多個滑行紀錄檔，以當前解碼器（`decode_auto` 與詞庫載入器）重新評估每筆手勢：
+
+```sh
+# 輸出文字分析報表
+python3 sweep-pad/tools/replay_log.py /path/to/sweeps.jsonl
+
+# 合併多個檔案並輸出機器可讀之 JSON
+python3 sweep-pad/tools/replay_log.py day1.jsonl day2.jsonl --json
+
+# 網格搜尋微調解碼參數（需至少 50 筆有選字的有效手勢）
+python3 sweep-pad/tools/replay_log.py /path/to/sweeps.jsonl --tune
+```
+
+報表包含：
+- 使用者點選候選的手勢總數（作為評估依據）。
+- 點選目標在重新解碼時的 Top-1、Top-3、Top-5 命中率。
+- 依單字（char）與詞語（word）之分類命中率。
+- 依滑行幾何長度（<5、5–10、10–15、>=15 鍵寬）之分類命中率。
+- 最嚴重的 10 個失誤（包含採樣點數 points、目標編碼 code、重播排名 rank）。
+- `--tune` 參數搜尋：在已記錄手勢上網格搜尋解碼器參數（如 `align_weight`、`prune_radius`、`loc_weight`）並印出最佳設定與基準比較。**注意事項**：搜尋直接於紀錄檔上進行，缺乏獨立 held-out 驗證分割，結果可能過度適配（overfit）特定使用習慣；若有效手勢少於 50 筆將明確拒絕執行。
+
+Re-decodes recorded sweeps using the current decoder (`decode_auto` + the pad's lexicon loader) and prints an evaluation report:
+
+```sh
+# Human-readable text report:
+python3 sweep-pad/tools/replay_log.py /path/to/sweeps.jsonl
+
+# Multiple files with machine-readable JSON output:
+python3 sweep-pad/tools/replay_log.py day1.jsonl day2.jsonl --json
+
+# Grid-search parameter calibration (requires >= 50 chosen sweeps):
+python3 sweep-pad/tools/replay_log.py /path/to/sweeps.jsonl --tune
+```
+
+The report provides:
+- Count of sweeps containing a user-chosen candidate.
+- Top-1, top-3, and top-5 retrieval accuracy for chosen candidates.
+- Breakdowns by type (character vs word) and by geometric path length.
+- The 10 worst misses (point count, code, rank).
+- `--tune` grid search: evaluates decoder parameter sets (e.g. `align_weight`, `prune_radius`, `loc_weight`) on the recorded sweeps. **Caveat**: Tuning is performed without a held-out test split, which risks overfitting to specific personal gesture tendencies; validate on separate sweeps before changing defaults. Tuning requires at least 50 chosen sweeps and refuses to run otherwise.
 
 ## 各平台 / Platforms
 

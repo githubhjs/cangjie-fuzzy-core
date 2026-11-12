@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Desktop Cangjie sweep pad. Python 3.8+, standard library only."""
 import argparse
+import atexit
 import ctypes
 import ctypes.util
 import json
@@ -8,6 +9,7 @@ import math
 import os
 from pathlib import Path
 import re
+import stat
 import subprocess
 import sys
 import time
@@ -22,7 +24,7 @@ from pad_words import make_decoder, DecoderLoader
 
 DEFAULTS = dict(strictness=1.0, top_k=5, mode='keys', window_size='640x300',
                 keysize=48.0, always_on_top=True, profile='mouse',
-                word_separator='', lift_ms=250.0)
+                word_separator='', lift_ms=250.0, log_sweeps=None)
 # Two lines like a filled candidate ('字\ncode'): a constant button height keeps the
 # keyboard canvas from moving or redrawing (and losing the trail) between gestures.
 EMPTY_CANDIDATE = '—\n '
@@ -56,6 +58,9 @@ def parse_args(argv=None):
         if not isinstance(values, dict) or set(values) - set(DEFAULTS):
             raise ValueError('config must be an object containing only documented settings')
         defaults.update(values)
+    log_val = defaults.get('log_sweeps')
+    if log_val is not None and (isinstance(log_val, bool) or not isinstance(log_val, (str, Path))):
+        raise ValueError('log_sweeps in config must be a string path or null')
     ap = argparse.ArgumentParser(description=__doc__, parents=[pre])
     modes = ap.add_mutually_exclusive_group()
     modes.add_argument('--decode-file', type=Path)
@@ -81,6 +86,9 @@ def parse_args(argv=None):
     ap.add_argument('--always-on-top', dest='always_on_top', action='store_true')
     ap.add_argument('--no-always-on-top', dest='always_on_top', action='store_false')
     ap.set_defaults(always_on_top=defaults['always_on_top'])
+    ap.add_argument('--log-sweeps', type=Path,
+                    default=Path(defaults['log_sweeps']) if defaults['log_sweeps'] else None,
+                    help='append completed sweeps to PATH (0600, strictly local)')
     ap.add_argument('--delay', type=float, default=3.0, help='seconds before --inject-test')
     ap.add_argument('--save-config', action='store_true')
     ap.add_argument('--table', type=Path, default=HERE / 'data/cangjie3.tsv')
@@ -102,14 +110,63 @@ def parse_args(argv=None):
             ap.error(name + ' must be a finite positive number')
     if not math.isfinite(a.delay) or a.delay < 0:
         ap.error('delay must be finite and nonnegative')
+    if a.log_sweeps is not None:
+        if isinstance(a.log_sweeps, bool) or not isinstance(a.log_sweeps, (str, Path)):
+            ap.error('log-sweeps must be a file path')
+        a.log_sweeps = Path(a.log_sweeps)
     return a
 
 
 def save_config(a):
     a.config.parent.mkdir(parents=True, exist_ok=True)
+    data = {}
+    for k in DEFAULTS:
+        v = getattr(a, k)
+        if isinstance(v, Path):
+            v = str(v)
+        data[k] = v
     with a.config.open('w', encoding='utf-8') as f:
-        json.dump({k: getattr(a, k) for k in DEFAULTS}, f, indent=2)
+        json.dump(data, f, indent=2)
         f.write('\n')
+
+
+def make_sweep_entry(points, lifts, results, chosen=None, profile='mouse', mode='keys', keysize=48.0, t=None):
+    if t is None:
+        t = time.time()
+    return {
+        "v": 1,
+        "t": t,
+        "profile": profile,
+        "layout": {
+            "keysize": float(keysize),
+            "centers": {k: list(v) for k, v in default_layout().centers.items()}
+        },
+        "points": [list(p) for p in points],
+        "lifts": list(lifts),
+        "top": [{"text": text, "code": code, "score": score} for text, code, score in results[:5]],
+        "chosen": chosen,
+        "mode": mode,
+    }
+
+
+def append_sweep_log(path, entry):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    line = json.dumps(entry, ensure_ascii=False) + '\n'
+    flags = os.O_WRONLY | os.O_CREAT | os.O_APPEND
+    mode = 0o600
+    fd = os.open(str(path), flags, mode)
+    try:
+        if hasattr(os, 'fchmod'):
+            try:
+                os.fchmod(fd, 0o600)
+            except OSError:
+                pass
+        with open(fd, 'a', encoding='utf-8', closefd=False) as f:
+            f.write(line)
+            f.flush()
+    finally:
+        os.close(fd)
 
 
 def key_rects():
@@ -284,16 +341,20 @@ class Pad:
         self.points = []
         self.start = 0
         self.results = []
+        self.last_sweep = None
+        atexit.register(self.flush_log)
         root.withdraw()
-        root.title('倉頡 Sweep Pad')
+        title = '倉頡 Sweep Pad' + (' [logging to %s]' % a.log_sweeps if a.log_sweeps else '')
+        root.title(title)
         root.geometry(a.window_size)
         root.attributes('-topmost', a.always_on_top)
         self.focus = FocusPolicy(root)
+        root.protocol('WM_DELETE_WINDOW', self.close)
         bar = tk.Frame(root); bar.pack(fill='x')
         handle = tk.Label(bar, text='倉頡 Sweep Pad   ⋮ drag to move', cursor='fleur'); handle.pack(side='left')
         handle.bind('<ButtonPress-1>', lambda e: setattr(self, 'move', (e.x_root-root.winfo_x(), e.y_root-root.winfo_y())))
         handle.bind('<B1-Motion>', lambda e: root.geometry('+%d+%d' % (e.x_root-self.move[0], e.y_root-self.move[1])))
-        tk.Button(bar, text='×', command=root.destroy, takefocus=False).pack(side='right')
+        tk.Button(bar, text='×', command=self.close, takefocus=False).pack(side='right')
         self.code = tk.StringVar(value='Loading word lexicon… / 載入詞庫中…')
         # Read-only code box: editable widgets would require stealing target focus.
         box = tk.Entry(root, textvariable=self.code, state='disabled', takefocus=False)
@@ -340,7 +401,10 @@ class Pad:
             self.pending = None
             self.code.set('Loading failed: ' + error)
             return
-        self.code.set('Ready / 就緒 — ' + self.args.profile)
+        ready_text = 'Ready / 就緒 — ' + self.args.profile
+        if self.args.log_sweeps:
+            ready_text += ' (logging to %s)' % self.args.log_sweeps
+        self.code.set(ready_text)
         if self.pending is not None:
             points, lifts = self.pending
             self.pending = None
@@ -359,6 +423,7 @@ class Pad:
             self.lifts.append(len(self.points) - 1)
             self.points.append(self.sample(event))
         else:
+            self.flush_log()
             self.canvas.delete('trail'); self.start = now
             self.points = [self.sample(event)]
             self.lifts = []
@@ -405,7 +470,14 @@ class Pad:
         self.rank(points, lifts)
 
     def rank(self, points, lifts):
+        self.flush_log()
         self.results = self.decoder.decode(points, lifts, top_k=self.args.top_k)
+        if getattr(self.args, 'log_sweeps', None):
+            keysize = getattr(self, 'scale', self.args.keysize)
+            self.last_sweep = make_sweep_entry(points, lifts, self.results, chosen=None,
+                                               profile=getattr(self.args, 'profile', 'mouse'),
+                                               mode=getattr(self.args, 'mode', 'keys'),
+                                               keysize=keysize)
         self.code.set('  |  '.join('%s %s' % (ch, code) for ch,code,_ in self.results))
         for b in self.buttons:
             b.configure(text=EMPTY_CANDIDATE, state='disabled')
@@ -414,7 +486,21 @@ class Pad:
 
     def choose(self, index):
         ch,code,_ = self.results[index]
+        last = getattr(self, 'last_sweep', None)
+        if isinstance(last, dict):
+            last['chosen'] = {'text': ch, 'code': code}
         self.send(self.decoder.injection_code(ch, self.args.word_separator), ch)
+
+    def close(self):
+        self.flush_log()
+        self.root.destroy()
+
+    def flush_log(self):
+        last = getattr(self, 'last_sweep', None)
+        if isinstance(last, dict):
+            self.last_sweep = None
+            if getattr(self.args, 'log_sweeps', None):
+                append_sweep_log(self.args.log_sweeps, last)
 
     def send(self, code, char, single=False):
         try:
