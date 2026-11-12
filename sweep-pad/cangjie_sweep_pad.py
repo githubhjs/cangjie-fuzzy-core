@@ -59,6 +59,7 @@ def parse_args(argv=None):
     modes.add_argument('--decode-string')
     ap.add_argument('--boundary', choices=('continuous', 'lift', 'dwell'), default='continuous')
     ap.add_argument('--expect')
+    ap.add_argument('--expect-code', help='with --decode-string/--decode-file: the top candidate must have this main code')
     ap.add_argument('--profile', choices=('mouse', 'touchpad', 'touchscreen'), default=defaults['profile'])
     ap.add_argument('--word-separator', default=defaults['word_separator'])
     ap.add_argument('--lift-ms', type=positive, default=defaults['lift_ms'])
@@ -87,8 +88,8 @@ def parse_args(argv=None):
         ap.error('invalid settings: top-k 1..100, mode keys/commit, window-size WIDTHxHEIGHT, topmost boolean')
     if a.profile not in ('mouse', 'touchpad', 'touchscreen') or a.word_separator not in ('', ' ', "'"):
         ap.error('profile must be mouse/touchpad/touchscreen; separator must be empty, space, or apostrophe')
-    if a.expect is not None and not (a.decode_file or a.decode_string):
-        ap.error('--expect requires --decode-file or --decode-string')
+    if (a.expect is not None or a.expect_code is not None) and not (a.decode_file or a.decode_string):
+        ap.error('--expect and --expect-code require --decode-file or --decode-string')
     for name in ('strictness', 'keysize', 'lift_ms'):
         val = getattr(a, name)
         if isinstance(val, bool) or not isinstance(val, (int, float)) or not math.isfinite(val) or val <= 0:
@@ -152,8 +153,12 @@ def read_points(path, scale=1.0):
 
 
 def literal_gesture(sequence, boundary):
+    if re.fullmatch(r'[a-z]+', sequence):
+        # one key sequence = one character sweep (for example the slip y h y j m n b v c -> yhyjmnbvc); boundary does not apply
+        from sweep.make_vectors import polyline_path
+        return polyline_path(sequence, default_layout()), []
     if not re.fullmatch(r'[a-z]+ [a-z]+', sequence):
-        raise ValueError('--decode-string requires two lowercase key sequences separated by one space')
+        raise ValueError('--decode-string requires one lowercase key sequence (a character) or two separated by one space (a word)')
     # report_words imports resource for report metrics (absent on Windows).
     # Import only when this headless diagnostic is requested.
     try:
@@ -438,7 +443,8 @@ def main(argv=None):
                 pts, lifts = literal_gesture(a.decode_string, a.boundary)
             results = make_decoder(a).decode(pts, lifts)
             print(json.dumps([dict(char=ch, code=code, score=sc) for ch,code,sc in results], ensure_ascii=False))
-            return 0 if a.expect is None or (results and results[0][0] == a.expect) else 1
+            ok = results and (a.expect is None or results[0][0] == a.expect) and (a.expect_code is None or results[0][1] == a.expect_code)
+            return 0 if (a.expect is None and a.expect_code is None) or ok else 1
         if a.self_check:
             import tkinter
             ok, msg = injector().availability()

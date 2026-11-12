@@ -9,7 +9,8 @@ import sys
 import tempfile
 import threading
 
-from sweep.decoder import Lexicon
+from sweep.auto import AutoDecoder, char_config
+from sweep.decoder import Lexicon, SweepDecoder
 from sweep.keyboard import default_layout
 from sweep.words import WordConfig, WordDecoder, WordLexicon, main_codes, _WT
 
@@ -35,15 +36,25 @@ def word_config(args):
                        cover_weight=cfg.cover_weight * args.strictness)
 
 
+def char_decoder(args, entries):
+    """Single-character decoder of the device profile (SPEC section 12); strictness scales the same weights as for words."""
+    cfg = char_config(args.profile)
+    cfg = cfg.replace(loc_weight=cfg.loc_weight * args.strictness, end_weight=cfg.end_weight * args.strictness,
+                      cover_weight=cfg.cover_weight * args.strictness)
+    return SweepDecoder(Lexicon([e for e in entries if len(e[0]) >= 2], default_layout(), cfg.n), cfg)
+
+
 class PadDecoder:
-    def __init__(self, lexicon, codes, cfg):
+    """decode() = decode_auto: the single-character decoder and the one-list word decoder, combined by the SPEC section 12 policy."""
+    def __init__(self, lexicon, codes, cfg, chars=None):
         self.lex = lexicon
         self.codes = codes
         self.decoder = WordDecoder(lexicon, cfg)
+        self.auto = AutoDecoder(chars, self.decoder, cfg.top_k)
 
     def decode(self, points, lifts=(), top_k=None):
         return [(text, ''.join(self.codes[c] for c in text), score)
-                for text, kind, score in self.decoder.decode(points, lifts, top_k)]
+                for text, kind, score, code in self.auto.decode(points, lifts, top_k)]
 
     def injection_code(self, text, separator=''):
         return separator.join(self.codes[c] for c in text)
@@ -97,12 +108,12 @@ def make_decoder(args, directory=None):
     cfg = word_config(args)
     directory = Path(directory) if directory is not None else cache_dir()
     target = directory / (_cache_key(args, cfg) + '.json')
+    chars = Lexicon.from_tsv(str(args.table), min_len=1).entries
     try:
         lex, codes = _restore(json.loads(target.read_text(encoding='utf-8')), cfg)
-        return PadDecoder(lex, codes, cfg)
+        return PadDecoder(lex, codes, cfg, char_decoder(args, chars))
     except (OSError, ValueError, KeyError, TypeError, IndexError):
         pass
-    chars = Lexicon.from_tsv(str(args.table), min_len=1).entries
     codes = main_codes(chars)
     words = []
     with Path(args.essay).open(encoding='utf-8') as source:
@@ -126,7 +137,7 @@ def make_decoder(args, directory=None):
     finally:
         if temporary is not None and temporary.exists():
             temporary.unlink()
-    return PadDecoder(lex, codes, cfg)
+    return PadDecoder(lex, codes, cfg, char_decoder(args, chars))
 
 
 class DecoderLoader:

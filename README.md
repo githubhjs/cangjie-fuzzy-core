@@ -56,6 +56,8 @@ A path decoder for Cangjie 3 sweeps, platform neutral (finger on a phone, **mous
 
 **手機鍵盤幾何 / phone geometry:** 手機鍵列距是 1.5 個鍵寬；移植必須先做「每軸正規化」（x/sx、y/sy，SPEC.md 2c），否則 `y h y j m n b v c` 在手機上仍會先出錯碼。Ports must normalise each axis (SPEC.md section 2c; [sweep/results/PHONE.md](sweep/results/PHONE.md)); vectors: `sweep/vectors/phone_vectors.json`.
 
+**產品層策略 / product-level policy:** `sweep/auto.py` `decode_auto`：單字解碼器與「字＋詞同一份清單」解碼器都跑；一詞清單第一名是詞就用它，否則回傳單字結果再接上新詞（SPEC.md 第 12 節；桌面 sweep-pad 與 Android 使用同一規則）。Both decoders run; the one-list result is used when its best guess is a word, else the character list followed by the words (SPEC.md section 12, [sweep/results/AUTO.md](sweep/results/AUTO.md)). Vectors: `sweep/vectors/auto_vectors.json`.
+
 **Not validated:** real finger and mouse data, real users' dwell behaviour, any phone or browser latency. The Cangjie 3 table and the word list (essay.txt) are not in this repository.
 
 ## 授權

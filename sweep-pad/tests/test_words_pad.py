@@ -47,6 +47,25 @@ class WordPadTests(unittest.TestCase):
                     self.assertEqual(result[0][:2], (expected, code))
                     self.assertEqual(len(result), 5)
 
+    def test_single_character_owner_slip_decodes_yhmbc_first_through_the_pad_path(self):
+        # y h y j m n b v c is the slip over ONE character (顏 / 頻, code yhmbc); the one-list decoder alone ranks ytmbc first
+        decoder = pad.make_decoder(self.args())
+        for sequence in ('yhyjmnbvc', 'yhjmnbvc', 'yhmnbvc', 'yhmbc'):  # not yhyhmbc: with 243k words it matches a spurious word (SPEC 12)
+            with self.subTest(sequence=sequence):
+                points, lifts = pad.literal_gesture(sequence, 'continuous')
+                result = decoder.decode(points, lifts)
+                self.assertEqual(result[0][1], 'yhmbc')
+                self.assertIn(result[0][0], ('頻', '顏'))
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            self.assertEqual(pad.main(['--config', str(self.config), '--decode-string', 'yhyjmnbvc', '--expect-code', 'yhmbc']), 0)
+            self.assertEqual(pad.main(['--config', str(self.config), '--decode-string', 'yhyjmnbvc', '--expect-code', 'ytmbc']), 1)
+        points, lifts = pad.literal_gesture('yhyjmnbvc', 'continuous')
+        path = self.directory / 'slip.json'
+        path.write_text(json.dumps(dict(points=points, lifts=lifts)))
+        with contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(pad.main(['--config', str(self.config), '--decode-file', str(path), '--expect-code', 'yhmbc']), 0)
+
     def test_windows_literal_fallback_matches_report_sampler(self):
         original_import = builtins.__import__
 

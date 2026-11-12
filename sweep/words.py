@@ -49,7 +49,7 @@ class WordConfig:
     lift_weight: float = 2.495       # weight of squared distance between lift/landing points and a boundary of the candidate
     lift_extra_penalty: float = 4.0  # per lift beyond the candidate's number of boundaries
     align_weight: float = 2.49      # key-sequence alignment rerank of the best `align_top` candidates; 0 = off
-    align_gate: float = 0.2
+    align_gate: float = 0.2        # words
     align_ins: float = 0.42
     align_miss: float = 1.0
     hit_radius: float = 0.582
@@ -134,6 +134,7 @@ class WordLexicon:
             groups.setdefault(keys, []).append((word, "word", math.log(freq + cfg.prior_floor), reps, tuple(bounds), len(word)))
             nwords += 1
         self.n_words = nwords
+        self.mc = mc  # char -> main code
         self.templates = []
         self.buckets = {}
         for keys, ents in groups.items():

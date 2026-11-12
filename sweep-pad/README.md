@@ -68,6 +68,7 @@ JSON settings accept `strictness`, `top_k`, `mode`, `window_size`, `keysize`, `a
 ```sh
 python3 sweep-pad/cangjie_sweep_pad.py --decode-string "yhmnbvc ojhbnm" --boundary continuous --expect 顏值
 python3 sweep-pad/cangjie_sweep_pad.py --decode-string "yhjmnbvc yuiokjhj" --boundary lift --expect 頻率
+python3 sweep-pad/cangjie_sweep_pad.py --decode-string yhyjmnbvc --expect-code yhmbc   # one character: the slip y h y j m n b v c
 python3 sweep-pad/cangjie_sweep_pad.py --print-layout
 python3 sweep-pad/cangjie_sweep_pad.py --decode-file path.json --top-k 5
 python3 sweep-pad/cangjie_sweep_pad.py --decode-file pixels.json --keysize 48
@@ -81,7 +82,7 @@ python3 sweep-pad/cangjie_sweep_pad.py --inject-test yhmbc --delay 5
 
 `--decode-string` 使用上游 `sweep.report_words.literal`，`--boundary` 可選 `continuous`、`lift`、`dwell`。加上 `--expect` 時，只有第一候選符合預期才回傳 0；不符合回傳非零。
 
-`--decode-string` reuses upstream `sweep.report_words.literal`; `--boundary` accepts `continuous`, `lift`, or `dwell`. With `--expect`, exit status is 0 only when the first candidate matches.
+`--decode-string` reuses upstream `sweep.report_words.literal`; `--boundary` accepts `continuous`, `lift`, or `dwell`. With `--expect`, exit status is 0 only when the first candidate matches. A single key sequence (no space) is one character sweep; `--expect-code` checks the main code of the first candidate. Decoding uses `sweep/auto.py` `decode_auto` (single-character decoder + one-list word decoder, SPEC section 12).
 
 ## 測試與發行 / Tests and release
 

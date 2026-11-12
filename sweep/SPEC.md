@@ -325,9 +325,43 @@ Test words: 900 (stratified: length 2/3/4 x frequency band 1k-3k, 3k-10k, >=10k,
 - Low-pass the pointer in the platform layer: independent per-sample jitter comparable to the sample spacing breaks the word decoder's length window (section 8, "jitter cliff"); a minimum-step debounce did not fix it. Real sensor noise is expected to be far below that, but that is not measured.
 - Desktop (mouse): lifts are button-up/button-down pairs inside one gesture (for example a gesture that continues while a modifier is held); a dwell is a pause with the button held. Both hints are optional; the continuous path works alone.
 
+## 12. 產品層解碼策略 / Product-level decode policy `decode_auto` (characters + words, one list)
+
+**中文摘要**：一次滑行可能是一個字，也可能是一個詞。單字解碼器對單字（尤其是折返、迴旋的滑法）比「字＋詞同一份清單」的解碼器可靠，詞解碼器則在滑過整個詞時較好，所以兩個都跑，再用一條固定規則合併：單字解碼器的結果與一詞清單；若一詞清單的第一名是「詞」（2-4 字），就用一詞清單；否則回傳單字解碼器的字，後面接上一詞清單中尚未出現的詞。沒有分數門檻，也不比較兩邊的分數。Python 參考實作是 `sweep/auto.py`（`AutoDecoder` / `decode_auto`），桌面小工具（sweep-pad）用它，Android 的 `SweepEngine.decode` 是同一條規則。
+
+**English.** Code: `sweep/auto.py`. Exact rules (the Kotlin `SweepEngine.decode` at commit 49f63432 implements the same ones):
+
+1. `chars` = single-character decoder (character config of the device profile: `SweepConfig()` for mouse, `defaults_finger.json` etc.), `top_k` rows `(char, code, score)`. Not run when fewer than 2 samples: return an empty list.
+2. `all` = one-list word decoder (`WordConfig` defaults, characters + words in one list), `top_k` rows `(text, kind, score)`; lifts are passed to it.
+3. If `all` is non-empty and `all[0].kind == "word"` (a 2-4 character word): return `all` unchanged.
+4. Otherwise return `chars` followed by those rows of `all` with `kind == "word"` whose text is not in `chars`, in the order they have in `all`, cut to `top_k`. If no word lexicon is loaded, return `chars`.
+5. No score threshold, margin or tie rule between the two lists; ties inside a list are the decoders' own (score, then code, then text). Row = `(text, kind, score, code)`: `code` is the decoded code for characters from `chars`, empty for rows from `all` (compose words from the characters' main codes; the pad's injection code is the main code of each character).
+
+**Differences between the Python reference and the Kotlin engine (no port change needed unless you want them):** Python passes `lifts` to the word decoder (a desktop gesture may lift between characters); Kotlin passes none (a lift ends the sweep there). The pad picks the character config from its device profile (mouse / touchpad / touchscreen) and scales the location, start/end and cover weights by `--strictness` for both decoders; Kotlin uses its strictness presets. Vectors use `lifts = []` and the mouse character config, so both agree on them. The pad loads words with freq >= 100 (243k), Android freq >= 1000 (31.6k): see the known limit below.
+
+**Why this and not the one-list decoder alone.** The owner's slip `y h y j m n b v c` for 顏 (code yhmbc) ranked ytmbc 顱 first in the one-list decoder on the Android check; the single-character decoder ranks yhmbc first (SPEC 2b, 2c). With the policy: ANSI and phone-geometry `yhyjmnbvc`, `yhjmnbvc` and clean `yhmbc` decode to a character with code `yhmbc` first, 顏值 and 頻率 stay first as words (`vectors/auto_vectors.json`, 12 cases, words >= 1000 like Android; the pad's own path is tested by `sweep-pad/tests/test_words_pad.py`).
+
+**Evidence (synthetic, `results/AUTO.md`; level mid; top-1 / top-5 %, 'w' = frequency-weighted top-1):**
+
+| profile | backtrack | sweeps | one-list alone | auto (profile char config) | auto (mouse char config) |
+|---|---|---|---|---|---|
+| mouse | 0 | char | 80.2 / 98.8 (w 92.0) | 78.8 / 98.9 (w 92.2) | same |
+| mouse | 0 | word | 96.8 / 100.0 | 96.8 / 98.9 | same |
+| mouse | 0.4 | char | 56.6 / 78.3 (w 80.5) | 55.8 / 79.9 (w 79.5) | same |
+| mouse | 0.4 | word | 63.5 / 72.7 | 63.5 / 71.8 | same |
+| finger | 0 | char | 48.1 / 76.9 (w 42.3) | 36.8 / 71.7 (w 46.0) | 45.5 / 79.4 (w 40.5) |
+| finger | 0 | word | 79.8 / 92.6 | 79.8 / 90.8 | same |
+| finger | 0.4 | char | 31.8 / 55.6 (w 34.0) | 25.5 / 55.3 (w 28.7) | 31.4 / 59.5 (w 32.4) |
+| finger | 0.4 | word | 49.6 / 64.0 | 49.6 / 62.8 | same |
+
+- **Word sweeps:** top-1 is identical (the policy returns the same list when the best guess is a word); top-5 is 1-2 points lower because, when the one-list best guess is not a word, the character list replaces the one-list ranking. This is the only word-sweep cost.
+- **Character sweeps:** on average the policy is NOT better than the one-list decoder on the simulator. Mouse: -1.4 / -0.8 top-1 (clean / backtrack), +1.6 top-5 on backtracks. Finger with the finger character config: -11 unweighted top-1 (it trades unweighted for frequency-weighted accuracy, w +3.7); with the mouse character config the loss is -2.6 (w -1.8). The policy is adopted for the owner's reason (a spur slip over one character must give the right code first, which the one-list decoder does not) and because Android already ships it, not because it is statistically better. Which character config to use for the finger is a product choice (weighted vs unweighted).
+- **Known limit.** A backtracking slide over one character can itself match a word in a big word list, and then the word list is returned: `y h y h m b c` matched the word with codes `ygyhmbc` and `y h y j m n b v c` on the phone geometry matched 主頻 (freq 997) when words >= 100 were loaded (pad, 243k words); with words >= 1000 (Android) both give yhmbc first. Guards that were tried and rejected because every one costs word sweeps: a score margin between the two decoders (-7 points top-1 on word sweeps at margin -4), a character-score threshold (-8 to -66), "the top word has a template key the path never touched" (-15 to -31), and the same combined with "the path revisits a key" and "the character decoder fits well" (-0.8 to -4 for +0.8 to +1.4 on characters; with a threshold loose enough to catch the two examples about -2). They are listed so nobody repeats the search; a learned decision would need real data.
+- **Latency (pure Python):** word sweep one-list 21.7 -> auto 26.2 ms mean (p95 32.0 -> 36.7); single-character sweep 8.7 -> 16.7 ms mean (p95 14.1 -> 26.0), because both decoders run.
+
 ## 11. 檔案 / Files
 
-`keyboard.py` geometry (imports `core/layout.py`), `decoder.py` single-character decoder, `words.py` word-level decoder and segmentation alternative, `simulate.py` synthetic strokes and profiles (`generate`, `generate_word`), `evaluate.py` / `evaluate_words.py` harnesses (train/test split by character / word hash), `tune.py` / `tune_words.py` search, `report.py` / `report_words.py` final evaluations, `make_vectors.py` / `make_word_vectors.py` / `make_phone_vectors.py`, `report_phone.py`, `tests/test_sweep.py`, `tests/test_words.py`, `results/` (`REPORT.md`, `WORDS.md`, `final.json`, `words.json`, tuning logs, `defaults_*.json`, `round1/`, `round2/` older rounds kept as logs), `vectors/vectors.json`, `vectors/word_vectors.json`.
+`keyboard.py` geometry (imports `core/layout.py`), `decoder.py` single-character decoder, `words.py` word-level decoder and segmentation alternative, `auto.py` product-level policy decode_auto, `simulate.py` synthetic strokes and profiles (`generate`, `generate_word`), `evaluate.py` / `evaluate_words.py` harnesses (train/test split by character / word hash), `tune.py` / `tune_words.py` search, `report.py` / `report_words.py` final evaluations, `make_vectors.py` / `make_word_vectors.py` / `make_phone_vectors.py` / `make_auto_vectors.py`, `report_phone.py` / `report_auto.py`, `tests/test_sweep.py`, `tests/test_words.py`, `tests/test_auto.py`, `results/` (`REPORT.md`, `WORDS.md`, `final.json`, `words.json`, tuning logs, `defaults_*.json`, `round1/`, `round2/` older rounds kept as logs), `vectors/vectors.json`, `vectors/word_vectors.json`.
 
 Reproduce (paths of the Cangjie 3 table and essay.txt are arguments; neither is in this repository):
 `python3 -m sweep.tune --profile mouse --trials 40 --refine 40 --sample 1000 --out sweep/results/tune_mouse.json`; `python3 -m sweep.report --table cangjie3.tsv`; `python3 -m sweep.tune_words --table cangjie3.tsv --essay essay.txt --out sweep/results/tune_words.json`; `python3 -m sweep.report_words --table cangjie3.tsv --essay essay.txt`; tests: `python3 sweep/tests/test_sweep.py`, `python3 sweep/tests/test_words.py` (the tests that need the real table or essay.txt are skipped when they are missing; the vector tests are self-contained).
