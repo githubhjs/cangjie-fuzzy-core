@@ -2,7 +2,8 @@
 
 Run it as the panel of a private ibus-daemon so a GUI test can read the real Rime candidate list:
   ibus-daemon --daemonize --address=unix:path=$T/ibus.sock --config=disable \
-      --panel="python3 tests/gui/log_panel.py $T/panel.log"
+      --panel="/usr/bin/python3 $PWD/tests/gui/log_panel.py $T/panel.log"
+(ibus-daemon does not search PATH for the panel command: use absolute paths.)
 Each line: '<time> <KIND> <json>'; KIND is TABLE (list of candidate strings, cursor), PREEDIT, AUX, HIDE.
 """
 import json
