@@ -99,6 +99,69 @@ class PadTests(unittest.TestCase):
             inj.inject_keys.assert_called_once_with('abc')
             sleep.assert_called_once_with(0)
 
+    def test_commit_text_cli_uses_commit_injector(self):
+        from unittest.mock import Mock
+        inj = Mock()
+        with patch.object(pad, 'injector', return_value=inj), patch.object(pad.time, 'sleep'), \
+                contextlib.redirect_stderr(io.StringIO()):
+            self.assertEqual(pad.main(['--config', str(self.config), '--commit-text', '顏值', '--delay', '0']), 0)
+            inj.commit_text.assert_called_once_with('顏值')
+            inj.inject_keys.assert_not_called()
+            for bad in ('', 'a\nb', 'x' * 300):
+                self.assertEqual(pad.main(['--config', str(self.config), '--commit-text', bad, '--delay', '0']), 1)
+            self.assertEqual(inj.commit_text.call_count, 1)
+        with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+            self.args('--commit-text', 'a', '--inject-test', 'a')
+
+    def test_commit_mode_config_on_every_platform(self):
+        self.config.write_text(json.dumps(dict(mode='commit')))
+        self.assertEqual(self.args().mode, 'commit')
+        self.assertEqual(self.args('--mode', 'keys').mode, 'keys')
+
+    def fake_pad(self, mode):
+        from unittest.mock import Mock
+        fake = Mock()
+        fake.args = self.args('--mode', mode)
+        fake.root.after.side_effect = lambda ms, fn: fn()
+        fake.decoder.injection_code.side_effect = lambda ch, sep: {'顏值': 'yhmbcojbm', '顏': 'yhmbc'}[ch]
+        return fake
+
+    def test_choose_commit_mode_sends_candidate_text(self):
+        from unittest.mock import Mock
+        for platform in ('linux', 'darwin', 'win32'):
+            for text, code in (('顏值', 'yhmbcojbm'), ('顏', 'yhmbc')):
+                inj = Mock()
+                fake = self.fake_pad('commit')
+                fake.send = lambda c, ch, single=False, f=fake: pad.Pad.send(f, c, ch, single)
+                fake.results = [('頻', 'yhmbc', 1.0), (text, code, 0.9)]
+                with self.subTest(platform=platform, text=text), patch.object(pad.sys, 'platform', platform), \
+                        patch.object(pad, 'injector', return_value=inj):
+                    pad.Pad.choose(fake, 1)
+                inj.commit_text.assert_called_once_with(text)
+                inj.inject_keys.assert_not_called()
+                fake.code.set.assert_called_with('Committed: ' + text)
+
+    def test_single_key_click_still_sends_letter_in_commit_mode(self):
+        from unittest.mock import Mock
+        inj = Mock()
+        fake = self.fake_pad('commit')
+        with patch.object(pad, 'injector', return_value=inj):
+            pad.Pad.send(fake, 'k', 'k', single=True)
+        inj.inject_keys.assert_called_once_with('k')
+        inj.commit_text.assert_not_called()
+
+    def test_keys_mode_unchanged(self):
+        from unittest.mock import Mock
+        inj = Mock()
+        fake = self.fake_pad('keys')
+        fake.send = lambda c, ch, single=False: pad.Pad.send(fake, c, ch, single)
+        fake.results = [('顏值', 'yhmbcojbm', 1.0)]
+        with patch.object(pad, 'injector', return_value=inj):
+            pad.Pad.choose(fake, 0)
+        inj.inject_keys.assert_called_once_with('yhmbcojbm')
+        inj.commit_text.assert_not_called()
+        fake.code.set.assert_called_with('Sent: yhmbcojbm')
+
 
 class VectorTests(unittest.TestCase):
     def test_sweep_vectors(self):

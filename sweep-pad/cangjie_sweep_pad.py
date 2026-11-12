@@ -66,12 +66,15 @@ def parse_args(argv=None):
     ap.add_argument('--profile', choices=('mouse', 'touchpad', 'touchscreen'), default=defaults['profile'])
     ap.add_argument('--word-separator', default=defaults['word_separator'])
     ap.add_argument('--lift-ms', type=positive, default=defaults['lift_ms'])
-    modes.add_argument('--inject-test')
+    modes.add_argument('--inject-test', help='after --delay seconds, inject these code letters (key mode)')
+    modes.add_argument('--commit-text', help='after --delay seconds, commit this text with the commit-mode injector')
     modes.add_argument('--print-layout', action='store_true')
     modes.add_argument('--self-check', action='store_true')
     ap.add_argument('--strictness', type=positive, default=defaults['strictness'])
     ap.add_argument('--top-k', type=int, default=defaults['top_k'])
-    ap.add_argument('--mode', choices=('keys', 'commit'), default=defaults['mode'])
+    ap.add_argument('--mode', choices=('keys', 'commit'), default=defaults['mode'],
+                    help='keys (default): send the candidate code letters for the IME to compose; '
+                         'commit: type the chosen candidate text directly, bypassing IME composition')
     ap.add_argument('--window-size', default=defaults['window_size'])
     ap.add_argument('--keysize', type=positive, default=None,
                     help='GUI key width; with --decode-file, convert pixel coordinates by this width')
@@ -419,12 +422,11 @@ class Pad:
             def perform():
                 try:
                     if self.args.mode == 'commit' and not single:
-                        if sys.platform != 'win32':
-                            raise RuntimeError('commit mode is supported only on Windows')
-                        injector().inject_unicode(char)
+                        injector().commit_text(char)
+                        self.code.set('Committed: ' + char)
                     else:
                         injector().inject_keys(code)
-                    self.code.set('Sent: ' + code)
+                        self.code.set('Sent: ' + code)
                 except (OSError, RuntimeError, ValueError) as e:
                     self.code.set(str(e)); print(str(e), file=sys.stderr)
             self.root.after(150 if sys.platform == 'darwin' else 15, perform)
@@ -451,9 +453,11 @@ def main(argv=None):
         if a.self_check:
             import tkinter
             ok, msg = injector().availability()
+            if a.mode == 'commit' and hasattr(injector(), 'commit_availability'):
+                ok, msg = injector().commit_availability()
             table_ok = a.table.is_file()
             essay_ok = a.essay.is_file()
-            print(json.dumps(dict(platform=sys.platform, session=os.environ.get('XDG_SESSION_TYPE', ''),
+            print(json.dumps(dict(platform=sys.platform, session=os.environ.get('XDG_SESSION_TYPE', ''), mode=a.mode,
                                   display=bool(os.environ.get('DISPLAY')), tkinter=tkinter.TkVersion,
                                   injector_available=ok, injector_message=msg, table_available=table_ok, essay_available=essay_ok), ensure_ascii=False))
             if wayland():
@@ -466,8 +470,18 @@ def main(argv=None):
                 raise ValueError('--inject-test accepts lowercase ASCII letters a-z only')
             print('Focus the target application; injecting in %g seconds.' % a.delay, file=sys.stderr)
             time.sleep(a.delay); injector().inject_keys(a.inject_test); return 0
-        if a.mode == 'commit' and sys.platform != 'win32':
-            raise ValueError('commit mode is supported only on Windows')
+        if a.commit_text is not None:
+            from injectors import validate_commit
+            validate_commit(a.commit_text, 0)
+            if not a.commit_text:
+                raise ValueError('--commit-text needs non-empty text')
+            print('Focus the target application; committing in %g seconds.' % a.delay, file=sys.stderr)
+            time.sleep(a.delay); injector().commit_text(a.commit_text); return 0
+        if a.mode == 'commit':
+            ok, msg = (injector().commit_availability() if hasattr(injector(), 'commit_availability')
+                       else injector().availability())
+            if not ok:
+                print('Sweep Pad commit mode: ' + msg, file=sys.stderr)
         import tkinter as tk
         try:
             root = tk.Tk(); Pad(root, a); root.mainloop(); return 0

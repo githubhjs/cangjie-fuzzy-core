@@ -10,6 +10,20 @@ def validate(text, delay_ms):
         raise ValueError("delay_ms must be a finite non-negative number")
 
 
+COMMIT_MAX = 256
+
+
+def validate_commit(text, delay_ms):
+    """Commit text is the chosen candidate: printable Unicode, no control characters."""
+    validate("", delay_ms)
+    if not isinstance(text, str):
+        raise ValueError("commit text must be a string")
+    if len(text) > COMMIT_MAX:
+        raise ValueError("commit text is limited to %d characters" % COMMIT_MAX)
+    if any(ord(c) < 0x20 or 0x7F <= ord(c) < 0xA0 or 0xD800 <= ord(c) < 0xE000 for c in text):
+        raise ValueError("commit text must not contain control characters or lone surrogates")
+
+
 def get_injector(platform=None):
     platform = platform or sys.platform
     if platform == "win32":

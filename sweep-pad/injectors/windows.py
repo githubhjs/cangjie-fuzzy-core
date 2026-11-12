@@ -4,7 +4,7 @@ from ctypes import wintypes
 import sys
 import time
 
-from . import validate
+from . import validate, validate_commit
 
 # Explicit Windows-width fields also make structure tests meaningful on Linux.
 DWORD = ctypes.c_uint32
@@ -75,10 +75,9 @@ def inject_keys(text: str, delay_ms=8):
         time.sleep(delay_ms / 1000.0)
 
 
-def inject_unicode(text: str, delay_ms=8):
-    validate("", delay_ms)
-    if not isinstance(text, str):
-        raise ValueError("commit text must be a string")
+def commit_text(text: str, delay_ms=8):
+    """Commit mode: send the chosen text as KEYEVENTF_UNICODE UTF-16 units (bypasses IME composition)."""
+    validate_commit(text, delay_ms)
     if not text:
         return
     api = _api()
@@ -86,3 +85,7 @@ def inject_unicode(text: str, delay_ms=8):
     for i in range(0, len(encoded), 2):
         _send_pair(api, int.from_bytes(encoded[i:i + 2], "little"), 0x0004)
         time.sleep(delay_ms / 1000.0)
+
+
+# Backward-compatible name used by earlier Windows releases.
+inject_unicode = commit_text
