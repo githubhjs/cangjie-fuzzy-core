@@ -13,6 +13,7 @@ import math
 from dataclasses import dataclass, replace, asdict
 
 from sweep.keyboard import default_layout
+from sweep.pointer import prepare_pointer
 
 
 @dataclass
@@ -45,6 +46,8 @@ class SweepConfig:
     align_miss: float = 1.0        # cost of a code key the path never touches
     hit_radius: float = 0.582        # a key is "touched" when the path passes within this many key widths of its centre
     align_top: int = 40            # only the best `align_top` candidates by score are reranked
+    pointer_filter: str = "smooth"  # optional adaptive low-pass; "off" restores raw decoding
+    pointer_jitter_floor: float = 0.045  # iid sigma in normalised key widths; bypass clean paths
     top_k: int = 10
 
     def to_dict(self):
@@ -319,6 +322,8 @@ class SweepDecoder:
         top_k = top_k or cfg.top_k
         if not points:
             return []
+        raw_points = points
+        points, _, _ = prepare_pointer(points, cfg)
         u = resample(points, n)
         ux = [p[0] for p in u]
         uy = [p[1] for p in u]
@@ -328,7 +333,7 @@ class SweepDecoder:
         uyc = [y - ucy for y in uy]
         usize = max(max(ux) - min(ux), max(uy) - min(uy))
         alphas = end_alphas(n, cfg.end_alpha)
-        dwells = detect_dwells(points, cfg) if cfg.repeat_mode == "dwell" and len(points) > 2 else []
+        dwells = detect_dwells(raw_points, cfg) if cfg.repeat_mode == "dwell" and len(points) > 2 else []
         tol = cfg.loc_tolerance
         cands = None
         for radius in (cfg.prune_radius, cfg.prune_radius * 2.0, None):

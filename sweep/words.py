@@ -16,6 +16,7 @@ from dataclasses import dataclass, asdict, replace
 
 from sweep.decoder import SweepConfig, align_cost, concat_template, detect_dwells, backtrack_count, end_alphas, hit_sequence, resample
 from sweep.keyboard import default_layout
+from sweep.pointer import prepare_pointer
 
 
 @dataclass
@@ -54,6 +55,8 @@ class WordConfig:
     align_miss: float = 1.0
     hit_radius: float = 0.582
     align_top: int = 25
+    pointer_filter: str = "smooth"  # same preprocessing contract as SweepConfig
+    pointer_jitter_floor: float = 0.045
     top_k: int = 10
 
     def to_dict(self):
@@ -189,13 +192,20 @@ class WordDecoder:
         top_k = top_k or cfg.top_k
         if not points:
             return []
+        raw_points = points
+        points, length_points, _ = prepare_pointer(points, cfg, lifts)
         n = cfg.n
         uf = resample(points, n)
         uc = resample(points, cfg.m)
         sx, sy, ex, ey = uf[0][0], uf[0][1], uf[-1][0], uf[-1][1]
-        lp = path_length(points)
+        lp = path_length(length_points) if cfg.pointer_filter == "length" else path_length(points)
+        widen = 1.0
+        if cfg.pointer_filter in ("window", "smooth_window"):
+            smooth_length = path_length(length_points)
+            if smooth_length > 1e-9:
+                widen = max(1.0, path_length(raw_points) / smooth_length)
         cands = []
-        for radius, lo, hi in ((cfg.prune_radius, cfg.len_lo, cfg.len_hi), (cfg.prune_radius * 1.6, cfg.len_lo * 0.7, cfg.len_hi * 1.4),
+        for radius, lo, hi in ((cfg.prune_radius, cfg.len_lo, cfg.len_hi * widen), (cfg.prune_radius * 1.6, cfg.len_lo * 0.7, cfg.len_hi * 1.4 * widen),
                                (cfg.prune_radius * 2.5, 0.0, 0.0)):
             if lp < 1e-6:
                 lo, hi = 0.0, 0.0
@@ -235,7 +245,7 @@ class WordDecoder:
         uxc = [x - ucx for x in ux]
         uyc = [y - ucy for y in uy]
         usize = max(max(ux) - min(ux), max(uy) - min(uy))
-        strokes = split_strokes(points, lifts)
+        strokes = split_strokes(raw_points, lifts)
         dwells = []
         sc = cfg.as_sweep()
         for st in strokes:

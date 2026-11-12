@@ -34,7 +34,7 @@ lexicon: entries (code, char, weight) with len(code) >= 2   (single-letter codes
 - Pixels to key widths: `layout_from_rects(rects)` gives the key centres in key widths and the key width in pixels (median rectangle width); divide pixel coordinates by it (`to_key_units`). The same parameters then mean the same on every screen size and keyboard.
 - One sweep = pointer down ... pointer up. Lifting ends the sweep. The caller supplies the layout; there is no hidden state.
 - The decoder is deterministic: same input gives the same output. Ties: score, then code, then char (ascending).
-- Time is used **only** for dwell. Everything else is arc-length based, so uneven or low sampling rates are fine, provided the stream contains the true start and end points.
+- Time is used for dwell and the optional pointer low-pass (section 13). Template matching is arc-length based. Sparse streams bypass the low-pass and must contain the true start and end points.
 
 ## 2. 演算法（精確）/ Algorithm (exact; reference = `decoder.py`)
 
@@ -230,7 +230,7 @@ Frequency-weighted top-1 (what a user typing common characters sees), mid: mouse
 - Repeated letters rely on the user dwelling. Users who never dwell lose the repeat codes (see the dwell table). Run lengths above 2 (`aaa` vs `aa`) are not distinguished.
 - 2-letter codes carry little shape information; accuracy there depends on the location channel.
 - Very short or nearly motionless paths: the shape channel rescales by the input's size; a path shorter than about a quarter key width should be treated as a tap by the caller.
-- **Independent per-sample jitter cliff.** Characters degrade gracefully (mouse, mid-noise paths plus iid per-sample jitter of 0.05 / 0.1 / 0.2 key widths: top-1 77 / 69 / 60%). Words do not when the jitter is comparable to the sample spacing: the literal owner path (97 samples over 18.6 key widths, 0.19 spacing) with iid jitter 0.1 still gives 顏值 100% but 頻率 about 1%, and at 0.2 both are 0%, because the jitter doubles the measured arc length (39.5 vs 18.6) and the length window `len_lo..len_hi` then removes the right template and the arc-length resampling stops tracking progress. Slow hand wobble (SPEC section 10.6) is fine. A minimum-step debounce (drop samples closer than 0.08 key widths) was tried and does NOT fix it (it helps at 0.25 for 頻率 at jitter 0.1 only) and cost 0.5-1.5 points on the main tables, so it was removed; a low-pass filter of the pointer in the platform layer (or a wider length window) is the open fix. Real touch and mouse sensor noise is far smaller than 0.1 key widths per sample, but this was not measured.
+- **Independent per-sample jitter cliff.** Characters degrade gracefully (mouse, mid-noise paths plus iid per-sample jitter of 0.05 / 0.1 / 0.2 key widths: top-1 77 / 69 / 60%). Words do not when the jitter is comparable to the sample spacing: the literal owner path (97 samples over 18.6 key widths, 0.19 spacing) with iid jitter 0.1 still gives 顏值 100% but 頻率 about 1%, and at 0.2 both are 0%, because the jitter doubles the measured arc length (39.5 vs 18.6) and the length window `len_lo..len_hi` then removes the right template and the arc-length resampling stops tracking progress. Slow hand wobble (SPEC section 10.6) is fine. A minimum-step debounce (drop samples closer than 0.08 key widths) was tried and does NOT fix it (it helps at 0.25 for 頻率 at jitter 0.1 only) and cost 0.5-1.5 points on the main tables, so it was removed; the reference now implements an adaptive pointer low-pass (section 13; measured comparisons in `results/JITTER.md`). Real touch and mouse sensor noise is far smaller than 0.1 key widths per sample, but this was not measured.
 - Cangjie 3 only; Cangjie 5 or other tables change the confusion structure. Only ANSI QWERTY (and one phone-like check) was simulated. Non-QWERTY layouts untested.
 - No latency measurement on a phone or in a browser; Python numbers only.
 - Not implemented: speed-dependent channel weighting, user adaptation, spatial model personalisation, any neural decoder.
@@ -322,7 +322,7 @@ Test words: 900 (stratified: length 2/3/4 x frequency band 1k-3k, 3k-10k, >=10k,
 
 - Build once: parse essay.txt (about 243k words at freq >= 100: build 2.4 s in Python), group by collapsed key string (257k templates), store per template `coarse[16]` floats, arc length, vertex key bytes, entry list; per-bucket arrays sorted by arc length. About 257k x 16 floats = 16 MB (floats) plus entries. A frequency threshold (1000: 31.6k words) cuts memory 8x and costs little accuracy (WORDS.md, lexicon-size table).
 - Per decode: resample once to 8 and 40 points; enumerate buckets of the first/last keys within 1.2 key widths (about 8-10 keys each); two binary searches by arc length; score the coarse pass on a few thousand templates (8 points each); partial sort for the best 150; fine pass on 150 templates only. Python needs 11 ms mean / 18 ms p95 for 243k words (7 ms for 31k); a JIT port should be far lower. If the platform needs it, shrink `keep` to 60 and the radius to 1.0.
-- Low-pass the pointer in the platform layer: independent per-sample jitter comparable to the sample spacing breaks the word decoder's length window (section 8, "jitter cliff"); a minimum-step debounce did not fix it. Real sensor noise is expected to be far below that, but that is not measured.
+- Port the optional reference pointer low-pass before matching (section 13); independent per-sample jitter comparable to sample spacing breaks the raw length window (section 8). Do not filter twice in the platform and decoder. Real sensor noise remains unmeasured.
 - Desktop (mouse): lifts are button-up/button-down pairs inside one gesture (for example a gesture that continues while a modifier is held); a dwell is a pause with the button held. Both hints are optional; the continuous path works alone.
 
 ## 12. 產品層解碼策略 / Product-level decode policy `decode_auto` (characters + words, one list)
@@ -365,3 +365,111 @@ Test words: 900 (stratified: length 2/3/4 x frequency band 1k-3k, 3k-10k, >=10k,
 
 Reproduce (paths of the Cangjie 3 table and essay.txt are arguments; neither is in this repository):
 `python3 -m sweep.tune --profile mouse --trials 40 --refine 40 --sample 1000 --out sweep/results/tune_mouse.json`; `python3 -m sweep.report --table cangjie3.tsv`; `python3 -m sweep.tune_words --table cangjie3.tsv --essay essay.txt --out sweep/results/tune_words.json`; `python3 -m sweep.report_words --table cangjie3.tsv --essay essay.txt`; tests: `python3 sweep/tests/test_sweep.py`, `python3 sweep/tests/test_words.py` (the tests that need the real table or essay.txt are skipped when they are missing; the vector tests are self-contained).
+
+
+## 13. Adaptive pointer low-pass / KAN-232
+
+Reference: `pointer.py`, applied by `SweepDecoder.decode` and `WordDecoder.decode`,
+so `AutoDecoder.decode` / `decode_auto` use it through both underlying configs.
+The section 12 merge policy is unchanged. `SweepConfig` and `WordConfig` add
+`pointer_filter` (default `"smooth"`) and `pointer_jitter_floor` (default **0.045**
+normalised key units, estimated iid sigma per axis). Set **both** configs to
+`pointer_filter="off"` for the previous raw decoder. Existing profile JSONs
+without these fields inherit the dataclass defaults. No templates are changed.
+
+### Exact algorithm and port contract (Kotlin and desktop)
+
+Apply AFTER section 2c per-axis coordinate normalisation and BEFORE arc-length
+resampling, start/end pruning, cover/shape/location scoring and hit alignment.
+This is a batch filter at gesture completion, with no state between gestures.
+Use double precision and original timestamp milliseconds. Do not debounce,
+resample in time, or discard repeated-position events before this stage.
+
+1. Partition sample indices into half-open spans `[a,b)` at every valid lift
+   `i` (cut at `i+1`) and every adjacent timestamp gap **>32 ms**. Remove duplicate
+   cuts and sort them. The gap bound limits smoothing to dense pointer streams
+   (roughly >=31 Hz) and protects sparse intentional corners and event-driven
+   pauses. Lift jumps remain part of the later whole-word arc length, as before.
+2. `off` or fewer than 7 total samples: return the original points unchanged.
+   Otherwise collect residuals from interior triples `(p,q,r)` in each span.
+   Skip triples without strictly increasing times. Let
+   `f=(tq-tp)/(tr-tp)`, `e=q.xy-((1-f)*p.xy+f*r.xy)`, and
+   `z=norm(e)/sqrt(1+f*f+(1-f)*(1-f))`. If fewer than 5 residuals exist, estimate
+   `sigma=0`; otherwise `sigma=median(z)/sqrt(2*ln(2))` (for an even count,
+   median is the mean of the middle two). This estimates per-axis Gaussian iid
+   jitter: the denominator accounts for three independent sample errors and
+   the radial Gaussian median. Straight constant-velocity motion cancels;
+   occasional corners are outliers to the median.
+3. If `sigma <= pointer_jitter_floor`, return the original points **exactly**.
+   No coordinates, timestamps, or scores change on this branch.
+4. Set radius `R=min(6,max(2,ceil(sigma/0.05)))`. In each span with at least 7
+   samples, for every sample `i` take original points at indices
+   `max(a,i-R)..min(b,i+R+1)` (upper bound exclusive). Fit independent local
+   straight lines `x(t)` and `y(t)` and evaluate each at the original `t_i`.
+   Specifically, put `u_j=t_j-t_i`, `C=count`, accumulate `Su,Sx,Sy,Suu,Sux,Suy`.
+   With `D=C*Suu-Su*Su > 1e-12`, output
+   `x=(Sx*Suu-Su*Sux)/D` and `y=(Sy*Suu-Su*Suy)/D`;
+   otherwise output `(Sx/C,Sy/C)`. Use the original input for every fit,
+   not already filtered samples. Spans shorter than 7 stay raw.
+5. Keep original sample count, timestamps and lift indices. Endpoints use
+   one-sided fits and may move; this reduces landing/release sample jitter
+   without a causal filter's fixed lag. With `smooth`, use these points for
+   both word length and scoring geometry, pruning, lift positions and hit
+   alignment. **Dwell detection still uses the original points**, per stroke
+   for words, to retain section 2's timing and repeat semantics. The character
+   decoder accepts one stroke; word lifts are supplied to the word decoder.
+   As in section 12, the auto character branch ignores lifts: a multi-stroke
+   gesture whose lift gap is <=32 ms can be filtered across that boundary in
+   the character branch. The word branch always respects explicit lifts.
+
+No filter is run twice within either decoder. `decode_auto` runs its character
+and word decoder independently; set matching filter fields on both configs.
+A caller implementing one shared filter must retain the raw samples for dwell,
+pass the original lifts, and disable any second filtering in matching code.
+Legacy vectors were not regenerated: they pass unchanged because the gate or
+sampling guard bypasses their clean and sparse paths. New fixed noisy vectors
+are in `vectors/jitter_vectors.json`, tested by `tests/test_jitter.py`.
+
+### Evaluated alternatives
+
+All variants use the same estimator, gate and local filter above:
+
+| `pointer_filter` | geometry / alignment | word candidate length |
+|---|---|---|
+| `off` | raw | raw |
+| `smooth` (default) | filtered | filtered |
+| `length` | raw | filtered |
+| `window` | raw | raw, upper window widened |
+| `smooth_window` | filtered | filtered, upper window widened |
+
+For either window variant, `w=max(1,Lraw/Lfiltered)` (1 if filtered length
+<=1e-9); multiply `len_hi` by `w` in both finite-window pruning attempts,
+leaving `len_lo`, minimum-candidate fallback and final unlimited window alone.
+The character decoder has no length window, so `length` and `window` leave its
+ranking raw. `smooth_window` deliberately also widens the filtered window as a
+combination ablation. Results, sample counts, noise seeds, clean-control deltas,
+latency and reproduction commands are in `results/JITTER.md`.
+
+The pilot selected `smooth`: filtered length alone and widening alone leave
+arc-length progress and noisy hit alignment distorted; combining smoothing
+with widening gave no consistent extra gain. On the larger product-lexicon run,
+mouse word top-1/top-5 at added sigma 0.2 went **26.3/30.0 -> 94.8/96.3%**.
+Clean controls (ordinary mid-profile noise, no additional iid jitter) had
+**0.00 points** top-1 regression for both mouse/finger words and characters.
+This is a finite synthetic experiment, not a population or real-device bound.
+The pilot and larger run overlap; the samples are held out from the original
+decoder tuning, but are not independent validation of filter selection.
+
+### Limitations
+
+This models iid sensing noise, not systematic offset, hand wobble, missing keys,
+or an intentional backtrack. A local linear window can cut sharp corners and
+shorten fast turns. The sigma estimator assumes mostly locally linear motion
+and isotropic independent noise in normalised units; dense oscillations can be
+misclassified. Sparse paths and gaps are deliberately left alone; noise there
+cannot reliably be separated from intended corners. Radius is bounded in sample
+count and fits use timestamps, but the effective time bandwidth still varies
+with sampling rate. The sigma estimate is gesture-wide: a noisy stroke can activate smoothing of
+another clean stroke in the same gesture. Dwell remains vulnerable to large raw jitter. Only synthetic
+streams have been tested; no real device traces, Kotlin implementation, desktop
+integration, or port latency is validated in this change.

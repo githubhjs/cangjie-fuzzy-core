@@ -291,3 +291,17 @@ def generate_word(codes, layout, profile, level, rng, boundary="continuous"):
         for a, b in bounds:
             hold.add(a)
     return generate(None, layout, profile, level, rng, keys=keys, reps=reps, hold_at=hold), []
+
+
+def add_sample_jitter(points, sigma, rng):
+    """Add independent Gaussian x/y sensing noise AFTER motor simulation.
+
+    sigma is per axis in normalised key units. Timestamps, sample count and
+    lift indices are unchanged; sigma=0 returns an exact copy without RNG use.
+    """
+    if sigma < 0:
+        raise ValueError("jitter sigma must be nonnegative")
+    if sigma == 0:
+        return list(points)
+    return [(x + rng.gauss(0, sigma), y + rng.gauss(0, sigma), t)
+            for x, y, t in points]

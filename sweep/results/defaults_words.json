@@ -32,5 +32,7 @@
  "align_ins": 0.42,
  "hit_radius": 0.582,
  "align_top": 25,
- "align_miss": 1.0
+ "align_miss": 1.0,
+ "pointer_filter": "smooth",
+ "pointer_jitter_floor": 0.045
 }
