@@ -23,6 +23,9 @@ from pad_words import make_decoder, DecoderLoader
 DEFAULTS = dict(strictness=1.0, top_k=5, mode='keys', window_size='640x300',
                 keysize=48.0, always_on_top=True, profile='mouse',
                 word_separator='', lift_ms=250.0)
+# Two lines like a filled candidate ('字\ncode'): a constant button height keeps the
+# keyboard canvas from moving or redrawing (and losing the trail) between gestures.
+EMPTY_CANDIDATE = '—\n '
 
 
 def config_path():
@@ -295,7 +298,7 @@ class Pad:
         row = tk.Frame(root); row.pack(fill='x')
         self.buttons = []
         for i in range(5):
-            b = tk.Button(row, text='—', state='disabled', takefocus=False, command=lambda j=i: self.choose(j))
+            b = tk.Button(row, text=EMPTY_CANDIDATE, state='disabled', takefocus=False, command=lambda j=i: self.choose(j))
             b.pack(side='left', expand=True, fill='x'); self.buttons.append(b)
         self.canvas = tk.Canvas(root, background='#17222c', highlightthickness=0)
         self.canvas.pack(fill='both', expand=True)
@@ -360,7 +363,7 @@ class Pad:
         self.released_at = None
         self.results = []
         for b in self.buttons:
-            b.configure(text='—', state='disabled')
+            b.configure(text=EMPTY_CANDIDATE, state='disabled')
 
     def motion(self, event):
         if not self.points or self.released_at is not None:
@@ -402,7 +405,7 @@ class Pad:
         self.results = self.decoder.decode(points, lifts, top_k=self.args.top_k)
         self.code.set('  |  '.join('%s %s' % (ch, code) for ch,code,_ in self.results))
         for b in self.buttons:
-            b.configure(text='—', state='disabled')
+            b.configure(text=EMPTY_CANDIDATE, state='disabled')
         for b, (text, code, score) in zip(self.buttons, self.results):
             b.configure(text=text + '\n' + code, state='normal')
 

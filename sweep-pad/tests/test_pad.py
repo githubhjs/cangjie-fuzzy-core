@@ -119,5 +119,39 @@ class VectorTests(unittest.TestCase):
                     self.assertAlmostEqual(actual[2], expected, places=5)
 
 
+@unittest.skipUnless(sys.platform.startswith('linux') and pad.os.environ.get('DISPLAY') and not pad.wayland(),
+                     'needs an X11 display (for example Xvfb)')
+class PadLayoutTests(unittest.TestCase):
+    """Real Tk widgets: the keyboard must not move when candidates appear or clear."""
+
+    def test_keyboard_does_not_move_and_trail_survives(self):
+        import tkinter as tk
+
+        class Loader:
+            def __init__(self, a): pass
+            def poll(self): return None
+
+        class Decoder:
+            def decode(self, points, lifts, top_k=5):
+                return [('顏值', 'yhmbcojbm', 0.0)] * 5
+
+        with tempfile.TemporaryDirectory() as tmp, patch.object(pad, 'DecoderLoader', Loader):
+            a = pad.parse_args(['--config', str(Path(tmp) / 'none.json')])
+            root = tk.Tk()
+            self.addCleanup(root.destroy)
+            p = pad.Pad(root, a)
+            root.update()
+            before = (p.canvas.winfo_rooty(), p.canvas.winfo_height())
+            p.canvas.create_line(10, 10, 50, 50, tags='trail')
+            p.decoder = Decoder()
+            p.rank([], [])
+            root.update()
+            self.assertEqual((p.canvas.winfo_rooty(), p.canvas.winfo_height()), before)
+            self.assertTrue(p.canvas.find_withtag('trail'), 'candidate display redrew the keyboard and erased the trail')
+            p.press(type('E', (), {'x': 20, 'y': 20})())
+            root.update()
+            self.assertEqual((p.canvas.winfo_rooty(), p.canvas.winfo_height()), before)
+
+
 if __name__ == '__main__':
     unittest.main()
