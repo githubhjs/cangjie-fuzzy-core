@@ -61,7 +61,7 @@ class PadDecoder:
 
 
 def _cache_key(args, cfg):
-    h = hashlib.sha256(b'pad-word-templates-v1;min_freq=100;length=2..4')
+    h = hashlib.sha256(b'pad-word-templates-v2;min_freq=1000;length=2..4')
     for path in (args.table, args.essay, Path(__file__), Path(sys.modules['sweep.words'].__file__),
                  Path(sys.modules['sweep.decoder'].__file__), Path(sys.modules['sweep.keyboard'].__file__)):
         h.update(Path(path).read_bytes())
@@ -119,7 +119,7 @@ def make_decoder(args, directory=None):
     with Path(args.essay).open(encoding='utf-8') as source:
         for line in source:
             p = line.rstrip('\n').split('\t')
-            if len(p) == 2 and p[1].isdigit() and int(p[1]) >= 100 and 2 <= len(p[0]) <= 4:
+            if len(p) == 2 and p[1].isdigit() and int(p[1]) >= 1000 and 2 <= len(p[0]) <= 4:
                 words.append((p[0], int(p[1])))
     lex = WordLexicon(chars, words, cfg=cfg)
     # A read-only/unavailable cache must not prevent decoding. Atomic replacement

@@ -108,10 +108,10 @@ class WordPadTests(unittest.TestCase):
         table = self.directory / 'table.tsv'
         essay = self.directory / 'essay.txt'
         table.write_text('ab\t明\t1\nbk\t甲\t1\n', encoding='utf-8')
-        essay.write_text('明甲\t100\n', encoding='utf-8')
+        essay.write_text('明甲\t1000\n', encoding='utf-8')
         args = self.args('--table', str(table), '--essay', str(essay))
         self.assertEqual(pad.make_decoder(args).lex.n_words, 1)
-        essay.write_text('明甲\t99\n', encoding='utf-8')
+        essay.write_text('明甲\t999\n', encoding='utf-8')
         self.assertEqual(pad.make_decoder(args).lex.n_words, 0)
         table.write_text('ab\t明\t1\nbk\t甲\t1\nkb\t乙\t1\n', encoding='utf-8')
         self.assertIn('乙', pad.make_decoder(args).codes)
