@@ -5,10 +5,12 @@ Real SendInput mouse events drive the pad; a Tk target Entry logs what it receiv
 Every injecting step first checks that the target window is the foreground window, else aborts.
 Screenshots cover only the pad window rectangle.
 Launch (from ssh, into the logged-on console session):
-  schtasks /create /f /tn cjgui_test /sc once /st 23:59 /ru <user> /it [/rl highest] /tr "<pythonw.exe> <this file> <OUTDIR> <PAD_DIR>"
+  schtasks /create /f /tn cjgui_test /sc once /st 23:59 /ru <user> /it /rl limited /tr "<pythonw.exe> <this file> <OUTDIR> <PAD_DIR>"
   schtasks /run /tn cjgui_test
-/rl highest is needed when an elevated window (for example an admin terminal) is in the foreground:
-UIPI then silently drops all medium-integrity SendInput/SetCursorPos.
+Run it at normal (medium) integrity. If an elevated window (for example an admin terminal) is in the
+foreground, UIPI silently drops medium-integrity SendInput/SetCursorPos and Windows refuses to hand the
+foreground to us; the script then logs the integrity levels and every foreground attempt and aborts
+without injecting. Do not elevate to work around it: close the elevated window first.
 """
 import ctypes
 from ctypes import wintypes as w
@@ -141,7 +143,70 @@ def fg():
     return u.GetForegroundWindow() or 0
 
 
-def capture(box, name=None):
+k32 = ctypes.WinDLL('kernel32', use_last_error=True)
+adv = ctypes.WinDLL('advapi32', use_last_error=True)
+k32.OpenProcess.restype = w.HANDLE
+k32.OpenProcess.argtypes = [w.DWORD, w.BOOL, w.DWORD]
+k32.GetCurrentProcess.restype = w.HANDLE
+k32.CloseHandle.argtypes = [w.HANDLE]
+k32.QueryFullProcessImageNameW.argtypes = [w.HANDLE, w.DWORD, w.LPWSTR, ctypes.POINTER(w.DWORD)]
+adv.OpenProcessToken.argtypes = [w.HANDLE, w.DWORD, ctypes.POINTER(w.HANDLE)]
+adv.GetTokenInformation.argtypes = [w.HANDLE, ctypes.c_int, ctypes.c_void_p, w.DWORD, ctypes.POINTER(w.DWORD)]
+u.GetWindowThreadProcessId.argtypes = [w.HWND, ctypes.POINTER(w.DWORD)]
+u.SetForegroundWindow.argtypes = [w.HWND]
+u.BringWindowToTop.argtypes = [w.HWND]
+u.GetClassNameW.argtypes = [w.HWND, w.LPWSTR, ctypes.c_int]
+adv.GetSidSubAuthorityCount.restype = ctypes.POINTER(ctypes.c_ubyte)
+adv.GetSidSubAuthorityCount.argtypes = [ctypes.c_void_p]
+adv.GetSidSubAuthority.restype = ctypes.POINTER(w.DWORD)
+adv.GetSidSubAuthority.argtypes = [ctypes.c_void_p, w.DWORD]
+IL_NAMES = {0x0: 'untrusted', 0x1000: 'low', 0x2000: 'medium', 0x2100: 'medium-plus', 0x3000: 'high', 0x4000: 'system'}
+
+
+def process_integrity(hproc):
+    tok = w.HANDLE()
+    if not adv.OpenProcessToken(hproc, 0x0008, ctypes.byref(tok)):  # TOKEN_QUERY
+        return 'OpenProcessToken failed err %d' % ctypes.get_last_error()
+    try:
+        need = w.DWORD()
+        adv.GetTokenInformation(tok, 25, None, 0, ctypes.byref(need))  # TokenIntegrityLevel
+        buf = ctypes.create_string_buffer(need.value)
+        if not adv.GetTokenInformation(tok, 25, buf, need, ctypes.byref(need)):
+            return 'GetTokenInformation failed err %d' % ctypes.get_last_error()
+        sid = ctypes.cast(buf, ctypes.POINTER(ctypes.c_void_p))[0]
+        n = adv.GetSidSubAuthorityCount(sid)[0]
+        rid = adv.GetSidSubAuthority(sid, n - 1)[0]
+        return '%s (0x%x)' % (IL_NAMES.get(rid, '?'), rid)
+    finally:
+        k32.CloseHandle(tok)
+
+
+def pid_of(hwnd):
+    p = w.DWORD()
+    u.GetWindowThreadProcessId(w.HWND(hwnd), ctypes.byref(p))
+    return p.value
+
+
+def describe(hwnd):
+    """hwnd, class, pid, exe and integrity level of a window's process (read-only queries)."""
+    if not hwnd:
+        return 'hwnd 0'
+    cls = ctypes.create_unicode_buffer(256)
+    u.GetClassNameW(w.HWND(hwnd), cls, 256)
+    pid = pid_of(hwnd)
+    h = k32.OpenProcess(0x1000, False, pid)  # PROCESS_QUERY_LIMITED_INFORMATION
+    if not h:
+        return 'hwnd %s class %s pid %s OpenProcess failed err %d' % (hwnd, cls.value, pid, ctypes.get_last_error())
+    try:
+        name = ctypes.create_unicode_buffer(1024)
+        size = w.DWORD(1024)
+        k32.QueryFullProcessImageNameW(h, 0, name, ctypes.byref(size))
+        return 'hwnd %s class %s pid %s exe %s integrity %s' % (hwnd, cls.value, pid, os.path.basename(name.value), process_integrity(h))
+    finally:
+        k32.CloseHandle(h)
+
+
+def capture(box, name=None, own_hwnd=None):
     """Return (width, height, bytes BGRA top-down) of a screen rectangle; optionally save a BMP."""
     x0, y0, x1, y1 = box
     W, H = x1 - x0, y1 - y0
@@ -156,6 +221,12 @@ def capture(box, name=None):
     g.GetDIBits(mdc, bmp, 0, H, buf, bi, 0)
     g.DeleteObject(bmp); g.DeleteDC(mdc); u.ReleaseDC(None, sdc)
     data = buf.raw
+    if name and own_hwnd:
+        # Keep the image only when every grid point inside it belongs to our own window.
+        foreign = [(x, y) for y in range(y0 + 1, y1, 8) for x in range(x0 + 1, x1, 8) if root_at(x, y) != own_hwnd]
+        if foreign:
+            say('screenshot %s NOT saved: %d grid points belong to other windows' % (name, len(foreign)))
+            name = None
     if name:
         with open(os.path.join(OUT, name), 'wb') as f:
             size = 14 + 40 + len(data)
@@ -218,6 +289,15 @@ for _ in range(90):  # our own earlier injected input also counts; wait up to 90
     u.GetLastInputInfo(ctypes.byref(li))
     idle = ((ctypes.windll.kernel32.GetTickCount() & 0xffffffff) - li.dwTime) & 0xffffffff
 say('idle seconds after wait', idle / 1000.0)
+try:
+    say('this process integrity', process_integrity(k32.GetCurrentProcess()))
+    wg = subprocess.run(['whoami', '/groups'], capture_output=True, text=True, creationflags=NOWIN).stdout
+    say('whoami /groups label:', ' | '.join(' '.join(l.split()[:4]) for l in wg.splitlines() if 'S-1-16-' in l))
+    say('whoami /groups admins:', ' | '.join(' '.join(l.split()) for l in wg.splitlines() if 'S-1-5-32-544' in l))
+    say('foreground at start', describe(fg()))
+except Exception as e:
+    import traceback
+    say('integrity probe failed', repr(e), traceback.format_exc())
 if idle < 120000:
     say('ABORT: owner input within the last 2 minutes; not touching the desktop'); sys.exit(0)
 pt = w.POINT(); u.GetCursorPos(ctypes.byref(pt)); cursor0 = (pt.x, pt.y)
@@ -237,24 +317,64 @@ try:
         raise SystemExit('target window not found')
     tr = rect(T)
     say('target hwnd', T, 'rect', tr, 'foreground', fg())
-    u.SetWindowPos(T, w.HWND(-1), 0, 0, 0, 0, 0x13)  # topmost, no move/size/activate: so the real click lands on it
+    u.SetWindowPos(T, w.HWND(-1), 0, 0, 0, 0, 0x13)  # topmost, no move/size/activate: so a real click lands on it
     time.sleep(0.3)
-    click((tr[0] + tr[2]) // 2, tr[1] + (tr[3] - tr[1]) * 2 // 3, T, 'target')  # real click into the target window
-    time.sleep(0.5)
-    cp = w.POINT(); u.GetCursorPos(ctypes.byref(cp))
-    say('after clicking target: foreground', fg(), 'is target', fg() == T, 'cursor', (cp.x, cp.y), 'root at cursor', root_at(cp.x, cp.y))
-    if fg() != T:
-        # Fallback, logged separately: attach to the foreground thread and ask for activation.
-        k32 = ctypes.windll.kernel32
-        ft = u.GetWindowThreadProcessId(fg(), None)
-        me = k32.GetCurrentThreadId()
-        a1 = u.AttachThreadInput(me, ft, True)
-        s1 = u.SetForegroundWindow(T)
-        u.AttachThreadInput(me, ft, False)
+    say('target', describe(T))
+    say('foreground now', describe(fg()))
+    tx, ty = (tr[0] + tr[2]) // 2, tr[1] + (tr[3] - tr[1]) * 2 // 3
+
+    def attempt(label, fn):
+        before = fg()
+        r = fn()
+        err = ctypes.get_last_error()
         time.sleep(0.5)
-        say('fallback AttachThreadInput', a1, 'SetForegroundWindow', s1, 'foreground', fg(), 'is target', fg() == T)
+        cp = w.POINT(); u.GetCursorPos(ctypes.byref(cp))
+        say('attempt %s: returned %r lasterr %d foreground %s -> %s is target %s cursor %s' % (
+            label, r, err, before, fg(), fg() == T, (cp.x, cp.y)))
+        return fg() == T
+
+    def direct():
+        return u.SetForegroundWindow(w.HWND(T))
+
+    def real_click():
+        check_point(tx, ty, T, 'target')
+        move(tx, ty); time.sleep(0.05)
+        cp = w.POINT(); u.GetCursorPos(ctypes.byref(cp))
+        say('  SendInput move to %s; cursor is now %s (unchanged cursor = input dropped by UIPI)' % ((tx, ty), (cp.x, cp.y)))
+        down(); time.sleep(0.04); up()
+        return 'clicked'
+
+    def attach():
+        ft = u.GetWindowThreadProcessId(w.HWND(fg()), None)
+        me = k32.GetCurrentThreadId()
+        a_ = u.AttachThreadInput(me, ft, True)
+        aerr = ctypes.get_last_error()
+        u.BringWindowToTop(w.HWND(T))
+        s_ = u.SetForegroundWindow(w.HWND(T))
+        if a_:
+            u.AttachThreadInput(me, ft, False)
+        return 'AttachThreadInput=%d (err %d) SetForegroundWindow=%d' % (a_, aerr, s_)
+
+    def alt_trick():
+        n = 0
+        for flags in (0, 2):  # VK_MENU down, up
+            ev = INPUT(type=1, ki=KEYBDINPUT(0x12, 0, flags, 0, 0))
+            n += u.SendInput(1, ctypes.byref(ev), ctypes.sizeof(INPUT))
+        s_ = u.SetForegroundWindow(w.HWND(T))
+        return 'SendInput(ALT) accepted %d/2 SetForegroundWindow=%d' % (n, s_)
+
+    ok = fg() == T
+    for label, fn in (('SetForegroundWindow', direct), ('SendInput click on own topmost target', real_click),
+                      ('AttachThreadInput+SetForegroundWindow', attach), ('ALT key + SetForegroundWindow', alt_trick)):
+        if ok:
+            break
+        try:
+            ok = attempt(label, fn)
+        except SystemExit as e:
+            say('attempt %s skipped: %s' % (label, e))
+    say('foreground after attempts', describe(fg()))
     if fg() != T:
-        raise SystemExit('ABORT: target is not foreground, no injection attempted')
+        raise SystemExit('ABORT: our normal-privilege target could not become the foreground window; no injection attempted')
     threading.Thread(target=monitor, daemon=True).start()
 
     # A. --inject-test through injectors/windows.py SendInput, no pad window, no Rime.
@@ -297,7 +417,7 @@ try:
             raise SystemExit('ABORT: cannot restore target foreground')
     time.sleep(10)  # decoder load
     pr = rect(P)
-    Wd, Hd, data = capture(pr, 'win_00_pad_idle.bmp')
+    Wd, Hd, data = capture(pr, 'win_00_pad_idle.bmp', P)
 
     def pix(x, y):
         i = (y * Wd + x) * 4
@@ -350,7 +470,7 @@ try:
     for name, keys, expect in (('B2_char', 'yhyjmnbvc', 'yhmbc'), ('B3_word', 'yhmnbvcojhbnm', 'yhmbcojbm')):
         clear(); guard(); n0 = len(samples)
         sweep(list(keys)); time.sleep(1.5)
-        capture(pr, 'win_%s_candidates.bmp' % name)  # pad rectangle only
+        capture(pr, 'win_%s_candidates.bmp' % name, P)  # pad rectangle only
         guard(); click(*cand0, P, 'candidate 1'); time.sleep(0.8)
         got = entry_text()
         keep = all(h == T for _, h in samples[n0:])
